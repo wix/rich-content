@@ -5,6 +5,7 @@ import {
   UrlInputModal,
   FOOTER_BUTTON_ALIGNMENT,
   MODAL_CONTROLS_POSITION,
+  BUTTON_SIZE,
 } from 'wix-rich-content-ui-components';
 import { contentTypeMap, verticalEmbedProviders } from '../constants';
 import ItemsList from './itemsList/ItemsList';
@@ -128,6 +129,7 @@ export default class VerticalEmbedInputModal extends Component {
         controlsPosition={isMobile ? MODAL_CONTROLS_POSITION.TOP : MODAL_CONTROLS_POSITION.BOTTOM}
         selected={selected}
         textInput={textInput}
+        buttonSize={BUTTON_SIZE.small}
       >
         <div className={styles.itemsWrapper}>
           {status === LOADING ? (

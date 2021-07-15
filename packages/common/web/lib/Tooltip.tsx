@@ -48,8 +48,6 @@ class Tooltip extends React.Component<Props> {
 
   static contextType = GlobalContext;
 
-  private firstShow = false;
-
   componentDidUpdate() {
     this.disabled = window.richContentHideTooltips; //used to hide tooltips in tests
   }
@@ -59,7 +57,6 @@ class Tooltip extends React.Component<Props> {
   }
 
   showTooltip = (e: MouseEvent) => {
-    this.firstShow = true;
     ToolTipComponent.preload();
     if (!(e.target as HTMLButtonElement).disabled) {
       this.mousePosition = { x: e.clientX, y: e.clientY };
@@ -127,7 +124,7 @@ class Tooltip extends React.Component<Props> {
     ) : (
       <>
         {React.cloneElement(React.Children.only(children), elementProps)}
-        {this.firstShow && ( //can't render Suspense in SSR
+        {tooltipVisible ? (
           <Suspense fallback={null}>
             <ToolTipComponent
               active={tooltipVisible}
@@ -136,11 +133,12 @@ class Tooltip extends React.Component<Props> {
               arrow={tooltipArrow}
               style={style}
               tooltipTimeout={10}
+              group={'ricos'}
             >
               {content}
             </ToolTipComponent>
           </Suspense>
-        )}
+        ) : null}
       </>
     );
   }

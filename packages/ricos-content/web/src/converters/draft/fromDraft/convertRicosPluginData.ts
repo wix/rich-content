@@ -10,7 +10,7 @@ import {
   LINK_PREVIEW_TYPE,
   MENTION_TYPE,
   POLL_TYPE,
-  VERTICAL_EMBED_TYPE,
+  APP_EMBED_TYPE,
   VIDEO_TYPE,
   MAP_TYPE,
   EMBED_TYPE,
@@ -40,7 +40,7 @@ export const convertBlockDataToRicos = (type: string, data) => {
     [FILE_UPLOAD_TYPE]: convertFileData,
     [IMAGE_TYPE]: convertImageData,
     [POLL_TYPE]: convertPollData,
-    [VERTICAL_EMBED_TYPE]: convertVerticalEmbedData,
+    [APP_EMBED_TYPE]: convertAppEmbedData,
     [LINK_PREVIEW_TYPE]: convertLinkPreviewData,
     [MENTION_TYPE]: convertMentionData,
     [LINK_BUTTON_TYPE]: convertButtonData,
@@ -151,8 +151,40 @@ const convertPollData = (data: { layout; design }) => {
     (data.design.poll.backgroundType = data.design.poll.backgroundType.toUpperCase());
 };
 
-const convertVerticalEmbedData = (data: { type?: string }) => {
-  has(data, 'type') && (data.type = data.type?.toUpperCase());
+const convertAppEmbedData = (data: {
+  type: string;
+  selectedProduct: Record<string, string>;
+  url;
+  imageSrc;
+  id;
+  name;
+  bookingData;
+  eventData;
+}) => {
+  const {
+    id,
+    name,
+    imageSrc,
+    description,
+    pageUrl,
+    scheduling,
+    location,
+    html,
+    durations,
+  } = data.selectedProduct;
+  data.url = pageUrl || (html && (data.url = html.match(/href="[^"]*/g)?.[0]?.slice(6)));
+  data.id = id;
+  data.name = name;
+  data.imageSrc = imageSrc;
+  if (data.type === 'booking') {
+    data.bookingData = { durations: durations || description };
+  } else if (data.type === 'event') {
+    data.eventData = {
+      location: location || (description && description.match(/[^|]*$/)?.[0]),
+      scheduling: scheduling || (description && description.match(/[^|]+/)?.[0]),
+    };
+  }
+  data.type = data.type?.toUpperCase();
 };
 
 const convertLinkPreviewData = (data: {

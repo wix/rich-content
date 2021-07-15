@@ -842,22 +842,73 @@
       }
     },
     {
-      "type": "VERTICAL_EMBED",
+      "type": "APP_EMBED",
       "key": "dm5qe",
       "nodes": [],
-      "verticalEmbedData": {
+      "appEmbedData": {
         "type": "PRODUCT",
-        "selectedProduct": {
-          "id": "265beaf5-3008-c5c2-fa5e-1447e0bebf71",
-          "name": "flowers",
-          "imageSrc": "https://static.wixstatic.com/media/11062b_3a93dbce5ab64e7c90d9b2a83a598893~mv2.jpg/v1/fit/w_6720,h_4480,q_90/file.jpg",
-          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/stores/54e7b326-49ec-434f-a7cc-c2ad1eaec049/catalog/265beaf5-3008-c5c2-fa5e-1447e0bebf71?d=https://sapirs0.wixsite.com/mysite/product-page/flowers\" target=\"_blank\"><div class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_3a93dbce5ab64e7c90d9b2a83a598893~mv2.jpg/v1/fit/w_6720,h_4480,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">flowers</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Comprar ahora</div></div></div></div></a>"
-        }
+        "id": "265beaf5-3008-c5c2-fa5e-1447e0bebf71",
+        "name": "flowers",
+        "imageSrc": "https://static.wixstatic.com/media/11062b_3a93dbce5ab64e7c90d9b2a83a598893~mv2.jpg/v1/fit/w_6720,h_4480,q_90/file.jpg",
+        "url": "https://www.wix.app/stores/54e7b326-49ec-434f-a7cc-c2ad1eaec049/catalog/265beaf5-3008-c5c2-fa5e-1447e0bebf71?d=https://sapirs0.wixsite.com/mysite/product-page/flowers"
       }
     },
     {
       "type": "PARAGRAPH",
       "key": "akn59",
+      "nodes": [],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        },
+        "indentation": 0
+      }
+    },
+    {
+      "type": "APP_EMBED",
+      "key": "c1q2f",
+      "nodes": [],
+      "appEmbedData": {
+        "type": "EVENT",
+        "id": "65129504-3bfc-44c8-90cc-f9eedfea9321",
+        "name": "2-week course of intensive physical research, with a sense of plenty of time for process and discovery. Rooted in Ohad N",
+        "imageSrc": "https://static.wixstatic.com/media/2571849c6b0749a4bbd008a06fd65762.jpg",
+        "url": "https://www.wix.app/events/54e7b326-49ec-434f-a7cc-c2ad1eaec049/65129504-3bfc-44c8-90cc-f9eedfea9321/details?d=https://sapirs0.wixsite.com/mysite/event-details/2-week-course-of-intensive-physical-research-with-a-sense-of-plenty-of-time-for-process-and-discovery-rooted-in-ohad-n",
+        "eventData": {
+          "scheduling": "13 de octubre de 2020 19:00–27 de octubre de 2020 23:00 ",
+          "location": " Suzanna Baby Shop"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "264en",
+      "nodes": [],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        },
+        "indentation": 0
+      }
+    },
+    {
+      "type": "APP_EMBED",
+      "key": "cnbji",
+      "nodes": [],
+      "appEmbedData": {
+        "type": "BOOKING",
+        "id": "03ef6546-985d-4739-951e-ca897375b967",
+        "name": "CUPCAKE MASTER",
+        "imageSrc": "https://static.wixstatic.com/media/78ccafc88f7fce3e55bd7a33f166704b.jpg",
+        "url": "https://www.wix.app/bookings/54e7b326-49ec-434f-a7cc-c2ad1eaec049/service/03ef6546-985d-4739-951e-ca897375b967/details?d=https://sapirs0.wixsite.com/mysite/bookings-checkout/cupcake-master",
+        "bookingData": {
+          "durations": "90"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "8uk1q",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -1009,7 +1060,7 @@
       "nodes": [
         {
           "type": "PARAGRAPH",
-          "key": "cj084",
+          "key": "9c35l",
           "nodes": [
             {
               "type": "TEXT",
@@ -1101,7 +1152,7 @@
     },
     {
       "type": "ORDERED_LIST",
-      "key": "4d6u5",
+      "key": "9dvdg",
       "nodes": [
         {
           "type": "LIST_ITEM",
@@ -1109,7 +1160,7 @@
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "9va36",
+              "key": "862l6",
               "nodes": [
                 {
                   "type": "TEXT",
@@ -1130,7 +1181,7 @@
             },
             {
               "type": "ORDERED_LIST",
-              "key": "doj60",
+              "key": "6govu",
               "nodes": [
                 {
                   "type": "LIST_ITEM",
@@ -1138,7 +1189,7 @@
                   "nodes": [
                     {
                       "type": "PARAGRAPH",
-                      "key": "6c1b0",
+                      "key": "euru2",
                       "nodes": [
                         {
                           "type": "TEXT",
@@ -1159,7 +1210,7 @@
                     },
                     {
                       "type": "ORDERED_LIST",
-                      "key": "ct9gs",
+                      "key": "986gm",
                       "nodes": [
                         {
                           "type": "LIST_ITEM",
@@ -1167,7 +1218,7 @@
                           "nodes": [
                             {
                               "type": "PARAGRAPH",
-                              "key": "5ui5b",
+                              "key": "bmbv9",
                               "nodes": [
                                 {
                                   "type": "TEXT",
@@ -1188,7 +1239,7 @@
                             },
                             {
                               "type": "ORDERED_LIST",
-                              "key": "6hak",
+                              "key": "fg3dn",
                               "nodes": [
                                 {
                                   "type": "LIST_ITEM",
@@ -1196,7 +1247,7 @@
                                   "nodes": [
                                     {
                                       "type": "PARAGRAPH",
-                                      "key": "eje0t",
+                                      "key": "26fdk",
                                       "nodes": [
                                         {
                                           "type": "TEXT",
@@ -1217,7 +1268,7 @@
                                     },
                                     {
                                       "type": "ORDERED_LIST",
-                                      "key": "coea7",
+                                      "key": "50juu",
                                       "nodes": [
                                         {
                                           "type": "LIST_ITEM",
@@ -1225,7 +1276,7 @@
                                           "nodes": [
                                             {
                                               "type": "PARAGRAPH",
-                                              "key": "b1asu",
+                                              "key": "3da1p",
                                               "nodes": [
                                                 {
                                                   "type": "TEXT",
@@ -1252,7 +1303,7 @@
                                           "nodes": [
                                             {
                                               "type": "PARAGRAPH",
-                                              "key": "ecr97",
+                                              "key": "7f9a0",
                                               "nodes": [
                                                 {
                                                   "type": "TEXT",
@@ -1295,7 +1346,7 @@
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "cdv8j",
+              "key": "em1hu",
               "nodes": [
                 {
                   "type": "TEXT",
@@ -1316,7 +1367,7 @@
             },
             {
               "type": "BULLET_LIST",
-              "key": "c7uqe",
+              "key": "cachf",
               "nodes": [
                 {
                   "type": "LIST_ITEM",
@@ -1324,7 +1375,7 @@
                   "nodes": [
                     {
                       "type": "PARAGRAPH",
-                      "key": "2g2nc",
+                      "key": "bhjdc",
                       "nodes": [
                         {
                           "type": "TEXT",
@@ -1355,7 +1406,7 @@
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "2knbn",
+              "key": "70p34",
               "nodes": [
                 {
                   "type": "TEXT",
@@ -1391,7 +1442,7 @@
     },
     {
       "type": "BULLET_LIST",
-      "key": "ficao",
+      "key": "5p4lq",
       "nodes": [
         {
           "type": "LIST_ITEM",
@@ -1399,7 +1450,7 @@
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "80fbm",
+              "key": "2jkv6",
               "nodes": [
                 {
                   "type": "TEXT",
@@ -1420,7 +1471,7 @@
             },
             {
               "type": "BULLET_LIST",
-              "key": "apeuh",
+              "key": "ahdbn",
               "nodes": [
                 {
                   "type": "LIST_ITEM",
@@ -1428,7 +1479,7 @@
                   "nodes": [
                     {
                       "type": "PARAGRAPH",
-                      "key": "1oc20",
+                      "key": "55m11",
                       "nodes": [
                         {
                           "type": "TEXT",
@@ -1449,7 +1500,7 @@
                     },
                     {
                       "type": "BULLET_LIST",
-                      "key": "4p6k8",
+                      "key": "a86j7",
                       "nodes": [
                         {
                           "type": "LIST_ITEM",
@@ -1457,7 +1508,7 @@
                           "nodes": [
                             {
                               "type": "PARAGRAPH",
-                              "key": "41h5r",
+                              "key": "37idm",
                               "nodes": [
                                 {
                                   "type": "TEXT",
@@ -1478,7 +1529,7 @@
                             },
                             {
                               "type": "BULLET_LIST",
-                              "key": "u2to",
+                              "key": "ag4jl",
                               "nodes": [
                                 {
                                   "type": "LIST_ITEM",
@@ -1486,7 +1537,7 @@
                                   "nodes": [
                                     {
                                       "type": "PARAGRAPH",
-                                      "key": "4ejvi",
+                                      "key": "1hcsi",
                                       "nodes": [
                                         {
                                           "type": "TEXT",
@@ -1507,7 +1558,7 @@
                                     },
                                     {
                                       "type": "BULLET_LIST",
-                                      "key": "65k22",
+                                      "key": "b5fhq",
                                       "nodes": [
                                         {
                                           "type": "LIST_ITEM",
@@ -1515,7 +1566,7 @@
                                           "nodes": [
                                             {
                                               "type": "PARAGRAPH",
-                                              "key": "30tm6",
+                                              "key": "6eegc",
                                               "nodes": [
                                                 {
                                                   "type": "TEXT",
@@ -1542,7 +1593,7 @@
                                           "nodes": [
                                             {
                                               "type": "PARAGRAPH",
-                                              "key": "10oe",
+                                              "key": "e7j45",
                                               "nodes": [
                                                 {
                                                   "type": "TEXT",
@@ -1585,7 +1636,7 @@
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "e879u",
+              "key": "517rc",
               "nodes": [
                 {
                   "type": "TEXT",
@@ -1612,7 +1663,7 @@
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "6d3uk",
+              "key": "4er5f",
               "nodes": [
                 {
                   "type": "TEXT",
@@ -1804,7 +1855,7 @@
   ],
   "metadata": {
     "version": 1,
-    "createdTimestamp": "2021-07-13T13:13:09.871Z",
-    "updatedTimestamp": "2021-07-13T13:13:09.871Z"
+    "createdTimestamp": "2021-07-15T07:54:42.534Z",
+    "updatedTimestamp": "2021-07-15T07:54:42.534Z"
   }
 }

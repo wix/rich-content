@@ -85,13 +85,9 @@ export const parseMap = ({ mapData }: Node): string => {
   return address || '';
 };
 
-export const parseVerticalEmbed = ({ verticalEmbedData }: Node, delimiter: string): string => {
-  const { html, name } = verticalEmbedData?.selectedProduct || {};
-  const href = html
-    ?.replace(/.*href="/g, '')
-    .replace(/.*=http/g, 'http')
-    .replace(/" .*/g, '');
-  return [name, href].filter(Boolean).join(delimiter);
+export const parseAppEmbed = ({ appEmbedData }: Node, delimiter: string): string => {
+  const { url, name } = appEmbedData || {};
+  return [name, url].filter(Boolean).join(delimiter);
 };
 
 export const parseLinkPreview = ({ linkPreviewData }: Node): string => {

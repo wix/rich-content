@@ -30,7 +30,7 @@ import "wix/rich_content/v1/plugin_image.proto";
 import "wix/rich_content/v1/plugin_link_preview.proto";
 import "wix/rich_content/v1/plugin_map.proto";
 import "wix/rich_content/v1/plugin_poll.proto";
-import "wix/rich_content/v1/plugin_vertical_embed.proto";
+import "wix/rich_content/v1/plugin_app_embed.proto";
 import "wix/rich_content/v1/plugin_video.proto";
 import "wix/rich_content/v1/plugin_embed.proto";
 
@@ -59,7 +59,7 @@ message Node {
         LINK_PREVIEW = 15;
         MAP = 16;
         POLL = 17;
-        VERTICAL_EMBED = 18;
+        APP_EMBED = 18;
         BUTTON = 19;
         COLLAPSIBLE_LIST = 20;
         TABLE = 21;
@@ -85,7 +85,7 @@ message Node {
         ParagraphData paragraph_data = 16;
         PollData poll_data = 17;
         TextData text_data = 18;
-        VerticalEmbedData vertical_embed_data = 19;
+        AppEmbedData app_embed_data = 19;
         VideoData video_data = 20;
         EmbedData embed_data = 21;
     }

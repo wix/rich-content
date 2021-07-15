@@ -437,7 +437,7 @@
       "data": {}
     },
     {
-      "key": "2pjv8",
+      "key": "c1q2f",
       "text": " ",
       "type": "atomic",
       "depth": 0,
@@ -447,6 +447,54 @@
           "offset": 0,
           "length": 1,
           "key": 18
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "264en",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [],
+      "data": {}
+    },
+    {
+      "key": "cnbji",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 19
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "8uk1q",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [],
+      "data": {}
+    },
+    {
+      "key": "2pjv8",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 20
         }
       ],
       "data": {}
@@ -470,7 +518,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 19
+          "key": 21
         }
       ],
       "data": {}
@@ -713,7 +761,7 @@
         {
           "offset": 99,
           "length": 7,
-          "key": 20
+          "key": 22
         }
       ],
       "data": {
@@ -744,7 +792,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 21
+          "key": 23
         }
       ],
       "data": {}
@@ -1131,12 +1179,41 @@
         "selectedProduct": {
           "id": "265beaf5-3008-c5c2-fa5e-1447e0bebf71",
           "name": "flowers",
-          "imageSrc": "https://static.wixstatic.com/media/11062b_3a93dbce5ab64e7c90d9b2a83a598893~mv2.jpg/v1/fit/w_6720,h_4480,q_90/file.jpg",
-          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/stores/54e7b326-49ec-434f-a7cc-c2ad1eaec049/catalog/265beaf5-3008-c5c2-fa5e-1447e0bebf71?d=https://sapirs0.wixsite.com/mysite/product-page/flowers\" target=\"_blank\"><div class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_3a93dbce5ab64e7c90d9b2a83a598893~mv2.jpg/v1/fit/w_6720,h_4480,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">flowers</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Comprar ahora</div></div></div></div></a>"
+          "pageUrl": "https://www.wix.app/stores/54e7b326-49ec-434f-a7cc-c2ad1eaec049/catalog/265beaf5-3008-c5c2-fa5e-1447e0bebf71?d=https://sapirs0.wixsite.com/mysite/product-page/flowers",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_3a93dbce5ab64e7c90d9b2a83a598893~mv2.jpg/v1/fit/w_6720,h_4480,q_90/file.jpg"
         }
       }
     },
     "18": {
+      "type": "wix-draft-plugin-vertical-embed",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "type": "event",
+        "selectedProduct": {
+          "id": "65129504-3bfc-44c8-90cc-f9eedfea9321",
+          "name": "2-week course of intensive physical research, with a sense of plenty of time for process and discovery. Rooted in Ohad N",
+          "pageUrl": "https://www.wix.app/events/54e7b326-49ec-434f-a7cc-c2ad1eaec049/65129504-3bfc-44c8-90cc-f9eedfea9321/details?d=https://sapirs0.wixsite.com/mysite/event-details/2-week-course-of-intensive-physical-research-with-a-sense-of-plenty-of-time-for-process-and-discovery-rooted-in-ohad-n",
+          "imageSrc": "https://static.wixstatic.com/media/2571849c6b0749a4bbd008a06fd65762.jpg",
+          "scheduling": "13 de octubre de 2020 19:00–27 de octubre de 2020 23:00 ",
+          "location": " Suzanna Baby Shop"
+        }
+      }
+    },
+    "19": {
+      "type": "wix-draft-plugin-vertical-embed",
+      "mutability": "IMMUTABLE",
+      "data": {
+        "type": "booking",
+        "selectedProduct": {
+          "id": "03ef6546-985d-4739-951e-ca897375b967",
+          "pageUrl": "https://www.wix.app/bookings/54e7b326-49ec-434f-a7cc-c2ad1eaec049/service/03ef6546-985d-4739-951e-ca897375b967/details?d=https://sapirs0.wixsite.com/mysite/bookings-checkout/cupcake-master",
+          "name": "CUPCAKE MASTER",
+          "imageSrc": "https://static.wixstatic.com/media/78ccafc88f7fce3e55bd7a33f166704b.jpg",
+          "durations": "90"
+        }
+      }
+    },
+    "20": {
       "type": "wix-draft-plugin-link-preview",
       "mutability": "IMMUTABLE",
       "data": {
@@ -1154,7 +1231,7 @@
         "description": "A mock description"
       }
     },
-    "19": {
+    "21": {
       "type": "wix-draft-plugin-poll",
       "mutability": "IMMUTABLE",
       "data": {
@@ -1262,14 +1339,14 @@
         "siteToken": "VBLuQllkHnrmBH_7O0-Xmzek4kW6U1qHy5-p36Rfkys.eyJpbnN0YW5jZUlkIjoiYTE2NDRiZmUtNzFmOC00MDFiLWI3YWEtNTgwYzkxMDBmMDk3IiwiYXBwRGVmSWQiOiIxNDhjMjI4Ny1jNjY5LWQ4NDktZDE1My00NjNjNzQ4NmE2OTQiLCJtZXRhU2l0ZUlkIjoiMzlkNjk1MTYtYWYwNC00ZTQ1LWE2NjAtMzQwNjIwZWQ0NGNkIiwic2lnbkRhdGUiOiIyMDIwLTA3LTMwVDA4OjQyOjQ2LjQ2MVoiLCJ1aWQiOiIzZWZhN2U4Ni1mYzI1LTRlZjEtYTAwMi0xOTc2OWI4NDIwMmYiLCJwZXJtaXNzaW9ucyI6Ik9XTkVSIiwiZGVtb01vZGUiOmZhbHNlLCJhaWQiOiIzYTk1MzMzMS1hZGU4LTQzMDMtOWM5NC04NmIzNmU0ZDAzMzIiLCJiaVRva2VuIjoiOThiMmRlZTgtZGVmYy0wZTVlLTExY2EtNmMwYWIxZWRiNDVhIiwic2l0ZU93bmVySWQiOiIzZWZhN2U4Ni1mYzI1LTRlZjEtYTAwMi0xOTc2OWI4NDIwMmYiLCJleHBpcmF0aW9uRGF0ZSI6IjIwMjAtMDctMzBUMTI6NDI6NDYuNDYxWiIsImhhc1VzZXJSb2xlIjp0cnVlfQ"
       }
     },
-    "20": {
+    "22": {
       "type": "EMOJI_TYPE",
       "mutability": "IMMUTABLE",
       "data": {
         "emojiUnicode": "👨‍👩‍👦‍👦"
       }
     },
-    "21": {
+    "23": {
       "type": "wix-draft-plugin-image",
       "mutability": "IMMUTABLE",
       "data": {

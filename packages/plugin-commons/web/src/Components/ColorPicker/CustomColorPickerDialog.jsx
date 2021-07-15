@@ -2,7 +2,7 @@ import React, { Component, Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
 import { mergeStyles } from 'wix-rich-content-common';
 import styles from '../../../statics/styles/custom-color-picker-dialog.scss';
-import ActionButtons from './ActionButtons';
+import { ActionButtons, BUTTON_SIZE } from 'wix-rich-content-ui-components';
 import classNames from 'classnames';
 
 const CustomColorPicker = lazy(() => import('./CustomColorPicker'));
@@ -34,16 +34,23 @@ class CustomColorPickerDialog extends Component {
   }
 
   renderActionButtons = () => {
-    const { t, isMobile } = this.props;
+    const { t, isMobile, theme } = this.props;
     return (
-      <ActionButtons
-        t={t}
-        isMobile={isMobile}
-        onCancel={this.onCancel}
-        onUpdate={this.onUpdate}
-        cancelBtnText={t('ColorPickerButtonLabel_Cancel')}
-        updateBtnText={t('ColorPickerButtonLabel_Update')}
-      />
+      <div
+        className={classNames(styles.colorPickerDialog_buttons_wrapper, {
+          [styles.mobile]: isMobile,
+        })}
+      >
+        <ActionButtons
+          size={BUTTON_SIZE.tiny}
+          isMobile={isMobile}
+          onCancel={this.onCancel}
+          onSave={this.onUpdate}
+          theme={theme}
+          cancelText={t('ColorPickerButtonLabel_Cancel')}
+          saveText={t('ColorPickerButtonLabel_Update')}
+        />
+      </div>
     );
   };
 
