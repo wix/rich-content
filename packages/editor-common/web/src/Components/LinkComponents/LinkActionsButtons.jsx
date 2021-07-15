@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Button } from 'wix-rich-content-ui-components';
 import styles from '../../../statics/styles/multi-select-link-panel.scss';
 import { mergeStyles } from 'wix-rich-content-common';
 
@@ -23,6 +24,7 @@ class LinkActionsButtons extends PureComponent {
       basicLinkPanel,
       hideUrlInput,
       isMobile,
+      saveBtnOnly,
     } = this.props;
     const doneButtonText = t('LinkPanelContainer_DoneButton');
     const cancelButtonText = t('LinkPanelContainer_CancelButton');
@@ -43,7 +45,11 @@ class LinkActionsButtons extends PureComponent {
       [styles.linkPanel_FooterButton_mobile]: isMobile,
       [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     });
-    return (
+    return saveBtnOnly ? (
+      <Button className={styles.linkPanel_saveOnlyBtn} type="primary" onClick={onDone}>
+        {doneButtonText}
+      </Button>
+    ) : (
       <div
         className={classNames(styles.linkPanel_Footer, {
           [styles.linkPanel_Footer_mobile]: isMobile,
@@ -111,6 +117,7 @@ LinkActionsButtons.propTypes = {
   basicLinkPanel: PropTypes.bool,
   hideUrlInput: PropTypes.bool,
   isMobile: PropTypes.bool,
+  saveBtnOnly: PropTypes.bool,
 };
 
 export default LinkActionsButtons;

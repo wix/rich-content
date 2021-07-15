@@ -19,19 +19,27 @@
   color: black;
   position: relative;
   min-width: 360px;
-  margin-top: 18px;
+  padding: 12px;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
+  &.basicPanel {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 0;
+    width: 420px;
+  }
 }
 
 .linkPanel_container_isMobile {
   min-width: 0;
 }
 
-.linkPanel_content {
-  padding: 0 23px;
+.linkPanel_wrapper {
+  padding: 0 ;
+  width: 100%;
 }
 
 .linkPanel_Content {
@@ -44,12 +52,19 @@
   line-height: 1.5;
   letter-spacing: normal;
   text-align: left;
+  &.basicPanel {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .linkPanel_Input {
   // margin: 16px 0 14px 0; // this is the right margin - once radio buttons would be added back
-  margin: 5px 0 13px 0;
+  margin: 0px 0 20px;
   position: relative;
+  &.basicPanel {
+    margin: 0;
+  }
 }
 .checkboxesContainer {
   margin-left: 0;
@@ -69,7 +84,7 @@
 }
 
 .linkPanel_textInput {
-  height: 42px;
+  height: 40px;
   padding: 0 18px;
   text-align: left;
   box-sizing: border-box;
@@ -106,8 +121,10 @@
 }
 
 .linkPanel_actionsDivider {
-  margin: 0 4px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: 1px solid rgba(51,51,51,.1);
 }
 
 .mobileLinkModal_titleContainer {

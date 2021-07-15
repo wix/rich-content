@@ -40,9 +40,11 @@ class BasicLinkPanel extends PureComponent {
       linkPanelValues,
       onChangeLinkPanel,
       isMobile,
+      hasCheckboxes,
     } = this.props;
     const linkPanelContainerClassName = classNames(styles.linkPanel_container, {
       [styles.linkPanel_container_isMobile]: isMobile,
+      [styles.basicPanel]: !hasCheckboxes,
     });
     return (
       <FocusManager
@@ -52,18 +54,19 @@ class BasicLinkPanel extends PureComponent {
         {...ariaProps}
       >
         {isMobile && this.renderMobileTitle()}
-        <div className={styles.linkPanel_content}>
+        <div className={styles.linkPanel_wrapper}>
           <LinkPanelWrapper
             linkValues={linkPanelValues}
             onChange={onChangeLinkPanel}
             showNewTabCheckbox={showNewTabCheckbox}
             showNoFollowCheckbox={showNoFollowCheckbox}
             showSponsoredCheckbox={showSponsoredCheckbox}
+            hasCheckboxes={hasCheckboxes}
             {...sharedPanelsProps}
           />
           <div className={styles.linkPanel_actionsDivider} role="separator" />
         </div>
-        <LinkActionsButtons basicLinkPanel {...buttonsProps} />
+        <LinkActionsButtons basicLinkPanel {...buttonsProps} saveBtnOnly={!hasCheckboxes} />
       </FocusManager>
     );
   }
@@ -82,6 +85,7 @@ BasicLinkPanel.propTypes = {
   linkPanelValues: PropTypes.object,
   onChangeLinkPanel: PropTypes.func,
   isMobile: PropTypes.bool,
+  hasCheckboxes: PropTypes.bool,
 };
 
 export default BasicLinkPanel;

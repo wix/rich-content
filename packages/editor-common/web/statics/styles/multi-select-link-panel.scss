@@ -59,7 +59,9 @@
 .linkPanel_Footer {
   display: flex;
   justify-content: space-between;
-  padding: 12px 23px 14px;
+  // padding: 12px 23px 14px;
+  height: 40px;
+  margin-top: 12px;
   &.multiSelectLinkPanel_Footer {
     padding: 12px 0 16px 0;
   }
@@ -180,4 +182,9 @@
     border-bottom: 2px solid $settings-action-color-fallback;
     color: $settings-action-color-fallback;
   }
+}
+.linkPanel_saveOnlyBtn {
+  height: 40px;
+  width: 94px;
+  border: none;
 }
