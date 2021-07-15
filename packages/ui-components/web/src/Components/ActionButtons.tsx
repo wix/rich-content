@@ -6,6 +6,7 @@ import styles from '../../statics/styles/action-buttons.scss';
 import { BUTTON_SIZE } from '../consts';
 
 type ButtonSizeKeys = keyof typeof BUTTON_SIZE;
+
 export interface ActionButtonsProps {
   size?: typeof BUTTON_SIZE[ButtonSizeKeys];
   onCancel: () => void;
@@ -13,8 +14,6 @@ export interface ActionButtonsProps {
   cancelText: string;
   saveText: string;
   isMobile?: boolean;
-  saveBtnDataHook?: string;
-  cancelBtnDataHook?: string;
   disableSave?: boolean;
   theme?: RichContentTheme;
 }

@@ -60,7 +60,7 @@
   display: flex;
   justify-content: space-between;
   // padding: 12px 23px 14px;
-  height: 40px;
+  height: 32px;
   margin-top: 12px;
   &.multiSelectLinkPanel_Footer {
     padding: 12px 0 16px 0;
@@ -77,6 +77,9 @@
 .linkPanel_FooterActions,
 .linkPanel_RemoveContainer {
   display: flex;
+  button {
+    color: $settings-action-color-fallback;
+  }
 }
 
 .linkPanel_FooterButton {
@@ -94,20 +97,20 @@
   }
 }
 
-.linkPanel_VerticalDivider {
-  margin: 0 0 0 20px;
-  height: auto;
-  border-right: 1px solid rgba(51, 51, 51, 0.1);
-  &.linkPanel_VerticalDividerNarrowMargin {
-    margin: 0 13px;
-  }
-  &.linkPanel_VerticalDivider_mobile {
-    margin: 0 20px;
-    &.multiSelectLinkPanel_VerticalDivider {
-      border-right: 1px solid white;
-    }
-  }
-}
+// .linkPanel_VerticalDivider {
+//   margin: 0 0 0 20px;
+//   height: auto;
+//   border-right: 1px solid rgba(51, 51, 51, 0.1);
+//   &.linkPanel_VerticalDividerNarrowMargin {
+//     margin: 0 13px;
+//   }
+//   &.linkPanel_VerticalDivider_mobile {
+//     margin: 0 20px;
+//     &.multiSelectLinkPanel_VerticalDivider {
+//       border-right: 1px solid white;
+//     }
+//   }
+// }
 
 .linkPanel_disabled {
   opacity: 0.4;
@@ -183,6 +186,10 @@
     color: $settings-action-color-fallback;
   }
 }
+.actionButtons_wrapper {
+  width: 212px;
+}
+
 .linkPanel_saveOnlyBtn {
   height: 40px;
   width: 94px;

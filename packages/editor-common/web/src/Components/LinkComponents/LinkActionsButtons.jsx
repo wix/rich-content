@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Button } from 'wix-rich-content-ui-components';
+import { Button, ActionButtons, BUTTON_SIZE } from 'wix-rich-content-ui-components';
 import styles from '../../../statics/styles/multi-select-link-panel.scss';
 import { mergeStyles } from 'wix-rich-content-common';
 
@@ -46,7 +46,12 @@ class LinkActionsButtons extends PureComponent {
       [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     });
     return saveBtnOnly ? (
-      <Button className={styles.linkPanel_saveOnlyBtn} type="primary" onClick={onDone}>
+      <Button
+        className={styles.linkPanel_saveOnlyBtn}
+        type="primary"
+        text={doneButtonText}
+        onClick={onDone}
+      >
         {doneButtonText}
       </Button>
     ) : (
@@ -57,18 +62,9 @@ class LinkActionsButtons extends PureComponent {
         })}
       >
         <div className={styles.linkPanel_FooterActions}>
-          <button
-            tabIndex={tabIndex}
-            aria-label={cancelButtonText}
-            className={cancelButtonClassName}
-            data-hook="linkPanelContainerCancel"
-            onClick={onCancel}
-          >
-            {cancelButtonText}
-          </button>
           {isActive && !hideUrlInput && (
             <div className={styles.linkPanel_RemoveContainer}>
-              <div
+              {/* <div
                 className={classNames(
                   styles.linkPanel_VerticalDivider,
                   styles.linkPanel_VerticalDividerNarrowMargin,
@@ -77,7 +73,7 @@ class LinkActionsButtons extends PureComponent {
                     [styles.multiSelectLinkPanel_VerticalDivider]: !basicLinkPanel,
                   }
                 )}
-              />
+              /> */}
               <button
                 tabIndex={tabIndex}
                 aria-label={removeButtonText}
@@ -90,16 +86,18 @@ class LinkActionsButtons extends PureComponent {
             </div>
           )}
         </div>
-        <button
-          tabIndex={tabIndex}
-          aria-label={doneButtonText}
-          className={doneButtonClassName}
-          data-hook="linkPanelContainerDone"
-          onClick={onDone}
-          disabled={!isDoneButtonEnable}
-        >
-          {doneButtonText}
-        </button>
+        <div className={styles.actionButtons_wrapper}>
+          <ActionButtons
+            size={BUTTON_SIZE.tiny}
+            isMobile={isMobile}
+            onCancel={onCancel}
+            onSave={onDone}
+            theme={this.theme}
+            cancelText={cancelButtonText}
+            saveText={doneButtonText}
+            disableSave={!isDoneButtonEnable}
+          />
+        </div>
       </div>
     );
   }
