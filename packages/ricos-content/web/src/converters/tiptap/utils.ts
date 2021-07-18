@@ -1,4 +1,4 @@
-import { JSONContent } from '@tiptap-es5/core';
+import { JSONContent } from '@tiptap/core';
 import { capitalize } from 'lodash';
 import { Decoration, Node, Node_Type, RichContent } from 'ricos-schema';
 import { DraftContent, IMAGE_TYPE } from '../..';

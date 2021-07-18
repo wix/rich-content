@@ -1,15 +1,15 @@
-// import React from 'react';
-// import { render } from '@testing-library/react';
-// import { initTiptapEditor } from '../TiptapEditor';
-// import { Editor, JSONContent } from '@tiptap-es5/react';
-// import supportedPluginsContent from './supportedPluginsContent.json';
-// import { tiptapToDraft } from 'ricos-content/lib/converters';
-// import { compare } from 'ricos-content/lib/comparision';
+import React from 'react';
+import { render } from '@testing-library/react';
+import { initTiptapEditor } from '../TiptapEditor';
+import { Editor, JSONContent } from '@tiptap/react';
+import supportedPluginsContent from './supportedPluginsContent.json';
+import { tiptapToDraft } from 'ricos-content/lib/converters';
+import { compare } from 'ricos-content/lib/comparision';
 
 // let editor: Editor | null = null;
 
-// jest.mock('@tiptap-es5/react', () => {
-//   const { Editor, ...tiptapReact } = jest.requireActual('@tiptap-es5/react');
+// jest.mock('@tiptap/react', () => {
+//   const { Editor, ...tiptapReact } = jest.requireActual('@tiptap/react');
 //   return {
 //     ...tiptapReact,
 //     Editor(options) {

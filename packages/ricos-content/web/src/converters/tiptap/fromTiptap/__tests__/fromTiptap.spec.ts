@@ -5,7 +5,7 @@ import draftMigrationContent from '../../../../../../../../e2e/tests/fixtures/mi
 import { toTiptap, fromTiptap, tiptapToDraft, tiptapNodeDataToDraft } from '../..';
 import { getImageBlockData, getImageNode } from '../../utils';
 import { compare } from '../../../..';
-import { JSONContent } from '@tiptap-es5/core';
+import { JSONContent } from '@tiptap/core';
 
 describe('convert from Tiptap', () => {
   describe('to RichContent', () => {
