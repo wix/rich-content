@@ -6,7 +6,7 @@ import { FocusManager } from 'wix-rich-content-ui-components';
 import { mergeStyles } from 'wix-rich-content-common';
 import styles from '../../../statics/styles/link-panel.scss';
 import LinkActionsButtons from './LinkActionsButtons';
-import { LinkIcon } from '../../Icons';
+// import { LinkIcon } from '../../Icons';
 
 class BasicLinkPanel extends PureComponent {
   constructor(props) {
@@ -18,12 +18,10 @@ class BasicLinkPanel extends PureComponent {
     const { t } = this.props;
     return (
       <div className={styles.mobileLinkModal_titleContainer}>
-        <div className={styles.mobileLinkModal_linkIconContainer}>
-          <LinkIcon />
-        </div>
-        <h3 id="mob_link_modal_hdr" className={styles.mobileLinkModal_title}>
+        {/* <div className={styles.mobileLinkModal_linkIconContainer}></div> */}
+        <div id="mob_link_modal_hdr" className={styles.mobileLinkModal_title}>
           {t('MobileLinkModal_Title')}
-        </h3>
+        </div>
       </div>
     );
   };
@@ -46,6 +44,7 @@ class BasicLinkPanel extends PureComponent {
       [styles.linkPanel_container_isMobile]: isMobile,
       [styles.basicPanel]: !hasCheckboxes,
     });
+    const showSeparator = hasCheckboxes || isMobile;
     return (
       <FocusManager
         className={linkPanelContainerClassName}
@@ -54,7 +53,11 @@ class BasicLinkPanel extends PureComponent {
         {...ariaProps}
       >
         {isMobile && this.renderMobileTitle()}
-        <div className={styles.linkPanel_wrapper}>
+        <div
+          className={classNames(styles.linkPanel_wrapper, {
+            [styles.linkPanel_wrapper_mobile]: isMobile,
+          })}
+        >
           <LinkPanelWrapper
             linkValues={linkPanelValues}
             onChange={onChangeLinkPanel}
@@ -64,8 +67,15 @@ class BasicLinkPanel extends PureComponent {
             hasCheckboxes={hasCheckboxes}
             {...sharedPanelsProps}
           />
-          {hasCheckboxes && <div className={styles.linkPanel_actionsDivider} role="separator" />}
         </div>
+        {showSeparator && (
+          <div
+            className={classNames(styles.linkPanel_actionsDivider, {
+              [styles.linkPanel_actionsDivider_mobile]: isMobile,
+            })}
+            role="separator"
+          />
+        )}
         <LinkActionsButtons basicLinkPanel {...buttonsProps} saveBtnOnly={!hasCheckboxes} />
       </FocusManager>
     );

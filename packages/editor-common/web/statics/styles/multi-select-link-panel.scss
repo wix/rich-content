@@ -64,7 +64,9 @@
     margin: 20px 0;
   }
   &.linkPanel_Footer_mobile {
-    padding: 12px 18px 14px;
+    margin: 0;
+    padding: 12px 0;
+    width: 100%;
     &.multiSelectLinkPanel_Footer {
       background-color: $settings-action-color-fallback;
       padding: 10px 10px;
@@ -80,20 +82,20 @@
   }
 }
 
-// .linkPanel_FooterButton {
-//   line-height: 1.5;
-//   font-size: 14px;
-//   border: none;
-//   background-color: transparent;
-//   display: flex;
-//   align-items: center;
-//   cursor: pointer;
-//   &.linkPanel_FooterButton_mobile {
-//     &.multiSelectLinkPanel_Button {
-//       color: #ffffff;
-//     }
-//   }
-// }
+.linkPanel_FooterButton {
+  line-height: 1.5;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &.linkPanel_FooterButton_mobile {
+    &.multiSelectLinkPanel_Button {
+      color: #ffffff;
+    }
+  }
+}
 
 .linkPanel_VerticalDivider {
   margin: 0 0 0 20px;
@@ -186,6 +188,13 @@
 }
 .actionButtons_wrapper {
   width: 212px;
+  &.actionButtons_wrapper_mobile {
+    padding: 0 16px;
+    width: 100%;
+    button {
+      width: 50px;
+    }
+  }
 }
 
 .linkPanel_saveOnlyBtn {

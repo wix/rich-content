@@ -374,7 +374,7 @@ export const uiSettings: UISettings = {
     // nofollowRelToggleVisibilityFn: () => true, // deprecated
     showNewTabCheckbox: true,
     showNoFollowCheckbox: true,
-    showSponsoredCheckbox: true,
+    showSponsoredCheckbox: false,
     dropDown: getLinkPanelDropDownConfig(),
     //placeholder: "Enter a URL here",
   },
@@ -597,7 +597,7 @@ const config: RichContentEditorProps['config'] = {
     //   },
     // },
     onClick: (event, url) => console.log('link clicked!', url),
-    linkTypes: { anchor: true },
+    linkTypes: { anchor: false },
     // linkTypes: {
     //   anchor: {
     //     blockPreview: ({ type, data, text }) => {

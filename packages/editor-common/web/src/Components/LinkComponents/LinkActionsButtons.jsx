@@ -37,15 +37,15 @@ class LinkActionsButtons extends PureComponent {
     //     [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     //   }
     // );
-    const cancelButtonClassName = classNames(styles.linkPanel_FooterButton, {
-      [styles.linkPanel_FooterButton_mobile]: isMobile,
-      [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
-    });
+    // const cancelButtonClassName = classNames(styles.linkPanel_FooterButton, {
+    //   [styles.linkPanel_FooterButton_mobile]: isMobile,
+    //   [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
+    // });
     const removeButtonClassName = classNames(styles.linkPanel_FooterButton, {
       [styles.linkPanel_FooterButton_mobile]: isMobile,
       [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     });
-    return saveBtnOnly ? (
+    return saveBtnOnly && !isMobile ? (
       <Button
         className={styles.linkPanel_saveOnlyBtn}
         type="primary"
@@ -76,7 +76,11 @@ class LinkActionsButtons extends PureComponent {
             </div>
           )}
         </div>
-        <div className={styles.actionButtons_wrapper}>
+        <div
+          className={classNames(styles.actionButtons_wrapper, {
+            [styles.actionButtons_wrapper_mobile]: isMobile,
+          })}
+        >
           <ActionButtons
             size={BUTTON_SIZE.tiny}
             isMobile={isMobile}
