@@ -8,7 +8,6 @@
   width: 502px;
   min-width: 360px;
   height: 372px;
-  margin-top: 18px;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -59,11 +58,10 @@
 .linkPanel_Footer {
   display: flex;
   justify-content: space-between;
-  // padding: 12px 23px 14px;
   height: 32px;
   margin-top: 12px;
   &.multiSelectLinkPanel_Footer {
-    padding: 12px 0 16px 0;
+    margin: 20px 0;
   }
   &.linkPanel_Footer_mobile {
     padding: 12px 18px 14px;
@@ -82,44 +80,44 @@
   }
 }
 
-.linkPanel_FooterButton {
-  line-height: 1.5;
-  font-size: 14px;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &.linkPanel_FooterButton_mobile {
-    &.multiSelectLinkPanel_Button {
-      color: #ffffff;
-    }
-  }
-}
-
-// .linkPanel_VerticalDivider {
-//   margin: 0 0 0 20px;
-//   height: auto;
-//   border-right: 1px solid rgba(51, 51, 51, 0.1);
-//   &.linkPanel_VerticalDividerNarrowMargin {
-//     margin: 0 13px;
-//   }
-//   &.linkPanel_VerticalDivider_mobile {
-//     margin: 0 20px;
-//     &.multiSelectLinkPanel_VerticalDivider {
-//       border-right: 1px solid white;
+// .linkPanel_FooterButton {
+//   line-height: 1.5;
+//   font-size: 14px;
+//   border: none;
+//   background-color: transparent;
+//   display: flex;
+//   align-items: center;
+//   cursor: pointer;
+//   &.linkPanel_FooterButton_mobile {
+//     &.multiSelectLinkPanel_Button {
+//       color: #ffffff;
 //     }
 //   }
 // }
 
-.linkPanel_disabled {
-  opacity: 0.4;
-  cursor: default;
+.linkPanel_VerticalDivider {
+  margin: 0 0 0 20px;
+  height: auto;
+  border-right: 1px solid rgba(51, 51, 51, 0.1);
+  &.linkPanel_VerticalDividerNarrowMargin {
+    margin: 0 13px;
+  }
+  &.linkPanel_VerticalDivider_mobile {
+    margin: 0 20px;
+    &.multiSelectLinkPanel_VerticalDivider {
+      border-right: 1px solid white;
+    }
+  }
 }
 
-.linkPanel_enabled {
-  color: $settings-action-color-fallback;
-}
+// .linkPanel_disabled {
+//   opacity: 0.4;
+//   cursor: default;
+// }
+
+// .linkPanel_enabled {
+//   color: $settings-action-color-fallback;
+// }
 
 .multiSelectLinkPanel_header {
   font-size: 16px;

@@ -64,7 +64,7 @@ class BasicLinkPanel extends PureComponent {
             hasCheckboxes={hasCheckboxes}
             {...sharedPanelsProps}
           />
-          <div className={styles.linkPanel_actionsDivider} role="separator" />
+          {hasCheckboxes && <div className={styles.linkPanel_actionsDivider} role="separator" />}
         </div>
         <LinkActionsButtons basicLinkPanel {...buttonsProps} saveBtnOnly={!hasCheckboxes} />
       </FocusManager>

@@ -123,6 +123,7 @@ class MultiSelectLinkPanel extends PureComponent {
       anchorableBlocksData,
       anchorPanelValues,
       blockPreview,
+      hasCheckboxes,
     } = this.props;
 
     const containerClassName = !isMobile
@@ -161,6 +162,7 @@ class MultiSelectLinkPanel extends PureComponent {
                 showNewTabCheckbox={showNewTabCheckbox}
                 showNoFollowCheckbox={showNoFollowCheckbox}
                 showSponsoredCheckbox={showSponsoredCheckbox}
+                hasCheckboxes={hasCheckboxes}
                 {...sharedPanelsProps}
               />
             </div>
@@ -199,6 +201,7 @@ MultiSelectLinkPanel.propTypes = {
   anchorableBlocksData: PropTypes.object,
   anchorPanelValues: PropTypes.object,
   isMobile: PropTypes.bool,
+  hasCheckboxes: PropTypes.bool,
   blockPreview: PropTypes.func,
 };
 

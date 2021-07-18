@@ -597,7 +597,7 @@ const config: RichContentEditorProps['config'] = {
     //   },
     // },
     onClick: (event, url) => console.log('link clicked!', url),
-    linkTypes: { anchor: false },
+    linkTypes: { anchor: true },
     // linkTypes: {
     //   anchor: {
     //     blockPreview: ({ type, data, text }) => {

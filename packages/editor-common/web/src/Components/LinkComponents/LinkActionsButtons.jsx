@@ -29,14 +29,14 @@ class LinkActionsButtons extends PureComponent {
     const doneButtonText = t('LinkPanelContainer_DoneButton');
     const cancelButtonText = t('LinkPanelContainer_CancelButton');
     const removeButtonText = t('LinkPanelContainer_RemoveButton');
-    const doneButtonClassName = classNames(
-      styles.linkPanel_FooterButton,
-      isDoneButtonEnable ? styles.linkPanel_enabled : styles.linkPanel_disabled,
-      {
-        [styles.linkPanel_FooterButton_mobile]: isMobile,
-        [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
-      }
-    );
+    // const doneButtonClassName = classNames(
+    //   styles.linkPanel_FooterButton,
+    //   isDoneButtonEnable ? styles.linkPanel_enabled : styles.linkPanel_disabled,
+    //   {
+    //     [styles.linkPanel_FooterButton_mobile]: isMobile,
+    //     [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
+    //   }
+    // );
     const cancelButtonClassName = classNames(styles.linkPanel_FooterButton, {
       [styles.linkPanel_FooterButton_mobile]: isMobile,
       [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
@@ -64,16 +64,6 @@ class LinkActionsButtons extends PureComponent {
         <div className={styles.linkPanel_FooterActions}>
           {isActive && !hideUrlInput && (
             <div className={styles.linkPanel_RemoveContainer}>
-              {/* <div
-                className={classNames(
-                  styles.linkPanel_VerticalDivider,
-                  styles.linkPanel_VerticalDividerNarrowMargin,
-                  {
-                    [styles.linkPanel_VerticalDivider_mobile]: isMobile,
-                    [styles.multiSelectLinkPanel_VerticalDivider]: !basicLinkPanel,
-                  }
-                )}
-              /> */}
               <button
                 tabIndex={tabIndex}
                 aria-label={removeButtonText}
