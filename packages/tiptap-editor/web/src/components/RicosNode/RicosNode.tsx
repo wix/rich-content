@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { RicosTiptapContext } from '../../context';
+import { tiptapNodeDataToDraft } from 'ricos-content/libs/tiptap';
 
 const pipe = functions => data => {
   return functions.reduce((value, func) => func(value), data);
@@ -7,19 +8,22 @@ const pipe = functions => data => {
 
 export const RicosNode = ({ component, tiptapNodeProps, children }) => {
   const ricosTiptapContext = useContext(RicosTiptapContext) || {};
+  const { nodeViewsHOCs } = ricosTiptapContext;
   console.log({
     ricosTiptapContext,
     component,
-    nodeViewsHOCs: ricosTiptapContext.nodeViewsHOCs,
+    nodeViewsHOCs,
   });
-  const ComponentWithNodeHOCs = pipe(ricosTiptapContext.ricosExtensionsManager.nodeViewsHOCs)(
-    component
+  const ComponentWithNodeHOCs = pipe(nodeViewsHOCs)(component);
+
+  console.log({ ricosTiptapContext, ComponentWithNodeHOCs, tiptapNodeProps });
+  const componentData = tiptapNodeDataToDraft(
+    tiptapNodeProps.node.type.name.toUpperCase(),
+    tiptapNodeProps.node.attrs
   );
-
-  console.log({ ComponentWithNodeHOCs, tiptapNodeProps });
-
   return children({
     ...ricosTiptapContext,
+    componentData,
     ...tiptapNodeProps,
     ComponentWithNodeHOCs,
   });

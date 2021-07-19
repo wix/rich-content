@@ -1,18 +1,14 @@
-import { createRicosNodeConfig } from './../../extensions-creators/node';
-import { createNodeExtension } from '../../extension';
-import Image from './image';
-import { ImageData } from 'ricos-schema';
 import React from 'react';
-// export const createImage = () => {
-//   const attrs = ImageData.fromJSON({});
-//   return createNodeExtension('image', Image, attrs);
-// };
+import { createNodeExtension } from '../../extension';
+import Divider from './divider';
+import { DividerData } from 'ricos-schema';
+import { createRicosNodeConfig } from '../../extensions-creators/node';
 
-const componentDataDefaults = ImageData.fromJSON({});
-const name = 'image';
+const componentDataDefaults = DividerData.fromJSON({});
+const name = 'divider';
 
-export const createImageConfig = () =>
-  createRicosNodeConfig(Image, ({ mergeAttributes }) => {
+export const createDividerConfig = () =>
+  createRicosNodeConfig(Divider, ({ mergeAttributes }) => {
     return {
       name,
 
@@ -38,11 +34,11 @@ export const createImageConfig = () =>
         return [`${name}-component`, mergeAttributes(HTMLAttributes)];
       },
       addNodeViewHOC() {
-        return ImageComponent => {
+        return Component => {
           return props => {
             return (
               <div style={{ border: '1px solid red' }}>
-                <ImageComponent {...props} />
+                <Component {...props} t={key => key} />
               </div>
             );
           };

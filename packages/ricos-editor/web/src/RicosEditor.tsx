@@ -27,6 +27,7 @@ import {
 import { ToolbarType, Version } from 'wix-rich-content-common';
 import { emptyDraftContent, getEditorContentSummary } from 'wix-rich-content-editor-common';
 import { RicosTiptapEditor, TiptapAPI, RichContentAdapter } from 'wix-tiptap-editor';
+import { draftToTiptap, tiptapToDraft, draftBlockDataToTiptap } from 'ricos-content/libs/tiptap';
 
 // eslint-disable-next-line
 const PUBLISH_DEPRECATION_WARNING_v9 = `Please provide the postId via RicosEditor biSettings prop and use one of editorRef.publish() or editorEvents.publish() APIs for publishing.
@@ -197,9 +198,9 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
 
   getToolbarProps = (type: ToolbarType) => this.editor.getToolbarProps(type);
 
-  focus = () => (this.useTiptap ? this.tiptapApi.focus() : this.editor.focus());
+  focus = () => this.editor.focus();
 
-  blur = () => (this.useTiptap ? this.tiptapApi.blur() : this.editor.blur());
+  blur = () => this.editor.blur();
 
   getToolbars = () => this.editor.getToolbars();
 
@@ -310,11 +311,11 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
   renderTiptapEditor() {
     const { content, injectedContent } = this.props;
     const { tiptapToolbar } = this.state;
-    console.log('renderTiptapEditor');
+    const initalContent = draftToTiptap(content ?? injectedContent ?? emptyDraftContent);
     const child = (
       <RicosTiptapEditor
         extensions={[]}
-        content={content ?? injectedContent ?? emptyDraftContent}
+        content={initalContent}
         onLoad={editor => {
           const richContentAdapter = new RichContentAdapter(editor);
           this.setEditorRef(richContentAdapter);

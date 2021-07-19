@@ -5,6 +5,7 @@ import { EditorContent, Editor } from '@tiptap/react';
 import { RicosExtensionManager } from '../../ricos-extensions-manager';
 import { tiptapExtensions as coreExtensions } from '../../tiptap-extensions';
 import { createImageConfig } from '../../extensions/extension-image';
+import { createDividerConfig } from '../../extensions/extension-divider';
 
 function useForceUpdate() {
   const [, setValue] = useState(0);
@@ -12,6 +13,7 @@ function useForceUpdate() {
   return () => setValue(value => value + 1);
 }
 const imageExt = createImageConfig();
+const dividerExt = createDividerConfig();
 
 export const RicosTiptapEditor = ({ content, extensions = [], onLoad, ...context }) => {
   const [editor, setEditor] = useState<Editor | null>(null);
@@ -22,9 +24,14 @@ export const RicosTiptapEditor = ({ content, extensions = [], onLoad, ...context
     const tiptapExtensions = RicosExtensionManager.ricosExtensionsTotiptapExtensions([
       ...extensions,
       imageExt,
+      dividerExt,
     ]);
 
-    const nodeViewsHOCs = RicosExtensionManager.extractNodeViewsHOCs(extensions);
+    const nodeViewsHOCs = RicosExtensionManager.extractNodeViewsHOCs([
+      ...extensions,
+      imageExt,
+      dividerExt,
+    ]);
     setNodeViewsHOCs(nodeViewsHOCs);
 
     const editorInstance = new Editor({
@@ -48,7 +55,10 @@ export const RicosTiptapEditor = ({ content, extensions = [], onLoad, ...context
     <RicosTiptapContext.Provider
       value={{
         nodeViewsHOCs,
-        context,
+        context: {
+          ...context,
+          t: key => key,
+        },
       }}
     >
       <div dir="">

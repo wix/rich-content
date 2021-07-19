@@ -8,6 +8,7 @@ const createRicosNodeHOC = Component => {
     <NodeViewWrapper as="div">
       <RicosNode component={Component} tiptapNodeProps={props}>
         {({ ComponentWithNodeHOCs, ...rest }) => {
+          console.log({ rest });
           return <ComponentWithNodeHOCs {...rest} />;
         }}
       </RicosNode>
