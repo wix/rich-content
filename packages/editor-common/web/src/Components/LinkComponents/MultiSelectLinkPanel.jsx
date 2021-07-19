@@ -9,7 +9,6 @@ import { mergeStyles } from 'wix-rich-content-common';
 import { RadioGroup, FocusManager } from 'wix-rich-content-ui-components';
 import styles from '../../../statics/styles/multi-select-link-panel.scss';
 import LinkActionsButtons from './LinkActionsButtons';
-// import { LinkIcon } from '../../Icons';
 import { RADIO_GROUP_VALUES } from '../AnchorComponents/consts';
 
 const Separator = ({ isMobile }) => (
@@ -59,34 +58,6 @@ class MultiSelectLinkPanel extends PureComponent {
           <div>{t('LinkTo_Modal_Header')}</div>
         </div>
         <Separator isMobile={false} />
-      </>
-    );
-  };
-
-  // renderDesktopLinkActionsButtons = () => {
-  //   const { buttonsProps } = this.props;
-  //   return (
-  //     <>
-  //       <div className={styles.multiSelectLinkPanel_actionsDivider} role="separator" />
-  //       <LinkActionsButtons {...buttonsProps} />
-  //     </>
-  //   );
-  // };
-
-  renderActionsButtons = () => {
-    const { buttonsProps } = this.props;
-    return (
-      <>
-        {/* <LinkActionsButtons {...buttonsProps} />
-        <div className={styles.multiSelectLinkPanel_header_mobile}>
-          <LinkIcon className={styles.multiSelectLinkPanel_mobileHeaderIcon} />
-          <div>{t('LinkTo_Modal_Header')}</div>
-        </div> */}
-        {/* <div className={isMobile && styles.linkPanel_mobile_title_buttons_wrapper}> */}
-        {/* {isMobile && this.renderMobileTitle()} */}
-        <LinkActionsButtons basicLinkPanel {...buttonsProps} />
-        {/* </div> */}
-        {this.renderMobileTabs()}
       </>
     );
   };

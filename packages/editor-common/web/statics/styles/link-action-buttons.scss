@@ -8,17 +8,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  // &.actionButtons_FooterButton_mobile {
-  //   &.multiSelectLinkPanel_Button {
-  //     color: #ffffff;
-  //   }
-  // }
 }
-//   .linkPanel_FooterButton
+
 .actionButtons_wrapper {
   width: 212px;
   &.actionButtons_wrapper_mobile {
-    // padding: 0 16px;
     width: 100%;
     button {
       width: 50px;
@@ -38,10 +32,6 @@
     margin: 0;
     padding: 12px 0;
     width: 100%;
-    // &.multiSelectLinkPanel_Footer {
-    //   background-color: $settings-action-color-fallback;
-    //   padding: 10px 10px;
-    // }
   }
 }
 

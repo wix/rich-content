@@ -25,9 +25,7 @@
   font-stretch: normal;
   font-style: normal;
   &.basicPanel {
-    @extend .display_flex_with_gap;
-    // display: flex;
-    // gap: 12px;
+    @extend .flex_with_gap;
     align-items: center;
     margin: 0;
     width: 420px;
@@ -35,12 +33,10 @@
 }
 
 .linkPanel_container_isMobile {
-  @extend .display_flex_with_gap;
+  @extend .flex_with_gap;
   padding: 0;
   min-width: 0;
-  // display: flex;
   flex-direction: column-reverse;
-  // gap: 12px;
   width: 100%;
   &.basicPanel {
     width: 100%;
@@ -51,8 +47,6 @@
   padding: 0;
   width: 100%;
   &.linkPanel_wrapper_mobile {
-    // display: flex;
-    // flex-direction: column-reverse;
     margin: 0 auto;
     width: calc(100% - 40px);
   }
@@ -146,34 +140,7 @@
   }
 }
 
-// .mobileLinkModal_titleContainer {
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-// .mobileLinkModal_linkIconContainer {
-//   width: 19px;
-//   height: 19px;
-//   margin-right: 11px;
-// }
-
-// .mobileLinkModal_title {
-//   margin: 0;
-//   font-size: 16px;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-// .linkPanel_mobile_title_buttons_wrapper {
-//   width: 100%;
-//   position: relative;
-// }
-
-.display_flex_with_gap {
+.flex_with_gap {
   display: flex;
   gap: 12px;
 }

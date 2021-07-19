@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Button, ActionButtons, BUTTON_SIZE } from 'wix-rich-content-ui-components';
-// import styles from '../../../statics/styles/multi-select-link-panel.scss';
 import styles from '../../../statics/styles/link-action-buttons.scss';
 import { mergeStyles } from 'wix-rich-content-common';
 
@@ -39,21 +38,9 @@ class LinkActionsButtons extends PureComponent {
     const doneButtonText = t('LinkPanelContainer_DoneButton');
     const cancelButtonText = t('LinkPanelContainer_CancelButton');
     const removeButtonText = t('LinkPanelContainer_RemoveButton');
-    // const doneButtonClassName = classNames(
-    //   styles.linkPanel_FooterButton,
-    //   isDoneButtonEnable ? styles.linkPanel_enabled : styles.linkPanel_disabled,
-    //   {
-    //     [styles.linkPanel_FooterButton_mobile]: isMobile,
-    //     [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
-    //   }
-    // );
-    // const cancelButtonClassName = classNames(styles.linkPanel_FooterButton, {
-    //   [styles.linkPanel_FooterButton_mobile]: isMobile,
-    //   [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
-    // });
+    const showRemoveButton = isActive && !hideUrlInput && !isMobile;
     const removeButtonClassName = classNames(styles.actionButtons_FooterButton, {
       [styles.actionButtons_FooterButton_mobile]: isMobile,
-      // [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     });
     return saveBtnOnly && !isMobile ? (
       <Button
@@ -72,7 +59,7 @@ class LinkActionsButtons extends PureComponent {
         })}
       >
         <div className={styles.actionButtons_FooterActions}>
-          {isActive && !hideUrlInput && !isMobile && (
+          {showRemoveButton && (
             <div className={styles.actionButtons_RemoveContainer}>
               <button
                 tabIndex={tabIndex}

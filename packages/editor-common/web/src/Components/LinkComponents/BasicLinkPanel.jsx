@@ -6,26 +6,12 @@ import { FocusManager } from 'wix-rich-content-ui-components';
 import { mergeStyles } from 'wix-rich-content-common';
 import styles from '../../../statics/styles/link-panel.scss';
 import LinkActionsButtons from './LinkActionsButtons';
-// import { LinkIcon } from '../../Icons';
 
 class BasicLinkPanel extends PureComponent {
   constructor(props) {
     super(props);
     this.styles = mergeStyles({ styles, theme: props.theme });
   }
-
-  // renderMobileTitle = () => {
-  //   const { t } = this.props;
-  //   return (
-  //     <div id="mob_link_modal_hdr" className={styles.mobileLinkModal_title}>
-  //       {t('MobileLinkModal_Title')}
-  //     </div>
-  //     // <div className={styles.mobileLinkModal_titleContainer}>
-  //     //   {/* <div className={styles.mobileLinkModal_linkIconContainer}></div> */}
-
-  //     // </div>
-  //   );
-  // };
 
   render() {
     const { styles } = this;
@@ -76,10 +62,7 @@ class BasicLinkPanel extends PureComponent {
             role="separator"
           />
         )}
-        {/* <div className={isMobile && styles.linkPanel_mobile_title_buttons_wrapper}> */}
-        {/* {isMobile && this.renderMobileTitle()} */}
         <LinkActionsButtons basicLinkPanel {...buttonsProps} saveBtnOnly={!hasCheckboxes} />
-        {/* </div> */}
       </FocusManager>
     );
   }
