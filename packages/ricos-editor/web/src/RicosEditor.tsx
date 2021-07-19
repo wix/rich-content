@@ -26,8 +26,8 @@ import {
 } from 'wix-rich-content-editor-common/libs/EditorEventsContext';
 import { ToolbarType, Version } from 'wix-rich-content-common';
 import { emptyDraftContent, getEditorContentSummary } from 'wix-rich-content-editor-common';
-import { TiptapAPI } from 'wix-tiptap-editor';
-import { omit } from 'lodash';
+import { RicosTiptapEditor, TiptapAPI, RichContentAdapter } from 'wix-tiptap-editor';
+
 // eslint-disable-next-line
 const PUBLISH_DEPRECATION_WARNING_v9 = `Please provide the postId via RicosEditor biSettings prop and use one of editorRef.publish() or editorEvents.publish() APIs for publishing.
 The getContent(postId, isPublishing) API is deprecated and will be removed in ricos v9.0.0`;
@@ -38,6 +38,7 @@ interface State {
   remountKey: boolean;
   editorState?: EditorState;
   initialContentChanged: boolean;
+  tiptapToolbar: unknown;
 }
 
 // controller between tiptap extensions to ricos editor
@@ -69,6 +70,7 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
       localeData: { locale: props.locale },
       remountKey: false,
       initialContentChanged: true,
+      tiptapToolbar: null,
     };
     this.useTiptap = !!props.experiments?.tiptapEditor?.enabled;
   }
@@ -102,12 +104,11 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
         'wix-tiptap-editor'
       ).then(tiptapEditorModule => {
         const { initTiptapEditor } = tiptapEditorModule;
-        const { content, injectedContent, ricosExtensions } = this.props;
-        const ricosExtensionsManager = new RicosExtensionsManager({ ricosExtensions });
+        const { content, injectedContent } = this.props;
         this.tiptapApi = initTiptapEditor({
           initialContent: content ?? injectedContent ?? emptyDraftContent,
           onUpdate: this.onUpdate,
-          extensions: ricosExtensionsManager.tiptapExtensions,
+          extensions: [],
         });
         this.forceUpdate();
       });
@@ -240,8 +241,12 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
     }
   };
 
-  setEditorRef = (ref: RichContentEditor) => {
+  setEditorRef = ref => {
     this.editor = ref;
+  };
+
+  setEditorAndStaticToolbar = (ref: RichContentEditor) => {
+    this.setEditorRef(ref);
     this.setStaticToolbar(ref);
   };
 
@@ -296,22 +301,33 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
         {this.renderToolbarPortal(StaticToolbar)}
         {this.renderRicosEngine(child, {
           onChange: this.onChange(child.props.onChange),
-          ref: this.setEditorRef,
+          ref: this.setEditorAndStaticToolbar,
         })}
       </Fragment>
     );
   }
 
   renderTiptapEditor() {
-    if (!this.tiptapApi) {
-      return null;
-    }
-    const { Editor: TiptapEditor, getToolbars } = this.tiptapApi;
-    const Toolbar = getToolbars().TextToolbar;
-    const child = <TiptapEditor />;
+    const { content, injectedContent } = this.props;
+    const { tiptapToolbar } = this.state;
+    console.log('renderTiptapEditor');
+    const child = (
+      <RicosTiptapEditor
+        extensions={[]}
+        content={content ?? injectedContent ?? emptyDraftContent}
+        onLoad={editor => {
+          const richContentAdapter = new RichContentAdapter(editor);
+          this.setEditorRef(richContentAdapter);
+          const TextToolbar = richContentAdapter.getToolbars().TextToolbar;
+          console.log({ TextToolbar });
+          this.setState({ tiptapToolbar: TextToolbar });
+        }}
+      />
+    );
+
     return (
       <Fragment>
-        {this.renderToolbarPortal(Toolbar)}
+        {tiptapToolbar && this.renderToolbarPortal(tiptapToolbar)}
         {this.renderRicosEngine(child, {})}
       </Fragment>
     );

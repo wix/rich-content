@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { EditorPropsContext } from './context';
+import React, { useContext, useEffect, useRef } from 'react';
+import { EditorPropsContext, RicosTiptapContext } from './context';
 import { ImageData } from 'ricos-schema';
 import {
   ReactNodeViewRenderer,
@@ -99,45 +99,47 @@ const createRicosNodeConfig = (Component, tiptapExtensionConfig): NodeConfig => 
   };
 };
 
-export const createNodeConfig = () => {
-  return ({ ReactNodeViewRenderer, mergeAttributes }) => {
-    const RicosImageComponent = ImageComponent;
-    const imageAttrs = ImageData.fromJSON({});
+// export const createNodeConfig = () => {
+//   return ({ ReactNodeViewRenderer, mergeAttributes }) => {
+//     const RicosImageComponent = ImageComponent;
+//     const imageAttrs = ImageData.fromJSON({});
 
-    createRicosNodeConfig(RicosImageComponent, {
-      name: 'image',
+//     createRicosNodeConfig(RicosImageComponent, {
+//       name: 'image',
 
-      group: 'block',
+//       group: 'block',
 
-      atom: true,
-      selectable: true,
-      draggable: true,
+//       atom: true,
+//       selectable: true,
+//       draggable: true,
 
-      addAttributes() {
-        return imageAttrs;
-      },
+//       addAttributes() {
+//         return imageAttrs;
+//       },
 
-      parseHTML() {
-        return [
-          {
-            tag: `${name}-component`,
-          },
-        ];
-      },
+//       parseHTML() {
+//         return [
+//           {
+//             tag: `${name}-component`,
+//           },
+//         ];
+//       },
 
-      renderHTML({ HTMLAttributes }) {
-        return [`${name}-component`, mergeAttributes(HTMLAttributes)];
-      },
-    });
-  };
-};
+//       renderHTML({ HTMLAttributes }) {
+//         return [`${name}-component`, mergeAttributes(HTMLAttributes)];
+//       },
+//     });
+//   };
+// };
 
-<RicosTiptapEditor
+{
+  /* <RicosTiptapEditor
     onLoad={editor => createTiptapAdapter(editor)}
     content={content}
     extensions={ricosExtensions}
     onUpdate={() => null}
-  />;
+  />; */
+}
 
 const ricosExtensionsToTiptapExtension = ricosExtension => {
   return ricosExtension.map(ricosExtension => {
@@ -145,28 +147,28 @@ const ricosExtensionsToTiptapExtension = ricosExtension => {
   });
 };
 
-const RicosTiptapEditor = ({ extensions, content, onLoad, ...rest }) => {
-  const editor = useEditor({
-    extensions: ricosExtensionsToTiptapExtension(extensions),
-    content,
-  });
+// const RicosTiptapEditor = ({ extensions, content, onLoad, ...rest }) => {
+//   const editor = useEditor({
+//     extensions: ricosExtensionsToTiptapExtension(extensions),
+//     content,
+//   });
 
-  const ricosExtensionsManager = useRef(new RicosExtensionManager(extensions));
-  useEffect(() => {
-    onLoad(editor);
-  }, []);
-  return (
-    <RicosTiptapProvider
-      value={{
-        ricosExtensionsManager: ricosExtensionsManager.current,
-      }}
-    >
-      <div dir="">
-        <EditorContent editor={editor} />
-      </div>
-    </RicosTiptapProvider>
-  );
-};
+//   const ricosExtensionsManager = useRef(new RicosExtensionManager(extensions));
+//   useEffect(() => {
+//     onLoad(editor);
+//   }, []);
+//   return (
+//     <RicosTiptapProvider
+//       value={{
+//         ricosExtensionsManager: ricosExtensionsManager.current,
+//       }}
+//     >
+//       <div dir="">
+//         <EditorContent editor={editor} />
+//       </div>
+//     </RicosTiptapProvider>
+//   );
+// };
 
 // export const createImageNodeConfig = () => {
 //   return ({ReactNodeViewRenderer}) => createRicosNodeConfig(RicosComponent(ImageComponent, 'image'), {
@@ -190,3 +192,26 @@ const RicosTiptapEditor = ({ extensions, content, onLoad, ...rest }) => {
 //     // },
 //   });
 // };
+
+export const RicosTiptapEditor = ({ extensions, content, ...rest }) => {
+  const tiptapExtensions = ricosExtensionsToTiptapExtension(extensions);
+  const editor = useEditor({
+    content,
+    extensions: tiptapExtensions,
+  });
+
+  const ricosExtensionsManager = useRef(new RicosExtensionManager(extensions));
+
+  return (
+    <RicosTiptapContext.Provider
+      value={{
+        ricosExtensionsManager: ricosExtensionsManager.current,
+        editorProps: rest,
+      }}
+    >
+      <div dir="">
+        <EditorContent editor={editor} />
+      </div>
+    </RicosTiptapContext.Provider>
+  );
+};

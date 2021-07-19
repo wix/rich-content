@@ -49,6 +49,99 @@ import {
   mockImageNativeUploadFunc,
 } from '../../../main/shared/utils/fileUploadUtil';
 import { MockVerticalSearchModule } from '../../../main/shared/utils/verticalEmbedUtil';
+const tiptapContent = {
+  type: 'doc',
+  attrs: {
+    metadata: {
+      version: 1,
+      createdTimestamp: '2021-07-18T16:22:36.617Z',
+      updatedTimestamp: '2021-07-18T16:22:36.617Z',
+    },
+  },
+  content: [
+    {
+      type: 'paragraph',
+      attrs: {
+        textStyle: {
+          textAlignment: 'AUTO',
+          lineHeight: '20px',
+        },
+        indentation: 0,
+        key: '81ob3',
+      },
+      content: [
+        {
+          type: 'text',
+          text: 'f',
+        },
+      ],
+    },
+    // {
+    //   type: 'divider',
+    //   attrs: {
+    //     lineStyle: 'SINGLE',
+    //     width: 'LARGE',
+    //     alignment: 'CENTER',
+    //     containerData: {
+    //       width: {
+    //         size: 'CONTENT',
+    //       },
+    //       alignment: 'CENTER',
+    //     },
+    //     key: '1uttj',
+    //   },
+    // },
+    {
+      type: 'paragraph',
+      attrs: {
+        textStyle: {
+          textAlignment: 'AUTO',
+        },
+        indentation: 0,
+        key: '7n447',
+      },
+    },
+    {
+      type: 'image',
+      attrs: {
+        containerData: {
+          width: {
+            size: 'CONTENT',
+          },
+          alignment: 'CENTER',
+          spoiler: {
+            enabled: false,
+            description: 'ffd',
+          },
+        },
+        image: {
+          src: {
+            custom: '8bb438_f4f7fa31c5364557af0da7c4fd543cc9.jpg',
+          },
+          width: 5600,
+          height: 3737,
+        },
+        link: null,
+        disableExpand: false,
+        altText: null,
+        caption: null,
+        disableDownload: false,
+        key: '6hrme',
+      },
+    },
+    {
+      type: 'paragraph',
+      attrs: {
+        textStyle: {
+          textAlignment: 'AUTO',
+        },
+        indentation: 0,
+        key: '8p260',
+      },
+    },
+  ],
+};
+import { RicosTiptapEditor } from 'wix-tiptap-editor';
 
 const { Instagram, Twitter, TikTok } = LinkPreviewProviders;
 const { event, booking, product } = verticalEmbedProviders;
@@ -204,6 +297,8 @@ interface Props {
   experiments?: Record<string, any>;
 }
 
+const MiniEditor = props => {};
+
 class EditorWrapper extends React.Component<Props> {
   static defaultProps = {
     isMobile: mobileDetect.mobile() !== null,
@@ -233,25 +328,34 @@ class EditorWrapper extends React.Component<Props> {
     } = this.props;
 
     return (
-      <RicosEditor
-        ref={ref => (this.editor = ref)}
-        plugins={this.editorPlugins}
-        theme={theme}
-        content={content}
-        injectedContent={injectedContent}
-        isMobile={isMobile}
-        placeholder={'Share something...'}
-        toolbarSettings={toolbarSettings}
-        onChange={onChange}
-        experiments={experiments}
-        _rcProps={rcProps}
-      >
-        <RichContentEditor
-          onFocus={onFocus}
-          onBlur={onBlur}
-          helpers={{ handleFileUpload: mockImageNativeUploadFunc }}
-        />
-      </RicosEditor>
+      <>
+        {/* <RicosTiptapEditor
+          content={tiptapContent}
+          extensions={[]}
+          onLoad={() => null}
+          theme={{}}
+          t={key => key}
+        /> */}
+        <RicosEditor
+          ref={ref => (this.editor = ref)}
+          plugins={this.editorPlugins}
+          theme={theme}
+          content={content}
+          injectedContent={injectedContent}
+          isMobile={isMobile}
+          placeholder={'Share something...'}
+          toolbarSettings={toolbarSettings}
+          onChange={onChange}
+          experiments={experiments}
+          _rcProps={rcProps}
+        >
+          <RichContentEditor
+            onFocus={onFocus}
+            onBlur={onBlur}
+            helpers={{ handleFileUpload: mockImageNativeUploadFunc }}
+          />
+        </RicosEditor>
+      </>
     );
   }
 }

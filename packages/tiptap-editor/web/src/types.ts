@@ -1,7 +1,7 @@
 import { Node as ProseMirrorNode } from 'prosemirror-model';
 import { DraftContent } from 'ricos-content';
 import { FC } from 'react';
-import { Editor } from '@tiptap/react';
+import { Editor, ExtensionConfig } from '@tiptap/react';
 
 export interface PluginProps {
   context: {
@@ -23,7 +23,6 @@ export type TiptapConfig = {
 };
 
 export type TiptapAPI = {
-  Editor: FC;
   blur: () => void;
   focus: () => void;
   // eslint-disable-next-line
@@ -33,3 +32,8 @@ export type TiptapAPI = {
   getToolbarProps: () => Record<string, any>; // to be deprecated
   destroy: Editor['destroy'];
 };
+
+export interface RicosExtensionConfig extends ExtensionConfig {
+  addNodeViewHOC: () => React.FC;
+  priority?: number;
+}

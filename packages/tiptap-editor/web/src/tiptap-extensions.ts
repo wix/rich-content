@@ -16,8 +16,7 @@ import OrderedList from '@tiptap/extension-ordered-list';
 import ListItem from '@tiptap/extension-list-item';
 import Paragraph from './extensions/extension-paragraph';
 import Link from '@tiptap/extension-link';
-import { createDivider } from './extensions/extension-divider';
-import { createImage } from './extensions/extension-image';
+// import { createDivider } from './extensions/extension-divider';
 import { createBold } from './extensions/extension-bold';
 import { LinkData, HeadingData } from 'ricos-schema';
 import { MarkConfig, NodeConfig } from '@tiptap/react';
@@ -32,7 +31,6 @@ const extendedAttrs = (attrs): Partial<NodeConfig & MarkConfig> => ({
 });
 
 const withKey = extendedAttrs({ key: '' });
-
 export const tiptapExtensions = [
   Blockquote.extend(withKey),
   Underline,
@@ -47,9 +45,8 @@ export const tiptapExtensions = [
   Paragraph.extend(withKey),
   Text,
   Link.extend(extendedAttrs(LinkData.fromJSON({}))),
-  createDivider().extend(withKey),
+  // createDivider().extend(withKey),
   createBold(),
-  createImage().extend(withKey),
   // Dropcursor,
   // Gapcursor,
 ];
