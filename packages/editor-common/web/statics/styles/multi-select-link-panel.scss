@@ -15,20 +15,22 @@
 }
 .multiSelectLinkPanel_container_mobile {
   font-family: $ricos-font-family;
-  color: black;
+  // color: black;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  min-width: 0;
-  width: auto;
-  height: auto;
-  margin: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  // min-width: 0;
+  // width: auto;
+  // height: auto;
+  // margin: 0;
 }
 
 .multiSelectLinkPanel_content {
@@ -53,49 +55,52 @@
 .multiSelectLinkPanel_actionsDivider {
   margin: 0 -19px;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-}
-
-.linkPanel_Footer {
-  display: flex;
-  justify-content: space-between;
-  height: 32px;
-  margin-top: 12px;
-  &.multiSelectLinkPanel_Footer {
-    margin: 20px 0;
-  }
-  &.linkPanel_Footer_mobile {
+  &.multiSelectLinkPanel_actionsDivider_mobile {
     margin: 0;
-    padding: 12px 0;
-    width: 100%;
-    &.multiSelectLinkPanel_Footer {
-      background-color: $settings-action-color-fallback;
-      padding: 10px 10px;
-    }
   }
 }
 
-.linkPanel_FooterActions,
-.linkPanel_RemoveContainer {
-  display: flex;
-  button {
-    color: $settings-action-color-fallback;
-  }
-}
+// .linkPanel_Footer {
+//   display: flex;
+//   justify-content: space-between;
+//   height: 32px;
+//   margin-top: 12px;
+//   &.multiSelectLinkPanel_Footer {
+//     margin: 20px 0;
+//   }
+//   &.linkPanel_Footer_mobile {
+//     margin: 0;
+//     padding: 12px 0;
+//     width: 100%;
+//     // &.multiSelectLinkPanel_Footer {
+//     //   background-color: $settings-action-color-fallback;
+//     //   padding: 10px 10px;
+//     // }
+//   }
+// }
 
-.linkPanel_FooterButton {
-  line-height: 1.5;
-  font-size: 14px;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &.linkPanel_FooterButton_mobile {
-    &.multiSelectLinkPanel_Button {
-      color: #ffffff;
-    }
-  }
-}
+// .linkPanel_FooterActions,
+// .linkPanel_RemoveContainer {
+//   display: flex;
+//   button {
+//     color: $settings-action-color-fallback;
+//   }
+// }
+
+// .linkPanel_FooterButton {
+//   line-height: 1.5;
+//   font-size: 14px;
+//   border: none;
+//   background-color: transparent;
+//   display: flex;
+//   align-items: center;
+//   cursor: pointer;
+//   &.linkPanel_FooterButton_mobile {
+//     &.multiSelectLinkPanel_Button {
+//       color: #ffffff;
+//     }
+//   }
+// }
 
 .linkPanel_VerticalDivider {
   margin: 0 0 0 20px;
@@ -138,11 +143,11 @@
   text-align: center;
 }
 
-.multiSelectLinkPanel_mobileHeaderIcon {
-  width: 19px;
-  height: 19px;
-  margin-right: 11px;
-}
+// .multiSelectLinkPanel_mobileHeaderIcon {
+//   width: 19px;
+//   height: 19px;
+//   margin-right: 11px;
+// }
 
 .multiSelectLinkPanel_radioButtons {
   margin-top: 20px;
@@ -172,7 +177,7 @@
   .multiSelectLinkPanel_tab {
     display: flex;
     height: 30px;
-    padding-bottom: 8px;
+    padding: 8px 0;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -186,19 +191,34 @@
     color: $settings-action-color-fallback;
   }
 }
-.actionButtons_wrapper {
-  width: 212px;
-  &.actionButtons_wrapper_mobile {
-    padding: 0 16px;
-    width: 100%;
-    button {
-      width: 50px;
-    }
-  }
-}
+// .actionButtons_wrapper {
+//   width: 212px;
+//   &.actionButtons_wrapper_mobile {
+//     // padding: 0 16px;
+//     width: 100%;
+//     button {
+//       width: 50px;
+//     }
+//   }
+// }
 
-.linkPanel_saveOnlyBtn {
-  height: 40px;
-  width: 94px;
-  border: none;
-}
+// .linkPanel_saveOnlyBtn {
+//   height: 40px;
+//   width: 94px;
+//   border: none;
+// }
+
+// .linkPanel_mobile_title_buttons_wrapper {
+//   width: 100%;
+//   position: relative;
+//   padding: 0 16px;
+// }
+
+// .mobileLinkModal_title {
+//   margin: 0;
+//   font-size: 16px;
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+// }

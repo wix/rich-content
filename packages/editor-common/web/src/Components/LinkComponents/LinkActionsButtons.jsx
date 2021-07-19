@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Button, ActionButtons, BUTTON_SIZE } from 'wix-rich-content-ui-components';
-import styles from '../../../statics/styles/multi-select-link-panel.scss';
+// import styles from '../../../statics/styles/multi-select-link-panel.scss';
+import styles from '../../../statics/styles/link-action-buttons.scss';
 import { mergeStyles } from 'wix-rich-content-common';
 
 class LinkActionsButtons extends PureComponent {
@@ -10,6 +11,15 @@ class LinkActionsButtons extends PureComponent {
     super(props);
     this.styles = mergeStyles({ styles, theme: props.theme });
   }
+
+  renderMobileTitle = () => {
+    const { t } = this.props;
+    return (
+      <div id="mob_link_modal_hdr" className={styles.actionButtons_mobile_title}>
+        {t('MobileLinkModal_Title')}
+      </div>
+    );
+  };
 
   render() {
     const { styles } = this;
@@ -41,13 +51,13 @@ class LinkActionsButtons extends PureComponent {
     //   [styles.linkPanel_FooterButton_mobile]: isMobile,
     //   [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     // });
-    const removeButtonClassName = classNames(styles.linkPanel_FooterButton, {
-      [styles.linkPanel_FooterButton_mobile]: isMobile,
-      [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
+    const removeButtonClassName = classNames(styles.actionButtons_FooterButton, {
+      [styles.actionButtons_FooterButton_mobile]: isMobile,
+      // [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
     });
     return saveBtnOnly && !isMobile ? (
       <Button
-        className={styles.linkPanel_saveOnlyBtn}
+        className={styles.actionButtons_saveOnlyBtn}
         type="primary"
         text={doneButtonText}
         onClick={onDone}
@@ -56,14 +66,14 @@ class LinkActionsButtons extends PureComponent {
       </Button>
     ) : (
       <div
-        className={classNames(styles.linkPanel_Footer, {
-          [styles.linkPanel_Footer_mobile]: isMobile,
+        className={classNames(styles.actionButtons_Footer, {
+          [styles.actionButtons_Footer_mobile]: isMobile,
           [styles.multiSelectLinkPanel_Footer]: !basicLinkPanel,
         })}
       >
-        <div className={styles.linkPanel_FooterActions}>
-          {isActive && !hideUrlInput && (
-            <div className={styles.linkPanel_RemoveContainer}>
+        <div className={styles.actionButtons_FooterActions}>
+          {isActive && !hideUrlInput && !isMobile && (
+            <div className={styles.actionButtons_RemoveContainer}>
               <button
                 tabIndex={tabIndex}
                 aria-label={removeButtonText}
@@ -76,21 +86,24 @@ class LinkActionsButtons extends PureComponent {
             </div>
           )}
         </div>
-        <div
-          className={classNames(styles.actionButtons_wrapper, {
-            [styles.actionButtons_wrapper_mobile]: isMobile,
-          })}
-        >
-          <ActionButtons
-            size={BUTTON_SIZE.tiny}
-            isMobile={isMobile}
-            onCancel={onCancel}
-            onSave={onDone}
-            theme={this.theme}
-            cancelText={cancelButtonText}
-            saveText={doneButtonText}
-            disableSave={!isDoneButtonEnable}
-          />
+        <div className={isMobile && styles.actionButtons_mobile_title_buttons_wrapper}>
+          {isMobile && this.renderMobileTitle()}
+          <div
+            className={classNames(styles.actionButtons_wrapper, {
+              [styles.actionButtons_wrapper_mobile]: isMobile,
+            })}
+          >
+            <ActionButtons
+              size={BUTTON_SIZE.tiny}
+              isMobile={isMobile}
+              onCancel={onCancel}
+              onSave={onDone}
+              theme={this.theme}
+              cancelText={cancelButtonText}
+              saveText={doneButtonText}
+              disableSave={!isDoneButtonEnable}
+            />
+          </div>
         </div>
       </div>
     );

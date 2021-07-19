@@ -14,17 +14,18 @@ class BasicLinkPanel extends PureComponent {
     this.styles = mergeStyles({ styles, theme: props.theme });
   }
 
-  renderMobileTitle = () => {
-    const { t } = this.props;
-    return (
-      <div className={styles.mobileLinkModal_titleContainer}>
-        {/* <div className={styles.mobileLinkModal_linkIconContainer}></div> */}
-        <div id="mob_link_modal_hdr" className={styles.mobileLinkModal_title}>
-          {t('MobileLinkModal_Title')}
-        </div>
-      </div>
-    );
-  };
+  // renderMobileTitle = () => {
+  //   const { t } = this.props;
+  //   return (
+  //     <div id="mob_link_modal_hdr" className={styles.mobileLinkModal_title}>
+  //       {t('MobileLinkModal_Title')}
+  //     </div>
+  //     // <div className={styles.mobileLinkModal_titleContainer}>
+  //     //   {/* <div className={styles.mobileLinkModal_linkIconContainer}></div> */}
+
+  //     // </div>
+  //   );
+  // };
 
   render() {
     const { styles } = this;
@@ -52,7 +53,6 @@ class BasicLinkPanel extends PureComponent {
         role="form"
         {...ariaProps}
       >
-        {isMobile && this.renderMobileTitle()}
         <div
           className={classNames(styles.linkPanel_wrapper, {
             [styles.linkPanel_wrapper_mobile]: isMobile,
@@ -76,7 +76,10 @@ class BasicLinkPanel extends PureComponent {
             role="separator"
           />
         )}
+        {/* <div className={isMobile && styles.linkPanel_mobile_title_buttons_wrapper}> */}
+        {/* {isMobile && this.renderMobileTitle()} */}
         <LinkActionsButtons basicLinkPanel {...buttonsProps} saveBtnOnly={!hasCheckboxes} />
+        {/* </div> */}
       </FocusManager>
     );
   }

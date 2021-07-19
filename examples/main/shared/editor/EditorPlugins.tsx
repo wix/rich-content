@@ -372,8 +372,8 @@ export const uiSettings: UISettings = {
     externalPopups: false,
     // blankTargetToggleVisibilityFn: () => true, // deprecated
     // nofollowRelToggleVisibilityFn: () => true, // deprecated
-    showNewTabCheckbox: true,
-    showNoFollowCheckbox: true,
+    showNewTabCheckbox: false,
+    showNoFollowCheckbox: false,
     showSponsoredCheckbox: false,
     dropDown: getLinkPanelDropDownConfig(),
     //placeholder: "Enter a URL here",

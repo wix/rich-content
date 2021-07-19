@@ -9,8 +9,17 @@ import { mergeStyles } from 'wix-rich-content-common';
 import { RadioGroup, FocusManager } from 'wix-rich-content-ui-components';
 import styles from '../../../statics/styles/multi-select-link-panel.scss';
 import LinkActionsButtons from './LinkActionsButtons';
-import { LinkIcon } from '../../Icons';
+// import { LinkIcon } from '../../Icons';
 import { RADIO_GROUP_VALUES } from '../AnchorComponents/consts';
+
+const Separator = ({ isMobile }) => (
+  <div
+    className={classNames(styles.multiSelectLinkPanel_actionsDivider, {
+      [styles.multiSelectLinkPanel_actionsDivider_mobile]: isMobile,
+    })}
+    role="separator"
+  />
+);
 
 class MultiSelectLinkPanel extends PureComponent {
   constructor(props) {
@@ -49,31 +58,34 @@ class MultiSelectLinkPanel extends PureComponent {
         <div className={styles.multiSelectLinkPanel_header}>
           <div>{t('LinkTo_Modal_Header')}</div>
         </div>
-        <div className={styles.multiSelectLinkPanel_actionsDivider} role="separator" />
+        <Separator isMobile={false} />
       </>
     );
   };
 
-  renderDesktopLinkActionsButtons = () => {
+  // renderDesktopLinkActionsButtons = () => {
+  //   const { buttonsProps } = this.props;
+  //   return (
+  //     <>
+  //       <div className={styles.multiSelectLinkPanel_actionsDivider} role="separator" />
+  //       <LinkActionsButtons {...buttonsProps} />
+  //     </>
+  //   );
+  // };
+
+  renderActionsButtons = () => {
     const { buttonsProps } = this.props;
     return (
       <>
-        <div className={styles.multiSelectLinkPanel_actionsDivider} role="separator" />
-        <LinkActionsButtons {...buttonsProps} />
-      </>
-    );
-  };
-
-  renderMobileHeader = () => {
-    const { buttonsProps, t } = this.props;
-    return (
-      <>
-        <LinkActionsButtons {...buttonsProps} />
+        {/* <LinkActionsButtons {...buttonsProps} />
         <div className={styles.multiSelectLinkPanel_header_mobile}>
           <LinkIcon className={styles.multiSelectLinkPanel_mobileHeaderIcon} />
           <div>{t('LinkTo_Modal_Header')}</div>
-        </div>
-
+        </div> */}
+        {/* <div className={isMobile && styles.linkPanel_mobile_title_buttons_wrapper}> */}
+        {/* {isMobile && this.renderMobileTitle()} */}
+        <LinkActionsButtons basicLinkPanel {...buttonsProps} />
+        {/* </div> */}
         {this.renderMobileTabs()}
       </>
     );
@@ -145,7 +157,7 @@ class MultiSelectLinkPanel extends PureComponent {
         role="form"
         {...ariaProps}
       >
-        {!isMobile ? this.renderDesktopHeader() : this.renderMobileHeader()}
+        {!isMobile && this.renderDesktopHeader()}
 
         <div className={contentClassName}>
           {!isMobile && (
@@ -177,12 +189,24 @@ class MultiSelectLinkPanel extends PureComponent {
             />
           )}
         </div>
-
-        {!isMobile && this.renderDesktopLinkActionsButtons()}
+        {!isMobile && <Separator isMobile={isMobile} />}
+        <div>
+          <LinkActionsButtons {...this.props.buttonsProps} />
+          {isMobile && (
+            <>
+              <Separator isMobile={isMobile} />
+              {this.renderMobileTabs()}
+            </>
+          )}
+        </div>
       </FocusManager>
     );
   }
 }
+
+Separator.propTypes = {
+  isMobile: PropTypes.bool,
+};
 
 MultiSelectLinkPanel.propTypes = {
   theme: PropTypes.object.isRequired,

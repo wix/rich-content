@@ -25,8 +25,9 @@
   font-stretch: normal;
   font-style: normal;
   &.basicPanel {
-    display: flex;
-    gap: 12px;
+    @extend .display_flex_with_gap;
+    // display: flex;
+    // gap: 12px;
     align-items: center;
     margin: 0;
     width: 420px;
@@ -34,9 +35,13 @@
 }
 
 .linkPanel_container_isMobile {
+  @extend .display_flex_with_gap;
   padding: 0;
   min-width: 0;
+  // display: flex;
   flex-direction: column-reverse;
+  // gap: 12px;
+  width: 100%;
   &.basicPanel {
     width: 100%;
   }
@@ -135,24 +140,40 @@
   position: absolute;
   width: 100%;
   left: 0;
-  border: 1px solid rgba(51, 51, 51, 0.1);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   &.linkPanel_actionsDivider_mobile {
     top: 56px;
   }
 }
 
-.mobileLinkModal_titleContainer {
-  position: fixed;
-  top: 20px;
-}
+// .mobileLinkModal_titleContainer {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
-.mobileLinkModal_linkIconContainer {
-  width: 19px;
-  height: 19px;
-  margin-right: 11px;
-}
+// .mobileLinkModal_linkIconContainer {
+//   width: 19px;
+//   height: 19px;
+//   margin-right: 11px;
+// }
 
-.mobileLinkModal_title {
-  margin: 0;
-  font-size: 16px;
+// .mobileLinkModal_title {
+//   margin: 0;
+//   font-size: 16px;
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// .linkPanel_mobile_title_buttons_wrapper {
+//   width: 100%;
+//   position: relative;
+// }
+
+.display_flex_with_gap {
+  display: flex;
+  gap: 12px;
 }
