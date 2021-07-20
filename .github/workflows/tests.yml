@@ -188,7 +188,7 @@ jobs:
         run: |
           echo "pr-number=$(curl -s https://api.github.com/repos/wix/ricos/commits/${{ env.COMMIT_SHA }} | jq '.commit.message' | sed 's/.*(#//g' | sed 's/[^0-9]//g')" >> $GITHUB_ENV
       - name: Notify fail in Slack
-        uses: voxmedia/github-action-slack-notify-build@v1.1.3
+        uses: voxmedia/github-action-slack-notify-build@v2
         if: github.ref == 'refs/heads/master' && (needs.e2e-visual.result == 'failure' || needs.content-state-tests.result == 'failure' || needs.lint-and-unit-tests.result == 'failure')
         with:
           channel_id: C0124DH7HHS #ricos-ci
@@ -212,7 +212,7 @@ jobs:
         run: |
           echo "previous-status=$(echo $(curl -s https://api.github.com/repos/wix/ricos/actions/workflows/tests.yml/runs\?branch\=master | jq '.workflow_runs | .[] | select( .head_sha == "${{ env.previous-commit }}") | .conclusion' | sed 's/\"//g'))" >> $GITHUB_ENV
       - name: Notify recovery in Slack
-        uses: voxmedia/github-action-slack-notify-build@v1.1.3
+        uses: voxmedia/github-action-slack-notify-build@v2
         if: github.ref == 'refs/heads/master' && env.previous-status == 'failure' && (needs.e2e-visual.result == 'success' && needs.content-state-tests.result == 'success' && needs.lint-and-unit-tests.result == 'success')
         with:
           channel_id: C0124DH7HHS #ricos-ci
