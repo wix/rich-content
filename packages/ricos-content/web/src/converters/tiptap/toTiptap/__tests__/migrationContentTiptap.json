@@ -473,68 +473,63 @@
         },
         "items": [
           {
-            "metadata": {
-              "height": 3733,
-              "width": 5600,
-              "type": "image"
-            },
-            "itemId": "2c2698b83ba64574db5e28ed54064081",
-            "url": "8bb438_0ab44689f626435c94b9a5b996524aba.jpg",
-            "selected": false
+            "image": {
+              "data": {
+                "src": {
+                  "url": "8bb438_0ab44689f626435c94b9a5b996524aba.jpg"
+                },
+                "height": 3733,
+                "width": 5600
+              }
+            }
           },
           {
-            "metadata": {
-              "height": 1922,
-              "width": 1920,
-              "type": "image"
-            },
-            "itemId": "a327950f89cc4994f34a0cd0d4a71473",
-            "url": "8bb438_6a7159be0f944dde9098fe566bf22831.jpg",
-            "selected": false
+            "image": {
+              "data": {
+                "src": {
+                  "url": "8bb438_6a7159be0f944dde9098fe566bf22831.jpg"
+                },
+                "height": 1922,
+                "width": 1920
+              }
+            }
           },
           {
-            "metadata": {
-              "height": 3727,
-              "width": 5600,
-              "type": "image"
-            },
-            "itemId": "f6db1b532552aa00e9549b5c97e6770a",
-            "url": "8bb438_cabd67053eae45e7ab273832504717ff.jpg",
-            "selected": false
+            "video": {
+              "data": {
+                "src": {
+                  "url": "0d72ac_31569a98fd8d436f98ae9c827c216443"
+                },
+                "width": 1920,
+                "height": 1080
+              },
+              "thumbnail": {
+                "src": {
+                  "url": "8bb438_cabd67053eae45e7ab273832504717ff.jpg"
+                },
+                "height": 3727,
+                "width": 5600
+              }
+            }
           }
         ],
         "styles": {
-          "galleryLayout": 2,
-          "gallerySizeType": "px",
-          "gallerySizePx": 300,
-          "oneRow": false,
-          "cubeRatio": 1,
-          "galleryThumbnailsAlignment": "bottom",
-          "isVertical": false,
-          "numberOfImagesPerRow": 3,
-          "imageMargin": 20,
-          "thumbnailSpacings": 0,
-          "cubeType": "fill",
-          "enableInfiniteScroll": true,
-          "titlePlacement": "SHOW_ON_HOVER",
-          "allowHover": true,
-          "itemClick": "link",
-          "showArrows": false,
-          "gridStyle": 1,
-          "loveButton": false,
-          "allowSocial": false,
-          "allowDownload": false,
-          "galleryMargin": 0,
-          "fullscreen": false,
-          "mobileSwipeAnimation": "NO_EFFECT",
-          "thumbnailSize": 120,
-          "gotStyleParams": true,
-          "showVideoPlayButton": true,
-          "videoPlay": "onClick"
-        },
-        "config": {
-          "layout": "small",
-          "spacing": 0
+          "layout": {
+            "type": "GRID",
+            "horizontalScroll": false,
+            "orientation": "ROWS",
+            "itemsPerRow": 3
+          },
+          "itemStyling": {
+            "targetSize": 300,
+            "ratio": 1,
+            "crop": "FILL",
+            "margin": 20
+          },
+          "thumbnails": {
+            "alignment": "BOTTOM",
+            "spacings": 0
+          }
         },
         "disableExpand": false,
         "key": "8"

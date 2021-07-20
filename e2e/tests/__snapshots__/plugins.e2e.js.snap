@@ -5483,14 +5483,8 @@ exports[`plugins > spoiler > check spoilers on a gallery in editor and reveal it
           }
         ],
         "styles": {
-          "allowContextMenu": true,
-          "allowHover": true,
-          "arrowsSize": 23,
           "cubeType": "fill",
-          "floatingImages": 0,
-          "galleryLayout": 9,
-          "showArrows": true,
-          "slideshowInfoSize": 0
+          "galleryLayout": 9
         }
       },
       "mutability": "IMMUTABLE",

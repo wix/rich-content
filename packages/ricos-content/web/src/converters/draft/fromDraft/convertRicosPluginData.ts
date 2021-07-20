@@ -15,6 +15,7 @@ import {
   MAP_TYPE,
   EMBED_TYPE,
   LINK_TYPE,
+  GALLERY_TYPE,
 } from '../../../consts';
 import {
   PluginContainerData_Spoiler,
@@ -49,6 +50,7 @@ export const convertBlockDataToRicos = (type: string, data) => {
     [MAP_TYPE]: convertMapData,
     [EMBED_TYPE]: convertEmbedData,
     [LINK_TYPE]: convertLinkData,
+    [GALLERY_TYPE]: convertGalleryData,
   };
   let blockType = type;
   if (type === LINK_PREVIEW_TYPE && data.html) {
@@ -110,6 +112,45 @@ const convertVideoData = (data: {
       height: data.src.thumbnail.height,
     };
   }
+};
+
+const convertGalleryStyles = styles => {
+  styles.layout = {};
+  styles.itemStyling = {};
+  styles.thumbnails = {};
+  has(styles, 'galleryLayout') && (styles.layout.type = styles.galleryLayout);
+  has(styles, 'oneRow') && (styles.layout.horizontalScroll = styles.oneRow);
+  has(styles, 'isVertical') && (styles.layout.orientation = styles.isVertical ? 'COLUMNS' : 'ROWS');
+  has(styles, 'numberOfImagesPerRow') && (styles.layout.itemsPerRow = styles.numberOfImagesPerRow);
+  has(styles, 'gallerySizePx') && (styles.itemStyling.targetSize = styles.gallerySizePx);
+  has(styles, 'cubeRatio') && (styles.itemStyling.ratio = styles.cubeRatio);
+  has(styles, 'cubeType') && (styles.itemStyling.crop = styles.cubeType.toUpperCase());
+  has(styles, 'imageMargin') && (styles.itemStyling.margin = styles.imageMargin);
+  has(styles, 'galleryThumbnailsAlignment') &&
+    (styles.thumbnails.alignment = styles.galleryThumbnailsAlignment.toUpperCase());
+  has(styles, 'thumbnailSpacings') && (styles.thumbnails.spacings = styles.thumbnailSpacings);
+  return styles;
+};
+
+const convertGalleryItem = item => {
+  const {
+    url,
+    metadata: { type, poster, height, width, link, title, altText },
+  } = item;
+  item[type] = { data: { src: { url }, height, width } };
+  title && (item.title = title);
+  altText && (item.altText = altText);
+  if (type === 'video' && poster) {
+    const src = { url: poster.url || poster };
+    item.video.thumbnail = { src, height: poster.height || height, width: poster.width || width };
+  }
+  type === 'image' && link && (item.image.link = link);
+  return item;
+};
+
+const convertGalleryData = (data: { items; styles }) => {
+  has(data, 'items') && (data.items = data.items.map(item => convertGalleryItem(item)));
+  has(data, 'styles') && (data.styles = convertGalleryStyles(data.styles));
 };
 
 const convertDividerData = (data: {

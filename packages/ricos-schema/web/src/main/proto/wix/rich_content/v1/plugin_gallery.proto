@@ -6,73 +6,83 @@ import "wix/rich_content/v1/common.proto";
 import "google/protobuf/wrappers.proto";
 
 message GalleryData {
+
+  message Styles {
+    message Layout {
+      enum Type {
+        COLLAGE = 0;
+        MASONRY = 1;
+        GRID = 2;
+        THUMBNAIL = 3;
+        SLIDER = 4;
+        SLIDESHOW = 5;
+        PANORAMA = 6;
+        COLUMN = 7;
+        MAGIC = 8;
+        FULLSIZE = 9;
+      }
+    
+      enum Orientation {
+        ROWS = 0;
+        COLUMNS = 1;
+      }
+    
+      Type type = 1;
+      google.protobuf.BoolValue horizontal_scroll = 2;
+      Orientation orientation = 3;
+      google.protobuf.Int32Value items_per_row = 4;
+    }
+    
+    message ItemStyling {
+      enum Crop {
+        FILL = 0;
+        FIT = 1;
+      }
+      google.protobuf.Int32Value target_size = 1;
+      google.protobuf.DoubleValue ratio = 2;
+      Crop crop = 3;
+      google.protobuf.Int32Value margin = 4;
+    }
+    
+    // relevant only when has thumbnails
+    message Thumbnails {
+      enum Alignment {
+        TOP = 0;
+        RIGHT = 1;
+        BOTTOM = 2;
+        LEFT = 3;
+      }
+      Alignment alignment = 1;
+      google.protobuf.FloatValue spacings = 2;
+    }
+  
+    Layout layout = 1;
+    ItemStyling item_styling = 2;
+    Thumbnails thumbnails = 3;
+  }
+  
+  message Item {
+    message Video {
+      Media data = 1;
+      Media thumbnail = 2;
+    }
+
+    message Image {
+      Media data = 1;
+      Link link = 2;
+    }
+
+    oneof data {
+      Image image = 1;
+      Video video = 2;
+    }
+    google.protobuf.StringValue title = 3;
+    google.protobuf.StringValue altText = 4;
+  }
+
   PluginContainerData container_data = 1;
-  repeated GalleryItem items = 2;
-  GalleryStyles styles = 3;
-  GalleryConfig config = 4;
-  google.protobuf.BoolValue disable_expand = 5;
-  google.protobuf.BoolValue disable_download = 6;
-}
-
-message GalleryStyles {
-  google.protobuf.Int32Value gallery_layout = 1;
-  google.protobuf.StringValue gallery_size_type = 2;
-  google.protobuf.Int32Value gallery_size_px = 3;
-  google.protobuf.BoolValue one_row = 4;
-  google.protobuf.DoubleValue cube_ratio = 5;
-  google.protobuf.StringValue gallery_thumbnails_alignment = 6;
-  google.protobuf.BoolValue is_vertical = 7;
-  google.protobuf.Int32Value number_of_images_per_row = 8;
-  google.protobuf.Int32Value image_margin = 9;
-  google.protobuf.Int32Value thumbnail_spacings = 10;
-  google.protobuf.StringValue cube_type = 11;
-  google.protobuf.BoolValue enable_infinite_scroll = 12;
-  google.protobuf.StringValue title_placement = 13;
-  google.protobuf.BoolValue allow_hover = 14;
-  google.protobuf.StringValue item_click = 15;
-  google.protobuf.BoolValue show_arrows = 16;
-  google.protobuf.Int32Value grid_style = 17;
-  google.protobuf.BoolValue love_button = 18;
-  google.protobuf.BoolValue allow_social = 19;
-  google.protobuf.BoolValue allow_download = 20;
-  google.protobuf.BoolValue cube_images = 21;
-  google.protobuf.Int32Value group_size = 22;
-  google.protobuf.StringValue group_types = 23;
-  google.protobuf.Int32Value fixed_columns = 24;
-  google.protobuf.BoolValue has_thumbnails = 25;
-  google.protobuf.BoolValue enable_scroll = 26;
-  google.protobuf.BoolValue is_grid = 27;
-  google.protobuf.BoolValue is_slider = 28;
-  google.protobuf.BoolValue is_columns = 29;
-  google.protobuf.BoolValue is_slideshow = 30;
-  google.protobuf.BoolValue crop_only_fill = 31;
-  google.protobuf.Int32Value gallery_margin = 32;
-  google.protobuf.BoolValue fullscreen = 33;
-  google.protobuf.StringValue mobile_swipe_animation = 34;
-  google.protobuf.Int32Value thumbnail_size = 35;
-  google.protobuf.BoolValue got_style_params = 36;
-  google.protobuf.BoolValue show_video_play_button = 37;
-  google.protobuf.StringValue video_play = 38;
-  google.protobuf.StringValue gallery_type = 39;
-}
-
-message GalleryConfig {
-  google.protobuf.StringValue layout = 2;
-  google.protobuf.Int32Value spacing = 3;
-  google.protobuf.StringValue key = 4;
-  google.protobuf.BoolValue disableExpand = 5;
-}
-
-message GalleyItemMetadata {
-  google.protobuf.Int32Value height = 1;
-  google.protobuf.Int32Value width = 2;
-  google.protobuf.StringValue title = 3;
-  google.protobuf.StringValue type = 4;
-}
-
-message GalleryItem {
-  GalleyItemMetadata metadata = 1;
-  google.protobuf.StringValue item_id = 2;
-  google.protobuf.StringValue url = 3;
-  google.protobuf.BoolValue selected = 4;
+  repeated Item items = 2;
+  Styles styles = 3;
+  google.protobuf.BoolValue disable_expand = 4;
+  google.protobuf.BoolValue disable_download = 5;
 }

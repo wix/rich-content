@@ -5,7 +5,7 @@ import { validate, mergeStyles } from 'wix-rich-content-common';
 import pluginGallerySchema from 'wix-rich-content-common/dist/statics/schemas/plugin-gallery.schema.json';
 import { isEqual, debounce } from 'lodash';
 import { convertItemData } from '../lib/convert-item-data';
-import { DEFAULTS, isHorizontalLayout, sampleItems } from './defaults';
+import { getFixedStyles, isHorizontalLayout, sampleItems } from './defaults';
 import { resizeMediaUrl } from '../lib/resize-media-url';
 import { GALLERY_LAYOUTS } from '../lib/layout-data-provider';
 import styles from '../statics/styles/viewer.rtlignore.scss';
@@ -132,7 +132,7 @@ class GalleryViewer extends React.Component {
   }, 100);
 
   stateFromProps = props => {
-    let items = props.componentData.items || DEFAULTS.items;
+    let items = props.componentData.items || [];
     items = items.filter(item => !item.error);
     return {
       items,
@@ -234,15 +234,20 @@ class GalleryViewer extends React.Component {
       componentData: { styles: styleParams, disableDownload },
       isMobile,
     } = this.props;
-    if (isMobile && isHorizontalLayout(styleParams)) {
-      styleParams.arrowsSize = 20;
-      styleParams.imageMargin = 0;
-      if (styleParams.galleryLayout === GALLERY_LAYOUTS.THUMBNAIL) {
-        styleParams.thumbnailSize = 90;
+    const calculatedStyles = {
+      ...getFixedStyles(styleParams.galleryLayout),
+      allowContextMenu: !disableDownload,
+      showArrows: isHorizontalLayout(styleParams),
+      ...styleParams,
+    };
+    if (isMobile && isHorizontalLayout(calculatedStyles)) {
+      calculatedStyles.arrowsSize = 20;
+      calculatedStyles.imageMargin = 0;
+      if (calculatedStyles.galleryLayout === GALLERY_LAYOUTS.THUMBNAIL) {
+        calculatedStyles.thumbnailSize = 90;
       }
     }
-    styleParams.allowContextMenu = !disableDownload;
-    return styleParams;
+    return calculatedStyles;
   };
 
   handleContextMenu = e => {
@@ -260,10 +265,6 @@ class GalleryViewer extends React.Component {
     const items = this.getItems();
     const styleParams = this.getStyleParams();
     const viewMode = seoMode ? GALLERY_CONSTS.viewMode.SEO : undefined;
-    const alwaysShowHover = {
-      hoveringBehaviour: 'NO_CHANGE',
-      alwaysShowHover: 'true' /*alwaysShowHover needed for mobile*/,
-    };
 
     return (
       <div
@@ -275,15 +276,10 @@ class GalleryViewer extends React.Component {
       >
         {size?.width ? (
           <ProGallery
-            options={{ allowContextMenu: true }}
             domId={this.domId}
             allowSSR={!!seoMode}
             items={items}
-            styles={{
-              ...DEFAULTS.styles,
-              ...styleParams,
-              ...alwaysShowHover,
-            }}
+            options={styleParams}
             container={size}
             settings={gallerySettings}
             scrollingElement={scrollingElement}

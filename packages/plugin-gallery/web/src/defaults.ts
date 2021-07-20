@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { GALLERY_LAYOUTS } from '../lib/layout-data-provider';
+import { GALLERY_LAYOUTS, layoutData } from '../lib/layout-data-provider';
 
 export const GALLERY_ITEMS_TYPES = Object.freeze({
   IMAGE: 'image',
@@ -30,40 +30,82 @@ export const sampleItems = [1, 2, 3].map(i => {
 export const DEFAULTS = Object.freeze({
   items: [],
   styles: {
-    galleryLayout: 2,
-    gallerySizeType: 'px',
-    gallerySizePx: 300,
-    galleryMargin: 0,
-    oneRow: false,
-    cubeRatio: 1,
-    galleryThumbnailsAlignment: 'bottom',
-    isVertical: false,
-    imageMargin: 5,
-    thumbnailSpacings: 0,
-    cubeType: 'fill',
-    enableInfiniteScroll: true,
-    titlePlacement: 'SHOW_ON_HOVER',
-    allowHover: true,
-    itemClick: 'link',
-    fullscreen: false,
-    showArrows: false,
-    gridStyle: 1,
-    loveButton: false,
-    allowSocial: false,
-    allowDownload: false,
-    mobileSwipeAnimation: 'NO_EFFECT',
-    thumbnailSize: 120,
-    gotStyleParams: true,
-    showVideoPlayButton: true,
-    videoPlay: 'onClick',
+    galleryLayout: GALLERY_LAYOUTS.GRID,
+    ...layoutData[GALLERY_LAYOUTS.GRID],
   },
   config: {
     alignment: 'center',
     size: 'content',
-    layout: 'small',
-    spacing: 0,
   },
 });
+
+const LAYOUT_FIXED_STYLES = {
+  [GALLERY_LAYOUTS.COLLAGE]: {
+    galleryType: 'Columns',
+    imageMargin: 5,
+  },
+  [GALLERY_LAYOUTS.MASONRY]: {
+    imageMargin: 5,
+    isVertical: false,
+    gridStyle: 0,
+  },
+  [GALLERY_LAYOUTS.GRID]: {
+    imageResize: false,
+    gridStyle: 1,
+    galleryImageRatio: 2,
+    imageMargin: 5,
+  },
+  [GALLERY_LAYOUTS.THUMBNAIL]: {
+    arrowsSize: 23,
+    thumbnailSize: 120,
+    floatingImages: 0,
+  },
+  [GALLERY_LAYOUTS.SLIDER]: {
+    arrowsSize: 23,
+    imageMargin: 5,
+  },
+  [GALLERY_LAYOUTS.SLIDESHOW]: {
+    arrowsSize: 23,
+    floatingImages: 0,
+    slideshowInfoSize: 0,
+  },
+  [GALLERY_LAYOUTS.PANORAMA]: {
+    hasThumbnails: false,
+    imageMargin: 5,
+  },
+  [GALLERY_LAYOUTS.COLUMN]: {
+    arrowsSize: 23,
+    hasThumbnails: false,
+    imageMargin: 5,
+  },
+  [GALLERY_LAYOUTS.FULLSIZE]: {
+    arrowsSize: 23,
+    floatingImages: 0,
+    slideshowInfoSize: 0,
+  },
+};
+
+const FIXED_STYLES = {
+  gallerySizeType: 'px',
+  enableInfiniteScroll: true,
+  titlePlacement: 'SHOW_ON_HOVER',
+  hoveringBehaviour: 'NO_CHANGE',
+  alwaysShowHover: true,
+  allowHover: true,
+  itemClick: 'link',
+  fullscreen: false,
+  loveButton: false,
+  allowSocial: false,
+  allowDownload: false,
+  mobileSwipeAnimation: 'NO_EFFECT',
+  gotStyleParams: true,
+  showVideoPlayButton: true,
+  videoPlay: 'onClick',
+};
+
+export const getFixedStyles = (layout: GALLERY_LAYOUTS) => {
+  return { ...FIXED_STYLES, ...LAYOUT_FIXED_STYLES[layout] };
+};
 
 export const isHorizontalLayout = ({ galleryLayout, oneRow }) =>
   HORIZONTAL_LAYOUTS.indexOf(galleryLayout) > -1 || oneRow;

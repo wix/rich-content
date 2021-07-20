@@ -957,9 +957,7 @@
               "height": 3733,
               "width": 5600
             },
-            "itemId": "2c2698b83ba64574db5e28ed54064081",
-            "url": "8bb438_0ab44689f626435c94b9a5b996524aba.jpg",
-            "selected": false
+            "url": "8bb438_0ab44689f626435c94b9a5b996524aba.jpg"
           },
           {
             "metadata": {
@@ -967,26 +965,25 @@
               "height": 1922,
               "width": 1920
             },
-            "itemId": "a327950f89cc4994f34a0cd0d4a71473",
-            "url": "8bb438_6a7159be0f944dde9098fe566bf22831.jpg",
-            "selected": false
+            "url": "8bb438_6a7159be0f944dde9098fe566bf22831.jpg"
           },
           {
             "metadata": {
-              "type": "image",
-              "height": 3727,
-              "width": 5600
+              "type": "video",
+              "width": 1920,
+              "height": 1080,
+              "poster": {
+                "url": "8bb438_cabd67053eae45e7ab273832504717ff.jpg",
+                "height": 3727,
+                "width": 5600
+              }
             },
-            "itemId": "f6db1b532552aa00e9549b5c97e6770a",
-            "url": "8bb438_cabd67053eae45e7ab273832504717ff.jpg",
-            "selected": false
+            "url": "0d72ac_31569a98fd8d436f98ae9c827c216443"
           }
         ],
         "styles": {
           "galleryLayout": 2,
-          "gallerySizeType": "px",
           "gallerySizePx": 300,
-          "galleryMargin": 0,
           "oneRow": false,
           "cubeRatio": 1,
           "galleryThumbnailsAlignment": "bottom",
@@ -994,29 +991,12 @@
           "imageMargin": 20,
           "thumbnailSpacings": 0,
           "cubeType": "fill",
-          "enableInfiniteScroll": true,
-          "titlePlacement": "SHOW_ON_HOVER",
-          "allowHover": true,
-          "itemClick": "link",
-          "fullscreen": false,
-          "showArrows": false,
-          "gridStyle": 1,
-          "loveButton": false,
-          "allowSocial": false,
-          "allowDownload": false,
-          "mobileSwipeAnimation": "NO_EFFECT",
-          "thumbnailSize": 120,
-          "gotStyleParams": true,
-          "showVideoPlayButton": true,
-          "videoPlay": "onClick",
           "numberOfImagesPerRow": 3
         },
         "disableExpand": false,
         "config": {
           "alignment": "center",
-          "size": "content",
-          "layout": "small",
-          "spacing": 0
+          "size": "content"
         }
       }
     },

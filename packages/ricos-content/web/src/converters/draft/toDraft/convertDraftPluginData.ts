@@ -14,6 +14,7 @@ import {
   FileData,
   ButtonData,
   LinkData,
+  GalleryData,
 } from 'ricos-schema';
 import { cloneDeep, has, merge } from 'lodash';
 import {
@@ -58,6 +59,7 @@ export const convertNodeDataToDraft = (nodeType: Node_Type, data) => {
     [Node_Type.HTML]: convertHTMLData,
     [Node_Type.MAP]: convertMapData,
     [Node_Type.EMBED]: convertEmbedData,
+    [Node_Type.GALLERY]: convertGalleryData,
   };
   if (newData.containerData && nodeType !== Node_Type.DIVIDER) {
     convertContainerData(newData, nodeType);
@@ -149,6 +151,83 @@ const convertDividerData = (
     delete data.alignment;
   }
   delete data.containerData;
+};
+
+enum GalleryLayout {
+  COLLAGE = 0,
+  MASONRY,
+  GRID,
+  THUMBNAIL,
+  SLIDER,
+  SLIDESHOW,
+  PANORAMA,
+  COLUMN,
+  MAGIC,
+  FULLSIZE,
+}
+
+const convertGalleryStyles = styles => {
+  has(styles, 'layout.type') && (styles.galleryLayout = GalleryLayout[styles.layout.type]);
+  has(styles, 'layout.horizontalScroll') && (styles.oneRow = styles.layout.horizontalScroll);
+  has(styles, 'layout.orientation') &&
+    (styles.isVertical = styles.layout.orientation === 'COLUMNS');
+  has(styles, 'layout.itemsPerRow') && (styles.numberOfImagesPerRow = styles.layout.itemsPerRow);
+  has(styles, 'itemStyling.targetSize') && (styles.gallerySizePx = styles.itemStyling.targetSize);
+  has(styles, 'itemStyling.ratio') && (styles.cubeRatio = styles.itemStyling.ratio);
+  has(styles, 'itemStyling.crop') && (styles.cubeType = styles.itemStyling.crop.toLowerCase());
+  has(styles, 'itemStyling.margin') && (styles.imageMargin = styles.itemStyling.margin);
+  has(styles, 'thumbnails.alignment') &&
+    (styles.galleryThumbnailsAlignment = styles.thumbnails.alignment.toLowerCase());
+  has(styles, 'thumbnails.spacings') && (styles.thumbnailSpacings = styles.thumbnails.spacings);
+  delete styles.layout;
+  delete styles.itemStyling;
+  delete styles.thumbnails;
+  return styles;
+};
+
+const convertGalleryItem = item => {
+  const type = has(item, 'image') ? 'image' : 'video';
+  const {
+    src: { url },
+    height,
+    width,
+  } = item[type].data;
+  item.url = url;
+  item.metadata = { height, width, type };
+  has(item, 'title') && (item.metadata.title = item.title);
+  has(item, 'altText') && (item.metadata.altText = item.altText);
+  if (has(item, 'video.thumbnail')) {
+    const {
+      src: { url },
+      height,
+      width,
+    } = item.video.thumbnail;
+    item.metadata.poster = { url, height, width };
+  }
+  has(item, 'image.link') && (item.metadata.link = item.image.link);
+  delete item.video;
+  delete item.image;
+  delete item.title;
+  delete item.altText;
+  return item;
+};
+
+const convertGalleryData = (
+  data: GalleryData & {
+    styles: {
+      galleryLayout;
+      gallerySizePx;
+      oneRow;
+      cubeRatio;
+      isVertical;
+      numberOfImagesPerRow;
+      cubeType;
+      galleryThumbnailsAlignment;
+    };
+  }
+) => {
+  has(data, 'items') && (data.items = data.items.map(item => convertGalleryItem(item)));
+  has(data, 'styles') && (data.styles = convertGalleryStyles(data.styles));
 };
 
 const convertImageData = (data: ImageData & { src; config; metadata }) => {

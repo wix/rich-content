@@ -96,15 +96,10 @@ describe('Content extract API', () => {
       .get().length;
     const galleryImageCount = extract(richContent.nodes)
       .map(({ galleryData }) => galleryData?.items || [])
-      .map(
-        items =>
-          items.filter(
-            ({ metadata }) => (!!metadata && metadata?.type === 'image') || !metadata?.type
-          ).length
-      )
+      .map(items => items.filter(({ image }) => !!image).length)
       .get()
       .reduce((sum, count) => sum + count, 0);
-    expect(imageCount + galleryImageCount).toEqual(5);
+    expect(imageCount + galleryImageCount).toEqual(4);
   });
 
   it('should extract all node keys of images with empty alt text', () => {
