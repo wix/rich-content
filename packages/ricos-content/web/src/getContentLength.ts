@@ -7,7 +7,7 @@ import {
 import { extract } from './RicosContentAPI/extract';
 import { RichContent } from 'ricos-schema';
 import { fromTraversable, Lens } from 'monocle-ts';
-import * as A from 'fp-ts/lib/Array';
+import * as A from 'fp-ts/Array';
 
 export function getContentLength(content: DraftContent): number;
 export function getContentLength(content: RichContent): number;

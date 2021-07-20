@@ -1,11 +1,65 @@
 import { extract } from './extract';
-import { RichContent, Node_Type } from 'ricos-schema';
+import { RichContent, Node_Type, Decoration_Type } from 'ricos-schema';
+import { fold, struct } from 'fp-ts/Monoid';
+import * as A from 'fp-ts/Array';
+import * as S from 'fp-ts/string';
 import { fromDraft } from '../converters/draft/fromDraft/fromDraft';
 import contentWithLists from '../../../../../e2e/tests/fixtures/text-blocks-new.json';
 import contentWithImages from '../../../../../e2e/tests/fixtures/images.json';
 import contentWithMedia from '../../../../../e2e/tests/fixtures/migration-content.json';
 
 describe('Content extract API', () => {
+  it('should extract all the node and decoration types used in content', () => {
+    const richContent = fromDraft(contentWithMedia);
+    type TaD = { types: Node_Type[]; decorations: Decoration_Type[] };
+    const typesAndDecorations = extract(richContent.nodes)
+      .map(({ type, textData }) => ({
+        types: [type],
+        decorations: textData?.decorations || [],
+      }))
+      .map(({ types, decorations }) => ({
+        types,
+        decorations: decorations.map(({ type }) => type),
+      }))
+      .get();
+    const pluginTypesM = struct<TaD>({
+      types: A.getMonoid<Node_Type>(),
+      decorations: A.getMonoid<Decoration_Type>(),
+    });
+    const merged = fold(pluginTypesM)(typesAndDecorations);
+    const actual = {
+      types: A.uniq(S.Eq)(merged.types),
+      decorations: A.uniq(S.Eq)(merged.decorations),
+    };
+    const expected = {
+      types: [
+        'UNRECOGNIZED',
+        'PARAGRAPH',
+        'TEXT',
+        'IMAGE',
+        'VIDEO',
+        'GALLERY',
+        'HTML',
+        'EMBED',
+        'BUTTON',
+        'DIVIDER',
+        'CODE_BLOCK',
+        'GIPHY',
+        'MAP',
+        'FILE',
+        'APP_EMBED',
+        'LINK_PREVIEW',
+        'POLL',
+        'BLOCKQUOTE',
+        'ORDERED_LIST',
+        'LIST_ITEM',
+        'BULLET_LIST',
+        'HEADING',
+      ],
+      decorations: ['BOLD', 'UNDERLINE', 'ITALIC', 'LINK', 'SPOILER', 'MENTION', 'COLOR', 'ANCHOR'],
+    };
+    expect(actual).toStrictEqual(expected);
+  });
   it('should extract the list texts', () => {
     const actual = extract(RichContent.fromJSON(contentWithLists).nodes)
       .filter(({ type }) => type === Node_Type.BULLET_LIST || type === Node_Type.ORDERED_LIST)

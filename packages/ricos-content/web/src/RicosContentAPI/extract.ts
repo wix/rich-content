@@ -1,4 +1,4 @@
-import * as T from 'fp-ts/lib/Tree';
+import * as T from 'fp-ts/Tree';
 import { compact, isArray } from 'lodash';
 import { Prism, fromTraversable, Traversal, Lens } from 'monocle-ts';
 import { Node, Node_Type } from 'ricos-schema';
