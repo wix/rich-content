@@ -532,7 +532,7 @@
             "crop": "FILL",
             "margin": 20
           },
-          "thumbnailsLayout": {
+          "thumbnails": {
             "alignment": "BOTTOM",
             "spacings": 0
           }

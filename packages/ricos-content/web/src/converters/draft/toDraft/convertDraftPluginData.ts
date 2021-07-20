@@ -181,13 +181,12 @@ const convertGalleryStyles = styles => {
   has(styles, 'itemStyling.ratio') && (styles.cubeRatio = styles.itemStyling.ratio);
   has(styles, 'itemStyling.crop') && (styles.cubeType = styles.itemStyling.crop.toLowerCase());
   has(styles, 'itemStyling.margin') && (styles.imageMargin = styles.itemStyling.margin);
-  has(styles, 'thumbnailsLayout.alignment') &&
-    (styles.galleryThumbnailsAlignment = styles.thumbnailsLayout.alignment.toLowerCase());
-  has(styles, 'thumbnailsLayout.spacings') &&
-    (styles.thumbnailSpacings = styles.thumbnailsLayout.spacings);
+  has(styles, 'thumbnails.alignment') &&
+    (styles.galleryThumbnailsAlignment = styles.thumbnails.alignment.toLowerCase());
+  has(styles, 'thumbnails.spacings') && (styles.thumbnailSpacings = styles.thumbnails.spacings);
   delete styles.layouting;
   delete styles.itemStyling;
-  delete styles.thumbnailsLayout;
+  delete styles.thumbnails;
   return styles;
 };
 

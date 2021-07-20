@@ -53,7 +53,7 @@ message GalleryData {
       google.protobuf.Int32Value margin = 4;
     }
     
-    message ThumbnailsLayout {
+    message Thumbnails {
       enum Alignment {
         TOP = 0;
         RIGHT = 1;
@@ -61,12 +61,12 @@ message GalleryData {
         LEFT = 3;
       }
       Alignment alignment = 1;
-      google.protobuf.Int32Value spacings = 2;
+      google.protobuf.FloatValue spacings = 2;
     }
   
     Layout layouting = 1;
     ItemStyling item_styling = 2;
-    ThumbnailsLayout thumbnails_layout = 3;
+    Thumbnails thumbnails = 3;
   }
   
   message Item {

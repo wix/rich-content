@@ -249,7 +249,7 @@ const gallery = {
         crop: 'FILL',
         margin: 5,
       },
-      thumbnailsLayout: {
+      thumbnails: {
         alignment: 'BOTTOM',
         spacings: 0,
       },
@@ -284,7 +284,7 @@ const gallery = {
         crop: 'FILL',
         margin: 5,
       },
-      thumbnailsLayout: {
+      thumbnails: {
         alignment: 'BOTTOM',
         spacings: 0,
       },

@@ -117,7 +117,7 @@ const convertVideoData = (data: {
 const convertGalleryStyles = styles => {
   styles.layouting = {};
   styles.itemStyling = {};
-  styles.thumbnailsLayout = {};
+  styles.thumbnails = {};
   has(styles, 'galleryLayout') && (styles.layouting.layout = styles.galleryLayout);
   has(styles, 'oneRow') && (styles.layouting.horizontalScroll = styles.oneRow);
   has(styles, 'isVertical') &&
@@ -129,8 +129,8 @@ const convertGalleryStyles = styles => {
   has(styles, 'cubeType') && (styles.itemStyling.crop = styles.cubeType.toUpperCase());
   has(styles, 'imageMargin') && (styles.itemStyling.margin = styles.imageMargin);
   has(styles, 'galleryThumbnailsAlignment') &&
-    (styles.thumbnailsLayout.alignment = styles.galleryThumbnailsAlignment.toUpperCase());
-  has(styles, 'thumbnailSpacings') && (styles.thumbnailsLayout.spacings = styles.thumbnailSpacings);
+    (styles.thumbnails.alignment = styles.galleryThumbnailsAlignment.toUpperCase());
+  has(styles, 'thumbnailSpacings') && (styles.thumbnails.spacings = styles.thumbnailSpacings);
   return styles;
 };
 
