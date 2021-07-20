@@ -1,5 +1,5 @@
-import * as T from 'fp-ts/lib/Tree';
-import { pipe } from 'fp-ts/lib/function';
+import * as T from 'fp-ts/Tree';
+import { pipe } from 'fp-ts/function';
 import { compact, isArray } from 'lodash';
 import { Prism, fromTraversable, Traversal } from 'monocle-ts';
 import { RichContent, Node, Node_Type } from 'ricos-schema';
