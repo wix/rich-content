@@ -702,7 +702,7 @@ export function getBlockEntityType(editorState: EditorState, blockKey: string) {
 function getBlockEntity(editorState: EditorState, blockKey: string) {
   const contentState = editorState.getCurrentContent();
   const block = contentState.getBlockForKey(blockKey);
-  const entityKey = block.getEntityAt(0);
+  const entityKey = block?.getEntityAt(0);
   return entityKey ? contentState.getEntity(entityKey) : undefined;
 }
 

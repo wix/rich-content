@@ -210,7 +210,7 @@ class RichContentViewer extends Component<
     }
     if (/debug/i.test(window.location.search) && !window.__RICOS_INFO__) {
       import(
-        /* webpackChunkName: debugging-info */
+        /* webpackChunkName: "debugging-info" */
         'wix-rich-content-common/libs/debugging-info'
       ).then(({ reportDebuggingInfo }) => {
         reportDebuggingInfo({

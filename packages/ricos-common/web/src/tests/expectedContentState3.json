@@ -1,0 +1,115 @@
+{
+  "blocks": [
+    {
+      "key": "4567t",
+      "text": "Hey! I have 2 links.",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [
+        {
+          "offset": 0,
+          "length": 3,
+          "style": "UNDERLINE"
+        },
+        {
+          "offset": 14,
+          "length": 5,
+          "style": "UNDERLINE"
+        }
+      ],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 3,
+          "key": 0
+        },
+        {
+          "offset": 14,
+          "length": 5,
+          "key": 1
+        }
+      ],
+      "data": {}
+    },
+    {
+      "key": "59u2s",
+      "text": "Hey! I have 2 links.",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [
+        {
+          "offset": 0,
+          "length": 3,
+          "style": "UNDERLINE"
+        },
+        {
+          "offset": 14,
+          "length": 5,
+          "style": "UNDERLINE"
+        },
+        {
+          "offset": 3,
+          "length": 11,
+          "style": "{\"FG\":\"#212121\"}"
+        },
+        {
+          "offset": 19,
+          "length": 1,
+          "style": "{\"FG\":\"#212121\"}"
+        }
+      ],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 3,
+          "key": 2
+        },
+        {
+          "offset": 14,
+          "length": 5,
+          "key": 3
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "type": "LINK",
+      "mutability": "MUTABLE",
+      "data": {
+        "url": "www.wix.com",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    },
+    "1": {
+      "type": "LINK",
+      "mutability": "MUTABLE",
+      "data": {
+        "url": "www.ynet.co.il",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    },
+    "2": {
+      "type": "LINK",
+      "mutability": "MUTABLE",
+      "data": {
+        "url": "http://www.wix.com/",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    },
+    "3": {
+      "type": "LINK",
+      "mutability": "MUTABLE",
+      "data": {
+        "url": "http://www.ynet.co.il/",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    }
+  },
+  "VERSION": "7.4.5"
+}
