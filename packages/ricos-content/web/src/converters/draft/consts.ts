@@ -50,7 +50,7 @@ export enum HeaderLevel {
 }
 
 export const FROM_DRAFT_LIST_TYPE = {
-  [BlockType.UnorderedListItem]: Node_Type.BULLET_LIST,
+  [BlockType.UnorderedListItem]: Node_Type.BULLETED_LIST,
   [BlockType.OrderedListItem]: Node_Type.ORDERED_LIST,
 };
 

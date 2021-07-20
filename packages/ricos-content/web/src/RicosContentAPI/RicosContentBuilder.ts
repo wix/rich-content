@@ -34,7 +34,7 @@ type AddTextMethodParams<T> = AddMethodParams<T> & {
 type AddListMethodParams = {
   items: string | TextData | ListItemData | (string | TextData | ListItemData)[];
   data?: ParagraphData;
-  type: Node_Type.ORDERED_LIST | Node_Type.BULLET_LIST;
+  type: Node_Type.ORDERED_LIST | Node_Type.BULLETED_LIST;
   index?: number;
   before?: string;
   after?: string;
@@ -46,19 +46,19 @@ export interface RicosBuilder extends ContentBuilder {
 }
 
 export const setupContentBuilder = (
-  generateKey: () => string
+  generateId: () => string
 ): ContentBuilder & { RicosContentBuilder: RicosBuilder } => {
   function createNode(type: Node_Type, data: unknown): Node {
-    return { key: generateKey(), type, ...dataByNodeType(type, data), nodes: [] };
+    return { id: generateId(), type, ...dataByNodeType(type, data), nodes: [] };
   }
 
   function createListNode(type: Node_Type, items: ListItemData[]) {
     return {
       type,
-      key: generateKey(),
+      id: generateId(),
       nodes: items.map(({ text, data }) => ({
         type: Node_Type.LIST_ITEM,
-        key: generateKey(),
+        id: generateId(),
         nodes: [createTextNode(Node_Type.PARAGRAPH, text, data)],
       })),
     };
@@ -69,7 +69,7 @@ export const setupContentBuilder = (
       ...createNode(type, data),
       nodes: text.map(textData => ({
         nodes: [],
-        key: generateKey(),
+        id: generateId(),
         type: Node_Type.TEXT,
         ...dataByNodeType(Node_Type.TEXT, textData),
       })),
@@ -166,10 +166,10 @@ export const setupContentBuilder = (
   });
 
   [
-    { name: 'BulletList', type: Node_Type.BULLET_LIST },
+    { name: 'BulletList', type: Node_Type.BULLETED_LIST },
     { name: 'OrderedList', type: Node_Type.ORDERED_LIST },
   ].forEach(
-    ({ name, type }: { name: string; type: Node_Type.ORDERED_LIST | Node_Type.BULLET_LIST }) => {
+    ({ name, type }: { name: string; type: Node_Type.ORDERED_LIST | Node_Type.BULLETED_LIST }) => {
       builderApis[`add${name}`] = RicosContentBuilder.prototype[`add${name}`] = function({
         items,
         data,

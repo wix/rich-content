@@ -10,23 +10,23 @@ export interface Modifier {
 }
 
 const unfoldTree = (nodes: Node | Node[]) => {
-  const root = isArray(nodes) ? { key: 'root', type: Node_Type.UNRECOGNIZED, nodes } : nodes;
+  const root = isArray(nodes) ? { id: 'root', type: Node_Type.UNRECOGNIZED, nodes } : nodes;
   return T.unfoldTree<Node, Node>(root, n => [n, n.nodes]);
 };
 
 const toArray = item => (isArray(item) ? item : [item]);
 
-const modifyByKey = (keysToSet: string[], setter: (node: Node) => Node | Node[]) => (node: Node) =>
-  keysToSet.includes(node.key) ? setter(node) : node;
+const modifyById = (idsToSet: string[], setter: (node: Node) => Node | Node[]) => (node: Node) =>
+  idsToSet.includes(node.id) ? setter(node) : node;
 
 const mergeWith = (prefix: Node[]) => (suffix: Node[]) => [...prefix, ...suffix];
 
-const foldTree = (tree: T.Tree<Node>, setter: (node: Node) => Node | Node[], keysToSet: string[]) =>
+const foldTree = (tree: T.Tree<Node>, setter: (node: Node) => Node | Node[], idsToSet: string[]) =>
   T.fold<Node, Node>((root, forest) => ({
     ...root,
     nodes: forest.reduce(
       (modifiedForest, node) =>
-        pipe(node, modifyByKey(keysToSet, setter), toArray, mergeWith(modifiedForest)),
+        pipe(node, modifyById(idsToSet, setter), toArray, mergeWith(modifiedForest)),
       []
     ),
   }))(tree);
@@ -53,8 +53,8 @@ class TraversalModifier implements Modifier {
   }
 
   set(setter: (node: Node) => Node | Node[]) {
-    const keysToSet = compact(this.traversal.asFold().getAll(this.tree)).map(({ key }) => key);
-    const root = foldTree(this.tree, setter, keysToSet);
+    const idsToSet = compact(this.traversal.asFold().getAll(this.tree)).map(({ id }) => id);
+    const root = foldTree(this.tree, setter, idsToSet);
     return { ...this.content, nodes: root.nodes };
   }
 }

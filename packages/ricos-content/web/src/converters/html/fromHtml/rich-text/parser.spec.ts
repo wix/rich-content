@@ -12,7 +12,7 @@ describe('rich text converter', () => {
     const content = parse(getHTML('richTextHtml'));
     expect(
       compare(content, RichContent.fromJSON(richTextContent), {
-        ignoredKeys: ['key'],
+        ignoredKeys: ['id'],
       })
     ).toEqual({});
   });

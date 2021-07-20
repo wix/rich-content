@@ -27,7 +27,7 @@ import {
   Link,
   Link_Target,
 } from 'ricos-schema';
-import { genKey } from './generateRandomKey';
+import { generateId } from './generateRandomId';
 import { toUpperCase, replace } from '../fp-utils';
 import { fromEntries } from '../utils';
 
@@ -37,16 +37,16 @@ export const createNode = <TData>(
     nodes,
     data,
     style,
-    key,
+    id,
   }: {
     nodes: Node[];
     data: TData;
     style?: NodeStyle;
-    key?: string;
+    id?: string;
   }
 ): Node => ({
   type,
-  key: key ?? genKey(),
+  id: id ?? generateId(),
   nodes,
   ...dataByNodeType(type, data),
   style,
@@ -86,7 +86,7 @@ export const createParagraphNode = (
   });
 
 export const createTextNode = (text: string, decorations: Decoration[] = []): Node =>
-  createNode(Node_Type.TEXT, { nodes: [], data: { text, decorations } });
+  createNode(Node_Type.TEXT, { nodes: [], id: '', data: { text, decorations } });
 
 export const createHeadingNode = (nodes: Node[] = [], data: HeadingData): Node =>
   createNode(Node_Type.HEADING, {

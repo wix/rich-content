@@ -11,7 +11,7 @@ export const fromTiptap = <T extends JSONContent | Record<string, any>>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): T extends JSONContent ? RichContent | Node : Record<string, any> => {
   let { richContent } = convertFromProse({ richContent: proseContent });
-  richContent = removeKeyFromData(richContent);
+  richContent = removeIdFromData(richContent);
   return richContent;
 };
 
@@ -22,8 +22,8 @@ const FIELDS_MAP = {
 
 const typeToConstantCase = object => ({ ...object, type: toConstantCase(object.type) });
 
-const removeKeyFromData = value => {
-  const { key: _, ...newValue } = value;
+const removeIdFromData = value => {
+  const { id: _, ...newValue } = value;
   return isNode(value) ? value : newValue;
 };
 
@@ -47,9 +47,9 @@ const convertDataField = object => {
 
 const movefromAttrs = (object: JSONContent) => {
   const { attrs, ...newValue } = object;
-  const { style, key, ...rest } = attrs || {};
+  const { style, id, ...rest } = attrs || {};
   const newAttrs = Object.keys(rest).length > 0 ? rest : undefined;
-  return pickBy({ ...newValue, attrs: newAttrs, style, key }, x => x !== undefined);
+  return pickBy({ ...newValue, attrs: newAttrs, style, id }, x => x !== undefined);
 };
 
 const convertValue = value => {

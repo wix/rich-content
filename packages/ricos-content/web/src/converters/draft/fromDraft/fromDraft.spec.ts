@@ -12,7 +12,7 @@ import { convertBlockDataToRicos } from './convertRicosPluginData';
 import { IMAGE_TYPE } from '../../../consts';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const filterKeys = objArr => objArr.map(({ key, ...rest }) => rest); //disable
+const filterIds = objArr => objArr.map(({ id, ...rest }) => rest); //disable
 describe('migrate from draft', () => {
   const fixtures = { buggy, polyfills };
   Object.entries(fixtures).forEach(([name, content]) =>
@@ -27,7 +27,7 @@ describe('migrate from draft', () => {
   it('should migrate complex fixture', () => {
     expect(
       compare(fromDraft(complexFixture), RichContent.fromJSON(complexRicosFixture), {
-        ignoredKeys: ['key'],
+        ignoredKeys: ['id'],
       })
     ).toEqual({});
   });
@@ -60,19 +60,19 @@ describe('migrate from draft', () => {
 
     const expectedResults = [
       {
-        key: '2k4v1',
+        id: '2k4v1',
         nodes: [],
         textData: { decorations: [], text: 'bla' },
         type: Node_Type.TEXT,
       },
       {
-        key: '1ba7b',
+        id: '1ba7b',
         nodes: [],
         textData: { decorations: [{ type: Decoration_Type.ITALIC }], text: 'h ' },
         type: Node_Type.TEXT,
       },
       {
-        key: '59lhm',
+        id: '59lhm',
         nodes: [],
         textData: {
           decorations: [{ type: Decoration_Type.ITALIC }, { type: Decoration_Type.UNDERLINE }],
@@ -81,13 +81,13 @@ describe('migrate from draft', () => {
         type: Node_Type.TEXT,
       },
       {
-        key: '1agl0',
+        id: '1agl0',
         nodes: [],
         textData: { decorations: [{ type: Decoration_Type.UNDERLINE }], text: 'la' },
         type: Node_Type.TEXT,
       },
       {
-        key: '1m39g',
+        id: '1m39g',
         nodes: [],
         textData: {
           decorations: [{ type: Decoration_Type.UNDERLINE }, { type: Decoration_Type.BOLD }],
@@ -96,13 +96,13 @@ describe('migrate from draft', () => {
         type: Node_Type.TEXT,
       },
       {
-        key: '8cr95',
+        id: '8cr95',
         nodes: [],
         textData: { decorations: [{ type: Decoration_Type.BOLD }], text: 'bl' },
         type: Node_Type.TEXT,
       },
       {
-        key: 'dkn86',
+        id: 'dkn86',
         nodes: [],
         textData: { decorations: [], text: 'ah' },
         type: Node_Type.TEXT,
@@ -110,7 +110,7 @@ describe('migrate from draft', () => {
     ];
 
     const entityMap = {};
-    expect(filterKeys(getTextNodes(block, entityMap))).toEqual(filterKeys(expectedResults));
+    expect(filterIds(getTextNodes(block, entityMap))).toEqual(filterIds(expectedResults));
   });
 
   it('should detect mentions', () => {
@@ -166,7 +166,7 @@ describe('migrate from draft', () => {
       },
       { nodes: [], textData: { decorations: [], text: ' ' }, type: Node_Type.TEXT },
     ];
-    expect(filterKeys(getTextNodes(block, entityMap))).toEqual(expectedResult);
+    expect(filterIds(getTextNodes(block, entityMap))).toEqual(expectedResult);
   });
 
   it('should convert block data', () => {
@@ -235,19 +235,19 @@ describe('migrate from draft', () => {
       nodes: [
         {
           type: 'ORDERED_LIST',
-          key: '4kh4d',
+          id: '4kh4d',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '80vi2',
+              id: '80vi2',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: 'copbt',
+                  id: 'copbt',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '4vn2p',
+                      id: '4vn2p',
                       nodes: [],
                       textData: { text: 'xbxvbcvb', decorations: [] },
                     },
@@ -267,7 +267,7 @@ describe('migrate from draft', () => {
       },
     };
     expect(
-      compare(fromDraft(draftContent), RichContent.fromJSON(expected), { ignoredKeys: ['key'] })
+      compare(fromDraft(draftContent), RichContent.fromJSON(expected), { ignoredKeys: ['id'] })
     ).toEqual({});
   });
 });

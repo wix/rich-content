@@ -17,6 +17,11 @@
     Click to see more.
   </summary>
 
+### :nail_care: Polish
+
+- `ricos-schema`
+  - [#2744](https://github.com/wix/ricos/pull/2744) rename unique node identifier from `key` to `id`
+
 </details>
 <hr/>
 

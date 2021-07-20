@@ -44,7 +44,7 @@ message Node {
         PARAGRAPH = 0;
         TEXT = 1;
         HEADING = 2;
-        BULLET_LIST = 3;
+        BULLETED_LIST = 3;
         ORDERED_LIST = 4;
         LIST_ITEM = 5;
         BLOCKQUOTE = 6;
@@ -67,7 +67,7 @@ message Node {
     }
 
     Type type = 1; // Node type
-    string key = 2; // Node unique indentifier
+    string id = 2; // Node unique indentifier
     repeated Node nodes = 3; // List of child nodes
     NodeStyle style = 4;
     oneof data {

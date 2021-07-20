@@ -33,7 +33,7 @@ describe('migrate to draft', () => {
   const imageNodeData = {
     nodes: [],
     type: Node_Type.IMAGE,
-    key: 'eoba3',
+    id: 'eoba3',
     imageData: {
       containerData: {
         width: { size: PluginContainerData_Width_Type.CONTENT },

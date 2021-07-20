@@ -143,12 +143,18 @@ const convertImageData = (data: {
   data.caption = data.metadata?.caption;
 };
 
-const convertPollData = (data: { layout; design }) => {
+const convertPollData = (data: { layout; design; poll }) => {
   has(data, 'layout.poll.type') && (data.layout.poll.type = data.layout.poll.type.toUpperCase());
   has(data, 'layout.poll.direction') &&
     (data.layout.poll.direction = data.layout.poll.direction.toUpperCase());
   has(data, 'design.poll.backgroundType') &&
     (data.design.poll.backgroundType = data.design.poll.backgroundType.toUpperCase());
+  has(data, 'poll.id') && (data.poll.pollId = data.poll.id);
+  has(data, 'poll.options') &&
+    (data.poll.options = data.poll.options.map(({ id, ...rest }) => ({
+      optionId: id,
+      ...rest,
+    })));
 };
 
 const convertAppEmbedData = (data: {
@@ -156,7 +162,7 @@ const convertAppEmbedData = (data: {
   selectedProduct: Record<string, string>;
   url;
   imageSrc;
-  id;
+  itemId;
   name;
   bookingData;
   eventData;
@@ -173,7 +179,7 @@ const convertAppEmbedData = (data: {
     durations,
   } = data.selectedProduct;
   data.url = pageUrl || (html && (data.url = html.match(/href="[^"]*/g)?.[0]?.slice(6)));
-  data.id = id;
+  data.itemId = id;
   data.name = name;
   data.imageSrc = imageSrc;
   if (data.type === 'booking') {

@@ -7,20 +7,20 @@ describe('toDraft preprocess', () => {
     const content: RichContent = RichContent.fromJSON({
       nodes: [
         {
-          type: 'BULLET_LIST',
-          key: 'cjdfa',
+          type: 'BULLETED_LIST',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '6s1ga',
+              id: '6s1ga',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: 'para1',
+                  id: 'para1',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'paragraph1 ',
@@ -36,11 +36,11 @@ describe('toDraft preprocess', () => {
                 },
                 {
                   type: 'PARAGRAPH',
-                  key: 'para2',
+                  id: 'para2',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: ' paragraph2',
@@ -63,30 +63,30 @@ describe('toDraft preprocess', () => {
     const expected: RichContent = RichContent.fromJSON({
       nodes: [
         {
-          type: 'BULLET_LIST',
-          key: 'cjdfa',
+          type: 'BULLETED_LIST',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '6s1ga',
+              id: '6s1ga',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: 'para1',
+                  id: 'para1',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'paragraph1 ',
                         decorations: [],
                       },
                     },
-                    { type: 'TEXT', key: '', textData: { text: '\n', decorations: [] }, nodes: [] },
+                    { type: 'TEXT', id: '', textData: { text: '\n', decorations: [] }, nodes: [] },
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: ' paragraph2',
@@ -116,19 +116,19 @@ describe('toDraft preprocess', () => {
       nodes: [
         {
           type: 'ORDERED_LIST',
-          key: 'cjdfa',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '6s1ga',
+              id: '6s1ga',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '3um32',
+                  id: '3um32',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para1',
@@ -146,15 +146,15 @@ describe('toDraft preprocess', () => {
             },
             {
               type: 'LIST_ITEM',
-              key: 'c4gcn',
+              id: 'c4gcn',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '3um32',
+                  id: '3um32',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para2',
@@ -170,7 +170,7 @@ describe('toDraft preprocess', () => {
                 },
                 {
                   type: 'IMAGE',
-                  key: '5u2v2',
+                  id: '5u2v2',
                   nodes: [],
                   imageData: {
                     image: {
@@ -180,11 +180,11 @@ describe('toDraft preprocess', () => {
                 },
                 {
                   type: 'PARAGRAPH',
-                  key: '3um32',
+                  id: '3um32',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para3',
@@ -202,15 +202,15 @@ describe('toDraft preprocess', () => {
             },
             {
               type: 'LIST_ITEM',
-              key: 'f62ja',
+              id: 'f62ja',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '2u96f',
+                  id: '2u96f',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para4',
@@ -233,20 +233,20 @@ describe('toDraft preprocess', () => {
     const expected = RichContent.fromJSON({
       nodes: [
         {
-          type: 'BULLET_LIST',
-          key: 'cjdfa',
+          type: 'BULLETED_LIST',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '6s1ga',
+              id: '6s1ga',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '3um32',
+                  id: '3um32',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para1',
@@ -265,20 +265,20 @@ describe('toDraft preprocess', () => {
           ],
         },
         {
-          type: 'BULLET_LIST',
-          key: 'cjdfa',
+          type: 'BULLETED_LIST',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '6s1ga',
+              id: '6s1ga',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '3um32',
+                  id: '3um32',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para2',
@@ -298,7 +298,7 @@ describe('toDraft preprocess', () => {
         },
         {
           type: 'IMAGE',
-          key: '5u2v2',
+          id: '5u2v2',
           nodes: [],
           imageData: {
             image: {
@@ -307,20 +307,20 @@ describe('toDraft preprocess', () => {
           },
         },
         {
-          type: 'BULLET_LIST',
-          key: 'cjdfa',
+          type: 'BULLETED_LIST',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: '6s1ga',
+              id: '6s1ga',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '3um32',
+                  id: '3um32',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para3',
@@ -339,20 +339,20 @@ describe('toDraft preprocess', () => {
           ],
         },
         {
-          type: 'BULLET_LIST',
-          key: 'cjdfa',
+          type: 'BULLETED_LIST',
+          id: 'cjdfa',
           nodes: [
             {
               type: 'LIST_ITEM',
-              key: 'f62ja',
+              id: 'f62ja',
               nodes: [
                 {
                   type: 'PARAGRAPH',
-                  key: '2u96f',
+                  id: '2u96f',
                   nodes: [
                     {
                       type: 'TEXT',
-                      key: '',
+                      id: '',
                       nodes: [],
                       textData: {
                         text: 'para4',
@@ -373,6 +373,6 @@ describe('toDraft preprocess', () => {
       ],
     });
     const actual = preprocess(content);
-    expect(compare(RichContent.fromJSON(actual), expected, { ignoredKeys: ['key'] })).toEqual({});
+    expect(compare(RichContent.fromJSON(actual), expected, { ignoredKeys: ['id'] })).toEqual({});
   });
 });

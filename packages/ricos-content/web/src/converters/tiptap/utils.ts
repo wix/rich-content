@@ -46,7 +46,7 @@ export const getImageBlockData = (content: DraftContent): any =>
   Object.values(content.entityMap).find(({ type }) => type === IMAGE_TYPE)?.data;
 
 export const isDataFieldName = (fieldName: string | number | symbol, value) =>
-  value?.key && fieldName.toString().includes('Data');
+  value?.id && fieldName.toString().includes('Data');
 
 export const toDataFieldName = (type: string) =>
   toCamelCase(type)

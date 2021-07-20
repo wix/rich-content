@@ -3,7 +3,7 @@
 const seenKeys = {};
 const MULTIPLIER = Math.pow(2, 24);
 
-export function genKey(): string {
+export function generateId(): string {
   let key;
   // eslint-disable-next-line fp/no-loops, no-prototype-builtins
   while (key === undefined || seenKeys.hasOwnProperty(key) || !isNaN(Number(key))) {

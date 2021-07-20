@@ -34,7 +34,7 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,d.ts}'",
     "test": "jest --verbose",
     "test:watchAll": "jest --verbose --watchAll",
-    "updateBaselines": "ts-node --compiler-options={\\\"module\\\":\\\"commonJS\\\"} ../../../scripts/updateBaselines"
+    "updateBaselines": "ts-node --compiler-options='{\"module\":\"commonJS\"}' ../../../scripts/updateBaselines"
   },
   "dependencies": {
     "fp-ts": "^2.10.5",

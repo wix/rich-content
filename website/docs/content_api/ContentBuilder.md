@@ -115,7 +115,7 @@ results in:
 {
   nodes: [
     {
-      type: Node_Type.BULLET_LIST,
+      type: Node_Type.BULLETED_LIST,
       key: 'foo',
       nodes: [
         {

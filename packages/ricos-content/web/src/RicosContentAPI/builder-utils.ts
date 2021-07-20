@@ -33,14 +33,14 @@ const insertNode = (content: RichContent, node: Node) => (index: number) =>
     nodes: [...content.nodes.slice(0, index), node, ...content.nodes.slice(index)],
   }));
 
-const insertNodeByKey = (content: RichContent, node: Node, nodeKey: string, isAfter?: boolean) =>
-  isIndexFound(findIndex(({ key }) => key === nodeKey)(content.nodes))
+const insertNodeById = (content: RichContent, node: Node, nodeId: string, isAfter?: boolean) =>
+  isIndexFound(findIndex(({ id }) => id === nodeId)(content.nodes))
     .map((index: number) => (isAfter ? index + 1 : index))
     .chain(insertNode(content, node));
 
-export const removeNode = (nodeKey: string, content: RichContent) => ({
+export const removeNode = (nodeId: string, content: RichContent) => ({
   ...content,
-  nodes: content.nodes.filter(({ key }) => key !== nodeKey),
+  nodes: content.nodes.filter(({ id }) => id !== nodeId),
 });
 
 export function addNode({
@@ -58,8 +58,8 @@ export function addNode({
 }): RichContent {
   return firstResolved([
     insertNode(content, node)(<number>index),
-    insertNodeByKey(content, node, <string>before),
-    insertNodeByKey(content, node, <string>after, true),
+    insertNodeById(content, node, <string>before),
+    insertNodeById(content, node, <string>after, true),
     appendNode(node, content),
   ]);
 }

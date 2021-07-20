@@ -2,11 +2,11 @@
   "nodes": [
     {
       "type": "PARAGRAPH",
-      "key": "0",
+      "id": "0",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "Test",
@@ -19,7 +19,7 @@
         },
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": " ",
@@ -28,7 +28,7 @@
         },
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test",
@@ -41,7 +41,7 @@
         },
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": " ",
@@ -50,7 +50,7 @@
         },
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test",
@@ -70,7 +70,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "1",
+      "id": "1",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -80,11 +80,11 @@
     },
     {
       "type": "HEADING",
-      "key": "2",
+      "id": "2",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test ",
@@ -93,7 +93,7 @@
         },
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test",
@@ -106,7 +106,7 @@
         },
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": " test",
@@ -123,11 +123,11 @@
     },
     {
       "type": "HEADING",
-      "key": "3",
+      "id": "3",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test test test",
@@ -144,11 +144,11 @@
     },
     {
       "type": "HEADING",
-      "key": "4",
+      "id": "4",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test test test",
@@ -165,11 +165,11 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "5",
+      "id": "5",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test test test",
@@ -185,11 +185,11 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6",
+      "id": "6",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test test test",
@@ -205,11 +205,11 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "7",
+      "id": "7",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test test test",
@@ -225,7 +225,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "8",
+      "id": "8",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -234,20 +234,20 @@
       }
     },
     {
-      "type": "BULLET_LIST",
-      "key": "9",
+      "type": "BULLETED_LIST",
+      "id": "9",
       "nodes": [
         {
           "type": "LIST_ITEM",
-          "key": "10",
+          "id": "10",
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "11",
+              "id": "11",
               "nodes": [
                 {
                   "type": "TEXT",
-                  "key": "",
+                  "id": "",
                   "nodes": [],
                   "textData": {
                     "text": "test",
@@ -265,15 +265,15 @@
         },
         {
           "type": "LIST_ITEM",
-          "key": "12",
+          "id": "12",
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "13",
+              "id": "13",
               "nodes": [
                 {
                   "type": "TEXT",
-                  "key": "",
+                  "id": "",
                   "nodes": [],
                   "textData": {
                     "text": "test",
@@ -291,15 +291,15 @@
         },
         {
           "type": "LIST_ITEM",
-          "key": "14",
+          "id": "14",
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "15",
+              "id": "15",
               "nodes": [
                 {
                   "type": "TEXT",
-                  "key": "",
+                  "id": "",
                   "nodes": [],
                   "textData": {
                     "text": "test",
@@ -319,19 +319,19 @@
     },
     {
       "type": "ORDERED_LIST",
-      "key": "16",
+      "id": "16",
       "nodes": [
         {
           "type": "LIST_ITEM",
-          "key": "17",
+          "id": "17",
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "18",
+              "id": "18",
               "nodes": [
                 {
                   "type": "TEXT",
-                  "key": "",
+                  "id": "",
                   "nodes": [],
                   "textData": {
                     "text": "test",
@@ -349,15 +349,15 @@
         },
         {
           "type": "LIST_ITEM",
-          "key": "19",
+          "id": "19",
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "20",
+              "id": "20",
               "nodes": [
                 {
                   "type": "TEXT",
-                  "key": "",
+                  "id": "",
                   "nodes": [],
                   "textData": {
                     "text": "test",
@@ -375,15 +375,15 @@
         },
         {
           "type": "LIST_ITEM",
-          "key": "21",
+          "id": "21",
           "nodes": [
             {
               "type": "PARAGRAPH",
-              "key": "22",
+              "id": "22",
               "nodes": [
                 {
                   "type": "TEXT",
-                  "key": "",
+                  "id": "",
                   "nodes": [],
                   "textData": {
                     "text": "test",
@@ -403,11 +403,11 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "23",
+      "id": "23",
       "nodes": [
         {
           "type": "TEXT",
-          "key": "",
+          "id": "",
           "nodes": [],
           "textData": {
             "text": "test",

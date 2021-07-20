@@ -4,16 +4,16 @@ import chalk from 'chalk';
 import { writeFileSync, readFileSync } from 'fs';
 import { fromDraft } from '../packages/ricos-content/web/src/converters/draft';
 import { fromPlainText, toPlainText } from '../packages/ricos-content/web/src/converters/plainText';
-import { fromHtml, toHtml } from '../packages/ricos-content/web/src/converters/html';
+import { fromRichTextHtml, toHtml } from '../packages/ricos-content/web/src/converters/html';
 import { toTiptap } from '../packages/ricos-content/web/src/converters/tiptap';
 import migrationContent from '../e2e/tests/fixtures/migration-content.json';
 import { RichContent } from 'ricos-schema';
 
-const stringifyBaseLine = obj => {
+const stringifyBaseline = obj => {
   let i = 0;
   const normalizeKeys = (key, val) => {
     switch (key) {
-      case 'key':
+      case 'id':
         return val === '' ? '' : `${i++}`;
       case 'createdTimestamp':
       case 'updatedTimestamp':
@@ -25,7 +25,7 @@ const stringifyBaseLine = obj => {
   return JSON.stringify(obj, normalizeKeys, 2);
 };
 
-const writeBaseLine = (path, obj) => writeFileSync(path, stringifyBaseLine(obj));
+const writeBaseLine = (path, obj) => writeFileSync(path, stringifyBaseline(obj));
 
 const getAbsPath = (relPath: string) => path.resolve(__dirname, relPath);
 
@@ -82,7 +82,7 @@ const convertToHtml = () => {
 };
 
 const convertFromHtml = () => {
-  const content = fromHtml(HTML_CONTENT);
+  const content = fromRichTextHtml(HTML_CONTENT);
   const contentJSON = RichContent.toJSON(content);
   writeBaseLine(FROM_HTML_BASELINE, contentJSON);
 };

@@ -9,7 +9,7 @@ describe('convert from plain text', () => {
     const content = fromPlainText(PLAIN_TEXT);
     expect(
       compare(content, RichContent.fromJSON(plainTextContent), {
-        ignoredKeys: ['key', 'indentation'],
+        ignoredKeys: ['id', 'indentation'],
       })
     ).toEqual({});
   });

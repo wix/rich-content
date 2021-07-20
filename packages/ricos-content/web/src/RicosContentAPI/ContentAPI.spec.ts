@@ -26,7 +26,7 @@ describe('Ricos Content Builder', () => {
           type: Node_Type.IMAGE,
           imageData,
           nodes: [],
-          key: 'foo',
+          id: 'foo',
         },
       ],
     };
@@ -46,11 +46,11 @@ describe('Ricos Content Builder', () => {
       nodes: [
         {
           type: Node_Type.PARAGRAPH,
-          key: 'foo',
+          id: 'foo',
           paragraphData,
           nodes: [
             {
-              key: 'foo',
+              id: 'foo',
               type: Node_Type.TEXT,
               textData: {
                 text: 'test paragraph',
@@ -81,20 +81,20 @@ describe('Ricos Content Builder', () => {
     const expected: RichContent = {
       nodes: [
         {
-          type: Node_Type.BULLET_LIST,
-          key: 'foo',
+          type: Node_Type.BULLETED_LIST,
+          id: 'foo',
           nodes: [
             {
               type: Node_Type.LIST_ITEM,
-              key: 'foo',
+              id: 'foo',
               nodes: [
                 {
                   type: Node_Type.PARAGRAPH,
-                  key: 'foo',
+                  id: 'foo',
                   paragraphData,
                   nodes: [
                     {
-                      key: 'foo',
+                      id: 'foo',
                       type: Node_Type.TEXT,
                       textData: {
                         text: 'item1',
@@ -108,15 +108,15 @@ describe('Ricos Content Builder', () => {
             },
             {
               type: Node_Type.LIST_ITEM,
-              key: 'foo',
+              id: 'foo',
               nodes: [
                 {
                   type: Node_Type.PARAGRAPH,
-                  key: 'foo',
+                  id: 'foo',
                   paragraphData,
                   nodes: [
                     {
-                      key: 'foo',
+                      id: 'foo',
                       type: Node_Type.TEXT,
                       textData: {
                         text: 'item2',
@@ -160,19 +160,19 @@ describe('Ricos Content Builder', () => {
       nodes: [
         {
           type: Node_Type.ORDERED_LIST,
-          key: 'foo',
+          id: 'foo',
           nodes: [
             {
               type: Node_Type.LIST_ITEM,
-              key: 'foo',
+              id: 'foo',
               nodes: [
                 {
                   type: Node_Type.PARAGRAPH,
-                  key: 'foo',
+                  id: 'foo',
                   paragraphData,
                   nodes: [
                     {
-                      key: 'foo',
+                      id: 'foo',
                       type: Node_Type.TEXT,
                       textData: {
                         text: 'item1',
@@ -186,18 +186,18 @@ describe('Ricos Content Builder', () => {
             },
             {
               type: Node_Type.LIST_ITEM,
-              key: 'foo',
+              id: 'foo',
               nodes: [
                 {
                   type: Node_Type.PARAGRAPH,
-                  key: 'foo',
+                  id: 'foo',
                   paragraphData: {
                     textStyle: { textAlignment: TextStyle_TextAlignment.AUTO },
                     indentation: 2,
                   },
                   nodes: [
                     {
-                      key: 'foo',
+                      id: 'foo',
                       type: Node_Type.TEXT,
                       textData: {
                         text: 'item2',
@@ -211,15 +211,15 @@ describe('Ricos Content Builder', () => {
             },
             {
               type: Node_Type.LIST_ITEM,
-              key: 'foo',
+              id: 'foo',
               nodes: [
                 {
                   type: Node_Type.PARAGRAPH,
-                  key: 'foo',
+                  id: 'foo',
                   paragraphData,
                   nodes: [
                     {
-                      key: 'foo',
+                      id: 'foo',
                       type: Node_Type.TEXT,
                       textData: {
                         text: 'item3',

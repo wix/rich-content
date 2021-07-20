@@ -61,9 +61,9 @@ const flattenTextData = (node: Node) => {
 };
 
 const moveToData = (node: Node) => {
-  const { style, key, ...rest } = node;
+  const { style, id, ...rest } = node;
   const dataFieldName = DATA_FIELDS_MAP[node.type];
-  const dataField = { ...node[dataFieldName], ...pickBy({ style, key }, x => x !== undefined) };
+  const dataField = { ...node[dataFieldName], ...pickBy({ style, id }, x => x !== undefined) };
   return { ...rest, [dataFieldName]: dataField };
 };
 
