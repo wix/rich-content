@@ -10,7 +10,7 @@ import { getAbsoluteUrl } from './baseUrlConverter';
  * @param {string} relValue - link rel attribute
  */
 export const convertItemData = ({ items, anchorTarget, relValue }) =>
-  items.map(item => {
+  items.map((item, index) => {
     const { metadata, metaData } = item;
     if (metaData) {
       return item;
@@ -80,5 +80,10 @@ export const convertItemData = ({ items, anchorTarget, relValue }) =>
       }
     }
 
-    return { ...item, metadata: undefined, ...convertedData };
+    return {
+      ...item,
+      metadata: undefined,
+      ...convertedData,
+      itemId: item.url + '_' + index.toString(),
+    };
   });

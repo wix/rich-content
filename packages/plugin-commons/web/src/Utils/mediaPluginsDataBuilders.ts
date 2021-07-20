@@ -15,7 +15,6 @@ export const GALLERY_FILE_TYPES = {
 const galleryItemBuilder = {
   [GALLERY_FILE_TYPES.IMAGE]: (
     img: ImageComponentData & HTMLImageElement,
-    itemId: string,
     preloadImage?: boolean | undefined
   ) => {
     return {
@@ -24,16 +23,11 @@ const galleryItemBuilder = {
         height: img.height,
         width: img.width,
       },
-      itemId,
       url: preloadImage ? img.src : img.file_name,
       tempData: preloadImage,
     };
   },
-  [GALLERY_FILE_TYPES.VIDEO]: (
-    video: VideoComponentData,
-    itemId: string,
-    preloadImage?: boolean | undefined
-  ) => {
+  [GALLERY_FILE_TYPES.VIDEO]: (video: VideoComponentData, preloadImage?: boolean | undefined) => {
     const {
       thumbnail: { pathname: poster, width, height },
     } = video;
@@ -44,7 +38,6 @@ const galleryItemBuilder = {
         width: video.width || width,
         poster,
       },
-      itemId,
       url: video.pathname,
       tempData: preloadImage,
     };
@@ -93,7 +86,7 @@ export const dataBuilder = {
       data.type ||
       (data.thumbnail ? GALLERY_FILE_TYPES.VIDEO : GALLERY_FILE_TYPES.IMAGE);
     return setItemInGallery(
-      { ...galleryItemBuilder[type]?.(data, data.id || Date.now().toString()), error },
+      { ...galleryItemBuilder[type]?.(data), error },
       componentData,
       itemIndex
     );

@@ -323,12 +323,11 @@ function applyActionForGalleryItems(currentItems, newItems) {
     if (currentItem && !currentItem.tempData && newItem.tempData) {
       didChange = true;
       const {
-        itemId,
         url,
         metadata: { type, height, width },
       } = currentItem;
       const metadata = { ...newItem.metadata, type, height, width };
-      return { ...newItem, itemId, url, metadata, tempData: undefined };
+      return { ...newItem, url, metadata, tempData: undefined };
     }
     return newItem;
   });
