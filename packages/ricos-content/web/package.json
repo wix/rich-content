@@ -1,6 +1,6 @@
 {
   "name": "ricos-content",
-  "version": "8.47.1",
+  "version": "8.47.2",
   "author": {
     "name": "Oded Soffrin",
     "email": "odeds@wix.com"
@@ -41,7 +41,7 @@
     "monocle-ts": "^2.3.9",
     "omit-deep": "0.3.0",
     "parse5": "^6.0.0",
-    "ricos-schema": "8.47.1",
+    "ricos-schema": "8.47.2",
     "to-camel-case": "1.0.0",
     "to-constant-case": "1.0.0",
     "to-slug-case": "1.0.0",

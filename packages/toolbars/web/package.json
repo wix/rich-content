@@ -1,6 +1,6 @@
 {
   "name": "wix-rich-content-toolbars",
-  "version": "8.47.1",
+  "version": "8.47.2",
   "author": {
     "name": "Noam Tayri",
     "email": "noamt@wix.com"
@@ -34,9 +34,9 @@
     "test": "jest --verbose"
   },
   "dependencies": {
-    "wix-rich-content-common": "8.47.1",
-    "wix-rich-content-editor-common": "8.47.1",
-    "wix-rich-content-plugin-commons": "8.47.1"
+    "wix-rich-content-common": "8.47.2",
+    "wix-rich-content-editor-common": "8.47.2",
+    "wix-rich-content-plugin-commons": "8.47.2"
   },
   "unpkg": true,
   "publishConfig": {

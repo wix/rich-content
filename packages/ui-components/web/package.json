@@ -1,6 +1,6 @@
 {
   "name": "wix-rich-content-ui-components",
-  "version": "8.47.1",
+  "version": "8.47.2",
   "author": {
     "name": "tamrat bayeh",
     "email": "tamratb@wix.com"
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "focus-trap": "6.4.0",
-    "wix-rich-content-common": "8.47.1"
+    "wix-rich-content-common": "8.47.2"
   },
   "unpkg": true,
   "publishConfig": {

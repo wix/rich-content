@@ -1,6 +1,6 @@
 {
   "name": "wix-rich-content-editor-common",
-  "version": "8.47.1",
+  "version": "8.47.2",
   "author": {
     "name": "Matan Harsat",
     "email": "matanha@wix.com"
@@ -39,8 +39,8 @@
     "@wix/draft-js": "0.0.11",
     "downshift": "3.2.12",
     "react-window": "~1.5.0",
-    "wix-rich-content-common": "8.47.1",
-    "wix-rich-content-ui-components": "8.47.1"
+    "wix-rich-content-common": "8.47.2",
+    "wix-rich-content-ui-components": "8.47.2"
   },
   "unpkg": true,
   "publishConfig": {
