@@ -206,7 +206,6 @@ const gallery = {
             width: 5000,
           },
         },
-        itemId: 'be4312f031f9850a825b2064b9c92d72',
       },
       {
         image: {
@@ -218,7 +217,6 @@ const gallery = {
             width: 5600,
           },
         },
-        itemId: '682b2132c2697fb0e467e21977beeaa2',
       },
       {
         image: {
@@ -230,7 +228,6 @@ const gallery = {
             width: 5600,
           },
         },
-        itemId: '0ee95e519c2e1274c30f56e3c098ec86',
       },
     ],
     styles: {
@@ -264,7 +261,6 @@ const gallery = {
             width: 5600,
           },
         },
-        itemId: '0ee95e519c2e1274c30f56e3c098ec86',
       },
     ],
     styles: {
@@ -293,7 +289,6 @@ const gallery = {
     },
     items: [
       {
-        itemId: 'be4312f031f9850a825b2064b9c92d72',
         metadata: {
           height: 3497,
           type: 'image',
@@ -302,7 +297,6 @@ const gallery = {
         url: '8bb438_a3a11b05e3f54f77ba1c04dfba22c99c.jpg',
       },
       {
-        itemId: '682b2132c2697fb0e467e21977beeaa2',
         metadata: {
           height: 3733,
           type: 'image',
@@ -311,7 +305,6 @@ const gallery = {
         url: '8bb438_f89f7e8aac574a0f962437d4f369b37a.jpg',
       },
       {
-        itemId: '0ee95e519c2e1274c30f56e3c098ec86',
         metadata: {
           height: 3727,
           type: 'image',
@@ -340,7 +333,6 @@ const gallery = {
     },
     items: [
       {
-        itemId: '0ee95e519c2e1274c30f56e3c098ec86',
         metadata: {
           height: 3727,
           type: 'image',
