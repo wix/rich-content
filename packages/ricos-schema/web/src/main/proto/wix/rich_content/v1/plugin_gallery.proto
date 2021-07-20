@@ -26,8 +26,8 @@ message GalleryData {
       }
     
       enum Orientation {
-        HORIZONTAL = 0;
-        VERTICAL = 1;
+        ROWS = 0;
+        COLUMNS = 1;
       }
     
       Layout layout = 1;
@@ -61,12 +61,6 @@ message GalleryData {
     Layouting layouting = 1;
     ItemStyling item_styling = 2;
     ThumbnailsLayout thumbnails_layout = 3;
-  }
-  
-  message Config {
-    google.protobuf.StringValue layout = 2;
-    google.protobuf.Int32Value spacing = 3;
-    google.protobuf.StringValue key = 4;
   }
   
   message Item {
@@ -105,7 +99,6 @@ message GalleryData {
   PluginContainerData container_data = 1;
   repeated Item items = 2;
   Styles styles = 3;
-  Config config = 4;
-  google.protobuf.BoolValue disable_expand = 5;
-  google.protobuf.BoolValue disable_download = 6;
+  google.protobuf.BoolValue disable_expand = 4;
+  google.protobuf.BoolValue disable_download = 5;
 }

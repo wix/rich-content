@@ -174,7 +174,7 @@ const convertGalleryStyles = styles => {
     (styles.galleryLayout = GalleryLayout[styles.layouting.layout]);
   has(styles, 'layouting.horizontalScroll') && (styles.oneRow = styles.layouting.horizontalScroll);
   has(styles, 'layouting.orientation') &&
-    (styles.isVertical = styles.layouting.orientation === 'VERTICAL');
+    (styles.isVertical = styles.layouting.orientation === 'COLUMNS');
   has(styles, 'layouting.itemsPerRow') &&
     (styles.numberOfImagesPerRow = styles.layouting.itemsPerRow);
   has(styles, 'itemStyling.targetSize') && (styles.gallerySizePx = styles.itemStyling.targetSize);

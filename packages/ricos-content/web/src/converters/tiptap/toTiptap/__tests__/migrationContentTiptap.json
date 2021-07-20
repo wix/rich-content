@@ -512,7 +512,7 @@
           "layouting": {
             "layout": "GRID",
             "horizontalScroll": false,
-            "orientation": "HORIZONTAL",
+            "orientation": "ROWS",
             "itemsPerRow": 3
           },
           "itemStyling": {
@@ -525,10 +525,6 @@
             "alignment": "BOTTOM",
             "spacings": 0
           }
-        },
-        "config": {
-          "layout": "small",
-          "spacing": 0
         },
         "disableExpand": false,
         "key": "8"

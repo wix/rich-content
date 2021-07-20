@@ -999,9 +999,7 @@
         "disableExpand": false,
         "config": {
           "alignment": "center",
-          "size": "content",
-          "layout": "small",
-          "spacing": 0
+          "size": "content"
         }
       }
     },

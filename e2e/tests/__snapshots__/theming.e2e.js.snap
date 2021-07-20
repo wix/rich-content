@@ -1,0 +1,5151 @@
+exports[`Theming > desktop > no palette, no cssOverride #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > no palette, cssOverride #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > palette, no cssOverride #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > palette, cssOverride #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > dark palette, no cssOverride #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > dark palette, no cssOverride, no container #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > dark palette, no cssOverride, no container, contentBgColor #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};
+
+exports[`Theming > desktop > dark palette, cssOverride #0`] =
+{
+  "blocks": [
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 0,
+      "text": "Live Content Example!",
+      "type": "header-two"
+    },
+    {
+      "data": {
+        "textAlignment": "center"
+      },
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 1,
+      "text": "",
+      "type": "header-two"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 0,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 2,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 1,
+          "length": 8,
+          "offset": 39
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 3,
+      "text": "Try editing this #content and see what @Happens!",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 4,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "BOLD"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "UNDERLINE"
+        },
+        {
+          "length": 8,
+          "offset": 9,
+          "style": "ITALIC"
+        }
+      ],
+      "key": 5,
+      "text": "Add some plugins, see how they look in the viewer",
+      "type": "blockquote"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 6,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 2,
+          "length": 14,
+          "offset": 17
+        }
+      ],
+      "inlineStyleRanges": [
+        {
+          "length": 14,
+          "offset": 17,
+          "style": "UNDERLINE"
+        }
+      ],
+      "key": 7,
+      "text": "Here's a link to Wix's Homepage.",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 8,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 3,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 9,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 10,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 11,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 4,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 12,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 5,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 13,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 14,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 15,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 16,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 17,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 18,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 6,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 19,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 20,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 21,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 22,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 23,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 7,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 24,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 25,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 26,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 27,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 8,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 28,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 29,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 30,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 9,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 31,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 32,
+      "text": "",
+      "type": "unstyled"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [
+        {
+          "key": 10,
+          "length": 1,
+          "offset": 0
+        }
+      ],
+      "inlineStyleRanges": [],
+      "key": 33,
+      "text": " ",
+      "type": "atomic"
+    },
+    {
+      "data": {},
+      "depth": 0,
+      "entityRanges": [],
+      "inlineStyleRanges": [],
+      "key": 34,
+      "text": "",
+      "type": "unstyled"
+    }
+  ],
+  "entityMap": {
+    "0": {
+      "data": {
+        "config": {
+          "alignment": "right",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "www.wix.com"
+          },
+          "showDescription": true,
+          "showTitle": true,
+          "size": "small"
+        },
+        "metadata": {
+          "caption": "Image Caption Example (with link)"
+        },
+        "src": {
+          "file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "height": 3413,
+          "id": "bcb5bc2f8a914694b8dc0c9ff2575f79",
+          "original_file_name": "8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg",
+          "width": 5120
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-image"
+    },
+    "1": {
+      "data": {
+        "mention": {
+          "name": "Happens",
+          "slug": "Happens"
+        }
+      },
+      "mutability": "SEGMENTED",
+      "type": "mention"
+    },
+    "2": {
+      "data": {
+        "rel": "noopener",
+        "target": "_blank",
+        "url": "wix.com"
+      },
+      "mutability": "MUTABLE",
+      "type": "LINK"
+    },
+    "3": {
+      "data": {
+        "button": {
+          "design": {
+            "activeButton": 0,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "padding": 12
+          },
+          "settings": {
+            "buttonText": "מדליק מי שמקליק ראשון"
+          }
+        },
+        "config": {
+          "alignment": "left",
+          "size": "small",
+          "width": "fit-content"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-action-button"
+    },
+    "4": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "size": "large",
+          "textWrap": "nowrap"
+        },
+        "type": "single"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-divider"
+    },
+    "5": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "layout": "small",
+          "size": "small",
+          "spacing": 0
+        },
+        "items": [
+          {
+            "itemId": "9c0c752ebc1b7b27dc3b02b98f2a4181",
+            "metadata": {
+              "height": 2800,
+              "type": "image",
+              "width": 4200
+            },
+            "url": "8bb438_e78b371c75ce42de8719dccfc97298a4.jpg"
+          },
+          {
+            "itemId": "3b99fd57189241f69534dc4bb0528ffb",
+            "metadata": {
+              "height": 2247,
+              "type": "image",
+              "width": 3370
+            },
+            "url": "8bb438_b9d7f38696d84e288f0cd37d2fd472ac.jpg"
+          },
+          {
+            "itemId": "17ef104520dd9a0711f1cc900d970b79",
+            "metadata": {
+              "height": 1280,
+              "type": "image",
+              "width": 1920
+            },
+            "url": "8bb438_277609c27d9346c38d480b6da8237820.jpg"
+          }
+        ],
+        "styles": {
+          "allowDownload": false,
+          "allowHover": true,
+          "allowSocial": false,
+          "cubeRatio": 1,
+          "cubeType": "fill",
+          "enableInfiniteScroll": true,
+          "fullscreen": false,
+          "galleryLayout": 2,
+          "galleryMargin": 0,
+          "gallerySizePx": 300,
+          "gallerySizeType": "px",
+          "galleryThumbnailsAlignment": "bottom",
+          "gotStyleParams": true,
+          "gridStyle": 1,
+          "imageMargin": 20,
+          "isVertical": false,
+          "itemClick": "link",
+          "loveButton": false,
+          "mobileSwipeAnimation": "NO_EFFECT",
+          "oneRow": false,
+          "showArrows": false,
+          "showVideoPlayButton": true,
+          "thumbnailSize": 120,
+          "thumbnailSpacings": 0,
+          "titlePlacement": "SHOW_ON_HOVER",
+          "videoPlay": "onClick"
+        }
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-gallery"
+    },
+    "6": {
+      "data": {
+        "config": {
+          "alignment": "left",
+          "size": "small"
+        },
+        "name": "music.mp3",
+        "size": 150000,
+        "type": "mp3",
+        "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-file-upload"
+    },
+    "7": {
+      "data": {
+        "config": {
+          "alignment": "center",
+          "link": {
+            "rel": "noopener",
+            "target": "_blank",
+            "url": "wix.com"
+          },
+          "size": "content"
+        },
+        "description": "\tCreate a free website with Wix.com. Choose a stunning template and customize anything with the Wix website builder—no coding skills needed. Create yours today!",
+        "provider_url": "www.wix.com",
+        "thumbnail_url": "https://static.wixstatic.com/media/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg/v1/fill/w_600,h_315,al_c/5305c5_5f112df56dcd40a29e855baae08f19ce~mv2.jpg",
+        "title": "Free Website Builder | Create a Free Website | Wix.com"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-link-preview"
+    },
+    "8": {
+      "data": {
+        "selectedProduct": {
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>",
+          "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "name": "I'm a product",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2"
+        },
+        "type": "product"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "9": {
+      "data": {
+        "selectedProduct": {
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>",
+          "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
+          "location": " Wix HQ",
+          "name": "Make TPA work",
+          "pageUrl": "https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work",
+          "scheduling": "2 במרץ 2020 בשעה 19:00 "
+        },
+        "type": "event"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    },
+    "10": {
+      "data": {
+        "selectedProduct": {
+          "description": 80,
+          "durations": 80,
+          "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>",
+          "id": "285fe974-e729-4381-a874-7640d7f71ad8",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "name": "Yoga lesson",
+          "pageUrl": "https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson"
+        },
+        "type": "booking"
+      },
+      "mutability": "IMMUTABLE",
+      "type": "wix-draft-plugin-vertical-embed"
+    }
+  }
+};

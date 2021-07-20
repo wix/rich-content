@@ -231,7 +231,7 @@ const gallery = {
       layouting: {
         layout: 'GRID',
         horizontalScroll: false,
-        orientation: 'HORIZONTAL',
+        orientation: 'ROWS',
         itemsPerRow: 3,
       },
       itemStyling: {
@@ -263,7 +263,7 @@ const gallery = {
       layouting: {
         layout: 'GRID',
         horizontalScroll: false,
-        orientation: 'HORIZONTAL',
+        orientation: 'ROWS',
         itemsPerRow: 3,
       },
       itemStyling: {
@@ -281,9 +281,7 @@ const gallery = {
   expectedData1: {
     config: {
       alignment: 'center',
-      layout: 'small',
       size: 'content',
-      spacing: 0,
     },
     items: [
       {
@@ -330,9 +328,7 @@ const gallery = {
   expectedData2: {
     config: {
       alignment: 'center',
-      layout: 'small',
       size: 'content',
-      spacing: 0,
     },
     items: [
       {

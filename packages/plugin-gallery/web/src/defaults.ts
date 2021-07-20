@@ -36,8 +36,6 @@ export const DEFAULTS = Object.freeze({
   config: {
     alignment: 'center',
     size: 'content',
-    layout: 'small',
-    spacing: 0,
   },
 });
 
