@@ -64,7 +64,7 @@ const PluginMenuPluginsSection = ({
               toolbarName={toolbarName}
               hidePopup={hidePopup}
               theme={theme}
-              closePluginMenu={!isMobile ? hidePopup : undefined}
+              closePluginMenu={hidePopup}
             />
           ))}
         </div>

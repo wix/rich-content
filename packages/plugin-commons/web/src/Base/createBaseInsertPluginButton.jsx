@@ -29,7 +29,6 @@ export default ({
       getEditorState: PropTypes.func.isRequired,
       setEditorState: PropTypes.func.isRequired,
       theme: PropTypes.object,
-      hidePopup: PropTypes.func,
       showName: PropTypes.bool,
       isMobile: PropTypes.bool,
       t: PropTypes.func,
