@@ -19,6 +19,7 @@ export interface PluginProps {
 export type TiptapConfig = {
   onUpdate?: ({ content }: { content: DraftContent }) => void;
   initialContent: DraftContent;
+  extensions: unknown[];
 };
 
 export type TiptapAPI = {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { EditorPropsContext } from './context';
+import React, { useRef, useEffect } from 'react';
+import { EditorPropsContext, RicosTiptapContext } from './context';
 import Toolbar from './components/Toolbar';
 import { JSONContent } from '@tiptap/core';
 import { Editor, EditorContent } from '@tiptap/react';
@@ -8,11 +8,12 @@ import { tiptapExtensions } from './tiptap-extensions';
 import { capitalize } from 'lodash';
 import { TiptapAPI, TiptapConfig } from './types';
 import { RICOS_DIVIDER_TYPE, DIVIDER_TYPE } from 'wix-rich-content-common';
+import { RicosExtensionManager } from './ricos-extensions-manager';
 
-const getEditorCreator = ({ onUpdate }) => (content: JSONContent) => {
+const getEditorCreator = ({ onUpdate, extensions }) => (content: JSONContent) => {
   return new Editor({
     content,
-    extensions: tiptapExtensions,
+    extensions: [...tiptapExtensions, ...extensions],
     injectCSS: true,
     onUpdate: ({ editor }) => {
       const newContent = editor.getJSON();
@@ -65,9 +66,13 @@ const toTiptapAPI = (editor: Editor): TiptapAPI => ({
   destroy: editor.destroy.bind(editor),
 });
 
-export const initTiptapEditor = ({ initialContent, onUpdate }: TiptapConfig): TiptapAPI => {
+export const initTiptapEditor = ({
+  initialContent,
+  onUpdate,
+  extensions,
+}: TiptapConfig): TiptapAPI => {
   const tiptapData = draftToTiptap(initialContent);
-  const editorCreator = getEditorCreator({ onUpdate });
+  const editorCreator = getEditorCreator({ onUpdate, extensions });
   const editor = editorCreator(tiptapData);
 
   return toTiptapAPI(editor);

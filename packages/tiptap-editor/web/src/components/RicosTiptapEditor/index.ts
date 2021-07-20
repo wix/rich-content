@@ -1,0 +1,1 @@
+export { RicosTiptapEditor } from './RicosTiptapEditor';

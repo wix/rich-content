@@ -27,7 +27,7 @@ import {
 import { ToolbarType, Version } from 'wix-rich-content-common';
 import { emptyDraftContent, getEditorContentSummary } from 'wix-rich-content-editor-common';
 import { TiptapAPI } from 'wix-tiptap-editor';
-
+import { omit } from 'lodash';
 // eslint-disable-next-line
 const PUBLISH_DEPRECATION_WARNING_v9 = `Please provide the postId via RicosEditor biSettings prop and use one of editorRef.publish() or editorEvents.publish() APIs for publishing.
 The getContent(postId, isPublishing) API is deprecated and will be removed in ricos v9.0.0`;
@@ -40,6 +40,12 @@ interface State {
   initialContentChanged: boolean;
   error?: string;
 }
+
+// controller between tiptap extensions to ricos editor
+// extracts data from  Ricos Extensions
+// gives context (Ricos editor context)
+// awares of tiptap
+// sort , filter
 
 export class RicosEditor extends Component<RicosEditorProps, State> {
   editor!: RichContentEditor;
@@ -110,10 +116,12 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
         'wix-tiptap-editor'
       ).then(tiptapEditorModule => {
         const { initTiptapEditor } = tiptapEditorModule;
-        const { content, injectedContent } = this.props;
+        const { content, injectedContent, ricosExtensions } = this.props;
+        const ricosExtensionsManager = new RicosExtensionsManager({ ricosExtensions });
         this.tiptapApi = initTiptapEditor({
           initialContent: content ?? injectedContent ?? emptyDraftContent,
           onUpdate: this.onUpdate,
+          extensions: ricosExtensionsManager.tiptapExtensions,
         });
         this.forceUpdate();
       });
