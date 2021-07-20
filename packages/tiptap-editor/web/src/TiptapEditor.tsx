@@ -25,13 +25,15 @@ const getEditorCreator = ({ onUpdate }) => (content: JSONContent) => {
 // missing forceUpdate
 //github.com/ueberdosis/tiptap/blob/main/packages/react/src/useEditor.ts#L20
 const toTiptapAPI = (editor: Editor): TiptapAPI => ({
-  Editor: props => (
-    <EditorPropsContext.Provider value={props}>
-      <div dir="">
-        <EditorContent editor={editor} />
-      </div>
-    </EditorPropsContext.Provider>
-  ),
+  Editor: props => {
+    return (
+      <EditorPropsContext.Provider value={props}>
+        <div dir="">
+          <EditorContent editor={editor} />
+        </div>
+      </EditorPropsContext.Provider>
+    );
+  },
   blur: () => editor.commands.blur(),
   focus: () => editor.commands.focus(true),
   getEditorCommands: () => {

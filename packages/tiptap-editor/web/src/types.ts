@@ -22,7 +22,9 @@ export type TiptapConfig = {
 };
 
 export type TiptapAPI = {
-  Editor: FC;
+  Editor: FC<{
+    t: (key) => string;
+  }>;
   blur: () => void;
   focus: () => void;
   // eslint-disable-next-line

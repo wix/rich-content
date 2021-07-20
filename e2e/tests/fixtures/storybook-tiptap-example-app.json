@@ -2,15 +2,22 @@
   "blocks": [
     {
       "key": "81ob3",
-      "text": "",
-      "type": "unstyled",
+      "text": "gfdghfdghghghjh",
+      "type": "ordered-list-item",
       "depth": 0,
-      "inlineStyleRanges": [],
+      "inlineStyleRanges": [
+        {
+          "offset": 0,
+          "length": 15,
+          "style": "BOLD"
+        }
+      ],
       "entityRanges": [],
       "data": {
         "dynamicStyles": {
           "line-height": "20px"
-        }
+        },
+        "textAlignment": "left"
       }
     },
     {
@@ -54,7 +61,7 @@
     },
     {
       "key": "8p260",
-      "text": "",
+      "text": "g",
       "type": "unstyled",
       "depth": 0,
       "inlineStyleRanges": [],
@@ -67,12 +74,12 @@
       "type": "wix-draft-plugin-divider",
       "mutability": "IMMUTABLE",
       "data": {
-        "type": "single",
         "config": {
-          "size": "large",
+          "size": "small",
           "alignment": "center",
           "textWrap": "nowrap"
-        }
+        },
+        "type": "single"
       }
     },
     "1": {
@@ -86,7 +93,7 @@
           "showDescription": true,
           "disableExpand": false,
           "spoiler": {
-            "enabled": false,
+            "enabled": true,
             "description": "ffd"
           }
         },
@@ -98,9 +105,13 @@
           "width": 5600,
           "height": 3737
         },
-        "disableDownload": false
+        "disableDownload": false,
+        "metadata": {
+          "caption": "fdsfdsf",
+          "alt": "fds"
+        }
       }
     }
   },
-  "VERSION": "8.45.2"
+  "VERSION": "8.46.6"
 }

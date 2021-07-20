@@ -77,16 +77,12 @@ const BaseExtensionComponentHOC = Component => {
             isFocused: isSelected || selected,
             isMobile,
           });
-
           return (
             <NodeViewWrapper as="div">
               <div data-drag-handle className={Object.values(componentStyles).join(' ')}>
                 <Component
                   {...props}
-                  context={{
-                    context,
-                    t: key => `Translation is not supported: ${key}`,
-                  }}
+                  context={context}
                   componentData={componentData}
                   updateAttributes={props.updateAttributes}
                 />

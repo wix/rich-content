@@ -24,9 +24,10 @@ import {
   EditorEventsContext,
   EditorEvents,
 } from 'wix-rich-content-editor-common/libs/EditorEventsContext';
-import { ToolbarType, Version } from 'wix-rich-content-common';
+import { ToolbarType, Version, RicosTranslate } from 'wix-rich-content-common';
 import { emptyDraftContent, getEditorContentSummary } from 'wix-rich-content-editor-common';
 import { TiptapAPI } from 'wix-tiptap-editor';
+import englishResources from 'wix-rich-content-common/dist/statics/locale/messages_en.json';
 
 // eslint-disable-next-line
 const PUBLISH_DEPRECATION_WARNING_v9 = `Please provide the postId via RicosEditor biSettings prop and use one of editorRef.publish() or editorEvents.publish() APIs for publishing.
@@ -317,11 +318,19 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
     }
     const { Editor: TiptapEditor, getToolbars } = this.tiptapApi;
     const Toolbar = getToolbars().TextToolbar;
-    const child = <TiptapEditor />;
+    const { localeData } = this.state;
+    const { locale, localeResource } = localeData;
     return (
       <Fragment>
         {this.renderToolbarPortal(Toolbar)}
-        {this.renderRicosEngine(child, {})}
+        {
+          <RicosTranslate locale={locale} localeResource={localeResource || englishResources}>
+            {t => {
+              const tiptapEditor = <TiptapEditor t={t} />;
+              return this.renderRicosEngine(tiptapEditor, {});
+            }}
+          </RicosTranslate>
+        }
       </Fragment>
     );
   }
