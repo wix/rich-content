@@ -106,7 +106,7 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
   loadEditor() {
     if (this.useTiptap) {
       import(
-        /* webpackChunkName: wix-tiptap-editor */
+        /* webpackChunkName: "wix-tiptap-editor" */
         'wix-tiptap-editor'
       ).then(tiptapEditorModule => {
         const { initTiptapEditor } = tiptapEditorModule;
