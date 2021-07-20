@@ -20,14 +20,12 @@ export const getRefWidthAsNumber = ref => getSizeStringAsNumber(ref.style.width)
 export const getSizeStringAsNumber = str => parseInt(str.substring(0, str.length - 2));
 
 //SELECTION
-export const range = (start, end) => {
-  const array = [];
-  const inc = end - start > 0;
-  for (let i = start; inc ? i <= end : i >= end; inc ? i++ : i--) {
-    inc ? array.push(i) : array.unshift(i);
-  }
-  return array;
-};
+export const range = (start, end) =>
+  end >= start
+    ? Array(end - start + 1)
+        .fill(start)
+        .map((val, i) => val + i)
+    : range(end, start);
 
 export const getRange = ({ start, end }) => {
   const ranges = [];
