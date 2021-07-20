@@ -70,20 +70,20 @@ message GalleryData {
   message Item {
     message Video {
       Media data = 1;
-      Media thumbnail = 3;
+      Media thumbnail = 2;
     }
 
     message Image {
       Media data = 1;
-      Link link = 3;
+      Link link = 2;
     }
 
     oneof data {
       Image image = 1;
       Video video = 2;
     }
-    google.protobuf.StringValue title = 4;
-    google.protobuf.StringValue altText = 5;
+    google.protobuf.StringValue title = 3;
+    google.protobuf.StringValue altText = 4;
   }
 
   PluginContainerData container_data = 1;
