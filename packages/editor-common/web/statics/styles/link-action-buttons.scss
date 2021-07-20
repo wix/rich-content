@@ -1,0 +1,62 @@
+@import '~wix-rich-content-common/dist/statics/styles/palette';
+
+.actionButtons_FooterButton {
+  line-height: 1.5;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.actionButtons_wrapper {
+  width: 212px;
+  &.actionButtons_wrapper_mobile {
+    width: 100%;
+  }
+}
+
+.actionButtons_Footer {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  margin-top: 12px;
+  &.multiSelectLinkPanel_Footer {
+    margin: 20px 0;
+  }
+  &.actionButtons_Footer_mobile {
+    margin: 0;
+    padding: 12px 0;
+    width: 100%;
+  }
+}
+
+.actionButtons_FooterActions,
+.actionButtons_RemoveContainer {
+  display: flex;
+  button {
+    color: $settings-action-color-fallback;
+  }
+}
+
+.actionButtons_saveOnlyBtn {
+  height: 40px;
+  width: 94px;
+  border: none;
+}
+
+.actionButtons_mobile_title_buttons_wrapper {
+  width: 100%;
+  position: relative;
+  padding: 0 16px;
+}
+
+.actionButtons_mobile_title {
+  margin: 0;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

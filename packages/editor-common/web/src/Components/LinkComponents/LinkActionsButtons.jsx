@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from '../../../statics/styles/multi-select-link-panel.scss';
+import { Button, ActionButtons, BUTTON_SIZE } from 'wix-rich-content-ui-components';
+import styles from '../../../statics/styles/link-action-buttons.scss';
 import { mergeStyles } from 'wix-rich-content-common';
 
 class LinkActionsButtons extends PureComponent {
@@ -9,6 +10,15 @@ class LinkActionsButtons extends PureComponent {
     super(props);
     this.styles = mergeStyles({ styles, theme: props.theme });
   }
+
+  renderMobileTitle = () => {
+    const { t } = this.props;
+    return (
+      <div id="mob_link_modal_hdr" className={styles.actionButtons_mobile_title}>
+        {t('MobileLinkModal_Title')}
+      </div>
+    );
+  };
 
   render() {
     const { styles } = this;
@@ -23,55 +33,34 @@ class LinkActionsButtons extends PureComponent {
       basicLinkPanel,
       hideUrlInput,
       isMobile,
+      saveBtnOnly,
     } = this.props;
     const doneButtonText = t('LinkPanelContainer_DoneButton');
     const cancelButtonText = t('LinkPanelContainer_CancelButton');
     const removeButtonText = t('LinkPanelContainer_RemoveButton');
-    const doneButtonClassName = classNames(
-      styles.linkPanel_FooterButton,
-      isDoneButtonEnable ? styles.linkPanel_enabled : styles.linkPanel_disabled,
-      {
-        [styles.linkPanel_FooterButton_mobile]: isMobile,
-        [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
-      }
-    );
-    const cancelButtonClassName = classNames(styles.linkPanel_FooterButton, {
-      [styles.linkPanel_FooterButton_mobile]: isMobile,
-      [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
+    const showRemoveButton = isActive && !hideUrlInput && !isMobile;
+    const removeButtonClassName = classNames(styles.actionButtons_FooterButton, {
+      [styles.actionButtons_FooterButton_mobile]: isMobile,
     });
-    const removeButtonClassName = classNames(styles.linkPanel_FooterButton, {
-      [styles.linkPanel_FooterButton_mobile]: isMobile,
-      [styles.multiSelectLinkPanel_Button]: !basicLinkPanel,
-    });
-    return (
+    return saveBtnOnly && !isMobile ? (
+      <Button
+        className={styles.actionButtons_saveOnlyBtn}
+        type="primary"
+        text={doneButtonText}
+        onClick={onDone}
+      >
+        {doneButtonText}
+      </Button>
+    ) : (
       <div
-        className={classNames(styles.linkPanel_Footer, {
-          [styles.linkPanel_Footer_mobile]: isMobile,
+        className={classNames(styles.actionButtons_Footer, {
+          [styles.actionButtons_Footer_mobile]: isMobile,
           [styles.multiSelectLinkPanel_Footer]: !basicLinkPanel,
         })}
       >
-        <div className={styles.linkPanel_FooterActions}>
-          <button
-            tabIndex={tabIndex}
-            aria-label={cancelButtonText}
-            className={cancelButtonClassName}
-            data-hook="linkPanelContainerCancel"
-            onClick={onCancel}
-          >
-            {cancelButtonText}
-          </button>
-          {isActive && !hideUrlInput && (
-            <div className={styles.linkPanel_RemoveContainer}>
-              <div
-                className={classNames(
-                  styles.linkPanel_VerticalDivider,
-                  styles.linkPanel_VerticalDividerNarrowMargin,
-                  {
-                    [styles.linkPanel_VerticalDivider_mobile]: isMobile,
-                    [styles.multiSelectLinkPanel_VerticalDivider]: !basicLinkPanel,
-                  }
-                )}
-              />
+        <div className={styles.actionButtons_FooterActions}>
+          {showRemoveButton && (
+            <div className={styles.actionButtons_RemoveContainer}>
               <button
                 tabIndex={tabIndex}
                 aria-label={removeButtonText}
@@ -84,16 +73,25 @@ class LinkActionsButtons extends PureComponent {
             </div>
           )}
         </div>
-        <button
-          tabIndex={tabIndex}
-          aria-label={doneButtonText}
-          className={doneButtonClassName}
-          data-hook="linkPanelContainerDone"
-          onClick={onDone}
-          disabled={!isDoneButtonEnable}
-        >
-          {doneButtonText}
-        </button>
+        <div className={isMobile && styles.actionButtons_mobile_title_buttons_wrapper}>
+          {isMobile && this.renderMobileTitle()}
+          <div
+            className={classNames(styles.actionButtons_wrapper, {
+              [styles.actionButtons_wrapper_mobile]: isMobile,
+            })}
+          >
+            <ActionButtons
+              size={BUTTON_SIZE.tiny}
+              isMobile={isMobile}
+              onCancel={onCancel}
+              onSave={onDone}
+              theme={this.theme}
+              cancelText={cancelButtonText}
+              saveText={doneButtonText}
+              disableSave={!isDoneButtonEnable}
+            />
+          </div>
+        </div>
       </div>
     );
   }
@@ -111,6 +109,7 @@ LinkActionsButtons.propTypes = {
   basicLinkPanel: PropTypes.bool,
   hideUrlInput: PropTypes.bool,
   isMobile: PropTypes.bool,
+  saveBtnOnly: PropTypes.bool,
 };
 
 export default LinkActionsButtons;

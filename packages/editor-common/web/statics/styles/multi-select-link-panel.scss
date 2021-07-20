@@ -8,7 +8,6 @@
   width: 502px;
   min-width: 360px;
   height: 372px;
-  margin-top: 18px;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -16,26 +15,19 @@
 }
 .multiSelectLinkPanel_container_mobile {
   font-family: $ricos-font-family;
-  color: black;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  min-width: 0;
-  width: auto;
-  height: auto;
-  margin: 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .multiSelectLinkPanel_content {
   display: flex;
   height: 279px;
 }
+
 .multiSelectLinkPanel_content_mobile {
   display: flex;
   padding: 0 18px;
@@ -46,6 +38,7 @@
   width: 100%;
   margin: 14px 0 0 20px;
 }
+
 .multiSelectLinkPanel_LinkPanelContainer_mobile {
   width: 100%;
   margin: 8px 0 0 0;
@@ -54,41 +47,8 @@
 .multiSelectLinkPanel_actionsDivider {
   margin: 0 -19px;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-}
-
-.linkPanel_Footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 23px 14px;
-  &.multiSelectLinkPanel_Footer {
-    padding: 12px 0 16px 0;
-  }
-  &.linkPanel_Footer_mobile {
-    padding: 12px 18px 14px;
-    &.multiSelectLinkPanel_Footer {
-      background-color: $settings-action-color-fallback;
-      padding: 10px 10px;
-    }
-  }
-}
-
-.linkPanel_FooterActions,
-.linkPanel_RemoveContainer {
-  display: flex;
-}
-
-.linkPanel_FooterButton {
-  line-height: 1.5;
-  font-size: 14px;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &.linkPanel_FooterButton_mobile {
-    &.multiSelectLinkPanel_Button {
-      color: #ffffff;
-    }
+  &.multiSelectLinkPanel_actionsDivider_mobile {
+    margin: 0;
   }
 }
 
@@ -96,24 +56,6 @@
   margin: 0 0 0 20px;
   height: auto;
   border-right: 1px solid rgba(51, 51, 51, 0.1);
-  &.linkPanel_VerticalDividerNarrowMargin {
-    margin: 0 13px;
-  }
-  &.linkPanel_VerticalDivider_mobile {
-    margin: 0 20px;
-    &.multiSelectLinkPanel_VerticalDivider {
-      border-right: 1px solid white;
-    }
-  }
-}
-
-.linkPanel_disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.linkPanel_enabled {
-  color: $settings-action-color-fallback;
 }
 
 .multiSelectLinkPanel_header {
@@ -121,22 +63,6 @@
   line-height: 1.5;
   margin-top: 2px;
   margin-bottom: 16px;
-}
-.multiSelectLinkPanel_header_mobile {
-  font-size: 16px;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 28px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.multiSelectLinkPanel_mobileHeaderIcon {
-  width: 19px;
-  height: 19px;
-  margin-right: 11px;
 }
 
 .multiSelectLinkPanel_radioButtons {
@@ -167,7 +93,7 @@
   .multiSelectLinkPanel_tab {
     display: flex;
     height: 30px;
-    padding-bottom: 8px;
+    padding: 8px 0;
     width: 100%;
     justify-content: center;
     align-items: center;
