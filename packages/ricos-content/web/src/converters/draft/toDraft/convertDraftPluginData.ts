@@ -195,8 +195,21 @@ const convertGalleryItem = item => {
   const type = has(item, 'image') ? 'image' : 'video';
   item.metadata = item[type].metadata;
   item.metadata.type = type;
-  item.url = item[type].url;
-  has(item, 'video.thumbnail') && (item.metadata.poster = item.video.thumbnail);
+  const {
+    src: { url },
+    height,
+    width,
+  } = item[type].data;
+  item.url = url;
+  item.metadata = { ...item.metadata, height, width };
+  if (has(item, 'video.thumbnail')) {
+    const {
+      src: { url },
+      height,
+      width,
+    } = item.video.thumbnail;
+    item.metadata.poster = { url, height, width };
+  }
   has(item, 'image.link') && (item.metadata.link = item.image.link);
   delete item.video;
   delete item.image;

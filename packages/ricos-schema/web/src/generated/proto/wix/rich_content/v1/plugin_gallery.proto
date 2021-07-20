@@ -71,26 +71,18 @@ message GalleryData {
   
   message Item {
     message ItemMetadata {
-      google.protobuf.Int32Value height = 1;
-      google.protobuf.Int32Value width = 2;
-      google.protobuf.StringValue title = 3;
-      google.protobuf.StringValue altText = 4;
+      google.protobuf.StringValue title = 1;
+      google.protobuf.StringValue altText = 2;
     }
 
     message Video {
-      message Thumbnail {
-        google.protobuf.StringValue url = 1;
-        google.protobuf.Int32Value height = 2;
-        google.protobuf.Int32Value width = 3;
-      }
-
-      google.protobuf.StringValue url = 1;
+      Media data = 1;
       ItemMetadata metadata = 2;
-      Thumbnail thumbnail = 3;
+      Media thumbnail = 3;
     }
 
     message Image {
-      google.protobuf.StringValue url = 1;
+      Media data = 1;
       ItemMetadata metadata = 2;
       Link link = 3;
     }

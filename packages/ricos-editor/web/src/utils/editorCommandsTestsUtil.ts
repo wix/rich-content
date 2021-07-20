@@ -198,31 +198,40 @@ const gallery = {
     items: [
       {
         image: {
-          url: '8bb438_a3a11b05e3f54f77ba1c04dfba22c99c.jpg',
-          metadata: {
+          data: {
+            src: {
+              url: '8bb438_a3a11b05e3f54f77ba1c04dfba22c99c.jpg',
+            },
             height: 3497,
             width: 5000,
           },
+          metadata: {},
         },
         itemId: 'be4312f031f9850a825b2064b9c92d72',
       },
       {
         image: {
-          url: '8bb438_f89f7e8aac574a0f962437d4f369b37a.jpg',
-          metadata: {
+          data: {
+            src: {
+              url: '8bb438_f89f7e8aac574a0f962437d4f369b37a.jpg',
+            },
             height: 3733,
             width: 5600,
           },
+          metadata: {},
         },
         itemId: '682b2132c2697fb0e467e21977beeaa2',
       },
       {
         image: {
-          url: '8bb438_a132b18dea524d48a68a37f0075fcc1e.jpg',
-          metadata: {
+          data: {
+            src: {
+              url: '8bb438_a132b18dea524d48a68a37f0075fcc1e.jpg',
+            },
             height: 3727,
             width: 5600,
           },
+          metadata: {},
         },
         itemId: '0ee95e519c2e1274c30f56e3c098ec86',
       },
@@ -250,11 +259,14 @@ const gallery = {
     items: [
       {
         image: {
-          url: '8bb438_a132b18dea524d48a68a37f0075fcc1e.jpg',
-          metadata: {
+          data: {
+            src: {
+              url: '8bb438_a132b18dea524d48a68a37f0075fcc1e.jpg',
+            },
             height: 3727,
             width: 5600,
           },
+          metadata: {},
         },
         itemId: '0ee95e519c2e1274c30f56e3c098ec86',
       },
