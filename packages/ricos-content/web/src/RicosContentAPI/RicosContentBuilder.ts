@@ -34,7 +34,7 @@ type AddTextMethodParams<T> = AddMethodParams<T> & {
 type AddListMethodParams = {
   items: string | TextData | ListItemData | (string | TextData | ListItemData)[];
   data?: ParagraphData;
-  type: Node_Type.ORDERED_LIST | Node_Type.BULLET_LIST;
+  type: Node_Type.ORDERED_LIST | Node_Type.BULLETED_LIST;
   index?: number;
   before?: string;
   after?: string;
@@ -166,10 +166,10 @@ export const setupContentBuilder = (
   });
 
   [
-    { name: 'BulletList', type: Node_Type.BULLET_LIST },
+    { name: 'BulletList', type: Node_Type.BULLETED_LIST },
     { name: 'OrderedList', type: Node_Type.ORDERED_LIST },
   ].forEach(
-    ({ name, type }: { name: string; type: Node_Type.ORDERED_LIST | Node_Type.BULLET_LIST }) => {
+    ({ name, type }: { name: string; type: Node_Type.ORDERED_LIST | Node_Type.BULLETED_LIST }) => {
       builderApis[`add${name}`] = RicosContentBuilder.prototype[`add${name}`] = function({
         items,
         data,

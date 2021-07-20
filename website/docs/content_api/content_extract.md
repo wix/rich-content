@@ -58,7 +58,7 @@ const galleryImageCount = extract(richContent.nodes)
 4. Extract list item texts, grouped by lists:
 ```ts
 const listTexts = extract(richContent.nodes)
-  .filter(({ type }) => type === Node_Type.BULLET_LIST || type === Node_Type.ORDERED_LIST)
+  .filter(({ type }) => type === Node_Type.BULLETED_LIST || type === Node_Type.ORDERED_LIST)
   .chain(n => extract(n).map(({ textData }) => textData?.text || ''))
   .map(extractor => extractor.get());
 ```

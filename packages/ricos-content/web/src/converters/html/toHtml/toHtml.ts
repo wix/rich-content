@@ -57,7 +57,7 @@ const DECORATION_TO_HTML_TAG = {
   [Decoration_Type.LINK]: 'a',
 };
 const NODE_TO_HTML_TAG = {
-  [Node_Type.BULLET_LIST]: 'ul',
+  [Node_Type.BULLETED_LIST]: 'ul',
   [Node_Type.ORDERED_LIST]: 'ol',
   [Node_Type.LIST_ITEM]: 'li',
   [Node_Type.PARAGRAPH]: 'p',

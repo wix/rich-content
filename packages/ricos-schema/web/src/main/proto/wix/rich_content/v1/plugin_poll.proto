@@ -19,7 +19,7 @@ message PollConfig {
 message PollOption {
   google.protobuf.Int32Value anonymous_count = 1;
   google.protobuf.Int32Value count = 2;
-  google.protobuf.StringValue id = 3;
+  google.protobuf.StringValue option_id = 3;
   repeated google.protobuf.StringValue latest_voters = 4;
   google.protobuf.StringValue media_id = 5;
   google.protobuf.Int32Value rating = 6;
@@ -75,7 +75,7 @@ message Poll {
   google.protobuf.Int32Value count = 2;
   google.protobuf.StringValue created_by = 3;
   google.protobuf.BoolValue creator_flag = 4;
-  google.protobuf.StringValue id = 5;
+  google.protobuf.StringValue poll_id = 5;
   google.protobuf.StringValue media_id = 6;
   repeated PollOption options = 7;
   repeated google.protobuf.StringValue own_votes = 8; // poll_option_id

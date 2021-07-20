@@ -6,7 +6,7 @@ export const COMMANDS = Object.freeze({
   ALIGN_CENTER: 'center',
   JUSTIFY: 'justify',
   NUMBERED_LIST: 'ordered-list-item',
-  BULLET_LIST: 'unordered-list-item',
+  BULLETED_LIST: 'unordered-list-item',
   CODE: 'code-block',
   BLOCKQUOTE: 'blockquote',
   BACKSPACE: 'backspace',

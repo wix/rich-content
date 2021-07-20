@@ -81,7 +81,7 @@ describe('Ricos Content Builder', () => {
     const expected: RichContent = {
       nodes: [
         {
-          type: Node_Type.BULLET_LIST,
+          type: Node_Type.BULLETED_LIST,
           id: 'foo',
           nodes: [
             {

@@ -9,11 +9,11 @@ import { createNode, partitionBy } from '../../nodeUtils';
 const decomposeListItem = (node: Node): Node[] =>
   partitionBy<Node>(
     ({ type }) =>
-      ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLET_LIST].includes(type), // anything but paragraph or list is a separator
-    ({ type }) => type === Node_Type.BULLET_LIST, // partition is a bullet list
+      ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLETED_LIST].includes(type), // anything but paragraph or list is a separator
+    ({ type }) => type === Node_Type.BULLETED_LIST, // partition is a bullet list
     identity, // separator added as is
     () =>
-      createNode(Node_Type.BULLET_LIST, {
+      createNode(Node_Type.BULLETED_LIST, {
         nodes: [createNode(Node_Type.LIST_ITEM, { nodes: [], data: {} })],
         data: {},
       }), // partition initialization
@@ -29,7 +29,7 @@ const decomposeUnsupportedListItems = (content: RichContent) =>
         nodes.length === 1 &&
         nodes[0].nodes.filter(
           ({ type }) =>
-            ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLET_LIST].includes(type)
+            ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLETED_LIST].includes(type)
         ).length > 0
     )
     .set(decomposeListItem);
@@ -40,37 +40,37 @@ const splitList = (list: Node): Node[] =>
     li =>
       li.nodes.filter(
         ({ type }) =>
-          ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLET_LIST].includes(type)
+          ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLETED_LIST].includes(type)
       ).length > 0, // separator is a list item with unsupported nodes
-    n => n.type === Node_Type.BULLET_LIST, // partition is an empty bullet list
+    n => n.type === Node_Type.BULLETED_LIST, // partition is an empty bullet list
     n => createNode(Node_Type.ORDERED_LIST, { nodes: [n], data: {} }), // separator list item wrapped with ordered list
-    () => createNode(Node_Type.BULLET_LIST, { nodes: [], data: {} }), // new partition
+    () => createNode(Node_Type.BULLETED_LIST, { nodes: [], data: {} }), // new partition
     (list, item) => list.nodes.push(item) // add valid list item to partition
   )(list.nodes);
 
 // find lists whose items contain some non-paragraphs or non-lists
-const getListToSplitKeys = content =>
+const getListToSplitIds = content =>
   extract(content.nodes)
-    .filter(({ type }) => type === Node_Type.BULLET_LIST || type === Node_Type.ORDERED_LIST)
-    .map(({ key, nodes }) => ({ key, nodes: nodes.flatMap(n => n.nodes) }))
+    .filter(({ type }) => type === Node_Type.BULLETED_LIST || type === Node_Type.ORDERED_LIST)
+    .map(({ id, nodes }) => ({ id, nodes: nodes.flatMap(n => n.nodes) }))
     .filter(
       ({ nodes }) =>
         nodes.filter(
           ({ type }) =>
-            ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLET_LIST].includes(type)
+            ![Node_Type.PARAGRAPH, Node_Type.ORDERED_LIST, Node_Type.BULLETED_LIST].includes(type)
         ).length > 0
     )
-    .map(({ key }) => key)
+    .map(({ id }) => id)
     .get();
 
 // separate legit draft list items from unsupported ones (containing anything except paragraphs and nested lists)
 const splitUnsupportedLists = (content: RichContent): E.Either<RichContent, RichContent> => {
-  const listToSplitKeys = getListToSplitKeys(content);
+  const listToSplitIds = getListToSplitIds(content);
   // Either used for short-circuiting of decomposeUnsupportedListItems, if nothing was splitted
-  return listToSplitKeys.length > 0
+  return listToSplitIds.length > 0
     ? E.right(
         modify(content)
-          .filter(({ key }) => listToSplitKeys.includes(key))
+          .filter(({ id }) => listToSplitIds.includes(id))
           .set(splitList)
       )
     : E.left(content);
@@ -78,7 +78,7 @@ const splitUnsupportedLists = (content: RichContent): E.Either<RichContent, Rich
 
 const newLine: Node = {
   type: Node_Type.TEXT,
-  key: '',
+  id: '',
   nodes: [],
   textData: { text: '\n', decorations: [] },
 };

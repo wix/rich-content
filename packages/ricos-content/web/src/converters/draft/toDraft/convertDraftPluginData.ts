@@ -179,13 +179,20 @@ const convertPollData = data => {
     (data.layout.poll.direction = data.layout.poll.direction.toLowerCase());
   has(data, 'design.poll.backgroundType') &&
     (data.design.poll.backgroundType = data.design.poll.backgroundType.toLowerCase());
+  has(data, 'poll.pollId') && (data.poll.id = data.poll.pollId);
+  delete data.poll.pollId;
+  has(data, 'poll.options') &&
+    (data.poll.options = data.poll.options.map(({ optionId, ...rest }) => ({
+      id: optionId,
+      ...rest,
+    })));
 };
 
 const convertAppEmbedData = data => {
-  const { type, id, name, imageSrc, url, bookingData, eventData } = data;
+  const { type, itemId, name, imageSrc, url, bookingData, eventData } = data;
   data.type = type.toLowerCase();
   const selectedProduct: Record<string, unknown> = {
-    id,
+    id: itemId,
     name,
     imageSrc,
     pageUrl: url,
@@ -193,7 +200,7 @@ const convertAppEmbedData = data => {
     ...(eventData || {}),
   };
   data.selectedProduct = selectedProduct;
-  delete data.id;
+  delete data.itemId;
   delete data.name;
   delete data.imageSrc;
   delete data.url;

@@ -33,7 +33,7 @@ export default (updateEditorState, customHandlers, blockType, onBackspace) => (
       case COMMANDS.TITLE:
       case COMMANDS.SUBTITLE:
       case COMMANDS.NUMBERED_LIST:
-      case COMMANDS.BULLET_LIST:
+      case COMMANDS.BULLETED_LIST:
       case COMMANDS.BLOCKQUOTE:
       case COMMANDS.CODE:
         newState = RichUtils.toggleBlockType(editorState, command);

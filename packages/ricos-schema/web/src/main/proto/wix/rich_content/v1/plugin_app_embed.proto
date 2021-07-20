@@ -21,7 +21,7 @@ message AppEmbedData {
     }
     
     AppType type = 1;
-    google.protobuf.StringValue id = 2;
+    google.protobuf.StringValue item_id = 2;
     google.protobuf.StringValue name = 3;
     google.protobuf.StringValue image_src = 4;
     google.protobuf.StringValue url = 5;

@@ -38,7 +38,7 @@ const COMMAND_BY_SHORTCUT = [
     key: '7',
   },
   {
-    command: COMMANDS.BULLET_LIST,
+    command: COMMANDS.BULLETED_LIST,
     modifiers: [MODIFIERS.COMMAND, MODIFIERS.SHIFT],
     key: '8',
   },

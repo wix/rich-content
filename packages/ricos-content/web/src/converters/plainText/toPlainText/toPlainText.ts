@@ -43,7 +43,7 @@ export const toPlainText = async (
           plainText += parseTextNodes(getParagraphNode(node));
           break;
         case Node_Type.ORDERED_LIST:
-        case Node_Type.BULLET_LIST:
+        case Node_Type.BULLETED_LIST:
           plainText += parseListNode(node, delimiter);
           break;
         case Node_Type.IMAGE:

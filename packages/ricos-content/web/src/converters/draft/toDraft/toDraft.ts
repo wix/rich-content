@@ -47,7 +47,7 @@ const convert = (ricosContent: RichContent): DraftContent => {
           parseTextNodes(node, { type: HeaderLevel[node.headingData.level], key: node.id });
           break;
         case Node_Type.ORDERED_LIST:
-        case Node_Type.BULLET_LIST:
+        case Node_Type.BULLETED_LIST:
           parseListNode(node);
           break;
         case Node_Type.PARAGRAPH:

@@ -5,7 +5,7 @@ export const NODE_TYPES = [
   Node_Type.PARAGRAPH,
   Node_Type.TEXT,
   Node_Type.HEADING,
-  Node_Type.BULLET_LIST,
+  Node_Type.BULLETED_LIST,
   Node_Type.ORDERED_LIST,
   Node_Type.LIST_ITEM,
   Node_Type.BLOCKQUOTE,

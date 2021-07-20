@@ -50,7 +50,7 @@ export const lToList: Rule = [
   context => (node: Element) => [
     createNode(
       {
-        ul: Node_Type.BULLET_LIST,
+        ul: Node_Type.BULLETED_LIST,
         ol: Node_Type.ORDERED_LIST,
         li: Node_Type.LIST_ITEM,
       }[node.nodeName],
