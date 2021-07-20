@@ -13,6 +13,7 @@ import {
   APP_EMBED_TYPE,
   VIDEO_TYPE,
   MAP_TYPE,
+  COLLAPSIBLE_LIST_TYPE,
   EMBED_TYPE,
   LINK_TYPE,
 } from '../../../consts';
@@ -45,6 +46,7 @@ export const convertBlockDataToRicos = (type: string, data) => {
     [MENTION_TYPE]: convertMentionData,
     [LINK_BUTTON_TYPE]: convertButtonData,
     [ACTION_BUTTON_TYPE]: convertButtonData,
+    [COLLAPSIBLE_LIST_TYPE]: convertCollapsibleListData,
     [HTML_TYPE]: convertHTMLData,
     [MAP_TYPE]: convertMapData,
     [EMBED_TYPE]: convertEmbedData,
@@ -210,6 +212,20 @@ const convertMentionData = (data: {
 const convertFileData = (data: FileComponentData & { src }) => {
   const src: FileSource = { url: data.url, custom: data.id };
   data.src = src;
+};
+
+const convertCollapsibleListData = (data: {
+  config?: { expandState: string; expandOnlyOne: boolean; direction: string };
+  expandState?: string;
+  expandOnlyOne?: boolean;
+  direction?: string;
+}) => {
+  const { config } = data || {};
+  const { expandState, expandOnlyOne, direction } = config || {};
+  data.expandState = expandState?.toUpperCase();
+  data.expandOnlyOne = expandOnlyOne;
+  data.direction = direction?.toUpperCase();
+  delete data.config;
 };
 
 const convertButtonData = (

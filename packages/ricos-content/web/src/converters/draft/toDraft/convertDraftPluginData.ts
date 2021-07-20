@@ -55,6 +55,7 @@ export const convertNodeDataToDraft = (nodeType: Node_Type, data) => {
     [Node_Type.APP_EMBED]: convertAppEmbedData,
     [Node_Type.LINK_PREVIEW]: convertLinkPreviewData,
     [Node_Type.BUTTON]: convertButtonData,
+    [Node_Type.COLLAPSIBLE_LIST]: convertCollapsibleListData,
     [Node_Type.HTML]: convertHTMLData,
     [Node_Type.MAP]: convertMapData,
     [Node_Type.EMBED]: convertEmbedData,
@@ -223,6 +224,24 @@ const convertFileData = (data: FileData & FileComponentData) => {
   data.url = url;
   data.id = custom;
   delete data.src;
+};
+
+const convertCollapsibleListData = (data: {
+  config: { expandState?: string; expandOnlyOne?: boolean; direction?: string };
+  expandState?: string;
+  expandOnlyOne?: boolean;
+  direction?: string;
+}) => {
+  const { expandState, expandOnlyOne, direction } = data || {};
+  const config = {
+    expandState: expandState?.toLowerCase(),
+    expandOnlyOne,
+    direction: direction?.toLowerCase(),
+  };
+  data.config = config;
+  delete data.expandState;
+  delete data.expandOnlyOne;
+  delete data.direction;
 };
 
 const convertButtonData = (data: Partial<ButtonData> & { button }) => {

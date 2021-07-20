@@ -60,12 +60,37 @@ export const fromDraft = (draftJSON: DraftContent): RichContent => {
   };
 
   const parseAtomicBlock = ({ key, data, entityRanges }: RicosContentBlock): Node | null => {
+    type CollapsibleListPair = { key: string; title: DraftContent; content: DraftContent };
+
+    const parseCollapsibleListPairItem = ({ key, item }: { key: string; item: DraftContent }) => ({
+      key,
+      type: Node_Type.COLLAPSIBLE_LIST_PAIR_ITEM,
+      nodes: fromDraft(item).nodes,
+    });
+
+    const parseCollapsibleListPair = (pair: CollapsibleListPair) => ({
+      key: pair.key,
+      type: Node_Type.COLLAPSIBLE_LIST_PAIR,
+      nodes: [
+        parseCollapsibleListPairItem({ key: '0', item: pair.title }),
+        parseCollapsibleListPairItem({ key: '1', item: pair.content }),
+      ],
+    });
+
+    const parseCollapsiblePairs = (pairs: CollapsibleListPair[]) =>
+      pairs.map((pair: CollapsibleListPair) => parseCollapsibleListPair(pair));
+
     if (entityRanges && entityRanges.length) {
       const entity = getEntity(entityRanges[0].key, entityMap);
       if (entity) {
+        const nodes =
+          entity.type === Node_Type.COLLAPSIBLE_LIST
+            ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              parseCollapsiblePairs((entity as any).collapsibleListData.pairs)
+            : [];
         return {
           key,
-          nodes: [],
+          nodes,
           style: getNodeStyle(data),
           ...entity,
         };
