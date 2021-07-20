@@ -26,6 +26,22 @@ const eyesOpen = ({
   });
 
 describe('plugins', () => {
+  beforeEach(() => {
+    const round = val => Math.round(val / 10) * 10;
+    cy.intercept(/https:\/\/static.wixstatic.com.*q_(?!5)/, req => {
+      const url = req.url;
+      const capturingRegex = /w_(?<width>\d+),h_(?<height>\d+)/;
+      const groups = url.match(capturingRegex)?.groups;
+      if (groups) {
+        let { width, height } = groups;
+        width = round(width / 4);
+        height = round(height / 4);
+        const newUrl = url.replace(/q_\d+/, 'q_5').replace(/w_\d+,h_\d+/, `w_${width},h_${height}`);
+        req.redirect(newUrl);
+      }
+    });
+  });
+
   afterEach(() => cy.matchContentSnapshot());
 
   context('viewerToolbar', () => {
