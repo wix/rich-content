@@ -16,20 +16,35 @@
     Changes that have landed in master but are not yet released.
     Click to see more.
   </summary>
-  
+
+- `*`
+  - [#2749](https://github.com/wix/ricos/pull/2749) remove string.matchAll to work in safari 12
+
+</details>
+<hr/>
+
+## 8.47.1 (July 19, 2021)
+
+### :bug: Bug Fix
+
+- `table`
+  - [#2748](https://github.com/wix/ricos/pull/2748) fix tables component data from store override
+
+## 8.47.0 (July 19, 2021)
+
 ### :rocket: New Feature
+
 - `ricos-content`
+
   - [#2740](https://github.com/wix/ricos/pull/2740) fromHtml/CKEditor convertor
   - [#2740](https://github.com/wix/ricos/pull/2740) `fromHtml` converter now exposed as `server-side-converters/fromRichTextHtml`
-  
+
 ### :bug: Bug Fix
+
 - `editor`
   - [#2708](https://github.com/wix/ricos/pull/2708) error boundary lifted from RCE to Ricos
 - `loadable`
   - [#2745](https://github.com/wix/ricos/pull/2745) CJS bundle fix
-
-</details>
-<hr/>
 
 ## 8.46.19 (July 18, 2021)
 

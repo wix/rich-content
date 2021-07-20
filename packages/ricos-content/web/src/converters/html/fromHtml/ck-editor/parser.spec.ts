@@ -28,8 +28,11 @@ describe('CKEditor parser', () => {
     );
     expect(images[0].imageData?.link?.url).toEqual('javascript:void(0)'); // eslint-disable-line no-script-url
     expect(images[0].imageData?.link?.customData).toEqual(
-      JSON.stringify({ method: 'navigateToPage', data: 'eihsd' })
+      JSON.stringify({ type: 'pageLink', id: 'eihsd' })
     );
+    // expect(images[2].imageData?.link?.customData).toEqual(
+    //   JSON.stringify({ type: 'pageLink', id: 'eihsd' })
+    // );
   });
 
   it('should output valid content for toDraft', () => {

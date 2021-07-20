@@ -13,7 +13,7 @@ const parseNavigationData = flow(
   d =>
     E.tryCatch(
       () => JSON.parse(d),
-      () => d
+      () => ({ type: 'pageLink', id: d })
     ),
   E.fold(identity, identity)
 );
@@ -21,7 +21,7 @@ const parseNavigationData = flow(
 const toCustomData = flow(
   getMatches(/Wix\.(.+)\('(.+)'\)/),
   E.fromOption(() => 'failed to parse custom link onclick'),
-  E.map(([, method, data]: string[]) => ({ method, data: parseNavigationData(data) })),
+  E.map(([, , data]: string[]) => parseNavigationData(data)),
   E.map(JSON.stringify),
   E.fold(identity, identity)
 );

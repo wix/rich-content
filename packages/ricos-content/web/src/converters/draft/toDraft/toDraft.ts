@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { flow } from 'fp-ts/function';
 import { RichContent, Node, Node_Type } from 'ricos-schema';
-import { DraftContent, RicosContentBlock, Version } from '../../..';
+import { DraftContent, RicosContentBlock } from '../../../types';
+import { Version } from '../../../version';
 import { genKey } from '../../generateRandomKey';
 import {
   BlockType,
