@@ -206,7 +206,6 @@ const gallery = {
             width: 5000,
           },
         },
-        metadata: {},
         itemId: 'be4312f031f9850a825b2064b9c92d72',
       },
       {
@@ -219,7 +218,6 @@ const gallery = {
             width: 5600,
           },
         },
-        metadata: {},
         itemId: '682b2132c2697fb0e467e21977beeaa2',
       },
       {
@@ -232,13 +230,12 @@ const gallery = {
             width: 5600,
           },
         },
-        metadata: {},
         itemId: '0ee95e519c2e1274c30f56e3c098ec86',
       },
     ],
     styles: {
-      layouting: {
-        layout: 'GRID',
+      layout: {
+        type: 'GRID',
         horizontalScroll: false,
         orientation: 'ROWS',
         itemsPerRow: 3,
@@ -267,13 +264,12 @@ const gallery = {
             width: 5600,
           },
         },
-        metadata: {},
         itemId: '0ee95e519c2e1274c30f56e3c098ec86',
       },
     ],
     styles: {
-      layouting: {
-        layout: 'GRID',
+      layout: {
+        type: 'GRID',
         horizontalScroll: false,
         orientation: 'ROWS',
         itemsPerRow: 3,

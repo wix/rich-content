@@ -482,7 +482,6 @@
                 "width": 5600
               }
             },
-            "metadata": {},
             "itemId": "2c2698b83ba64574db5e28ed54064081"
           },
           {
@@ -495,7 +494,6 @@
                 "width": 1920
               }
             },
-            "metadata": {},
             "itemId": "a327950f89cc4994f34a0cd0d4a71473"
           },
           {
@@ -515,13 +513,12 @@
                 "width": 5600
               }
             },
-            "metadata": {},
             "itemId": "d19570fa-e97f-4b3d-b8ad-4e24b3a9a3ec"
           }
         ],
         "styles": {
-          "layouting": {
-            "layout": "GRID",
+          "layout": {
+            "type": "GRID",
             "horizontalScroll": false,
             "orientation": "ROWS",
             "itemsPerRow": 3

@@ -115,15 +115,13 @@ const convertVideoData = (data: {
 };
 
 const convertGalleryStyles = styles => {
-  styles.layouting = {};
+  styles.layout = {};
   styles.itemStyling = {};
   styles.thumbnails = {};
-  has(styles, 'galleryLayout') && (styles.layouting.layout = styles.galleryLayout);
-  has(styles, 'oneRow') && (styles.layouting.horizontalScroll = styles.oneRow);
-  has(styles, 'isVertical') &&
-    (styles.layouting.orientation = styles.isVertical ? 'COLUMNS' : 'ROWS');
-  has(styles, 'numberOfImagesPerRow') &&
-    (styles.layouting.itemsPerRow = styles.numberOfImagesPerRow);
+  has(styles, 'galleryLayout') && (styles.layout.type = styles.galleryLayout);
+  has(styles, 'oneRow') && (styles.layout.horizontalScroll = styles.oneRow);
+  has(styles, 'isVertical') && (styles.layout.orientation = styles.isVertical ? 'COLUMNS' : 'ROWS');
+  has(styles, 'numberOfImagesPerRow') && (styles.layout.itemsPerRow = styles.numberOfImagesPerRow);
   has(styles, 'gallerySizePx') && (styles.itemStyling.targetSize = styles.gallerySizePx);
   has(styles, 'cubeRatio') && (styles.itemStyling.ratio = styles.cubeRatio);
   has(styles, 'cubeType') && (styles.itemStyling.crop = styles.cubeType.toUpperCase());
@@ -137,10 +135,12 @@ const convertGalleryStyles = styles => {
 const convertGalleryItem = item => {
   const {
     url,
-    metadata: { type, poster, height, width, link },
+    metadata: { type, poster, height, width, link, title, altText },
   } = item;
   item[type] = { data: { src: { url }, height, width } };
-  if (type === 'video') {
+  title && (item.title = title);
+  altText && (item.altText = altText);
+  if (type === 'video' && poster) {
     const src = { url: poster.url || poster };
     item.video.thumbnail = { src, height: poster.height || height, width: poster.width || width };
   }

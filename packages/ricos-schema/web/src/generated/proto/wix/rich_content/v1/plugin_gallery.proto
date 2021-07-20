@@ -26,9 +26,6 @@ message GalleryData {
         COLUMN = 7;
         MAGIC = 8;
         FULLSIZE = 9;
-        BRICKS = 10;
-        MIX = 11;
-        ALTERNATE = 12;
       }
     
       enum Orientation {
@@ -36,7 +33,7 @@ message GalleryData {
         COLUMNS = 1;
       }
     
-      Type layout = 1;
+      Type type = 1;
       google.protobuf.BoolValue horizontal_scroll = 2;
       Orientation orientation = 3;
       google.protobuf.Int32Value items_per_row = 4;
@@ -53,6 +50,7 @@ message GalleryData {
       google.protobuf.Int32Value margin = 4;
     }
     
+    // relevant only when has thumbnails
     message Thumbnails {
       enum Alignment {
         TOP = 0;
@@ -64,17 +62,12 @@ message GalleryData {
       google.protobuf.FloatValue spacings = 2;
     }
   
-    Layout layouting = 1;
+    Layout layout = 1;
     ItemStyling item_styling = 2;
     Thumbnails thumbnails = 3;
   }
   
   message Item {
-    message Metadata {
-      google.protobuf.StringValue title = 1;
-      google.protobuf.StringValue altText = 2;
-    }
-
     message Video {
       Media data = 1;
       Media thumbnail = 3;
@@ -90,7 +83,8 @@ message GalleryData {
       Image image = 2;
       Video video = 3;
     }
-    Metadata metadata = 4;
+    google.protobuf.StringValue title = 4;
+    google.protobuf.StringValue altText = 5;
   }
 
   PluginContainerData container_data = 1;

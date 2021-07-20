@@ -164,19 +164,14 @@ enum GalleryLayout {
   COLUMN,
   MAGIC,
   FULLSIZE,
-  BRICKS,
-  MIX,
-  ALTERNATE,
 }
 
 const convertGalleryStyles = styles => {
-  has(styles, 'layouting.layout') &&
-    (styles.galleryLayout = GalleryLayout[styles.layouting.layout]);
-  has(styles, 'layouting.horizontalScroll') && (styles.oneRow = styles.layouting.horizontalScroll);
-  has(styles, 'layouting.orientation') &&
-    (styles.isVertical = styles.layouting.orientation === 'COLUMNS');
-  has(styles, 'layouting.itemsPerRow') &&
-    (styles.numberOfImagesPerRow = styles.layouting.itemsPerRow);
+  has(styles, 'layout.type') && (styles.galleryLayout = GalleryLayout[styles.layout.type]);
+  has(styles, 'layout.horizontalScroll') && (styles.oneRow = styles.layout.horizontalScroll);
+  has(styles, 'layout.orientation') &&
+    (styles.isVertical = styles.layout.orientation === 'COLUMNS');
+  has(styles, 'layout.itemsPerRow') && (styles.numberOfImagesPerRow = styles.layout.itemsPerRow);
   has(styles, 'itemStyling.targetSize') && (styles.gallerySizePx = styles.itemStyling.targetSize);
   has(styles, 'itemStyling.ratio') && (styles.cubeRatio = styles.itemStyling.ratio);
   has(styles, 'itemStyling.crop') && (styles.cubeType = styles.itemStyling.crop.toLowerCase());
@@ -184,7 +179,7 @@ const convertGalleryStyles = styles => {
   has(styles, 'thumbnails.alignment') &&
     (styles.galleryThumbnailsAlignment = styles.thumbnails.alignment.toLowerCase());
   has(styles, 'thumbnails.spacings') && (styles.thumbnailSpacings = styles.thumbnails.spacings);
-  delete styles.layouting;
+  delete styles.layout;
   delete styles.itemStyling;
   delete styles.thumbnails;
   return styles;
@@ -198,7 +193,9 @@ const convertGalleryItem = item => {
     width,
   } = item[type].data;
   item.url = url;
-  item.metadata = { ...item.metadata, height, width, type };
+  item.metadata = { height, width, type };
+  has(item, 'title') && (item.metadata.title = item.title);
+  has(item, 'altText') && (item.metadata.altText = item.altText);
   if (has(item, 'video.thumbnail')) {
     const {
       src: { url },
@@ -210,6 +207,8 @@ const convertGalleryItem = item => {
   has(item, 'image.link') && (item.metadata.link = item.image.link);
   delete item.video;
   delete item.image;
+  delete item.title;
+  delete item.altText;
   return item;
 };
 
