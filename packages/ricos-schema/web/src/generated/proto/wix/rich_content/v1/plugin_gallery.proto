@@ -14,8 +14,8 @@ import "google/protobuf/wrappers.proto";
 message GalleryData {
 
   message Styles {
-    message Layouting {
-      enum Layout {
+    message Layout {
+      enum Type {
         COLLAGE = 0;
         MASONRY = 1;
         GRID = 2;
@@ -36,7 +36,7 @@ message GalleryData {
         COLUMNS = 1;
       }
     
-      Layout layout = 1;
+      Type layout = 1;
       google.protobuf.BoolValue horizontal_scroll = 2;
       Orientation orientation = 3;
       google.protobuf.Int32Value items_per_row = 4;
@@ -49,7 +49,7 @@ message GalleryData {
       }
       google.protobuf.Int32Value target_size = 1;
       google.protobuf.DoubleValue ratio = 2;
-      google.protobuf.StringValue crop = 3;
+      Crop crop = 3;
       google.protobuf.Int32Value margin = 4;
     }
     
@@ -64,7 +64,7 @@ message GalleryData {
       google.protobuf.Int32Value spacings = 2;
     }
   
-    Layouting layouting = 1;
+    Layout layouting = 1;
     ItemStyling item_styling = 2;
     ThumbnailsLayout thumbnails_layout = 3;
   }
