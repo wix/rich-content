@@ -1,7 +1,7 @@
 import { has, isNumber, isString, isArray } from 'lodash';
-import { flow } from 'fp-ts/lib/function';
-import * as A from 'fp-ts/lib/Array';
-import * as O from 'fp-ts/lib/Option';
+import { flow } from 'fp-ts/function';
+import * as A from 'fp-ts/Array';
+import * as O from 'fp-ts/Option';
 import { ParagraphData, RichContent, TextData, Node } from 'ricos-schema';
 import { task, either, firstResolved } from '../fp-utils';
 import { ListItemData } from '../types';

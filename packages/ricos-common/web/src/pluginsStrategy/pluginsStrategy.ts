@@ -1,75 +1,76 @@
-import { merge } from 'lodash';
-import {
-  EditorPluginsStrategy,
-  ViewerPluginsStrategy,
-  BasePlugin,
-  PluginsStrategy,
-} from './pluginTypes';
-import { RicosCssOverride, RichContentProps } from '../types';
+import { ComponentType } from 'react';
+import { merge, pick } from 'lodash'; // TODO: get rid of buggy merge
+import { fold, struct } from 'fp-ts/Monoid';
+import { last } from 'fp-ts/Semigroup';
+import * as A from 'fp-ts/Array';
+import * as R from 'fp-ts/Record';
+import { pipe } from 'fp-ts/function';
 import {
   AvailableExperiments,
+  CreatePluginFunction,
   DraftContent,
   EditorPlugin,
-  ViewerPlugin,
+  InlineStyleMapper as InlineStyleMapping,
+  PluginTypeMapper,
   ThemeData,
+  ViewerPlugin,
 } from 'wix-rich-content-common';
+import { RCEPluginProps, RCVPluginProps, BasePlugin } from './pluginTypes';
+import { RicosCssOverride, RichContentProps } from '../types';
 
-const getPluginProps = (
-  isViewer: boolean,
-  {
-    config = {},
-    plugins = [],
-    ModalsMap = {},
-    createPluginsDataMap = {},
-    typeMappers = [],
-    decorators = [],
-    inlineStyleMappers = [],
-    theme = {},
-  }: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  any,
+/* eslint-disable @typescript-eslint/no-explicit-any */
+type InlineStyleMapper = () => InlineStyleMapping;
+
+const recordMergeM = <T>() => R.getMonoid<string, T>(last<T>());
+const rcvPropM = struct<RCVPluginProps>({
+  config: recordMergeM<any>(),
+  decorators: A.getMonoid<any>(),
+  typeMappers: A.getMonoid<PluginTypeMapper>(),
+  inlineStyleMappers: A.getMonoid<InlineStyleMapper>(),
+});
+const rcePropM = struct<RCEPluginProps>({
+  config: recordMergeM<any>(),
+  plugins: A.getMonoid<CreatePluginFunction>(),
+  ModalsMap: recordMergeM<ComponentType>(),
+  createPluginsDataMap: recordMergeM<any>(),
+});
+
+const extractChildRCVPluginProps = (
+  { config = {}, typeMappers = [], decorators = [], inlineStyleMappers = [], theme = {} }: any,
   content?: DraftContent
-): EditorPluginsStrategy | ViewerPluginsStrategy =>
-  isViewer
-    ? {
-        config,
-        typeMappers,
-        decorators: decorators.map(decorator => decorator(theme, config)),
-        inlineStyleMappers: content
-          ? inlineStyleMappers.map(mapper => mapper(config, content))
-          : [],
-      }
-    : { config, plugins, ModalsMap, createPluginsDataMap };
+): RCVPluginProps => ({
+  config,
+  typeMappers,
+  decorators: decorators.map(decorator => decorator(theme, config)),
+  inlineStyleMappers: content ? inlineStyleMappers.map(mapper => mapper(config, content)) : [],
+});
 
-function editorStrategy(prev: EditorPluginsStrategy, curr: EditorPlugin) {
-  const { type, config, createPlugin, ModalsMap, createPluginData } = curr;
-  return {
-    config: { ...prev.config, [type]: config },
-    plugins: createPlugin ? prev.plugins.concat(createPlugin) : prev.plugins,
-    ModalsMap: { ...prev.ModalsMap, ...ModalsMap },
-    createPluginsDataMap: { ...prev.createPluginsDataMap, [type]: createPluginData },
-  };
-}
+const extractChildRCEPluginProps = (childProps: any): RCEPluginProps => ({
+  ...rcePropM.empty,
+  ...pick(childProps, ['config', 'ModalsMap', 'plugins', 'createPluginsDataMap']),
+});
 
-function viewerStrategy(
-  prev: ViewerPluginsStrategy,
-  curr: ViewerPlugin,
-  cssOverride: RicosCssOverride,
-  content?: DraftContent
-) {
-  const { type, config, typeMapper, decorator, inlineStyleMapper } = curr;
-  const finalConfig = { ...prev.config, [type]: config };
-  return {
-    config: finalConfig,
-    typeMappers: (typeMapper && prev.typeMappers.concat([typeMapper])) || prev.typeMappers,
-    decorators:
-      (decorator && prev.decorators.concat([decorator(cssOverride, config)])) || prev.decorators,
-    inlineStyleMappers:
-      (inlineStyleMapper &&
-        content &&
-        prev.inlineStyleMappers.concat([inlineStyleMapper?.(finalConfig, content)])) ||
-      prev.inlineStyleMappers,
-  };
-}
+const toRCEPluginProps = (plugin: EditorPlugin): RCEPluginProps => ({
+  config: { [plugin.type]: plugin.config },
+  plugins: plugin.createPlugin ? [plugin.createPlugin] : [],
+  ModalsMap: plugin.ModalsMap ?? {},
+  createPluginsDataMap: { [plugin.type]: plugin.createPluginData },
+});
+
+const toRCVPluginProps = (cssOverride: RicosCssOverride, content?: DraftContent) => (
+  plugin: ViewerPlugin
+): RCVPluginProps => ({
+  config: { [plugin.type]: plugin.config },
+  typeMappers: plugin.typeMapper ? [plugin.typeMapper] : [],
+  decorators: plugin.decorator ? [plugin.decorator(cssOverride, plugin.config)] : [],
+  inlineStyleMappers:
+    plugin.inlineStyleMapper && content
+      ? [plugin.inlineStyleMapper({ [plugin.type]: plugin.config }, content)]
+      : [],
+});
+
+const mergeWithChildProps = (childPluginProps, themeData) => pluginProps =>
+  merge(pluginProps, childPluginProps, { config: { themeData } });
 
 export default function pluginsStrategy({
   themeData,
@@ -87,31 +88,18 @@ export default function pluginsStrategy({
   cssOverride: RicosCssOverride;
   content?: DraftContent;
   experiments?: AvailableExperiments;
-}): PluginsStrategy {
-  let strategy: EditorPluginsStrategy | ViewerPluginsStrategy;
-
-  if (isViewer) {
-    const emptyStrategy: ViewerPluginsStrategy = {
-      config: { themeData },
-      typeMappers: [],
-      decorators: [],
-      inlineStyleMappers: [],
-    };
-    strategy = plugins.reduce(
-      (prev, curr) => viewerStrategy(prev, curr, cssOverride, content),
-      emptyStrategy
-    );
-  } else {
-    const emptyStrategy: EditorPluginsStrategy = {
-      config: { themeData },
-      plugins: [],
-      ModalsMap: {},
-      createPluginsDataMap: {},
-    };
-    strategy = plugins.reduce((prev, curr) => editorStrategy(prev, curr), emptyStrategy);
-  }
-
-  const childPluginProps = getPluginProps(isViewer, childProps, content) as PluginsStrategy;
-
-  return merge(strategy, childPluginProps);
+}): RCEPluginProps | RCVPluginProps {
+  return isViewer
+    ? pipe(
+        plugins as ViewerPlugin[],
+        A.map(toRCVPluginProps(cssOverride, content)),
+        fold(rcvPropM),
+        mergeWithChildProps(extractChildRCVPluginProps(childProps, content), themeData)
+      )
+    : pipe(
+        plugins as EditorPlugin[],
+        A.map(toRCEPluginProps),
+        fold(rcePropM),
+        mergeWithChildProps(extractChildRCEPluginProps(childProps), themeData)
+      );
 }
