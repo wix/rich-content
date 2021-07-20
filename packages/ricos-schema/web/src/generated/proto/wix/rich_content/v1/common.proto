@@ -79,10 +79,17 @@ message PluginContainerData {
 }
 
 message FileSource {
+    enum Privacy {
+        UNSET = 0;
+        PUBLIC = 1;
+        PRIVATE = 2;
+    }
     oneof data {
         google.protobuf.StringValue url = 1; // Absolute URL
-        google.protobuf.StringValue custom = 2; // ID that will be resolved to a URL by a resolver function
+        google.protobuf.StringValue id = 2; // ID that will be resolved to a URL by a resolver function
+        google.protobuf.StringValue custom = 3; // Custom id (e.g. serialized object, string)
     }
+    Privacy privacy = 4;
 }
 
 message Media {

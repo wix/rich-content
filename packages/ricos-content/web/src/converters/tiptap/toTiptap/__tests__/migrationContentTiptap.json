@@ -363,7 +363,8 @@
         },
         "image": {
           "src": {
-            "custom": "8bb438_67a68c0652d740bab508f68662acc882.jpg"
+            "custom": "8bb438_67a68c0652d740bab508f68662acc882.jpg",
+            "privacy": "UNSET"
           },
           "width": 3192,
           "height": 2124
@@ -399,12 +400,14 @@
         },
         "video": {
           "src": {
-            "url": "https://www.youtube.com/watch?v=CoJ23XNHgG0"
+            "url": "https://www.youtube.com/watch?v=CoJ23XNHgG0",
+            "privacy": "UNSET"
           }
         },
         "thumbnail": {
           "src": {
-            "url": "https://i.ytimg.com/vi/BBu5codsO6Y/hqdefault.jpg"
+            "url": "https://i.ytimg.com/vi/BBu5codsO6Y/hqdefault.jpg",
+            "privacy": "UNSET"
           },
           "width": 480,
           "height": 270
@@ -436,12 +439,14 @@
         },
         "video": {
           "src": {
-            "custom": "video/d3dd72_9397c7bfa03f4fa8920b16bdd667f73b/1080p/mp4/file.mp4"
+            "custom": "video/d3dd72_9397c7bfa03f4fa8920b16bdd667f73b/1080p/mp4/file.mp4",
+            "privacy": "UNSET"
           }
         },
         "thumbnail": {
           "src": {
-            "custom": "media/d3dd72_9397c7bfa03f4fa8920b16bdd667f73bf000.jpg"
+            "custom": "media/d3dd72_9397c7bfa03f4fa8920b16bdd667f73bf000.jpg",
+            "privacy": "UNSET"
           },
           "width": 1920,
           "height": 1080
@@ -823,7 +828,8 @@
           "alignment": "CENTER"
         },
         "src": {
-          "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+          "url": "https://www.w3.org/wai/er/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+          "privacy": "UNSET"
         },
         "name": "image.jpg",
         "type": "jpg",
@@ -1848,7 +1854,8 @@
         },
         "image": {
           "src": {
-            "custom": "8bb438_35ed730d87524b1a88179adc18ed9cd4.jpg"
+            "custom": "8bb438_35ed730d87524b1a88179adc18ed9cd4.jpg",
+            "privacy": "UNSET"
           },
           "width": 1920,
           "height": 1280

@@ -78,9 +78,12 @@ export interface VideoComponentData {
   };
 }
 
+export type MediaPrivacy = 'public' | 'private';
+
 export interface FileComponentData {
   name: string;
   type: string;
   url?: string;
   id?: string;
+  privacy?: MediaPrivacy;
 }

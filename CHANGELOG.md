@@ -186,6 +186,11 @@
 - `spoiler`
   - [#2657](https://github.com/wix/ricos/pull/2657) remove spoiler toggle from media settings modal
 
+### :nail_care: Polish
+
+- `file-upload`
+  - [#2662](https://github.com/wix-incubator/rich-content/pull/2662) `privacy` config field
+
 ## 8.45.2 (Jun 29, 2021)
 
 ### :nail_care: Polish
