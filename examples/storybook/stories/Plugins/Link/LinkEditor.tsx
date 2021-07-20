@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { DraftContent, RicosEditor } from 'ricos-editor';
-import { pluginLink } from 'wix-rich-content-plugin-Link';
+import { pluginLink } from 'wix-rich-content-plugin-link';
 
 const linkConfig = {
   linkTypes: { anchor: false },

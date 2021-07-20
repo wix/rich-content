@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { DraftContent, RicosViewer } from 'ricos-viewer';
-import { pluginLink } from 'wix-rich-content-plugin-Link';
+import { pluginLink } from 'wix-rich-content-plugin-link';
 
 const linkConfigWithAnchor = {
   linkTypes: { anchor: true },
