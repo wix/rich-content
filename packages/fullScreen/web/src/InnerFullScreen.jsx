@@ -42,8 +42,6 @@ export default class InnerFullscreen extends Component {
   getItems() {
     const { images } = this.props;
     this.items = convertItemData({ items: images });
-    this.itemIndexMap = {};
-    this.items.map((item, index) => (this.itemIndexMap[item.itemId] = index));
   }
 
   addFullscreenChangeListener = () => {
@@ -142,7 +140,7 @@ export default class InnerFullscreen extends Component {
 
   handleGalleryEvents = (name, data) => {
     if (name === 'CURRENT_ITEM_CHANGED') {
-      this.currentIdx = this.itemIndexMap[data.itemId];
+      this.currentIdx = parseInt(data.itemId.split('_').pop());
     }
   };
 

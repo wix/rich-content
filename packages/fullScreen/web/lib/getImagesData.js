@@ -15,7 +15,6 @@ function imageEntityToGallery(data, index) {
       title: (metadata && metadata.caption) || '',
       altText: (metadata && metadata.alt) || '',
     },
-    itemId: src.id || url + index,
     url,
     disableDownload: data.disableDownload,
   };
