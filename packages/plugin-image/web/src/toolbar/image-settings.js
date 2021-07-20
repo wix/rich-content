@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mergeStyles, getImageSrc } from 'wix-rich-content-common';
+import { mergeStyles, getImageSrc, RICOS_IMAGE_TYPE } from 'wix-rich-content-common';
 import {
   SettingsPanelFooter,
   SettingsSection,
@@ -103,10 +103,7 @@ class ImageSettings extends Component {
           dataHook: 'imageSpoilerToggle',
           tooltipText: this.props.t('Spoiler_Toggle_Tooltip'),
           onToggle: value => {
-            this.props.pubsub.update('componentData', {
-              ...this.props.componentData,
-              ...this.getSpoilerConfig(value),
-            });
+            this.setComponentData({ ...this.props.componentData, ...this.getSpoilerConfig(value) });
           },
         },
       ]
@@ -126,7 +123,7 @@ class ImageSettings extends Component {
   };
 
   revertComponentData() {
-    const { componentData, helpers, pubsub } = this.props;
+    const { componentData, helpers, editorCommands } = this.props;
     if (this.initialState) {
       const { isExpandEnabled, isDownloadEnabled, ...rest } = this.initialState;
       const initialComponentData = {
@@ -135,7 +132,7 @@ class ImageSettings extends Component {
         disableExpand: !isExpandEnabled,
         disableDownload: !isDownloadEnabled,
       };
-      pubsub.update('componentData', initialComponentData);
+      this.setComponentData(initialComponentData);
       this.setState({ ...this.initialState });
     }
     helpers.closeModal();
@@ -146,7 +143,7 @@ class ImageSettings extends Component {
   };
 
   onDoneClick = () => {
-    const { helpers, componentData, pubsub } = this.props;
+    const { helpers, componentData } = this.props;
     const newComponentData = {
       ...componentData,
       ...this.getSpoilerConfig(this.state.isSpoilerEnabled),
@@ -156,8 +153,7 @@ class ImageSettings extends Component {
     if (this.state.metadata) {
       newComponentData.metadata = this.state.metadata;
     }
-    pubsub.update('componentData', newComponentData);
-
+    this.setComponentData(newComponentData);
     helpers.closeModal();
   };
 
@@ -167,6 +163,11 @@ class ImageSettings extends Component {
       spoiler: { enabled },
     },
   });
+
+  setComponentData = data => {
+    const { editorCommands } = this.props;
+    editorCommands.setBlock(editorCommands.getSelection().focusKey, RICOS_IMAGE_TYPE, data);
+  };
 
   setBlockLink = item => this.props.pubsub.setBlockData({ key: 'componentLink', item });
 
@@ -286,6 +287,7 @@ ImageSettings.propTypes = {
   isMobile: PropTypes.bool,
   languageDir: PropTypes.string,
   shouldShowSpoiler: PropTypes.bool,
+  editorCommands: PropTypes.any,
 };
 
 export default ImageSettings;

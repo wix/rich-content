@@ -24,7 +24,7 @@ import {
   EditorEventsContext,
   EditorEvents,
 } from 'wix-rich-content-editor-common/libs/EditorEventsContext';
-import { ToolbarType, Version } from 'wix-rich-content-common';
+import { ToolbarType, Version, EditorCommands } from 'wix-rich-content-common';
 import { emptyDraftContent, getEditorContentSummary } from 'wix-rich-content-editor-common';
 import { TiptapAPI } from 'wix-tiptap-editor';
 
@@ -38,6 +38,7 @@ interface State {
   remountKey: boolean;
   editorState?: EditorState;
   initialContentChanged: boolean;
+  editorCommands?: EditorCommands;
   error?: string;
 }
 
@@ -266,6 +267,8 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
     );
   }
 
+  setEditorCommands = (editorCommands: EditorCommands) => this.setState({ editorCommands });
+
   renderRicosEngine(child, childProps) {
     const { toolbarSettings, draftEditorSettings = {}, localeContent, ...props } = this.props;
     const supportedDraftEditorSettings = filterDraftEditorSettings(draftEditorSettings);
@@ -276,12 +279,14 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
         isViewer={false}
         key={'editor'}
         toolbarSettings={toolbarSettings}
+        editorCommands={this.state.editorCommands}
         {...contentProp.content}
         {...props}
       >
         {React.cloneElement(child, {
           editorKey: 'editor',
           setEditorToolbars: this.setStaticToolbar,
+          setEditorCommands: this.setEditorCommands,
           ...childProps,
           ...contentProp.editorState,
           ...supportedDraftEditorSettings,

@@ -21,6 +21,7 @@ interface Props {
   container?: HTMLElement;
   onModalOpen: (modalProps: Record<string, unknown>) => void;
   onModalClose: () => void;
+  editorCommands?;
 }
 
 type ModalProps = {
@@ -91,7 +92,15 @@ export default class EditorModalProvider extends Component<Props, State> {
 
   render() {
     const { EditorModal, showModal, modalProps, modalStyles, editorModalId } = this.state;
-    const { children, ModalsMap, locale, theme, ariaHiddenId, container } = this.props;
+    const {
+      children,
+      ModalsMap,
+      locale,
+      theme,
+      ariaHiddenId,
+      container,
+      editorCommands,
+    } = this.props;
     const childProps = merge(children.props, this.modalHandlers);
     return (
       <Fragment>
@@ -112,6 +121,7 @@ export default class EditorModalProvider extends Component<Props, State> {
                   modalsMap={ModalsMap}
                   locale={locale}
                   target={editorModalId}
+                  editorCommands={editorCommands}
                   {...modalProps}
                 />
               </Suspense>

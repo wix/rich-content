@@ -11,6 +11,7 @@ import {
   convertRelStringToObject,
   convertRelObjectToString,
 } from 'wix-rich-content-common/libs/linkConverters';
+import { EditorCommands } from 'wix-rich-content-common';
 
 interface EngineProps extends RicosEditorProps, RicosViewerProps {
   children: ReactElement;
@@ -19,6 +20,7 @@ interface EngineProps extends RicosEditorProps, RicosViewerProps {
   isViewer: boolean;
   isPreviewExpanded?: boolean;
   onPreviewExpand?: PreviewConfig['onPreviewExpand'];
+  editorCommands?: EditorCommands;
 }
 
 export class RicosEngine extends Component<EngineProps> {
@@ -97,6 +99,7 @@ export class RicosEngine extends Component<EngineProps> {
       textAlignment,
       onAtomicBlockFocus,
       experiments,
+      editorCommands,
     } = this.props;
 
     const { strategyProps, previewContent, htmls } = this.runStrategies();
@@ -191,6 +194,7 @@ export class RicosEngine extends Component<EngineProps> {
         key={'ricosElement'}
         onModalOpen={onModalOpen}
         onModalClose={onModalClose}
+        editorCommands={editorCommands}
       >
         {Children.only(React.cloneElement(children, { ...mergedRCProps }))}
       </RicosModal>,
