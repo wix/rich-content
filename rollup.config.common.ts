@@ -3,7 +3,7 @@
 import { readdirSync, existsSync } from 'fs';
 import { cloneDeep } from 'lodash';
 import { plugins as createPlugins, lastEntryPlugins } from './rollup.plugins';
-import { isExternal as external } from './rollup.externals';
+import { isExternal } from './rollup.externals';
 import { RollupOptions, OutputOptions, WatcherOptions } from 'rollup';
 
 if (!process.env.MODULE_NAME) {
@@ -19,7 +19,7 @@ const commonConfig = (output: OutputOptions[], shouldExtractCss: boolean): Rollu
   };
   const commonOptions = {
     plugins,
-    external,
+    external: isExternal(),
     watch,
   };
 
@@ -88,9 +88,10 @@ const commonConfig = (output: OutputOptions[], shouldExtractCss: boolean): Rollu
   const viewerLoadablePath = 'src/viewer-loadable.ts';
   if (existsSync(`./${viewerLoadablePath}`)) {
     viewerEntry.push({
+      ...commonOptions,
       input: viewerLoadablePath,
       output: viewerLoadableOutput,
-      ...commonOptions,
+      external: isExternal(true),
     });
   }
 
