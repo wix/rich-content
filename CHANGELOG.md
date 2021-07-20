@@ -17,11 +17,17 @@
     Click to see more.
   </summary>
 
-- `*`
-  - [#2749](https://github.com/wix/ricos/pull/2749) remove string.matchAll to work in safari 12
-
 </details>
 <hr/>
+
+## 8.47.3 (July 20, 2021)
+
+### :bug: Bug Fix
+
+- `*`
+  - [#2753](https://github.com/wix/ricos/pull/2753) fix webpackChunkName magic comments
+- `*`
+  - [#2749](https://github.com/wix/ricos/pull/2749) remove string.matchAll to work in safari 12
 
 ## 8.47.1 (July 19, 2021)
 
