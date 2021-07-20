@@ -1,10 +1,6 @@
 import React from 'react';
 import { MultiSelectLinkViewer, BasicLinkViewer } from './LinkViewer';
-import {
-  BasicLinkEditor,
-  BasicLinkEditorWithSettings,
-  MultiSelectLinkEditor,
-} from './LinkEditor';
+import { BasicLinkEditor, BasicLinkEditorWithSettings, MultiSelectLinkEditor } from './LinkEditor';
 import viewerSourcecode from '!!raw-loader!./LinkViewer.tsx';
 import editorSourcecode from '!!raw-loader!./LinkEditor.tsx';
 import {
