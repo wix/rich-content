@@ -1,8 +1,8 @@
 import React from 'react';
-import { createNodeExtension } from '../../extension';
 import Divider from './divider';
 import { DividerData } from 'ricos-schema';
 import { createRicosNodeConfig } from '../../extensions-creators/node';
+import { RicosNodeConfig } from '../../types';
 
 const componentDataDefaults = DividerData.fromJSON({});
 const name = 'divider';
@@ -33,16 +33,30 @@ export const createDividerConfig = () =>
       renderHTML({ HTMLAttributes }) {
         return [`${name}-component`, mergeAttributes(HTMLAttributes)];
       },
-      addNodeViewHOC() {
-        return Component => {
-          return props => {
-            return (
-              <div style={{ border: '1px solid red' }}>
-                <Component {...props} t={key => key} />
-              </div>
-            );
-          };
-        };
-      },
     };
   });
+
+// createRicosNodeConfigGeneric(('spolier') => {
+//   return {
+//     addNodeViewHOC(){
+//       return {
+//         types: ['image'],
+//         HOC:  Component => {
+//           return props => {
+//             if(props.componentData.containerData.hasSpolier){
+//               return (
+//                 <div style={{ border: '1px solid red' }}>
+//                   <Component {...props} t={key => key} />
+//                 </div>
+//             }else{
+//               return <Component {...props} />
+//             }
+
+//             );
+//           };
+//         };
+//       }
+//     }
+
+//   }
+// })

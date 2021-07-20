@@ -1,9 +1,26 @@
-import { RicosExtensionConfig } from './../dist/src/types.d';
+import { RicosExtensionConfig } from '../src/types';
 import { omit } from 'lodash';
-import { Extensions, Node, AnyExtension } from '@tiptap/core';
+import { Extensions, Node, AnyExtension, Mark } from '@tiptap/core';
 
 export class RicosExtensionManager {
   static ricosExtensionsTotiptapExtensions(ricosExtensions): AnyExtension[] {
+    return ricosExtensions
+      .filter(ricosExtension => {
+        return ricosExtension.extensionType === 'node' || ricosExtension.extensionType === 'mark';
+      })
+      .map(ricosExtension => {
+        const tiptapConfig = omit(ricosExtension, 'addNodeViewHOC', 'extensionType');
+        if (ricosExtension.extensionType === 'node') {
+          return Node.create(tiptapConfig);
+        } else if (ricosExtension.extensionType === 'mark') {
+          return Mark.create(tiptapConfig);
+        }
+        return null;
+      });
+  }
+
+  static extractNodeViewsHOCsFromRicosExtensions(ricosExtensions) {
+    console.log('extractNodeViewsHOCsFromRicosExtensions');
     return ricosExtensions
       .sort((extA, extB) => {
         const defaultPriority = 100;
@@ -19,19 +36,24 @@ export class RicosExtensionManager {
         }
         return 0;
       })
-      .map(ricosExtension => omit(ricosExtension, 'addNodeViewHOC', 'extensionType'))
-      .map(extensionConfig => {
-        console.log({ extensionConfig });
-        return Node.create(extensionConfig);
-      });
-  }
-
-  static extractNodeViewsHOCs(ricosExtensions) {
-    return ricosExtensions
+      .filter(ricosExtension => ricosExtension.extensionType === 'extension')
       .map(ricosExtension => {
-        return ricosExtension.addNodeViewHOC();
+        const { nodeViewHOC, nodeTypes } = ricosExtension.addNodeViewHOC();
+        return {
+          types: nodeTypes,
+          nodeViewHOC,
+        };
       })
       .flat()
-      .filter(addNodeViewHOC => !!addNodeViewHOC);
+      .filter(({ nodeViewHOC }) => !!nodeViewHOC)
+      .reduce((acc, { types, nodeViewHOC }) => {
+        types.forEach(type => {
+          if (!acc[type]) {
+            acc[type] = [];
+          }
+          acc[type].push(nodeViewHOC);
+        });
+        return acc;
+      }, {});
   }
 }

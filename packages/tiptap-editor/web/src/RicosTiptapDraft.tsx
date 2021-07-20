@@ -77,7 +77,7 @@ const RicosNode = ({ render, component }) => {
   });
 };
 
-interface RicosExtensionConfig extends ExtensionConfig {
+export interface RicosExtensionConfig extends ExtensionConfig {
   addNodeViewHOC: () => React.FC;
 }
 

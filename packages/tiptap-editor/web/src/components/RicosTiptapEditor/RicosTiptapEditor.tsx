@@ -6,6 +6,8 @@ import { RicosExtensionManager } from '../../ricos-extensions-manager';
 import { tiptapExtensions as coreExtensions } from '../../tiptap-extensions';
 import { createImageConfig } from '../../extensions/extension-image';
 import { createDividerConfig } from '../../extensions/extension-divider';
+import { createSpoilerConfig } from '../../extensions/extension-spoiler';
+import { createDraftConfig } from '../../extensions/extension-draft';
 
 function useForceUpdate() {
   const [, setValue] = useState(0);
@@ -14,6 +16,8 @@ function useForceUpdate() {
 }
 const imageExt = createImageConfig();
 const dividerExt = createDividerConfig();
+const spoiler = createSpoilerConfig();
+const draft = createDraftConfig();
 
 export const RicosTiptapEditor = ({ content, extensions = [], onLoad, ...context }) => {
   const [editor, setEditor] = useState<Editor | null>(null);
@@ -25,13 +29,18 @@ export const RicosTiptapEditor = ({ content, extensions = [], onLoad, ...context
       ...extensions,
       imageExt,
       dividerExt,
+      spoiler,
+      draft,
     ]);
 
-    const nodeViewsHOCs = RicosExtensionManager.extractNodeViewsHOCs([
+    const nodeViewsHOCs = RicosExtensionManager.extractNodeViewsHOCsFromRicosExtensions([
       ...extensions,
       imageExt,
       dividerExt,
+      spoiler,
+      draft,
     ]);
+    console.log({ tiptapExtensions, nodeViewsHOCs });
     setNodeViewsHOCs(nodeViewsHOCs);
 
     const editorInstance = new Editor({

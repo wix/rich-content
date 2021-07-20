@@ -5,6 +5,7 @@ import { capitalize } from 'lodash';
 import { RICOS_DIVIDER_TYPE, DIVIDER_TYPE } from 'wix-rich-content-common';
 import { draftBlockDataToTiptap } from 'ricos-content/libs/tiptap';
 
+// todo : should change to RichContentInterface
 export class RichContentAdapter implements TiptapAPI {
   constructor(private editor) {
     this.editor = editor;

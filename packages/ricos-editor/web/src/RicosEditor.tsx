@@ -251,8 +251,7 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
     this.setStaticToolbar(ref);
   };
 
-  getEditorCommands = () =>
-    this.useTiptap ? this.tiptapApi.getEditorCommands() : this.editor.getEditorCommands();
+  getEditorCommands = () => this.editor.getEditorCommands();
 
   renderToolbarPortal(Toolbar) {
     return (
@@ -320,7 +319,6 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
           const richContentAdapter = new RichContentAdapter(editor);
           this.setEditorRef(richContentAdapter);
           const TextToolbar = richContentAdapter.getToolbars().TextToolbar;
-          console.log({ TextToolbar });
           this.setState({ tiptapToolbar: TextToolbar });
         }}
       />

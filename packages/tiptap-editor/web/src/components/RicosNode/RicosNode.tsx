@@ -6,25 +6,34 @@ const pipe = functions => data => {
   return functions.reduce((value, func) => func(value), data);
 };
 
-export const RicosNode = ({ component, tiptapNodeProps, children }) => {
+export const RicosNode = ({ component, tiptapNodeProps }) => {
   const ricosTiptapContext = useContext(RicosTiptapContext) || {};
   const { nodeViewsHOCs } = ricosTiptapContext;
-  console.log({
-    ricosTiptapContext,
-    component,
-    nodeViewsHOCs,
-  });
-  const ComponentWithNodeHOCs = pipe(nodeViewsHOCs)(component);
+  const nodeViewsHOCsByType = nodeViewsHOCs[tiptapNodeProps.node.type.name] || [];
+  const nodeViewsHOCsForAll = nodeViewsHOCs['*'] || [];
+  const nodeViewsHOCsAllAndByType = [...nodeViewsHOCsForAll, ...nodeViewsHOCsByType].sort(
+    (extA, extB) => {
+      const defaultPriority = 100;
+      const extAPriority = extA.priority || defaultPriority;
+      const extBPriority = extB.priority || defaultPriority;
 
-  console.log({ ricosTiptapContext, ComponentWithNodeHOCs, tiptapNodeProps });
-  const componentData = tiptapNodeDataToDraft(
-    tiptapNodeProps.node.type.name.toUpperCase(),
-    tiptapNodeProps.node.attrs
+      if (extAPriority > extBPriority) {
+        return -1;
+      }
+
+      if (extAPriority < extBPriority) {
+        return 1;
+      }
+      return 0;
+    }
   );
-  return children({
-    ...ricosTiptapContext,
-    componentData,
+
+  const ComponentWithNodeHOCs = pipe(nodeViewsHOCsAllAndByType.reverse())(component);
+
+  const componentProps = {
+    ...ricosTiptapContext, // helpes , editor Props
+    componentData: tiptapNodeProps.node.attrs,
     ...tiptapNodeProps,
-    ComponentWithNodeHOCs,
-  });
+  };
+  return <ComponentWithNodeHOCs {...componentProps} />;
 };

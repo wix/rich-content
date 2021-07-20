@@ -45,24 +45,7 @@ const Image: React.FC<PluginProps> = ({ context, componentData, updateAttributes
     />
   );
 
-  if (componentData?.config?.spoiler) {
-    return (
-      <BlockSpoilerComponent
-        theme={theme}
-        isMobile={isMobile}
-        isEditableText
-        t={t}
-        pluginType="Image"
-        handleDescriptionChange={() => {}}
-        setInPluginEditingMode={() => {}}
-        handleButtonContentChange={() => {}}
-      >
-        {imageComponent}
-      </BlockSpoilerComponent>
-    );
-  } else {
-    return imageComponent;
-  }
+  return imageComponent;
 };
 
 export default Image;

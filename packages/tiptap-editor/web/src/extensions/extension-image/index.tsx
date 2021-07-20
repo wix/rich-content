@@ -1,12 +1,7 @@
 import { createRicosNodeConfig } from './../../extensions-creators/node';
-import { createNodeExtension } from '../../extension';
 import Image from './image';
 import { ImageData } from 'ricos-schema';
 import React from 'react';
-// export const createImage = () => {
-//   const attrs = ImageData.fromJSON({});
-//   return createNodeExtension('image', Image, attrs);
-// };
 
 const componentDataDefaults = ImageData.fromJSON({});
 const name = 'image';
@@ -15,7 +10,6 @@ export const createImageConfig = () =>
   createRicosNodeConfig(Image, ({ mergeAttributes }) => {
     return {
       name,
-
       group: 'block',
 
       atom: true,
@@ -37,16 +31,16 @@ export const createImageConfig = () =>
       renderHTML({ HTMLAttributes }) {
         return [`${name}-component`, mergeAttributes(HTMLAttributes)];
       },
-      addNodeViewHOC() {
-        return ImageComponent => {
-          return props => {
-            return (
-              <div style={{ border: '1px solid red' }}>
-                <ImageComponent {...props} />
-              </div>
-            );
-          };
-        };
-      },
     };
   });
+// addNodeViewHOC() {
+//   return ImageComponent => {
+//     return props => {
+//       return (
+//         <div style={{ border: '10px solid blue' }}>
+//           <ImageComponent {...props} />
+//         </div>
+//       );
+//     };
+//   };
+// },

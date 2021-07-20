@@ -1,25 +1,23 @@
 import React from 'react';
 import { ReactNodeViewRenderer, mergeAttributes, NodeViewWrapper } from '@tiptap/react';
-import { RicosExtensionConfig } from '../types';
+import { RicosNodeConfig } from '../types';
 import { RicosNode } from '../components/RicosNode';
 
+type TiptapExtensionConfigCreator = ({ mergeAttributes }) => RicosNodeConfig;
+
+// RicosNode change it to regular component
 const createRicosNodeHOC = Component => {
   return props => (
     <NodeViewWrapper as="div">
-      <RicosNode component={Component} tiptapNodeProps={props}>
-        {({ ComponentWithNodeHOCs, ...rest }) => {
-          console.log({ rest });
-          return <ComponentWithNodeHOCs {...rest} />;
-        }}
-      </RicosNode>
+      <RicosNode component={Component} tiptapNodeProps={props} />
     </NodeViewWrapper>
   );
 };
 
 export const createRicosNodeConfig = (
   Component,
-  tiptapExtensionConfigCreator
-): RicosExtensionConfig => {
+  tiptapExtensionConfigCreator: TiptapExtensionConfigCreator
+) => {
   return {
     addNodeView: () => {
       // eslint-disable-next-line new-cap
