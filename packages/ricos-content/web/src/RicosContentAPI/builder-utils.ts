@@ -1,7 +1,9 @@
-import { isNumber, isString, isArray } from 'lodash';
-import { flow } from 'fp-ts/lib/function';
+import { isNumber, isString, isArray, isObject } from 'lodash';
+import { flow, pipe, identity } from 'fp-ts/lib/function';
 import * as A from 'fp-ts/lib/Array';
 import * as O from 'fp-ts/lib/Option';
+import * as E from 'fp-ts/Either';
+import { concatAll, first } from 'fp-ts/Semigroup';
 import { ParagraphData, RichContent, TextData, Node } from 'ricos-schema';
 import { task, either, firstResolved } from '../fp-utils';
 import { ListItemData } from '../types';
@@ -64,36 +66,73 @@ export function addNode({
   ]);
 }
 
-const isTextData = (text: Record<string, unknown>) => !!text?.text && !!text?.decorations;
+const resolveFirstRight = <C, T>(
+  candidate: C,
+  defaultT: T,
+  resolvers: [(candidate: C) => boolean, (candidate: unknown) => T][]
+): T => {
+  const firstRightSemi = E.getSemigroup<T, T>(first<T>());
+  const concatFirstRightSemi = concatAll(firstRightSemi)(E.left(defaultT));
+  return pipe(
+    concatFirstRightSemi(
+      pipe(
+        resolvers,
+        A.map(r =>
+          pipe(
+            candidate,
+            E.fromPredicate(r[0], () => defaultT),
+            E.map(r[1])
+          )
+        )
+      )
+    ),
+    E.fold(identity, identity)
+  );
+};
 
-const toTextData = (text: string) => ({ text, decorations: [] });
+const isTextData = (text: TextData) => !!text?.text && !!text?.decorations;
+
+const toTextData = (text: string) => ({ text, decorations: [] } as TextData);
+
+const isListItemData = (item: ListItemData) => isArray(item.text) && isObject(item.data);
 
 const toListItemData = (data: ParagraphData) => (text: TextData[]) => ({ data, text });
 
-export function toListDataArray(
+const emptyListItemData: ListItemData = { text: [], data: {} };
+
+export const toListDataArray = (
   items: string | TextData | ListItemData | (string | TextData | ListItemData)[],
   data: ParagraphData
-): ListItemData[] {
-  return firstResolved([
-    either(isString)(items).map(flow(toTextData, A.of, toListItemData(data), A.of)),
-    either(isTextData)(items).map(flow(A.of, toListItemData(data), A.of)),
-    either(isArray)(items).map(
-      A.map(item =>
-        firstResolved([
-          either(isString)(item).map(flow(toTextData, A.of, toListItemData(data))),
-          either(isTextData)(item).map(flow(A.of, toListItemData(data))),
-          task.of(item),
-        ])
-      )
-    ),
-    task.of([]),
-  ]);
-}
-export const toTextDataArray = (text?: string | TextData | (string | TextData)[]): TextData[] => {
-  return firstResolved([
-    either(isString)(text).map(flow(toTextData, A.of)),
-    either(isTextData)(text).map(A.of),
-    either(isArray)(text).map(A.map(t => (isString(t) ? toTextData(t) : t))),
-    task.of([]),
-  ]);
-};
+): ListItemData[] =>
+  resolveFirstRight(
+    items,
+    [],
+    [
+      [isString, flow(toTextData, A.of, toListItemData(data), A.of)],
+      [isTextData, flow(A.of, toListItemData(data), A.of)],
+      [isListItemData, i => [i] as ListItemData[]],
+      [
+        isArray,
+        flow(
+          A.map(item =>
+            resolveFirstRight(item, emptyListItemData, [
+              [isString, flow(toTextData, A.of, toListItemData(data))],
+              [isTextData, flow(A.of, toListItemData(data))],
+              [isListItemData, i => i as ListItemData],
+            ])
+          )
+        ),
+      ],
+    ]
+  );
+
+export const toTextDataArray = (text?: string | TextData | (string | TextData)[]): TextData[] =>
+  resolveFirstRight(
+    text,
+    [],
+    [
+      [isString, flow(toTextData, A.of)],
+      [isTextData, t => [t] as TextData[]],
+      [isArray, flow(A.map(t => resolveFirstRight(t, t, [[isString, toTextData]]) as TextData))],
+    ]
+  );
