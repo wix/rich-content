@@ -17,6 +17,8 @@
     Click to see more.
   </summary>
 
+- `*`
+  - [#2749](https://github.com/wix/ricos/pull/2749) remove string.matchAll to work in safari 12
 
 </details>
 <hr/>
