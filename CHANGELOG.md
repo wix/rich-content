@@ -26,7 +26,6 @@
 
 - `*`
   - [#2753](https://github.com/wix/ricos/pull/2753) fix webpackChunkName magic comments
-- `*`
   - [#2749](https://github.com/wix/ricos/pull/2749) remove string.matchAll to work in safari 12
 
 ## 8.47.1 (July 19, 2021)
