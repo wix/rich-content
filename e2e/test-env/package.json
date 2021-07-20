@@ -22,7 +22,7 @@
     "ricos-viewer": "8.47.3",
     "serialize-javascript": "^5.0.0",
     "ts-loader": "^8.0.4",
-    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-middleware": "^5.0.0",
     "webpack-hot-server-middleware": "^0.6.0",
     "webpack-node-externals": "^1.7.2",
     "wix-rich-content-common": "8.47.3",
