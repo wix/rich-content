@@ -52,7 +52,8 @@ export const Bold = Mark.create<BoldOptions>({
   renderHTML({ HTMLAttributes }) {
     return ['strong', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes), 0];
   },
-
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore-next-line
   addCommands() {
     return {
       setBold: () => ({ commands }) => {
@@ -69,6 +70,8 @@ export const Bold = Mark.create<BoldOptions>({
 
   addKeyboardShortcuts() {
     return {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore-next-line
       'Mod-b': () => this.editor.commands.toggleBold(),
     };
   },

@@ -587,7 +587,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Lihat Semua Hasil",
 	"Spoiler_Reveal_Image_Placeholder": "Gambar ini berisi bocoran",
 	"Poll_Viewer_Multiselect_Footer": "Anda boleh memberikan suara ke lebih dari satu jawaban.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} mnt",
 	"UploadFile_Viewer_Loader": "Memuatkan {{fileType}}",
 	"Preview_ReadMore_Label": "Teks lengkap",
 	"Spoiler_Reveal_Gallery_Placeholder": "Galeri ini berisi bocoran",
@@ -595,7 +594,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Tampilkan lebih sedikit",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} anonim",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Ikuti",
-	"Embed_Vertical_Units_Hour": "{{hours}}j",
 	"Poll_Viewer_Toast_Error_ServerDown": "Tidak dapat menyambung dengan server. Coba lagi nanti.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} orang memberikan suara untuk jawaban ini",
 	"Poll_Viewer_VoteCount": "{{number}} suara",
@@ -606,5 +604,10 @@
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Item dibentangkan",
 	"Spoiler_Reveal_Video_Placeholder": "Video ini berisi bocoran",
 	"Preview_SeeFullPost_Label": "Lihat pos lengkap",
-	"UploadFile_Viewer_Download": "Unduh {{fileType}}"
+	"UploadFile_Viewer_Download": "Unduh {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Pesan Sekarang",
+	"VerticalEmbed_Units_Minute": "{{minutes}}mnt",
+	"VerticalEmbed_Products_Button": "Beli Sekarang",
+	"VerticalEmbed_Units_Hour": "{{hours}}j",
+	"VerticalEmbed_Events_Button": "Daftar Sekarang"
 }

@@ -316,7 +316,7 @@ class RichContentEditor extends Component<RichContentEditorProps, State> {
   preloadLibs() {
     if (this.props.maxTextLength && this.props.maxTextLength > 0) {
       import(
-        /* webpackChunkName: getSelectedText */ 'wix-rich-content-editor-common/libs/getSelectedText'
+        /* webpackChunkName: "getSelectedText" */ 'wix-rich-content-editor-common/libs/getSelectedText'
       ).then(({ getSelectedText }) => (this.getSelectedText = getSelectedText));
     }
   }
@@ -327,7 +327,7 @@ class RichContentEditor extends Component<RichContentEditorProps, State> {
     }
     if (/debug/i.test(window.location.search) && !window.__RICOS_INFO__) {
       import(
-        /* webpackChunkName: debugging-info */
+        /* webpackChunkName: "debugging-info" */
         'wix-rich-content-common/libs/debugging-info'
       ).then(({ reportDebuggingInfo }) => {
         reportDebuggingInfo({
@@ -457,6 +457,8 @@ class RichContentEditor extends Component<RichContentEditorProps, State> {
           helpers.onPluginChange?.(pluginId, changeObj, Version.currentVersion),
         onToolbarButtonClick: args =>
           helpers.onToolbarButtonClick?.({ ...args, version: Version.currentVersion }),
+        onInlineToolbarOpen: args =>
+          helpers.onInlineToolbarOpen?.({ ...args, version: Version.currentVersion }),
       },
       config,
       isMobile,

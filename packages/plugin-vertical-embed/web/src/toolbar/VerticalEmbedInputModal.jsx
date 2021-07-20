@@ -5,11 +5,13 @@ import {
   UrlInputModal,
   FOOTER_BUTTON_ALIGNMENT,
   MODAL_CONTROLS_POSITION,
+  BUTTON_SIZE,
 } from 'wix-rich-content-ui-components';
-import { contentTypeMap } from '../constants';
+import { contentTypeMap, verticalEmbedProviders } from '../constants';
 import ItemsList from './itemsList/ItemsList';
 import styles from '../../statics/styles/vertical-embed-modal.scss';
 import generalStyles from '../../statics/styles/general.scss';
+import { convertDuration } from '../utils';
 
 const LOADING = 'LOADING';
 const NO_ITEMS = 'NO_ITEMS';
@@ -19,7 +21,7 @@ const NOT_FOUND = 'NOT_FOUND';
 export default class VerticalEmbedInputModal extends Component {
   state = {
     errorMsg: '',
-    products: [],
+    items: [],
     selectedProduct: this.props.componentData?.selectedProduct || null,
     status: LOADING,
   };
@@ -32,18 +34,18 @@ export default class VerticalEmbedInputModal extends Component {
     } = this.props;
     this.verticalApi = verticalsApi(type, locale);
     try {
-      this.verticalApi.search('').then(products => {
-        this.setState({ products, status: products.length === 0 ? NO_ITEMS : READY });
+      this.verticalApi.search('').then(items => {
+        this.setState({ items, status: items.length === 0 ? NO_ITEMS : READY });
       });
     } catch (e) {
       console.error('failed to load products ', e);
-      this.setState({ products: [], status: NO_ITEMS });
+      this.setState({ items: [], status: NO_ITEMS });
     }
   }
 
   onInputChange = (inputString = '') => {
-    this.verticalApi.search(inputString).then(products => {
-      this.setState({ products, status: products.length === 0 ? NOT_FOUND : READY });
+    this.verticalApi.search(inputString).then(items => {
+      this.setState({ items, status: items.length === 0 ? NOT_FOUND : READY });
     });
     this.setState({ inputString });
   };
@@ -71,8 +73,25 @@ export default class VerticalEmbedInputModal extends Component {
     }
   };
 
+  getItems = () => {
+    const {
+      componentData: { type },
+      t,
+    } = this.props;
+    const { items } = this.state;
+    let getDescriptionFunc;
+    if (type === verticalEmbedProviders.booking) {
+      getDescriptionFunc = product => convertDuration(product.durations, t);
+    } else if (type === verticalEmbedProviders.event) {
+      getDescriptionFunc = product => `${product.scheduling} | ${product.location}`;
+    }
+    return getDescriptionFunc
+      ? items.map(product => ({ ...product, description: getDescriptionFunc(product) }))
+      : items;
+  };
+
   render() {
-    const { products, inputString, selectedProduct, status } = this.state;
+    const { inputString, selectedProduct, status } = this.state;
     const {
       t,
       componentData: { type },
@@ -110,6 +129,7 @@ export default class VerticalEmbedInputModal extends Component {
         controlsPosition={isMobile ? MODAL_CONTROLS_POSITION.TOP : MODAL_CONTROLS_POSITION.BOTTOM}
         selected={selected}
         textInput={textInput}
+        buttonSize={BUTTON_SIZE.small}
       >
         <div className={styles.itemsWrapper}>
           {status === LOADING ? (
@@ -122,7 +142,7 @@ export default class VerticalEmbedInputModal extends Component {
             <ItemsList
               isMobile={isMobile}
               selectedItem={selectedProduct}
-              products={products}
+              items={this.getItems()}
               onClick={this.onItemClick}
               contentType={contentType}
               t={t}

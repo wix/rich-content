@@ -1,10 +1,10 @@
 /** Based on https://gist.github.com/Yimiprod/7ee176597fef230d1451 */
 /* eslint-disable no-console, @typescript-eslint/no-explicit-any, fp/no-delete */
-
 import { RawDraftEntityRange } from '@wix/draft-js';
 import { transform, isEqualWith, isEqual, isObject, omit, pick, cloneDeep } from 'lodash';
 import omitDeep from 'omit-deep';
 import { DraftContent } from '..';
+import { fromEntries } from '../utils';
 
 const IGNORED_KEYS = [
   'updatedTimestamp',
@@ -87,7 +87,7 @@ const removeEmoji = (object: DraftContent) => {
   Object.entries<any>(object.entityMap).forEach(
     ([key, value]) => value.type === 'EMOJI_TYPE' && emojiEntityKeys.push(parseInt(key, 10))
   );
-  object.entityMap = Object.fromEntries(
+  object.entityMap = fromEntries(
     Object.entries(object.entityMap).filter(([, value]) => value.type !== 'EMOJI_TYPE')
   );
   object.blocks = object.blocks.map(block => ({

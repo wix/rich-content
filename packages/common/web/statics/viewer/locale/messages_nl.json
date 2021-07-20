@@ -26,6 +26,9 @@
   "Spoiler_Reveal_Video_Placeholder": "Deze video bevat een spoiler",
   "Preview_SeeFullPost_Label": "Bekijk volledige post",
   "UploadFile_Viewer_Download": "Download {{fileType}}",
-  "Embed_Vertical_Units_Minute": "{{minutes}}min.",
-  "Embed_Vertical_Units_Hour": "{{hours}}u."
+  "VerticalEmbed_Bookings_Button": "Nu boeken",
+  "VerticalEmbed_Units_Minute": "{{minuten}}min",
+  "VerticalEmbed_Products_Button": "Nu kopen",
+  "VerticalEmbed_Units_Hour": "{{uur}}u",
+  "VerticalEmbed_Events_Button": "Nu registreren"
 }

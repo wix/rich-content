@@ -587,7 +587,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Näytä kaikki tulokset",
 	"Spoiler_Reveal_Image_Placeholder": "Tämä kuva sisältää spoilerin",
 	"Poll_Viewer_Multiselect_Footer": "Voit äänestää useamman kuin yhden vastauksen puolesta.",
-	"Embed_Vertical_Units_Minute": "{{minutes}}min",
 	"UploadFile_Viewer_Loader": "Ladataan {{fileType}}",
 	"Preview_ReadMore_Label": "Lue lisää",
 	"Spoiler_Reveal_Gallery_Placeholder": "Tämä galleria sisältää spoilerin",
@@ -595,7 +594,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Näytä vähemmän",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} tuntematonta",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Seuraa",
-	"Embed_Vertical_Units_Hour": "{{hours}}t",
 	"Poll_Viewer_Toast_Error_ServerDown": "Palvelimeen ei saatu yhteyttä. Yritä myöhemmin uudelleen.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} henkilöä äänesti tämän vastauksen puolesta",
 	"Poll_Viewer_VoteCount": "{{number}} ääntä",
@@ -606,5 +604,10 @@
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Kohde on laajennettu",
 	"Spoiler_Reveal_Video_Placeholder": "Tämä video sisältää spoilerin",
 	"Preview_SeeFullPost_Label": "Näytä koko päivitys",
-	"UploadFile_Viewer_Download": "Lataa {{fileType}}"
+	"UploadFile_Viewer_Download": "Lataa {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Varaa nyt",
+	"VerticalEmbed_Units_Minute": "{{minutes}} min",
+	"VerticalEmbed_Products_Button": "Osta nyt",
+	"VerticalEmbed_Units_Hour": "{{hours}} t",
+	"VerticalEmbed_Events_Button": "Rekisteröidy nyt"
 }

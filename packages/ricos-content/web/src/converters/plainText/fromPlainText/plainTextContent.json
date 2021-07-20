@@ -2,7 +2,7 @@
   "nodes": [
     {
       "type": "PARAGRAPH",
-      "key": "bg6sd",
+      "key": "0",
       "nodes": [
         {
           "type": "TEXT",
@@ -22,7 +22,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "ceejq",
+      "key": "1",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -32,7 +32,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "r3du",
+      "key": "2",
       "nodes": [
         {
           "type": "TEXT",
@@ -52,14 +52,14 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "2io0v",
+      "key": "3",
       "nodes": [
         {
           "type": "TEXT",
           "key": "",
           "nodes": [],
           "textData": {
-            "text": "https://static.wixstatic.com/media/8bb438_67a68c0652d740bab508f68662acc882.jpg/v1/fill/w_3192,h_2124,al_c,q_90/8bb438_67a68c0652d740bab508f68662acc882.jpg",
+            "text": "https://static.wixstatic.com/media/8bb438_67a68c0652d740bab508f68662acc882.jpg",
             "decorations": []
           }
         }
@@ -72,7 +72,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "alkdf",
+      "key": "4",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -82,7 +82,27 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "b1uvc",
+      "key": "5",
+      "nodes": [
+        {
+          "type": "TEXT",
+          "key": "",
+          "nodes": [],
+          "textData": {
+            "text": "iJustine | Create a Website with Wix Artificial Design Intelligence",
+            "decorations": []
+          }
+        }
+      ],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "6",
       "nodes": [
         {
           "type": "TEXT",
@@ -102,7 +122,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "b0h2",
+      "key": "7",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -112,7 +132,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "f1beo",
+      "key": "8",
       "nodes": [
         {
           "type": "TEXT",
@@ -132,7 +152,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "9jiis",
+      "key": "9",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -142,7 +162,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6laiq",
+      "key": "10",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -152,7 +172,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "755gv",
+      "key": "11",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -162,7 +182,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "es1i1",
+      "key": "12",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -172,7 +192,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "1aun",
+      "key": "13",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -182,7 +202,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "a00bk",
+      "key": "14",
       "nodes": [
         {
           "type": "TEXT",
@@ -202,7 +222,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "54hbp",
+      "key": "15",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -212,7 +232,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "1v8sn",
+      "key": "16",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -222,7 +242,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "d5ap1",
+      "key": "17",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -232,7 +252,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "7c1jb",
+      "key": "18",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -242,7 +262,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "ha47",
+      "key": "19",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -252,7 +272,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "e0evp",
+      "key": "20",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -262,7 +282,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6le65",
+      "key": "21",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -272,7 +292,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "8qmcs",
+      "key": "22",
       "nodes": [
         {
           "type": "TEXT",
@@ -292,7 +312,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "73cm5",
+      "key": "23",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -302,7 +322,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "1kmf7",
+      "key": "24",
       "nodes": [
         {
           "type": "TEXT",
@@ -322,7 +342,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "7o820",
+      "key": "25",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -332,7 +352,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "fukrr",
+      "key": "26",
       "nodes": [
         {
           "type": "TEXT",
@@ -352,7 +372,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6vieb",
+      "key": "27",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -362,7 +382,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "9tlbg",
+      "key": "28",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -372,7 +392,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "31rif",
+      "key": "29",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -382,7 +402,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "ehca6",
+      "key": "30",
       "nodes": [
         {
           "type": "TEXT",
@@ -402,14 +422,14 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "2dlv9",
+      "key": "31",
       "nodes": [
         {
           "type": "TEXT",
           "key": "",
           "nodes": [],
           "textData": {
-            "text": "https://sapirs0.wixsite.com/mysite/product-page/flowers",
+            "text": "https://www.wix.app/stores/54e7b326-49ec-434f-a7cc-c2ad1eaec049/catalog/265beaf5-3008-c5c2-fa5e-1447e0bebf71?d=https://sapirs0.wixsite.com/mysite/product-page/flowers",
             "decorations": []
           }
         }
@@ -422,7 +442,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "5p0a5",
+      "key": "32",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -432,7 +452,107 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "8gds1",
+      "key": "33",
+      "nodes": [
+        {
+          "type": "TEXT",
+          "key": "",
+          "nodes": [],
+          "textData": {
+            "text": "2-week course of intensive physical research, with a sense of plenty of time for process and discovery. Rooted in Ohad N",
+            "decorations": []
+          }
+        }
+      ],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "34",
+      "nodes": [
+        {
+          "type": "TEXT",
+          "key": "",
+          "nodes": [],
+          "textData": {
+            "text": "https://www.wix.app/events/54e7b326-49ec-434f-a7cc-c2ad1eaec049/65129504-3bfc-44c8-90cc-f9eedfea9321/details?d=https://sapirs0.wixsite.com/mysite/event-details/2-week-course-of-intensive-physical-research-with-a-sense-of-plenty-of-time-for-process-and-discovery-rooted-in-ohad-n",
+            "decorations": []
+          }
+        }
+      ],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "35",
+      "nodes": [],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "36",
+      "nodes": [
+        {
+          "type": "TEXT",
+          "key": "",
+          "nodes": [],
+          "textData": {
+            "text": "CUPCAKE MASTER",
+            "decorations": []
+          }
+        }
+      ],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "37",
+      "nodes": [
+        {
+          "type": "TEXT",
+          "key": "",
+          "nodes": [],
+          "textData": {
+            "text": "https://www.wix.app/bookings/54e7b326-49ec-434f-a7cc-c2ad1eaec049/service/03ef6546-985d-4739-951e-ca897375b967/details?d=https://sapirs0.wixsite.com/mysite/bookings-checkout/cupcake-master",
+            "decorations": []
+          }
+        }
+      ],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "38",
+      "nodes": [],
+      "paragraphData": {
+        "textStyle": {
+          "textAlignment": "AUTO"
+        }
+      }
+    },
+    {
+      "type": "PARAGRAPH",
+      "key": "39",
       "nodes": [
         {
           "type": "TEXT",
@@ -452,7 +572,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "2n5hd",
+      "key": "40",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -462,7 +582,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "2ocar",
+      "key": "41",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -472,7 +592,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "dpefl",
+      "key": "42",
       "nodes": [
         {
           "type": "TEXT",
@@ -492,7 +612,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "abhbo",
+      "key": "43",
       "nodes": [
         {
           "type": "TEXT",
@@ -512,7 +632,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "3gvmi",
+      "key": "44",
       "nodes": [
         {
           "type": "TEXT",
@@ -532,7 +652,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "1lj2d",
+      "key": "45",
       "nodes": [
         {
           "type": "TEXT",
@@ -552,7 +672,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "8c9bp",
+      "key": "46",
       "nodes": [
         {
           "type": "TEXT",
@@ -572,7 +692,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6gigf",
+      "key": "47",
       "nodes": [
         {
           "type": "TEXT",
@@ -592,7 +712,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "5jbv1",
+      "key": "48",
       "nodes": [
         {
           "type": "TEXT",
@@ -612,7 +732,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "d0bg7",
+      "key": "49",
       "nodes": [
         {
           "type": "TEXT",
@@ -632,7 +752,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "634h5",
+      "key": "50",
       "nodes": [
         {
           "type": "TEXT",
@@ -652,7 +772,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "2vvlt",
+      "key": "51",
       "nodes": [
         {
           "type": "TEXT",
@@ -672,7 +792,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6bfms",
+      "key": "52",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -682,7 +802,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "dosvf",
+      "key": "53",
       "nodes": [
         {
           "type": "TEXT",
@@ -702,7 +822,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "auvjg",
+      "key": "54",
       "nodes": [
         {
           "type": "TEXT",
@@ -722,7 +842,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "dlqvn",
+      "key": "55",
       "nodes": [
         {
           "type": "TEXT",
@@ -742,7 +862,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "a8vfd",
+      "key": "56",
       "nodes": [
         {
           "type": "TEXT",
@@ -762,7 +882,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "64bbb",
+      "key": "57",
       "nodes": [
         {
           "type": "TEXT",
@@ -782,7 +902,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "4s827",
+      "key": "58",
       "nodes": [
         {
           "type": "TEXT",
@@ -802,7 +922,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "du6b9",
+      "key": "59",
       "nodes": [
         {
           "type": "TEXT",
@@ -822,7 +942,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "bnq42",
+      "key": "60",
       "nodes": [
         {
           "type": "TEXT",
@@ -842,7 +962,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "88h27",
+      "key": "61",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -852,7 +972,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "3j93g",
+      "key": "62",
       "nodes": [
         {
           "type": "TEXT",
@@ -872,7 +992,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "6bpkv",
+      "key": "63",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -882,7 +1002,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "97f5f",
+      "key": "64",
       "nodes": [
         {
           "type": "TEXT",
@@ -902,7 +1022,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "1f86f",
+      "key": "65",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -912,14 +1032,14 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "d5ma4",
+      "key": "66",
       "nodes": [
         {
           "type": "TEXT",
           "key": "",
           "nodes": [],
           "textData": {
-            "text": "https://static.wixstatic.com/media/8bb438_35ed730d87524b1a88179adc18ed9cd4.jpg/v1/fill/w_1920,h_1280,al_c,q_90/8bb438_35ed730d87524b1a88179adc18ed9cd4.jpg",
+            "text": "https://static.wixstatic.com/media/8bb438_35ed730d87524b1a88179adc18ed9cd4.jpg",
             "decorations": []
           }
         }
@@ -932,7 +1052,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "b9iaq",
+      "key": "67",
       "nodes": [
         {
           "type": "TEXT",
@@ -952,7 +1072,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "fnes9",
+      "key": "68",
       "nodes": [
         {
           "type": "TEXT",
@@ -972,7 +1092,7 @@
     },
     {
       "type": "PARAGRAPH",
-      "key": "ara45",
+      "key": "69",
       "nodes": [],
       "paragraphData": {
         "textStyle": {
@@ -983,7 +1103,7 @@
   ],
   "metadata": {
     "version": 1,
-    "createdTimestamp": "2021-07-06T09:54:10.871Z",
-    "updatedTimestamp": "2021-07-06T09:54:10.871Z"
+    "createdTimestamp": "2021-07-15T07:42:30.023Z",
+    "updatedTimestamp": "2021-07-15T07:42:30.023Z"
   }
 }

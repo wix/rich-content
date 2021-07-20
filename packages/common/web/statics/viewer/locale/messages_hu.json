@@ -7,7 +7,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "Az összes eredmény mutatása",
   "Spoiler_Reveal_Image_Placeholder": "Ez a kép spoilert tartalmaz",
   "Poll_Viewer_Multiselect_Footer": "Egynél több válaszra is szavazhatsz.",
-  "Embed_Vertical_Units_Minute": "{{minutes}} perc",
   "UploadFile_Viewer_Loader": "{{fileType}} betöltése",
   "Preview_ReadMore_Label": "Bővebb információk",
   "Spoiler_Insert_Tooltip": "Spoiler",
@@ -16,7 +15,6 @@
   "Poll_Viewer_ShowLess_CTA": "Kevesebb mutatása",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} névtelen",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Követem",
-  "Embed_Vertical_Units_Hour": "{{hours}} ó",
   "Poll_Viewer_Toast_Error_ServerDown": "Nem sikerült csatlakozni a szerverhez. Próbálkozz ismét később!",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} felhasználó szavazott erre a válaszra",
   "Poll_Viewer_VoteCount": "{{number}} szavazat",
@@ -27,5 +25,10 @@
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "Kibontott elem",
   "Spoiler_Reveal_Video_Placeholder": "Ez a videó spoilert tartalmaz",
   "Preview_SeeFullPost_Label": "Teljes bejegyzés megjelenítése",
-  "UploadFile_Viewer_Download": "{{fileType}} letöltése"
+  "UploadFile_Viewer_Download": "{{fileType}} letöltése",
+  "VerticalEmbed_Bookings_Button": "Foglalás most",
+  "VerticalEmbed_Units_Minute": "{{minutes}} perc",
+  "VerticalEmbed_Products_Button": "Vásárlás most",
+  "VerticalEmbed_Units_Hour": "{{hours}} óra",
+  "VerticalEmbed_Events_Button": "Regisztráció most"
 }

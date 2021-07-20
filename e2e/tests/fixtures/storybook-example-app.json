@@ -599,7 +599,7 @@
         "selectedProduct": {
           "id": "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
           "name": "I'm a product",
-          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_9928686dcfa740bd802821d0b6f4ac03.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
+          "imageSrc": "https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg",
           "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/product-page/i-m-a-product-2\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/a9ff3b_119100d8c0144221b2f6733f4d205d2e.jpg/v1/fit/w_1000,h_1000,q_90/file.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">I&#x27;m a product</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Buy Now</div></div></div></div></a>"
         }
       }
@@ -611,8 +611,9 @@
         "type": "event",
         "selectedProduct": {
           "id": "ed97b710-1182-4c53-ab79-b938138d09e7",
-          "name": "Project session",
-          "description": "6 במרץ 2020 בשעה 19:00 | Tel Aviv-Yafo",
+          "name": "Make TPA work",
+          "description": "2 במרץ 2020 בשעה 19:00 | Wix HQ",
+          "imageSrc": "https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe",
           "html": "<a class=\"vertical-embed-link\" href=\"https://dorm62.wixsite.com/mysite-8/event-details/make-tpa-work\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/11062b_eaed09255b9c4aeaae99dd1aa409fde4~mv2.jpe)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Make TPA work</div><div class=\"vertical-embed-subtitle\">2 במרץ 2020 בשעה 19:00<span><span class=\"vertical-embed-right\">|</span>Wix HQ</span></div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Registrati</div></div></div></div></a>"
         }
       }
@@ -624,9 +625,9 @@
         "type": "booking",
         "selectedProduct": {
           "id": "285fe974-e729-4381-a874-7640d7f71ad8",
-          "name": "Demo Service",
-          "imageSrc": "https://static.wixstatic.com/media/11062b_cd1698150eb74897b56bfecd263e6fb6~mv2.jpg",
-          "description": 60,
+          "name": "Yoga lesson",
+          "imageSrc": "https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg",
+          "description": 80,
           "html": "<a class=\"vertical-embed-link\" href=\"https://www.wix.app/bookings/metaSiteId/service/3eb37526-e0b6-4ca8-a86e-471d1b752dfc/details?d=https://danari5.wixsite.com/mysite-1/bookings-checkout/yoga-lesson\" target=\"_blank\"><div style=\"direction:ltr\" class=\"vertical-embed-card vertical-embed-ltr vertical-embed-cardLayout\"><div style=\"background-image:url(https://static.wixstatic.com/media/e16a70bf019142d78d3d7ac4efffbaff.jpg)\" class=\"vertical-embed-imageLayout vertical-embed-image\"></div><div class=\"vertical-embed-content\"><div><div class=\"vertical-embed-title\">Yoga lesson</div><div class=\"vertical-embed-subtitle\">1h 20min</div></div><div class=\"vertical-embed-button\"><div class=\"vertical-embed-buttonText\">Book Now</div></div></div></div></a>"
         }
       }

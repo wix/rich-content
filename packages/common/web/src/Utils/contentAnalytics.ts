@@ -1,4 +1,4 @@
-import { RicosContent, RicosContentBlock } from 'ricos-content';
+import { DraftContent, RicosContentBlock } from 'ricos-content';
 import { countBy } from 'lodash';
 
 export const getBlockTypePlugins = (blocks: RicosContentBlock[]): RicosContentBlock[] =>
@@ -6,7 +6,7 @@ export const getBlockTypePlugins = (blocks: RicosContentBlock[]): RicosContentBl
 
 export const countByType = (obj: { type: string }[]) => countBy(obj, x => x.type);
 
-export function getContentSummary(content: RicosContent) {
+export function getContentSummary(content: DraftContent) {
   const { blocks, entityMap } = content;
   const blockPlugins = getBlockTypePlugins(blocks);
   const entries = Object.values(entityMap);

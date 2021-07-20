@@ -7,12 +7,14 @@ import {
   GALLERY_TYPE,
   VIDEO_TYPE_LEGACY,
   IMAGE_TYPE_LEGACY,
+  VERTICAL_EMBED_TYPE,
 } from '../consts';
 import {
   linkDataNormalizer,
   imageDataNormalizer,
   galleryDataNormalizer,
   videoDataNormalizer,
+  verticalEmbedDataNormalizer,
 } from './dataNormalizers';
 import { ComponentData, DraftContent, NormalizeConfig, RicosEntity } from '../types';
 
@@ -28,6 +30,7 @@ const dataNormalizers: {
   [IMAGE_TYPE]: imageDataNormalizer,
   [GALLERY_TYPE]: galleryDataNormalizer,
   [VIDEO_TYPE]: videoDataNormalizer,
+  [VERTICAL_EMBED_TYPE]: verticalEmbedDataNormalizer,
 };
 
 const normalizeComponentData = (
@@ -89,6 +92,7 @@ const entityTypeMap = {
     [IMAGE_TYPE]: IMAGE_TYPE,
     [GALLERY_TYPE]: GALLERY_TYPE,
     [VIDEO_TYPE]: VIDEO_TYPE,
+    [VERTICAL_EMBED_TYPE]: VERTICAL_EMBED_TYPE,
   },
 };
 

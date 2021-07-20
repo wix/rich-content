@@ -9,6 +9,24 @@ import { toTiptap } from '../packages/ricos-content/web/src/converters/tiptap';
 import migrationContent from '../e2e/tests/fixtures/migration-content.json';
 import { RichContent } from 'ricos-schema';
 
+const stringifyBaseLine = obj => {
+  let i = 0;
+  const normalizeKeys = (key, val) => {
+    switch (key) {
+      case 'key':
+        return val === '' ? '' : `${i++}`;
+      case 'createdTimestamp':
+      case 'updatedTimestamp':
+        return '2021-07-15T07:42:30.023Z';
+      default:
+        return val;
+    }
+  };
+  return JSON.stringify(obj, normalizeKeys, 2);
+};
+
+const writeBaseLine = (path, obj) => writeFileSync(path, stringifyBaseLine(obj));
+
 const getAbsPath = (relPath: string) => path.resolve(__dirname, relPath);
 
 const HTML_CONTENT = readFileSync(
@@ -47,7 +65,7 @@ enum Target {
 const convertToRichContent = async () => {
   console.log('Converting to ' + chalk.green('rich content') + '...');
   const richContentJSON = RichContent.toJSON(richContent);
-  writeFileSync(RICH_CONTENT_BASELINE, JSON.stringify(richContentJSON, null, 2));
+  writeBaseLine(RICH_CONTENT_BASELINE, richContentJSON);
   console.log('Saved rich content baseline 💰\n');
 };
 
@@ -66,7 +84,7 @@ const convertToHtml = () => {
 const convertFromHtml = () => {
   const content = fromHtml(HTML_CONTENT);
   const contentJSON = RichContent.toJSON(content);
-  writeFileSync(FROM_HTML_BASELINE, JSON.stringify(contentJSON, null, 2));
+  writeBaseLine(FROM_HTML_BASELINE, contentJSON);
 };
 
 const convertPlainText = async () => {
@@ -88,13 +106,13 @@ const convertFromPlainText = () => {
   const { PLAIN_TEXT } = require(TO_PLAIN_TEXT_BASELINE);
   const content = fromPlainText(PLAIN_TEXT);
   const contentJSON = RichContent.toJSON(content);
-  writeFileSync(FROM_PLAIN_TEXT_BASELINE, JSON.stringify(contentJSON, null, 2));
+  writeBaseLine(FROM_PLAIN_TEXT_BASELINE, contentJSON);
 };
 
 const convertToTiptap = async () => {
   console.log('Converting to ' + chalk.green('tiptap') + '...');
   const tiptap = toTiptap(richContent);
-  writeFileSync(TIPTAP_BASELINE, JSON.stringify(tiptap, null, 2));
+  writeBaseLine(TIPTAP_BASELINE, tiptap);
   console.log('Saved tiptap baseline ⚪️\n');
 };
 

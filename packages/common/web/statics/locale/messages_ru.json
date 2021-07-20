@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "Видео содержит спойлер",
 	"Preview_SeeFullPost_Label": "Показать весь пост",
 	"UploadFile_Viewer_Download": "Скачать {{fileType}}",
-	"Embed_Vertical_Units_Minute": "{{minutes}} мин.",
-	"Embed_Vertical_Units_Hour": "{{hours}} ч."
+	"VerticalEmbed_Bookings_Button": "Забронировать",
+	"VerticalEmbed_Units_Minute": "{{minutes}} мин.",
+	"VerticalEmbed_Products_Button": "Купить",
+	"VerticalEmbed_Units_Hour": "{{hours}} ч.",
+	"VerticalEmbed_Events_Button": "Зарегистрироваться"
 }

@@ -1,5 +1,4 @@
 import { Node, Node_Type } from 'ricos-schema';
-import { getImageSrc } from '../../../imageUtils';
 import { LINK_TYPE } from '../../../consts';
 import { mergeTextNodes, RangedDecoration } from '../../draft/toDraft/decorationParsers';
 
@@ -56,15 +55,7 @@ export const parseImage = async (
 ): Promise<string> => {
   const { caption } = imageData || {};
   const { src, width, height } = imageData?.image || {};
-  const imageUrlOptions = Object.assign(
-    {
-      imageType: 'highRes',
-      requiredQuality: 90,
-    },
-    width && { requiredWidth: width },
-    height && { requiredHeight: height }
-  );
-  let url: string = getImageSrc({ file_name: src?.custom }, undefined, imageUrlOptions);
+  let url = `https://static.wixstatic.com/media/${src?.custom?.replace('media/', '')}`;
   if (urlShortener) {
     url = await urlShortener(url);
   }
@@ -75,11 +66,13 @@ const getDefaultVideoUrl = async (fileId: string) => `https://video.wixstatic.co
 
 export const parseVideo = async (
   { videoData }: Node,
+  delimiter: string,
   getVideoUrl: (fileId: string) => Promise<string> = getDefaultVideoUrl
 ): Promise<string> => {
-  const { custom, url } = videoData?.video?.src || {};
-  const text = custom ? getVideoUrl(custom) : url;
-  return text || '';
+  const { video, title } = videoData || {};
+  const { custom, url } = video?.src || {};
+  const videoUrl = (custom ? getVideoUrl(custom) : url) || '';
+  return title ? title + delimiter + videoUrl : videoUrl;
 };
 
 export const parseGiphy = ({ giphyData }: Node): string => {
@@ -92,13 +85,9 @@ export const parseMap = ({ mapData }: Node): string => {
   return address || '';
 };
 
-export const parseVerticalEmbed = ({ verticalEmbedData }: Node, delimiter: string): string => {
-  const { html, name } = verticalEmbedData?.selectedProduct || {};
-  const href = html
-    ?.replace(/.*href="/g, '')
-    .replace(/.*=http/g, 'http')
-    .replace(/" .*/g, '');
-  return [name, href].filter(Boolean).join(delimiter);
+export const parseAppEmbed = ({ appEmbedData }: Node, delimiter: string): string => {
+  const { url, name } = appEmbedData || {};
+  return [name, url].filter(Boolean).join(delimiter);
 };
 
 export const parseLinkPreview = ({ linkPreviewData }: Node): string => {

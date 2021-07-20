@@ -1,6 +1,6 @@
 {
   "name": "wix-rich-content-plugin-image",
-  "version": "8.46.6",
+  "version": "8.47.3",
   "author": {
     "name": "Jonathan Bachman",
     "email": "jonathanb@wix.com"
@@ -17,7 +17,8 @@
   "files": [
     "dist",
     "libs",
-    "viewer"
+    "viewer",
+    "loadable"
   ],
   "main": "dist/module.cjs.js",
   "types": "dist/src/index.d.ts",
@@ -36,11 +37,11 @@
   },
   "dependencies": {
     "image-client-api": "1.2218.0",
-    "ricos-content": "8.46.6",
-    "wix-rich-content-common": "8.46.6",
-    "wix-rich-content-editor-common": "8.46.6",
-    "wix-rich-content-plugin-commons": "8.46.6",
-    "wix-rich-content-ui-components": "8.46.6"
+    "ricos-content": "8.47.3",
+    "wix-rich-content-common": "8.47.3",
+    "wix-rich-content-editor-common": "8.47.3",
+    "wix-rich-content-plugin-commons": "8.47.3",
+    "wix-rich-content-ui-components": "8.47.3"
   },
   "unpkg": true,
   "publishConfig": {

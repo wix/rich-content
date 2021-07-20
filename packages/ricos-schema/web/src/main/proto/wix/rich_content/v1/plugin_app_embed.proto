@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package wix.rich_content.v1;
+
+import "google/protobuf/wrappers.proto";
+
+message AppEmbedData {
+    message BookingData {
+        google.protobuf.StringValue durations = 1;
+    }
+
+    message EventData {
+        google.protobuf.StringValue scheduling = 1;
+        google.protobuf.StringValue location = 2;
+    }
+    
+    enum AppType {
+        PRODUCT = 0;
+        EVENT = 1;
+        BOOKING = 2;
+    }
+    
+    AppType type = 1;
+    google.protobuf.StringValue id = 2;
+    google.protobuf.StringValue name = 3;
+    google.protobuf.StringValue image_src = 4;
+    google.protobuf.StringValue url = 5;
+
+    oneof appData {
+        BookingData booking_data = 6;
+        EventData event_data = 7;
+    } 
+}

@@ -1,0 +1,5 @@
+{
+    "main": "../../dist/lib/tiptap.cjs.js",
+    "module": "../../dist/lib/tiptap.js",
+    "types": "../../dist/lib/tiptap.d.ts"
+}

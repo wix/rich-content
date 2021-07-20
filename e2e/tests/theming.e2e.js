@@ -5,11 +5,11 @@ import { DEFAULT_DESKTOP_BROWSERS, DEFAULT_MOBILE_BROWSERS } from './settings';
 
 function testFlow(isDesktop, title) {
   if (isDesktop) {
-    cy.setEditorSelection(78, 7);
+    cy.setEditorSelection(111, 7);
     cy.wait(200);
     cy.eyesCheckWindow(title + ' (formatting selection)');
 
-    cy.setEditorSelection(138, 14);
+    cy.setEditorSelection(171, 14);
     cy.wait(200);
     cy.eyesCheckWindow(title + ' (link selection)');
   }

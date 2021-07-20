@@ -96,6 +96,7 @@ import 'wix-rich-content-text-selection-toolbar/dist/styles.min.css';
 import 'wix-rich-content-plugin-social-polls/dist/styles.min.css';
 import 'wix-rich-content-plugin-collapsible-list/dist/styles.min.css';
 import 'wix-rich-content-plugin-table/dist/styles.min.css';
+import 'wix-rich-content-plugin-vertical-embed/dist/styles.min.css';
 
 import { RichContentViewerProps } from 'wix-rich-content-viewer';
 import {

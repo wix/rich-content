@@ -6,7 +6,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "Xem tất cả kết quả",
   "Spoiler_Reveal_Image_Placeholder": "Hình ảnh này có chứa chi tiết tiết lộ trước nội dung",
   "Poll_Viewer_Multiselect_Footer": "Bạn có thể bình chọn cho nhiều câu trả lời.",
-  "Embed_Vertical_Units_Minute": "{{minutes}} phút",
   "UploadFile_Viewer_Loader": "Đang tải {{fileType}}",
   "Preview_ReadMore_Label": "Đọc thêm",
   "Spoiler_Insert_Tooltip": "Chi tiết tiết lộ trước nội dung",
@@ -15,7 +14,6 @@
   "Poll_Viewer_ShowLess_CTA": "Ẩn bớt",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} ẩn danh",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Theo dõi",
-  "Embed_Vertical_Units_Hour": "{{hours}} giờ",
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "Mục được mở rộng",
   "Poll_Viewer_Toast_Error_ServerDown": "Không thể kết nối với máy chủ. Thử lại sau.",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} người đã bình chọn cho câu trả lời này",
@@ -27,5 +25,10 @@
   "Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} người đã bình chọn cho câu trả lời này",
   "Spoiler_Reveal_Video_Placeholder": "Video này có chứa chi tiết tiết lộ trước nội dung",
   "Preview_SeeFullPost_Label": "Xem toàn bộ bài đăng",
-  "UploadFile_Viewer_Download": "Tải về {{fileType}}"
+  "UploadFile_Viewer_Download": "Tải về {{fileType}}",
+  "VerticalEmbed_Bookings_Button": "Đặt ngay",
+  "VerticalEmbed_Units_Minute": "{{minutes}} phút",
+  "VerticalEmbed_Products_Button": "Mua ngay",
+  "VerticalEmbed_Units_Hour": "{{hours}} giờ",
+  "VerticalEmbed_Events_Button": "Đăng ký ngay"
 }

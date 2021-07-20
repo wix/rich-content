@@ -4,16 +4,12 @@ import {
   DividerData,
   FileData,
   GalleryData,
-  GiphyData,
   HTMLData,
   HeadingData,
   ImageData,
-  LinkPreviewData,
-  MapData,
   Node,
   Node_Type,
   ParagraphData,
-  PollData,
   RichContent,
   TextData,
   VideoData,
@@ -21,25 +17,7 @@ import {
 } from 'ricos-schema';
 import { addNode as add, toTextDataArray, toListDataArray } from './builder-utils';
 import { ContentBuilder, ListItemData } from '../types';
-
-const dataByNodeType = (type: Node_Type, data: unknown) =>
-  ({
-    [Node_Type.CODE_BLOCK]: { codeBlockData: data as CodeBlockData },
-    [Node_Type.DIVIDER]: { dividerData: data as DividerData },
-    [Node_Type.HEADING]: { headingData: data as HeadingData },
-    [Node_Type.FILE]: { fileData: data as FileData },
-    [Node_Type.GALLERY]: { galleryData: data as GalleryData },
-    [Node_Type.GIPHY]: { giphyData: data as GiphyData },
-    [Node_Type.HTML]: { htmlData: data as HTMLData },
-    [Node_Type.IMAGE]: { imageData: data as ImageData },
-    [Node_Type.BUTTON]: { buttonData: data as ButtonData },
-    [Node_Type.LINK_PREVIEW]: { LinkPreviewData: data as LinkPreviewData },
-    [Node_Type.MAP]: { mapData: data as MapData },
-    [Node_Type.PARAGRAPH]: { paragraphData: data as ParagraphData },
-    [Node_Type.POLL]: { pollData: data as PollData },
-    [Node_Type.TEXT]: { textData: data as TextData },
-    [Node_Type.VIDEO]: { videoData: data as VideoData },
-  }[type]);
+import { dataByNodeType } from '../converters/nodeUtils';
 
 type AddMethodParams<TData> = {
   data: TData;

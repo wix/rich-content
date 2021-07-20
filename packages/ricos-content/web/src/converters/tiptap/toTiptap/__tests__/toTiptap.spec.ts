@@ -5,7 +5,7 @@ import draftMigrationContent from '../../../../../../../../e2e/tests/fixtures/mi
 import migrationContentTiptap from './migrationContentTiptap.json';
 import { draftBlockDataToTiptap, draftToTiptap, toTiptap } from '../..';
 import { getImageBlockData, getImageNode } from '../../utils';
-import { IMAGE_TYPE } from '../../../..';
+import { IMAGE_TYPE } from '../../../../consts';
 
 describe('convert to Tiptap', () => {
   describe('from RichContent', () => {

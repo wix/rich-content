@@ -1,5 +1,0 @@
-{
-    "main": "../../dist/lib/htmlConverters.cjs.js",
-    "module": "../../dist/lib/htmlConverters.js",
-    "types": "../../dist/lib/htmlConverters.d.ts"
-}

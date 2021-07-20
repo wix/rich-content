@@ -10,7 +10,7 @@ import {
   LINK_PREVIEW_TYPE,
   MENTION_TYPE,
   POLL_TYPE,
-  VERTICAL_EMBED_TYPE,
+  APP_EMBED_TYPE,
   VIDEO_TYPE,
   MAP_TYPE,
   EMBED_TYPE,
@@ -40,7 +40,7 @@ export const convertBlockDataToRicos = (type: string, data) => {
     [FILE_UPLOAD_TYPE]: convertFileData,
     [IMAGE_TYPE]: convertImageData,
     [POLL_TYPE]: convertPollData,
-    [VERTICAL_EMBED_TYPE]: convertVerticalEmbedData,
+    [APP_EMBED_TYPE]: convertAppEmbedData,
     [LINK_PREVIEW_TYPE]: convertLinkPreviewData,
     [MENTION_TYPE]: convertMentionData,
     [LINK_BUTTON_TYPE]: convertButtonData,
@@ -70,11 +70,12 @@ export const convertBlockDataToRicos = (type: string, data) => {
 
 const convertContainerData = (data: { config?: ComponentData['config']; containerData }) => {
   const { size, alignment, width, spoiler, height } = data.config || {};
-  let newSpoiler: PluginContainerData_Spoiler | undefined;
-  if (spoiler?.enabled) {
-    const { description, buttonContent } = spoiler;
-    newSpoiler = { description, buttonText: buttonContent };
-  }
+  const { enabled, description, buttonContent } = spoiler || {};
+  const newSpoiler: PluginContainerData_Spoiler | undefined = spoiler && {
+    enabled: enabled || false,
+    description,
+    buttonText: buttonContent,
+  };
   data.containerData = {
     alignment: alignment && kebabToConstantCase(alignment),
     spoiler: newSpoiler,
@@ -87,13 +88,15 @@ const convertContainerData = (data: { config?: ComponentData['config']; containe
 
 const convertVideoData = (data: {
   src?: string | VideoComponentData;
-  metadata?: { thumbnail_url?: string; width?: number; height?: number };
+  metadata?: { thumbnail_url?: string; width?: number; height?: number; title?: string };
   video;
   thumbnail;
+  title?;
 }) => {
   if (typeof data.src === 'string') {
     data.video = { src: { url: data.src } };
-    const { thumbnail_url, width, height } = data.metadata || {};
+    const { thumbnail_url, width, height, title } = data.metadata || {};
+    title && (data.title = title);
     data.thumbnail = {
       src: { url: thumbnail_url },
       width,
@@ -112,11 +115,12 @@ const convertVideoData = (data: {
 const convertDividerData = (data: {
   type?: string;
   config?: ComponentData['config'];
+  lineStyle?: string;
   width;
   alignment;
   containerData;
 }) => {
-  has(data, 'type') && (data.type = data.type?.toUpperCase());
+  has(data, 'type') && (data.lineStyle = data.type?.toUpperCase());
   has(data, 'config.size') && (data.width = data.config?.size?.toUpperCase());
   has(data, 'config.alignment') && (data.alignment = data.config?.alignment?.toUpperCase());
   data.containerData = { width: { size: PluginContainerData_Width_Type.CONTENT } };
@@ -147,8 +151,40 @@ const convertPollData = (data: { layout; design }) => {
     (data.design.poll.backgroundType = data.design.poll.backgroundType.toUpperCase());
 };
 
-const convertVerticalEmbedData = (data: { type?: string }) => {
-  has(data, 'type') && (data.type = data.type?.toUpperCase());
+const convertAppEmbedData = (data: {
+  type: string;
+  selectedProduct: Record<string, string>;
+  url;
+  imageSrc;
+  id;
+  name;
+  bookingData;
+  eventData;
+}) => {
+  const {
+    id,
+    name,
+    imageSrc,
+    description,
+    pageUrl,
+    scheduling,
+    location,
+    html,
+    durations,
+  } = data.selectedProduct;
+  data.url = pageUrl || (html && (data.url = html.match(/href="[^"]*/g)?.[0]?.slice(6)));
+  data.id = id;
+  data.name = name;
+  data.imageSrc = imageSrc;
+  if (data.type === 'booking') {
+    data.bookingData = { durations: durations || description };
+  } else if (data.type === 'event') {
+    data.eventData = {
+      location: location || (description && description.match(/[^|]*$/)?.[0]),
+      scheduling: scheduling || (description && description.match(/[^|]+/)?.[0]),
+    };
+  }
+  data.type = data.type?.toUpperCase();
 };
 
 const convertLinkPreviewData = (data: {

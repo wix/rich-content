@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "Denne video indeholder en spoiler",
 	"Preview_SeeFullPost_Label": "Se hele indlægget",
 	"UploadFile_Viewer_Download": "Download {{fileType}}",
-	"Embed_Vertical_Units_Minute": "{{minutes}} min",
-	"Embed_Vertical_Units_Hour": "{{hours}} t"
+	"VerticalEmbed_Bookings_Button": "Book nu",
+	"VerticalEmbed_Units_Minute": "{{minutes}} min",
+	"VerticalEmbed_Products_Button": "Køb nu",
+	"VerticalEmbed_Units_Hour": "{{hours}} t",
+	"VerticalEmbed_Events_Button": "Tilmeld dig"
 }

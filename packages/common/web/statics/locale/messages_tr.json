@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "Bu video, spoiler içerir",
 	"Preview_SeeFullPost_Label": "Tamamını görüntüle",
 	"UploadFile_Viewer_Download": "{{fileType}} dosyasını indir",
-	"Embed_Vertical_Units_Minute": "{{minutes}}dk.",
-	"Embed_Vertical_Units_Hour": "{{hours}}s."
+	"VerticalEmbed_Bookings_Button": "Yer Ayırt",
+	"VerticalEmbed_Units_Minute": "{{minutes}} dk.",
+	"VerticalEmbed_Products_Button": "Satın Al",
+	"VerticalEmbed_Units_Hour": "{{hours}} sa.",
+	"VerticalEmbed_Events_Button": "Hemen Kaydol"
 }

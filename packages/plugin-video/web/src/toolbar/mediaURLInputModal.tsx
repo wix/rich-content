@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-import { UrlInputModal } from 'wix-rich-content-ui-components';
+import { UrlInputModal, BUTTON_SIZE } from 'wix-rich-content-ui-components';
 import {
   OnConfirmFunction,
   Pubsub,
@@ -95,6 +95,7 @@ export default class MediaURLInputModal extends Component<Props, State> {
         errorMessage={t('SoundCloudUploadModal_Input_InvalidUrl')}
         placeholder={placeholder}
         onCloseRequested={helpers.closeModal}
+        buttonSize={BUTTON_SIZE.medium}
       />
     );
   }

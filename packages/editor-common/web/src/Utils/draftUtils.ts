@@ -1,4 +1,4 @@
-import { convertToRaw } from '..';
+import { DraftContent } from 'ricos-content';
 import {
   EditorState,
   Modifier,
@@ -581,9 +581,8 @@ function getSelection(editorState: EditorState) {
   return selection;
 }
 
-export function getEditorContentSummary(editorState: EditorState) {
-  if (Object.entries(editorState).length === 0) return;
-  return getContentSummary(convertToRaw(editorState.getCurrentContent()));
+export function getEditorContentSummary(contentState: DraftContent) {
+  return getContentSummary(contentState);
 }
 
 const countByTypeField = obj => countBy(obj, x => x.type);
@@ -703,7 +702,7 @@ export function getBlockEntityType(editorState: EditorState, blockKey: string) {
 function getBlockEntity(editorState: EditorState, blockKey: string) {
   const contentState = editorState.getCurrentContent();
   const block = contentState.getBlockForKey(blockKey);
-  const entityKey = block.getEntityAt(0);
+  const entityKey = block?.getEntityAt(0);
   return entityKey ? contentState.getEntity(entityKey) : undefined;
 }
 

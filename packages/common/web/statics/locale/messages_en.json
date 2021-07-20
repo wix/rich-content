@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_CTA": "Reveal Video",
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Item is expanded",
 	"CollapsibleListPlugin_CollapseButton_AriaLabel": "Item is collapsed",
-	"Embed_Vertical_Units_Hour": "{{hours}}h",
-	"Embed_Vertical_Units_Minute": "{{minutes}}min"
+	"VerticalEmbed_Bookings_Button": "Book Now",
+	"VerticalEmbed_Events_Button": "Register Now",
+	"VerticalEmbed_Products_Button": "Buy Now",
+	"VerticalEmbed_Units_Hour": "{{hours}}h",
+	"VerticalEmbed_Units_Minute": "{{minutes}}min"
 }

@@ -15,7 +15,7 @@ import {
 } from 'ricos-content';
 import {
   DividerData,
-  DividerData_Type,
+  DividerData_LineStyle,
   GiphyData,
   HTMLData,
   GalleryData,
@@ -80,10 +80,10 @@ const divider = {
   type: RICOS_DIVIDER_TYPE,
   nodeType: Node_Type.DIVIDER,
   data1: DividerData.fromJSON({
-    type: DividerData_Type.DOUBLE,
+    lineStyle: DividerData_LineStyle.DOUBLE,
   }),
   data2: DividerData.fromJSON({
-    type: DividerData_Type.DASHED,
+    lineStyle: DividerData_LineStyle.DASHED,
   }),
   expectedData1: {
     type: 'double',

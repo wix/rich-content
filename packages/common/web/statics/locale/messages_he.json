@@ -586,7 +586,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "ראה את כל התוצאות",
 	"Spoiler_Reveal_Image_Placeholder": "יש ספוילרים בתמונה הזו",
 	"Poll_Viewer_Multiselect_Footer": "אתה יכול להצביע ליותר מתשובה אחת.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} דקות",
 	"UploadFile_Viewer_Loader": "טוענים את {{fileType}}",
 	"Preview_ReadMore_Label": "למידע נוסף",
 	"Spoiler_Reveal_Gallery_Placeholder": "יש ספוילרים בגלריה הזו",
@@ -594,7 +593,6 @@
 	"Poll_Viewer_ShowLess_CTA": "הצג פחות",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} אנונימי",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "עקוב",
-	"Embed_Vertical_Units_Hour": "{{hours}} שעות",
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "הפריט הזה מורחב",
 	"Poll_Viewer_Toast_Error_ServerDown": "לא ניתן היה להתחבר לשרת. נסה שוב מאוחר יותר.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} אדם הצביע בעד תשובה זו",
@@ -606,5 +604,10 @@
 	"Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} אנשים הצביעו בעד תשובה זו",
 	"Spoiler_Reveal_Video_Placeholder": "יש ספוילרים בסרטון הזה",
 	"Preview_SeeFullPost_Label": "עבור לפוסט המלא",
-	"UploadFile_Viewer_Download": "הורידו את {{fileType}}"
+	"UploadFile_Viewer_Download": "הורידו את {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "הזמינו עכשיו",
+	"VerticalEmbed_Units_Minute": "{{minutes}} דק'",
+	"VerticalEmbed_Products_Button": "קנו עכשיו",
+	"VerticalEmbed_Units_Hour": "{{hours}} שע'",
+	"VerticalEmbed_Events_Button": "להרשמה"
 }

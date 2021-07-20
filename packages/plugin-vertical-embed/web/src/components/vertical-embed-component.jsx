@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { validate } from 'wix-rich-content-common';
+import { validate, getLangDir } from 'wix-rich-content-common';
 // eslint-disable-next-line max-len
 import verticalEmbedSchema from 'wix-rich-content-common/dist/statics/schemas/vertical-embed.schema.json';
 import classnames from 'classnames';
 import styles from '../../statics/styles/widget.scss';
 import { VERTICAL_EMBED_TYPE } from '../types';
-
+import { dataTypeMapper } from '../utils';
+import Card from './Card';
 class VerticalEmbedComponent extends PureComponent {
   constructor(props) {
     super(props);
@@ -26,11 +27,13 @@ class VerticalEmbedComponent extends PureComponent {
       componentData,
       className,
       settings: { slimLayout = false },
+      t,
+      locale,
     } = this.props;
 
-    const { selectedProduct } = componentData;
-    const { html } = selectedProduct;
-
+    const { selectedProduct, type } = componentData;
+    const props = dataTypeMapper[type](selectedProduct, t);
+    const direction = getLangDir(locale);
     return (
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events
       <div
@@ -38,8 +41,7 @@ class VerticalEmbedComponent extends PureComponent {
         data-hook="vertical-embed"
         onClick={this.onClick}
       >
-        {/* eslint-disable-next-line react/no-danger*/}
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Card {...props} t={t} direction={direction} />
       </div>
     );
   }
@@ -50,6 +52,8 @@ VerticalEmbedComponent.propTypes = {
   className: PropTypes.string,
   settings: PropTypes.object,
   helpers: PropTypes.object,
+  locale: PropTypes.string,
+  t: PropTypes.func,
 };
 
 export default VerticalEmbedComponent;
