@@ -8,7 +8,7 @@
     "noImplicitAny": false,
     "module": "ESNext",
     "moduleResolution": "node",
-    "target": "ES5",
+    "target": "ESNext",
     "jsx": "react",
     "lib": ["dom", "ESNext"],
     "strictNullChecks": true,
@@ -19,6 +19,6 @@
     "allowJs": true
   },
   "files": ["external-types.d.ts"],
-"include": ["packages", "packages/**/*.json", "*.ts"],
+  "include": ["packages", "packages/**/*.json", "*.ts"],
   "exclude": ["**/node_modules/*", "**/dist/*"]
 }

@@ -38,6 +38,7 @@ interface State {
   remountKey: boolean;
   editorState?: EditorState;
   initialContentChanged: boolean;
+  error?: string;
 }
 
 export class RicosEditor extends Component<RicosEditorProps, State> {
@@ -55,6 +56,14 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
 
   currentEditorRef!: ElementType;
 
+  static getDerivedStateFromError(error: string) {
+    return { error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error({ error, errorInfo });
+  }
+
   constructor(props: RicosEditorProps) {
     super(props);
     this.dataInstance = createDataConverter(props.onChange, props.content);
@@ -67,14 +76,19 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
     this.useTiptap = !!props.experiments?.tiptapEditor?.enabled;
   }
 
-  static defaultProps = { locale: 'en' };
+  static defaultProps = {
+    onError: err => {
+      throw err;
+    },
+    locale: 'en',
+  };
 
   updateLocale = async () => {
     const { children } = this.props;
     const locale = children?.props.locale || this.props.locale;
-    await localeStrategy(locale).then(localeData =>
-      this.setState({ localeData, remountKey: !this.state.remountKey })
-    );
+    await localeStrategy(locale)
+      .then(localeData => this.setState({ localeData, remountKey: !this.state.remountKey }))
+      .catch(error => this.setState({ error }));
   };
 
   componentDidMount() {
@@ -164,7 +178,7 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
       const editorState = createWithContent(convertFromRaw(newProps.injectedContent));
       this.setState({ editorState }, () => {
         this.dataInstance = createDataConverter(this.props.onChange, this.props.injectedContent);
-        this.dataInstance.refresh(editorState);
+        this.dataInstance.refresh(editorState, this.props.onError);
       });
     }
   }
@@ -178,12 +192,16 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
   };
 
   onChange = (childOnChange?: RichContentEditorProps['onChange']) => (editorState: EditorState) => {
-    this.dataInstance.refresh(editorState);
-    if (this.getContentTraits().isContentChanged) {
-      this.onInitialContentChanged();
+    try {
+      this.dataInstance.refresh(editorState, this.props.onError);
+      if (this.getContentTraits().isContentChanged) {
+        this.onInitialContentChanged();
+      }
+      childOnChange?.(editorState);
+      this.onBusyChange(editorState.getCurrentContent());
+    } catch (err) {
+      this.setState({ error: err });
     }
-    childOnChange?.(editorState);
-    this.onBusyChange(editorState.getCurrentContent());
   };
 
   getToolbarProps = (type: ToolbarType) => this.editor.getToolbarProps(type);
@@ -197,12 +215,11 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
   getContentTraits = () => this.dataInstance.getContentTraits();
 
   getContent = async (postId?: string, forPublish?: boolean, shouldRemoveErrorBlocks = true) => {
-    const { getContentState } = this.dataInstance;
     if (postId && forPublish) {
       console.warn(PUBLISH_DEPRECATION_WARNING_v9); // eslint-disable-line
       this.sendPublishBi(postId); //async
     }
-    return getContentState({ shouldRemoveErrorBlocks });
+    return this.dataInstance.getContentState({ shouldRemoveErrorBlocks });
   };
 
   getContentPromise = async ({
@@ -318,7 +335,17 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
   }
 
   render() {
-    return this.useTiptap ? this.renderTiptapEditor() : this.renderDraftEditor();
+    try {
+      if (this.state.error) {
+        this.props.onError?.(this.state.error);
+        return null;
+      }
+
+      return this.useTiptap ? this.renderTiptapEditor() : this.renderDraftEditor();
+    } catch (e) {
+      this.props.onError?.(e);
+      return null;
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { EditorPropsContext } from '../../context';
-import { NodeViewWrapper } from '@tiptap-es5/react';
+import { NodeViewWrapper } from '@tiptap/react';
 import {
   getAlignmentClassName,
   getFocusClassName,

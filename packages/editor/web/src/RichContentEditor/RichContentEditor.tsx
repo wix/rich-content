@@ -457,6 +457,8 @@ class RichContentEditor extends Component<RichContentEditorProps, State> {
           helpers.onPluginChange?.(pluginId, changeObj, Version.currentVersion),
         onToolbarButtonClick: args =>
           helpers.onToolbarButtonClick?.({ ...args, version: Version.currentVersion }),
+        onInlineToolbarOpen: args =>
+          helpers.onInlineToolbarOpen?.({ ...args, version: Version.currentVersion }),
       },
       config,
       isMobile,

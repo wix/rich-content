@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { toTiptap } from './toTiptap/toTiptap';
 import { fromTiptap } from './fromTiptap/fromTiptap';
-import { DraftContent } from '../..';
+import { DraftContent } from '../../types';
 import { convertBlockDataToRicos, convertNodeDataToDraft, fromDraft, toDraft } from '../draft';
-import { JSONContent } from '@tiptap-es5/core';
+import { JSONContent } from '@tiptap/core';
 import { Node_Type } from 'ricos-schema';
 
 export const draftToTiptap = (draftContent: DraftContent): JSONContent =>

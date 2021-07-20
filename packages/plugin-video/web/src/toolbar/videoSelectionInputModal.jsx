@@ -213,9 +213,8 @@ export default class VideoSelectionInputModal extends Component {
               ariaProps={!this.state.url && { disabled: 'disabled' }}
               dataHook="videoUploadModalAddButton"
               theme={{ ...styles, ...theme }}
-            >
-              {t('VideoUploadModal_AddButtonText')}
-            </Button>
+              text={t('VideoUploadModal_AddButtonText')}
+            />
           </div>
           {(!isMobile || enableCustomUploadOnMobile) && hasCustomFileUpload && uploadVideoSection}
         </div>

@@ -15,6 +15,7 @@ export default class ToolbarContent extends PureComponent {
     structure: PropTypes.object,
     onOverrideContent: PropTypes.func,
     componentData: PropTypes.object,
+    triggerOnLoadBi: PropTypes.func,
   };
 
   constructor(props) {
@@ -39,6 +40,10 @@ export default class ToolbarContent extends PureComponent {
       showRightArrow: isScroll && scrollLeft < scrollWidth - clientWidth,
     });
   };
+
+  componentDidMount() {
+    this.props.triggerOnLoadBi?.();
+  }
 
   render() {
     const { showLeftArrow, showRightArrow } = this.state;

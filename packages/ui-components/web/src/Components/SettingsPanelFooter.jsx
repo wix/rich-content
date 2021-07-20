@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Button from './Button';
+import ActionButtons from './ActionButtons';
 import { mergeStyles } from 'wix-rich-content-common';
 import styles from '../../statics/styles/settings-panel-footer.scss';
-import { FOOTER_BUTTON_ALIGNMENT } from '../consts';
+import { FOOTER_BUTTON_ALIGNMENT, BUTTON_SIZE } from '../consts';
 
 class SettingsPanelFooter extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class SettingsPanelFooter extends Component {
       t,
       layoutOptions = {},
       selected = true,
+      buttonSize = BUTTON_SIZE.small,
     } = this.props;
     const { isModal, buttonAlignment = FOOTER_BUTTON_ALIGNMENT.CENTER } = layoutOptions;
     const endAlignment = buttonAlignment === FOOTER_BUTTON_ALIGNMENT.END;
@@ -42,33 +43,22 @@ class SettingsPanelFooter extends Component {
           }
         )}
       >
-        <Button
-          theme={theme}
-          ariaProps={{ 'aria-label': cancelText }}
-          dataHook="settingPanelFooterCancel"
-          onClick={() => cancel()}
+        <div
           className={classNames(
-            this.styles.settingsPanel_cancel,
-            isModal && this.styles.modal,
-            endAlignment && this.styles.flexEndModalButtons
+            this.styles.settingsPanel_footer_buttons_wrapper,
+            isModal && this.styles.modal
           )}
-          type={'secondary'}
         >
-          {cancelText}
-        </Button>
-        <Button
-          ariaProps={({ 'aria-label': saveText }, !selected && { disabled: 'disabled' })}
-          theme={theme}
-          className={classNames(
-            this.styles.settingsPanel_save,
-            isModal && this.styles.modal,
-            endAlignment && this.styles.flexEndModalButtons
-          )}
-          dataHook="settingPanelFooterDone"
-          onClick={() => save()}
-        >
-          {saveText}
-        </Button>
+          <ActionButtons
+            size={buttonSize}
+            theme={theme}
+            onCancel={cancel}
+            onSave={save}
+            cancelText={cancelText}
+            saveText={saveText}
+            disableSave={!selected}
+          />
+        </div>
       </div>
     );
   }
@@ -87,6 +77,7 @@ SettingsPanelFooter.propTypes = {
   flexEndModalButtons: PropTypes.bool,
   layoutOptions: PropTypes.object,
   selected: PropTypes.bool,
+  buttonSize: PropTypes.string,
 };
 
 export default SettingsPanelFooter;

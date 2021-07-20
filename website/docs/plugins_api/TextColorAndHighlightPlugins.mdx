@@ -37,10 +37,7 @@ import 'wix-rich-content-plugin-text-color/dist/styles.min.css';
 
 /* Viewer */
 import { RicosViewer } from 'ricos-viewer';
-import {
-  pluginTextColor,
-  pluginTextHighlight,
-} from 'wix-rich-content-plugin-text-color/dist/module.viewer';
+import { pluginTextColor, pluginTextHighlight } from 'wix-rich-content-plugin-text-color/viewer';
 import 'wix-rich-content-plugin-text-color/dist/styles.min.css';
 <RicosViewer
   plugins={[pluginTextColor(textColorConfig), pluginTextHighlight(textHighlightConfig)]}
@@ -164,7 +161,7 @@ const textHighlightConfig = {
 
 /* Viewer */
 import { RicosViewer } from 'ricos-viewer';
-import { pluginTextColor, pluginTextHighlight } from 'wix-rich-content-plugin-text-color/dist/module.viewer';
+import { pluginTextColor, pluginTextHighlight } from 'wix-rich-content-plugin-text-color/viewer';
 import 'wix-rich-content-plugin-text-color/dist/styles.min.css';
 import { isHexColor } from 'wix-rich-content-common';
 

@@ -21,6 +21,7 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
+    'new-cap': 'off',
     'lines-between-class-members': ['error', 'always'],
     'quote-props': 'off',
     'react/jsx-closing-tag-location': 'error',

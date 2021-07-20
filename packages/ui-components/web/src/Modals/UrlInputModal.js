@@ -66,6 +66,7 @@ export default class UrlInputModal extends Component {
       controlsPosition = MODAL_CONTROLS_POSITION.BOTTOM,
       selected = true,
       textInput = true,
+      buttonSize,
     } = this.props;
     const topControls = controlsPosition === MODAL_CONTROLS_POSITION.TOP;
     const { styles, classes } = this;
@@ -123,6 +124,7 @@ export default class UrlInputModal extends Component {
             layoutOptions={{ isModal: true, buttonAlignment }}
             t={t}
             selected={selected}
+            buttonSize={buttonSize}
           />
         )}
       </div>
@@ -148,4 +150,5 @@ UrlInputModal.propTypes = {
   controlsPosition: PropTypes.string,
   selected: PropTypes.bool,
   textInput: PropTypes.object || PropTypes.bool,
+  buttonSize: PropTypes.string,
 };

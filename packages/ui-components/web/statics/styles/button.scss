@@ -1,7 +1,7 @@
 @import '~wix-rich-content-common/dist/statics/styles/palette';
 
 %button {
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -18,6 +18,7 @@
     cursor: auto;
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(0, 0, 0, 0.4);
+    border: none;
   }
 }
 
@@ -36,4 +37,21 @@
     color: rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, 0.4);
   }
+}
+
+.tiny {
+  font-size: 14px;
+  height: 32px;
+}
+
+.small {
+  height: 36px;
+}
+
+.medium {
+  height: 40px;
+}
+
+.large {
+  height: 48px;
 }

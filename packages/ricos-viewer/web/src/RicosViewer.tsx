@@ -11,6 +11,7 @@ interface State {
   isPreviewExpanded: boolean;
   localeData: { locale?: string; localeResource?: Record<string, string> };
   remountKey: boolean;
+  error?: string;
   TextSelectionToolbar?;
 }
 
@@ -19,6 +20,14 @@ export class RicosViewer extends Component<RicosViewerProps, State> {
   viewerRef!: HTMLElement;
 
   getBiCallback: typeof getCallback;
+
+  static getDerivedStateFromError(error: string) {
+    return { error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error({ error, errorInfo });
+  }
 
   constructor(props: RicosViewerProps) {
     super(props);
@@ -30,7 +39,12 @@ export class RicosViewer extends Component<RicosViewerProps, State> {
     };
   }
 
-  static defaultProps = { locale: 'en' };
+  static defaultProps = {
+    onError: err => {
+      throw err;
+    },
+    locale: 'en',
+  };
 
   getLocale = () => {
     const { children, locale } = this.props;
@@ -69,36 +83,45 @@ export class RicosViewer extends Component<RicosViewerProps, State> {
   render() {
     const { children, seoSettings, ...props } = this.props;
     const { isPreviewExpanded, localeData, TextSelectionToolbar } = this.state;
-    const child =
-      children && shouldRenderChild('RichContentViewer', children) ? (
-        children
-      ) : (
-        <RichContentViewer />
-      );
-    return [
-      <RicosEngine
-        key="viewer"
-        RicosModal={RicosModal}
-        isPreviewExpanded={isPreviewExpanded}
-        onPreviewExpand={this.onPreviewExpand}
-        isViewer
-        {...props}
-      >
-        {React.cloneElement(child, {
-          seoMode: seoSettings,
-          setRef: this.setRef,
-          onMouseOver: this.loadTextSelection,
-          ...localeData,
-        })}
-      </RicosEngine>,
-      TextSelectionToolbar ? (
-        <Suspense fallback={<div />}>
-          <TextSelectionToolbar
-            onButtonClick={this.getBiCallback('onViewerAction')}
-            container={this.viewerRef}
-          />
-        </Suspense>
-      ) : null,
-    ];
+    try {
+      if (this.state.error) {
+        this.props.onError?.(this.state.error);
+        return null;
+      }
+      const child =
+        children && shouldRenderChild('RichContentViewer', children) ? (
+          children
+        ) : (
+          <RichContentViewer />
+        );
+      return [
+        <RicosEngine
+          key="viewer"
+          RicosModal={RicosModal}
+          isPreviewExpanded={isPreviewExpanded}
+          onPreviewExpand={this.onPreviewExpand}
+          isViewer
+          {...props}
+        >
+          {React.cloneElement(child, {
+            seoMode: seoSettings,
+            setRef: this.setRef,
+            onMouseOver: this.loadTextSelection,
+            ...localeData,
+          })}
+        </RicosEngine>,
+        TextSelectionToolbar ? (
+          <Suspense fallback={<div />}>
+            <TextSelectionToolbar
+              onButtonClick={this.getBiCallback('onViewerAction')}
+              container={this.viewerRef}
+            />
+          </Suspense>
+        ) : null,
+      ];
+    } catch (e) {
+      this.props.onError?.(e);
+      return null;
+    }
   }
 }

@@ -1,0 +1,32 @@
+@import '~wix-rich-content-common/dist/statics/styles/consts';
+@import '~wix-rich-content-common/dist/statics/styles/mixins';
+@import '~wix-rich-content-common/dist/statics/styles/palette';
+
+.action_buttons {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  &.mobile {
+    justify-content: space-between;
+  }
+}
+
+.action_buttons_button {
+  border: 1px solid $settings-action-color-fallback;
+  outline: none;
+  width: 100%;
+  max-width: 132px;
+  padding: 0;
+  &.mobile {
+    font-size: 16px;
+    color: $fallbackColor;
+    background: transparent;
+    border: none;
+  }
+}
+
+.action_buttons_button_primary {
+  .mobile & {
+    color: $settings-action-color-fallback;
+  }
+}
