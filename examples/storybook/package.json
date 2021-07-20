@@ -78,7 +78,7 @@
     "wix-ui-icons-common": "^2.0.313"
   },
   "devDependencies": {
-    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addon-viewport": "^6.3.4",
     "yoshi": "^4.31.0",
     "yoshi-style-dependencies": "^4.23.7"
   },
