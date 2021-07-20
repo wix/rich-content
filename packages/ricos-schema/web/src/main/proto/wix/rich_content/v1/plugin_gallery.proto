@@ -72,10 +72,9 @@ message GalleryData {
       Link link = 3;
     }
 
-    google.protobuf.StringValue item_id = 1;
     oneof data {
-      Image image = 2;
-      Video video = 3;
+      Image image = 1;
+      Video video = 2;
     }
     google.protobuf.StringValue title = 4;
     google.protobuf.StringValue altText = 5;
