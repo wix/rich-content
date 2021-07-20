@@ -17,6 +17,8 @@ const externals = [
   'react-flip-move',
   'image-client-api/dist/imageClientSDK',
   '@wix/draft-js',
+  'fullscreen',
+  'ricos',
   /^punycode$/,
   /^jss$/, //issue with ESM in CJS
   /^jss-plugin-camel-case$/, //issue with ESM in CJS
