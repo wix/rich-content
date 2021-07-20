@@ -327,7 +327,7 @@ const convertLinkData = (
 
 const parseLinkCustomData = (customData: string) => {
   try {
-    return JSON.parse(customData);
+    return { customData: JSON.parse(customData) };
   } catch (e) {
     console.error('failed to parse customData', customData); // eslint-disable-line
     return { customData };

@@ -1,5 +1,6 @@
 /* eslint-disable no-console, fp/no-loops, no-case-declarations */
-import { RicosContentBlock, RicosEntityMap, RicosEntityRange, EMOJI_TYPE } from '../../..';
+import { RicosContentBlock, RicosEntityMap, RicosEntityRange } from '../../../types';
+import { EMOJI_TYPE } from '../../../consts';
 import { Decoration, Decoration_Type, Node } from 'ricos-schema';
 import { TO_RICOS_DECORATION_TYPE } from '../consts';
 

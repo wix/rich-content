@@ -6,13 +6,8 @@ import {
   FROM_RICOS_ENTITY_TYPE,
   TO_RICOS_DECORATION_TYPE,
 } from '../consts';
-import {
-  ACTION_BUTTON_TYPE,
-  LINK_BUTTON_TYPE,
-  LINK_PREVIEW_TYPE,
-  RicosEntity,
-  RicosEntityMap,
-} from '../../..';
+import { ACTION_BUTTON_TYPE, LINK_BUTTON_TYPE, LINK_PREVIEW_TYPE } from '../../../consts';
+import { RicosEntity, RicosEntityMap } from '../../../types';
 import { DraftTypedDecoration } from './decorationParsers';
 import { convertDecorationToDraftData, convertNodeToDraftData } from './convertDraftPluginData';
 

@@ -2,7 +2,7 @@ import { toDraft, fromDraft, convertNodeDataToDraft, convertDecorationDataToDraf
 import { compare } from '../../../comparision/compare';
 import complexFixture from '../../../../../../../e2e/tests/fixtures/migration-content.json';
 import anchorBlocksFixture from '../../../../../../../e2e/tests/fixtures/all-blocks-with-anchors.json';
-import { ANCHOR_TYPE } from '../../..';
+import { ANCHOR_TYPE } from '../../../consts';
 import {
   Decoration_Type,
   Node_Type,

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Decoration, Node, Node_Type } from 'ricos-schema';
-import { RicosInlineStyleRange, RicosEntityRange, RicosEntityMap } from '../../..';
+import { RicosInlineStyleRange, RicosEntityRange, RicosEntityMap } from '../../../types';
 import { FROM_RICOS_DECORATION_TYPE, ENTITY_DECORATION_TO_DATA_FIELD } from '../consts';
 import { emojiRegex } from '../emojiRegex';
 import { createDecorationEntityData } from './getDraftEntityData';
@@ -159,19 +159,22 @@ export const getParagraphNode = (node: Node) => {
 const convertDecorationTypes = (decorations: Decoration[]): DraftTypedDecoration[] =>
   decorations.flatMap(decoration => pipe(decoration, toDraftDecorationType, splitColorDecoration));
 
-const createEmojiDecorations = (text: string) =>
-  Array.from(text.matchAll(emojiRegex)).flatMap(({ 0: emojiUnicode, index: start }) => {
-    if (start) {
-      const decoration: RangedDecoration = {
-        type: 'EMOJI_TYPE',
-        emojiData: { emojiUnicode },
-        start,
-        end: start + Array.from(emojiUnicode).length,
-      };
-      return decoration;
-    }
-    return [];
-  });
+const createEmojiDecorations = (text: string) => {
+  const result: RangedDecoration[] = [];
+  let match;
+  // eslint-disable-next-line fp/no-loops
+  while ((match = emojiRegex.exec(text)) !== null) {
+    const { 0: emojiUnicode, index: start } = match;
+    const decoration: RangedDecoration = {
+      type: 'EMOJI_TYPE',
+      emojiData: { emojiUnicode },
+      start,
+      end: start + Array.from(emojiUnicode).length,
+    };
+    result.push(decoration);
+  }
+  return result;
+};
 
 const toDraftDecorationType = (decoration: Decoration): DraftTypedDecoration => ({
   ...decoration,
