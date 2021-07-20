@@ -6,13 +6,21 @@ import "wix/rich_content/v1/common.proto";
 import "google/protobuf/wrappers.proto";
 
 message ButtonData {
-    message ButtonStyles {
-        google.protobuf.Int32Value border_width = 1; // number of pixels
-        google.protobuf.Int32Value border_radius = 2; // number of pixels
-        google.protobuf.StringValue text_color = 3; // hex color
-        google.protobuf.StringValue border_color = 4; // hex color
-        google.protobuf.StringValue background_color = 5; // hex color
+    message Styles {
+        message Colors {
+            google.protobuf.StringValue text_color = 1; // hex color
+            google.protobuf.StringValue border_color = 2; // hex color
+            google.protobuf.StringValue background_color = 3; // hex color
+        }
+
+        message BorderStyles {
+            google.protobuf.Int32Value border_width = 1; // number of pixels
+            google.protobuf.Int32Value border_radius = 2; // number of pixels
+        }
+        BorderStyles border_styles = 1;
+        Colors colors = 2;
     }
+
     enum Type {
         LINK = 0;
         ACTION = 1;
@@ -20,7 +28,7 @@ message ButtonData {
 
     PluginContainerData container_data = 1;
     Type type = 2;
-    ButtonStyles styles = 3;
+    Styles styles = 3;
     google.protobuf.StringValue text = 4;
     Link link = 5;
 }

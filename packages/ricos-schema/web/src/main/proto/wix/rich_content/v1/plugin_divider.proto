@@ -18,12 +18,6 @@ message DividerData {
         SMALL = 2;
     }
 
-    enum Alignment {
-        CENTER = 0;
-        LEFT = 1;
-        RIGHT = 2;
-    }
-
     PluginContainerData container_data = 1;
     LineStyle line_style = 2;
     Width width = 3;
