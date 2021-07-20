@@ -18,14 +18,14 @@ const createVideoPlugin: CreatePluginFunction<VideoPluginEditorConfig> = config 
   const disableDownload = config?.uiSettings?.disableDownload;
   const defaultPluginData =
     disableDownload !== undefined ? { ...DEFAULTS, disableDownload } : DEFAULTS;
-
+  const type = VIDEO_TYPE;
   return createBasePlugin({
     component: Component,
-    type: VIDEO_TYPE,
+    type,
     legacyType: VIDEO_TYPE_LEGACY,
     toolbar: createToolbar({
       t,
-      settings: { ...settings, commonPubsub },
+      settings: { ...settings, commonPubsub, type },
       isMobile,
       disableDownload,
       experiments,

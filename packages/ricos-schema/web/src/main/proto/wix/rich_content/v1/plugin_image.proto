@@ -12,4 +12,5 @@ message ImageData {
     google.protobuf.BoolValue disable_expand = 4;
     google.protobuf.StringValue alt_text = 5;
     google.protobuf.StringValue caption = 6;
+    google.protobuf.BoolValue disable_download = 7;
 }

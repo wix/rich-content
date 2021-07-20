@@ -26,6 +26,9 @@
   "Spoiler_Reveal_Video_Placeholder": "동영상에 스포일러가 포함되어 있습니다.",
   "Preview_SeeFullPost_Label": "전체 게시물 보기",
   "UploadFile_Viewer_Download": "{{fileType}} 다운로드",
-  "Embed_Vertical_Units_Minute": "{{minutes}}분",
-  "Embed_Vertical_Units_Hour": "{{hours}}시"
+  "VerticalEmbed_Bookings_Button": "예약하기",
+  "VerticalEmbed_Units_Minute": "{{minutes}}분",
+  "VerticalEmbed_Products_Button": "구매하기",
+  "VerticalEmbed_Units_Hour": "{{hours}}시간",
+  "VerticalEmbed_Events_Button": "등록하기"
 }

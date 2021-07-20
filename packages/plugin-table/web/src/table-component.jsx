@@ -82,7 +82,7 @@ class TableComponent extends React.Component {
   };
 
   updateComponentData = data => {
-    this.props.store.update('componentData', { ...data }, this.props.block.getKey());
+    this.props.store.update('componentData', { ...data });
   };
 
   renderInnerRCE = (i, j) => {

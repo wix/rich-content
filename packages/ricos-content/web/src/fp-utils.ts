@@ -1,6 +1,10 @@
-import { identity, flow } from 'fp-ts/lib/function';
+import { identity, flow, pipe } from 'fp-ts/function';
+import { Eq } from 'fp-ts/Eq';
+import * as O from 'fp-ts/Option';
+import { concatAll, Monoid } from 'fp-ts/Monoid';
+import * as A from 'fp-ts/Array';
 
-// TODO: improve types
+// TODO: replace this monad with fp-ts
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 type Fun = (data?: unknown) => any;
@@ -36,3 +40,25 @@ export const firstResolved = (tasks: Task[], i = 0) =>
 // if/else implemented with task
 export const either = (predicate: (data: unknown) => boolean) => data =>
   task((rej, res) => (predicate(data) ? res(data) : rej(data)));
+
+export const split = (splitter: string) => (str: string) => str.split(splitter);
+
+export const replace = (replaced: RegExp | string, by: string) => (str: string): string =>
+  str.replace(replaced, by);
+
+export const equals = <T>(E: Eq<T>) => (lhs: T) => (rhs: T) => E.equals(lhs, rhs);
+
+export const concatApply = <T, D>(m: Monoid<T>) => (fns: ((data: D) => T)[]) => (data: D) =>
+  pipe(fns, A.ap(A.of(data)), concatAll(m));
+
+export const not = <T>(predicate: (data: T) => boolean) => (data: T) => !predicate(data);
+
+export const toUpperCase = (str: string) => str.toUpperCase();
+
+export const log = <T>(tag: string, processor: (data: T) => string | T = identity) => (data: T) => {
+  console.log(tag, processor(data)); // eslint-disable-line no-console
+  return data;
+};
+
+export const getMatches = (regex: RegExp) => (str: string): O.Option<RegExpExecArray> =>
+  pipe(regex.exec(str), O.fromNullable);

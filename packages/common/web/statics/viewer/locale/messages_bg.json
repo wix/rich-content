@@ -6,7 +6,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "Вижте всички резултати",
   "Spoiler_Reveal_Image_Placeholder": "Това изображение съдържа спойлер",
   "Poll_Viewer_Multiselect_Footer": "Можете да гласувате за повече от един отговор.",
-  "Embed_Vertical_Units_Minute": "{{minutes}} мин.",
   "UploadFile_Viewer_Loader": "Зареждане на {{fileType}}",
   "Preview_ReadMore_Label": "Прочетете повече",
   "Spoiler_Insert_Tooltip": "Спойлер",
@@ -15,7 +14,6 @@
   "Poll_Viewer_ShowLess_CTA": "Покажи по-малко",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+ {{anonNumber}} анонимен",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Последвайте",
-  "Embed_Vertical_Units_Hour": "{{hours}}ч.",
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "Елементът е разширен",
   "Poll_Viewer_Toast_Error_ServerDown": "Не можа да се свърже със сървъра. Опитайте отново по-късно.",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} човек гласува за този отговор",
@@ -27,5 +25,10 @@
   "Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} души гласуваха за този отговор",
   "Spoiler_Reveal_Video_Placeholder": "Това видео съдържа спойлер",
   "Preview_SeeFullPost_Label": "Вижте пълната публикация",
-  "UploadFile_Viewer_Download": "Изтегляне на {{fileType}}"
+  "UploadFile_Viewer_Download": "Изтегляне на {{fileType}}",
+  "VerticalEmbed_Bookings_Button": "Резервирайте сега",
+  "VerticalEmbed_Units_Minute": "{{minutes}}мин",
+  "VerticalEmbed_Products_Button": "Купете сега",
+  "VerticalEmbed_Units_Hour": "{{hours}}ч",
+  "VerticalEmbed_Events_Button": "Регистрирайте се сега"
 }

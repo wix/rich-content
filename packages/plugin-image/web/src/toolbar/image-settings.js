@@ -128,7 +128,13 @@ class ImageSettings extends Component {
   revertComponentData() {
     const { componentData, helpers, pubsub } = this.props;
     if (this.initialState) {
-      const initialComponentData = { ...componentData, ...this.initialState };
+      const { isExpandEnabled, isDownloadEnabled, ...rest } = this.initialState;
+      const initialComponentData = {
+        ...componentData,
+        ...rest,
+        disableExpand: !isExpandEnabled,
+        disableDownload: !isDownloadEnabled,
+      };
       pubsub.update('componentData', initialComponentData);
       this.setState({ ...this.initialState });
     }

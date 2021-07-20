@@ -15,7 +15,7 @@ import {
 } from 'ricos-content';
 import {
   DividerData,
-  DividerData_Type,
+  DividerData_LineStyle,
   GiphyData,
   HTMLData,
   GalleryData,
@@ -80,10 +80,10 @@ const divider = {
   type: RICOS_DIVIDER_TYPE,
   nodeType: Node_Type.DIVIDER,
   data1: DividerData.fromJSON({
-    type: DividerData_Type.DOUBLE,
+    lineStyle: DividerData_LineStyle.DOUBLE,
   }),
   data2: DividerData.fromJSON({
-    type: DividerData_Type.DASHED,
+    lineStyle: DividerData_LineStyle.DASHED,
   }),
   expectedData1: {
     type: 'double',
@@ -483,20 +483,24 @@ const image = {
 
 const link = {
   type: RICOS_LINK_TYPE,
-  data1: LinkData.fromJSON({ url: 'www.wix.com', rel: 'nofollow', target: '_self' }),
+  data1: LinkData.fromJSON({
+    link: {
+      url: 'www.wix.com',
+      rel: { nofollow: true },
+      target: 'SELF',
+    },
+  }),
   selection1: selection,
-  data2: LinkData.fromJSON({ url: 'www.sport5.co.il', rel: 'sponsored', target: '_self' }),
+  data2: LinkData.fromJSON({
+    link: {
+      url: 'www.sport5.co.il',
+      rel: { sponsored: true },
+      target: 'SELF',
+    },
+  }),
   selection2: selectionCollapsed,
-  expectedData1: {
-    url: 'www.wix.com',
-    rel: 'nofollow',
-    target: '_self',
-  },
-  expectedData2: {
-    url: 'www.sport5.co.il',
-    rel: 'sponsored',
-    target: '_self',
-  },
+  expectedData1: { url: 'www.wix.com', rel: 'nofollow', target: '_self' },
+  expectedData2: { url: 'www.sport5.co.il', rel: 'sponsored', target: '_self' },
 };
 
 const mention = {

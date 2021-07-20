@@ -26,6 +26,9 @@
   "Spoiler_Reveal_Video_Placeholder": "この動画にはぼかしが入っています",
   "Preview_SeeFullPost_Label": "記事全文を表示",
   "UploadFile_Viewer_Download": "ダウンロード：{{fileType}}",
-  "Embed_Vertical_Units_Minute": "{{minutes}}分",
-  "Embed_Vertical_Units_Hour": "{{hours}}時間"
+  "VerticalEmbed_Bookings_Button": "今すぐ予約",
+  "VerticalEmbed_Units_Minute": "{{minutes}}分",
+  "VerticalEmbed_Products_Button": "購入する",
+  "VerticalEmbed_Units_Hour": "{{hours}}時間",
+  "VerticalEmbed_Events_Button": "今すぐ登録"
 }

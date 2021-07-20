@@ -67,12 +67,24 @@ export default class InlineToolbar extends Component {
 
   constructor(props) {
     super(props);
-    const { offset, displayOptions } = props;
+    const { offset, displayOptions, helpers } = props;
     let position;
 
     if (displayOptions.displayMode === DISPLAY_MODE.FLOATING) {
       position = { '--offset-top': `${offset.y}px`, '--offset-left': `${offset.x}px` };
     }
+    const isVisible = () => this.state.isVisible;
+    this.checkShouldTriggerBI = (() => {
+      let triggered = false;
+      return () => {
+        if (!triggered && isVisible()) {
+          triggered = true;
+          helpers?.onInlineToolbarOpen?.({ toolbarType: 'FORMATTING' });
+        } else if (!isVisible()) {
+          triggered = false;
+        }
+      };
+    })();
     this.state = {
       position,
       overrideContent: undefined,
@@ -349,6 +361,7 @@ export default class InlineToolbar extends Component {
   onClick = e => e.preventDefault();
 
   render() {
+    this.checkShouldTriggerBI();
     //checking false since undefined is not good
     if (this.isVisible() === false) {
       return null;

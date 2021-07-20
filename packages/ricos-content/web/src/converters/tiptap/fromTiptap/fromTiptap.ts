@@ -1,8 +1,7 @@
-import { transform, isObject, pickBy, identity } from 'lodash';
+import { transform, isObject, pickBy } from 'lodash';
 import { RichContent, Node } from 'ricos-schema';
 import { JSONContent } from '@tiptap/core';
 import { initializeMetadata } from '../../nodeUtils';
-import { genKey } from '../../generateRandomKey';
 import { DATA_FIELDS_MAP, isDecoration, isNode, isProseContent, isTextNode } from '../utils';
 import toConstantCase from 'to-constant-case';
 
@@ -48,9 +47,9 @@ const convertDataField = object => {
 
 const movefromAttrs = (object: JSONContent) => {
   const { attrs, ...newValue } = object;
-  const { style, key = genKey(), ...rest } = attrs || {};
+  const { style, key, ...rest } = attrs || {};
   const newAttrs = Object.keys(rest).length > 0 ? rest : undefined;
-  return pickBy({ ...newValue, attrs: newAttrs, style, key }, identity);
+  return pickBy({ ...newValue, attrs: newAttrs, style, key }, x => x !== undefined);
 };
 
 const convertValue = value => {

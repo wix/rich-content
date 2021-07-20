@@ -8,11 +8,8 @@ syntax = "proto3";
 
 package wix.rich_content.v1;
 
-import "google/protobuf/wrappers.proto";
+import "wix/rich_content/v1/common.proto";
 
 message LinkData {
-  string url = 1;
-  google.protobuf.StringValue rel = 2;
-  google.protobuf.StringValue target = 3;
-  google.protobuf.StringValue href = 4;
+  Link link = 1;
 }

@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "У цьому відео є спойлер",
 	"Preview_SeeFullPost_Label": "Переглянути весь пост",
 	"UploadFile_Viewer_Download": "Завантажити {{fileType}}",
-	"Embed_Vertical_Units_Minute": "{{minutes}} хв.",
-	"Embed_Vertical_Units_Hour": "{{hours}} г."
+	"VerticalEmbed_Bookings_Button": "Записатися",
+	"VerticalEmbed_Units_Minute": "{{minutes}} хв.",
+	"VerticalEmbed_Products_Button": "Купити",
+	"VerticalEmbed_Units_Hour": "{{hours}} год.",
+	"VerticalEmbed_Events_Button": "Зареєструватися"
 }

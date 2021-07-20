@@ -53,7 +53,7 @@ describe('plugins', () => {
         'testing undo redo for plugins'
       );
       cy.redo();
-      cy.get('input').should('have.value', 'Title');
+      cy.get('textarea').should('have.value', 'Title');
       cy.eyesCheckWindow(this.test.title);
     });
 

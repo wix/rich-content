@@ -587,7 +587,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Δείτε όλα τα αποτελέσματα",
 	"Spoiler_Reveal_Image_Placeholder": "Αυτή η εικόνα περιέχει σπόιλερ",
 	"Poll_Viewer_Multiselect_Footer": "Μπορείτε να ψηφίσετε περισσότερες από μία απαντήσεις.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} λεπτά",
 	"UploadFile_Viewer_Loader": "Φόρτωση {{fileType}}",
 	"Preview_ReadMore_Label": "Διαβάστε περισσότερα",
 	"Spoiler_Reveal_Gallery_Placeholder": "Αυτή η συλλογή περιέχει σπόιλερ",
@@ -595,7 +594,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Εμφάνιση λιγοτέρων",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} ανώνυμος",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Ακολουθήστε",
-	"Embed_Vertical_Units_Hour": "{{hours}}ω",
 	"Poll_Viewer_Toast_Error_ServerDown": "Δεν ήταν δυνατή η σύνδεση με τον διακομιστή. Προσπαθήστε πάλι αργότερα.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} άτομο ψήφισε υπέρ αυτής της απάντησης",
 	"Poll_Viewer_VoteCount": "{{number}} ψήφοι",
@@ -606,5 +604,10 @@
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Το στοιχείο επεκτάθηκε",
 	"Spoiler_Reveal_Video_Placeholder": "Αυτό το βίντεο περιέχει σπόιλερ",
 	"Preview_SeeFullPost_Label": "Δείτε την πλήρη ανάρτηση",
-	"UploadFile_Viewer_Download": "Λήψη {{fileType}}"
+	"UploadFile_Viewer_Download": "Λήψη {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Κάντε κράτηση τώρα",
+	"VerticalEmbed_Units_Minute": "{{minutes}}min",
+	"VerticalEmbed_Products_Button": "Αγορά τώρα",
+	"VerticalEmbed_Units_Hour": "{{hours}}h",
+	"VerticalEmbed_Events_Button": "Εγγραφείτε τώρα"
 }

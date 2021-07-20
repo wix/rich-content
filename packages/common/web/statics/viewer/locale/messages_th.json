@@ -7,7 +7,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "ดูผลทั้งหมด",
   "Spoiler_Reveal_Image_Placeholder": "รูปภาพนี้มีการสปอยล์",
   "Poll_Viewer_Multiselect_Footer": "คุณสามารถโหวตได้มากกว่า 1 คำตอบ",
-  "Embed_Vertical_Units_Minute": "{{minutes}} นาที",
   "UploadFile_Viewer_Loader": "กำลังโหลด {{fileType}}",
   "Preview_ReadMore_Label": "อ่านเพิ่มเติม",
   "Spoiler_Insert_Tooltip": "Spoiler",
@@ -16,7 +15,6 @@
   "Poll_Viewer_ShowLess_CTA": "แสดงลดลง",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} ไม่ระบุชื่อ",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "ติดตาม",
-  "Embed_Vertical_Units_Hour": "{{hours}}ชั่วโมง",
   "Poll_Viewer_Toast_Error_ServerDown": "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ กรุณาลองอีกครั้งภายหลัง",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "คนโหวตให้คำตอบนี้ {{count}} คน",
   "Poll_Viewer_VoteCount": "โหวด {{number}} คน",
@@ -27,5 +25,10 @@
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "รายการเผยแล้ว",
   "Spoiler_Reveal_Video_Placeholder": "วิดีโอนี้มีการสปอยล์",
   "Preview_SeeFullPost_Label": "ดูโพสต์ฉบับเต็ม",
-  "UploadFile_Viewer_Download": "ดาวน์โหลด {{fileType}}"
+  "UploadFile_Viewer_Download": "ดาวน์โหลด {{fileType}}",
+  "VerticalEmbed_Bookings_Button": "จองเลย",
+  "VerticalEmbed_Units_Minute": "{{minutes}} นาที",
+  "VerticalEmbed_Products_Button": "ซื้อเลย",
+  "VerticalEmbed_Units_Hour": "{{hours}} ชม.",
+  "VerticalEmbed_Events_Button": "ลงทะเบียนตอนนี้"
 }

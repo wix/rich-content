@@ -6,7 +6,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "Mostra tots els resultats",
   "Spoiler_Reveal_Image_Placeholder": "Aquesta imatge conté un espòiler",
   "Poll_Viewer_Multiselect_Footer": "Pots votar més d’una resposta.",
-  "Embed_Vertical_Units_Minute": "{{minutes}} min",
   "UploadFile_Viewer_Loader": "S'està carregant {{fileType}}",
   "Preview_ReadMore_Label": "Més informació",
   "Spoiler_Insert_Tooltip": "Espòiler",
@@ -15,7 +14,6 @@
   "Poll_Viewer_ShowLess_CTA": "Mostra'n menys",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} anònim(s)",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Segueix",
-  "Embed_Vertical_Units_Hour": "{{hours}} h",
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "L'element està ampliat",
   "Poll_Viewer_Toast_Error_ServerDown": "No s'ha pogut connectar amb el servidor. Torna-ho a provar més tard.",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} persona ha votat per aquesta resposta",
@@ -27,5 +25,10 @@
   "Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} persones han votat per aquesta resposta",
   "Spoiler_Reveal_Video_Placeholder": "Aquest vídeo conté un espòiler",
   "Preview_SeeFullPost_Label": "Mostra l'entrada completa",
-  "UploadFile_Viewer_Download": "Baixa {{fileType}}"
+  "UploadFile_Viewer_Download": "Baixa {{fileType}}",
+  "VerticalEmbed_Bookings_Button": "Book Now",
+  "VerticalEmbed_Units_Minute": "{{minutes}}min",
+  "VerticalEmbed_Products_Button": "Buy Now",
+  "VerticalEmbed_Units_Hour": "{{hours}}h",
+  "VerticalEmbed_Events_Button": "Register Now"
 }

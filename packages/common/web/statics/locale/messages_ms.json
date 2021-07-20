@@ -586,7 +586,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Lihat Semua Keputusan",
 	"Spoiler_Reveal_Image_Placeholder": "Imej ini mengandungi spoiler",
 	"Poll_Viewer_Multiselect_Footer": "Anda boleh mengundi lebih daripada satu jawapan.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} min",
 	"UploadFile_Viewer_Loader": "Memuatkan {{fileType}}",
 	"Preview_ReadMore_Label": "Baca lebih lanjut",
 	"Spoiler_Reveal_Gallery_Placeholder": "Galeri ini mengandungi spoiler",
@@ -594,7 +593,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Tunjukkan kurang",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} tanpa nama",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Ikut",
-	"Embed_Vertical_Units_Hour": "{{hours}}j",
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Item dikembangkan",
 	"Poll_Viewer_Toast_Error_ServerDown": "Tidak dapat menyambung ke pelayan. Cuba lagi kemudian.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} individu telah mengundi jawapan ini",
@@ -606,5 +604,10 @@
 	"Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} orang telah mengundi jawapan ini",
 	"Spoiler_Reveal_Video_Placeholder": "Video ini mengadungi spoiler",
 	"Preview_SeeFullPost_Label": "Lihat siaran penuh",
-	"UploadFile_Viewer_Download": "Muat turun {{fileType}}"
+	"UploadFile_Viewer_Download": "Muat turun {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Tempah Sekarang",
+	"VerticalEmbed_Units_Minute": "{{minit}}min",
+	"VerticalEmbed_Products_Button": "Beli Sekarang",
+	"VerticalEmbed_Units_Hour": "{{jam}}j",
+	"VerticalEmbed_Events_Button": "Daftar Sekarang"
 }

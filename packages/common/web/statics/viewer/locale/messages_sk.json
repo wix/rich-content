@@ -6,7 +6,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "See All Results",
   "Spoiler_Reveal_Image_Placeholder": "This image contains a spoiler",
   "Poll_Viewer_Multiselect_Footer": "You can vote for more than one answer.",
-  "Embed_Vertical_Units_Minute": "{{minutes}}min",
   "UploadFile_Viewer_Loader": "Loading {{fileType}}",
   "Preview_ReadMore_Label": "Read more",
   "Spoiler_Insert_Tooltip": "Spoiler",
@@ -15,7 +14,6 @@
   "Poll_Viewer_ShowLess_CTA": "Show Less",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} anonymous",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Follow",
-  "Embed_Vertical_Units_Hour": "{{hours}}h",
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "Item is expanded",
   "Poll_Viewer_Toast_Error_ServerDown": "Couldn't connect to server. Try again later.",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} person voted for this answer",
@@ -27,5 +25,10 @@
   "Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} people voted for this answer",
   "Spoiler_Reveal_Video_Placeholder": "This video contains a spoiler",
   "Preview_SeeFullPost_Label": "See Full Post",
-  "UploadFile_Viewer_Download": "Download {{fileType}}"
+  "UploadFile_Viewer_Download": "Download {{fileType}}",
+  "VerticalEmbed_Bookings_Button": "Book Now",
+  "VerticalEmbed_Units_Minute": "{{minutes}}min",
+  "VerticalEmbed_Products_Button": "Buy Now",
+  "VerticalEmbed_Units_Hour": "{{hours}}h",
+  "VerticalEmbed_Events_Button": "Register Now"
 }

@@ -27,7 +27,7 @@ const nodeToHtml = (node: Node): string | string[] => {
 const createHtmlAttrs = (decoration: Decoration): Record<string, string> => {
   switch (decoration.type) {
     case Decoration_Type.LINK:
-      return decoration.linkData ? { href: decoration.linkData.url } : {};
+      return decoration.linkData?.link?.url ? { href: decoration.linkData.link.url } : {};
     default:
       return {};
   }

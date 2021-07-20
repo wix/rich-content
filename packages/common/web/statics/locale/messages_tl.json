@@ -586,7 +586,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Tingnan ang Laht ng Resulta",
 	"Spoiler_Reveal_Image_Placeholder": "May spoiler ang larawang ito",
 	"Poll_Viewer_Multiselect_Footer": "Maaari kang bumot sa higit sa isang sagot.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} na min",
 	"UploadFile_Viewer_Loader": "Nilo-load ang {{fileType}}",
 	"Preview_ReadMore_Label": "Magbasa pa",
 	"Spoiler_Reveal_Gallery_Placeholder": "May spoiler ang gallery na ito",
@@ -594,7 +593,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Magpakita ng kaunti",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} anonymous",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Sundan",
-	"Embed_Vertical_Units_Hour": "{{hours}}h",
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Na-expand ang item",
 	"Poll_Viewer_Toast_Error_ServerDown": "Hindi makakonekta sa server. Subukan ulit sa ibang pagkakataon.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} tao ang bumot para sa sagot na ito",
@@ -606,5 +604,10 @@
 	"Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "{{count}} (na) tao ang bumoto para sa sagot na ito",
 	"Spoiler_Reveal_Video_Placeholder": "May spoiler ang video na ito",
 	"Preview_SeeFullPost_Label": "Tingnan ang buong post",
-	"UploadFile_Viewer_Download": "I-download ang {{fileType}}"
+	"UploadFile_Viewer_Download": "I-download ang {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Mag-book Na",
+	"VerticalEmbed_Units_Minute": "{{minutes}}min",
+	"VerticalEmbed_Products_Button": "Bumili Na",
+	"VerticalEmbed_Units_Hour": "{{hours}}h",
+	"VerticalEmbed_Events_Button": "Magparehistro Na"
 }

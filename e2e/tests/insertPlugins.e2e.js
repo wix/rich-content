@@ -18,13 +18,16 @@ const LINKS = {
 };
 
 const modalHandler = (INPUT, ADD_BUTTON, LINK) => {
-  cy.get(`[data-hook=${INPUT}]`).type(LINK);
+  cy.get(`[data-hook=${INPUT}]`)
+    .wait(500)
+    .type(LINK);
   cy.get(`[data-hook=${ADD_BUTTON}]`).click();
   cy.waitForVideoToLoad();
 };
 
 const additionalCommands = {
   VIDEO: () => {
+    cy.wait(500);
     modalHandler(VIDEO_PLUGIN.INPUT, VIDEO_PLUGIN.ADD, LINKS.YOUTUBE);
   },
   SOUND_CLOUD: () => {

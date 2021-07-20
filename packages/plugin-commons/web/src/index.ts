@@ -24,6 +24,11 @@ export { default as createBasePlugin } from './Base/createBasePlugin';
 export { default as createBaseComponent } from './Base/createBaseComponent';
 export { default as createBaseInsertPluginButton } from './Base/createBaseInsertPluginButton';
 export { default as baseToolbarButton } from './Base/baseToolbarButton';
+export {
+  handleUploadStart,
+  handleUploadFinished,
+  createBaseMediaPlugin,
+} from './Base/createBaseMediaPlugin';
 
 // Components
 export { default as ColorPicker } from './Components/ColorPicker/ColorPicker';

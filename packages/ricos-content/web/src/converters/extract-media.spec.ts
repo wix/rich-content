@@ -84,7 +84,6 @@ const draftContentWithImages = {
           size: 'content',
           showTitle: true,
           showDescription: true,
-          disableExpand: false,
         },
         metadata: {
           caption: 'wedding',
@@ -108,7 +107,6 @@ const draftContentWithImages = {
           size: 'content',
           layout: 'small',
           spacing: 0,
-          disableExpand: false,
         },
         items: [
           {
@@ -409,32 +407,28 @@ describe('extractMedia (DraftContent)', () => {
   it('should extract images from image and gallery', () => {
     const expected = [
       {
-        imageUrl:
-          'https://static.wixstatic.com/media/8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg/v1/fill/w_5120,h_3413,al_c,q_90/8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg',
+        imageUrl: 'https://static.wixstatic.com/media/8bb438_53cc82c7bc8a4b41baf4db640e8b5641.jpg',
         imageWidth: 5120,
         imageHeight: 3413,
         imageCaption: 'wedding',
         imageAlt: '',
       },
       {
-        imageUrl:
-          'https://static.wixstatic.com/media/8bb438_a3a11b05e3f54f77ba1c04dfba22c99c.jpg/v1/fill/w_5000,h_3497,al_c,q_90/8bb438_a3a11b05e3f54f77ba1c04dfba22c99c.jpg',
+        imageUrl: 'https://static.wixstatic.com/media/8bb438_a3a11b05e3f54f77ba1c04dfba22c99c.jpg',
         imageWidth: 5000,
         imageHeight: 3497,
         imageAlt: 'Wedding2',
         imageCaption: '',
       },
       {
-        imageUrl:
-          'https://static.wixstatic.com/media/8bb438_263b45a6faeb49e887b71d10a728516d.jpg/v1/fill/w_3286,h_4930,al_c,q_90/8bb438_263b45a6faeb49e887b71d10a728516d.jpg',
+        imageUrl: 'https://static.wixstatic.com/media/8bb438_263b45a6faeb49e887b71d10a728516d.jpg',
         imageWidth: 3286,
         imageHeight: 4930,
         imageCaption: '',
         imageAlt: '',
       },
       {
-        imageUrl:
-          'https://static.wixstatic.com/media/8bb438_0d6efcfc699344a2822fec577f398973.jpg/v1/fill/w_3370,h_2247,al_c,q_90/8bb438_0d6efcfc699344a2822fec577f398973.jpg',
+        imageUrl: 'https://static.wixstatic.com/media/8bb438_0d6efcfc699344a2822fec577f398973.jpg',
         imageWidth: 3370,
         imageHeight: 2247,
         imageAlt: '',

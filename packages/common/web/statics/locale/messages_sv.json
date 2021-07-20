@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "Videon innehåller en spoiler",
 	"Preview_SeeFullPost_Label": "Se hela inlägget",
 	"UploadFile_Viewer_Download": "Ladda ner {{fileType}}",
-	"Embed_Vertical_Units_Minute": "{{minutes}} min",
-	"Embed_Vertical_Units_Hour": "{{hours}} h"
+	"VerticalEmbed_Bookings_Button": "Boka nu",
+	"VerticalEmbed_Units_Minute": "{{minutes}} min",
+	"VerticalEmbed_Products_Button": "Köp nu",
+	"VerticalEmbed_Units_Hour": "{{hours}} t",
+	"VerticalEmbed_Events_Button": "Registrera dig nu"
 }

@@ -1,9 +1,8 @@
 import { toDraft, fromDraft, convertNodeDataToDraft, convertDecorationDataToDraft } from '..';
 import { compare } from '../../../comparision/compare';
-import fixture from '../../../../../../../e2e/tests/fixtures/intro.json';
 import complexFixture from '../../../../../../../e2e/tests/fixtures/migration-content.json';
 import anchorBlocksFixture from '../../../../../../../e2e/tests/fixtures/all-blocks-with-anchors.json';
-import { ANCHOR_TYPE } from '../../..';
+import { ANCHOR_TYPE } from '../../../consts';
 import {
   Decoration_Type,
   Node_Type,
@@ -12,7 +11,7 @@ import {
 } from 'ricos-schema';
 import { convertDecorationToDraftData, convertNodeToDraftData } from './convertDraftPluginData';
 
-const fixtures = { intro: fixture, complex: complexFixture };
+const fixtures = { complex: complexFixture };
 
 describe('migrate to draft', () => {
   Object.entries(fixtures).forEach(([name, content]) =>
@@ -55,8 +54,8 @@ describe('migrate to draft', () => {
     config: {
       alignment: 'center',
       size: 'content',
-      disableExpand: false,
     },
+    disableExpand: false,
     src: {
       id: '8bb438_131a7e1872bc45ec827bb61e56b840fe.jpg',
       file_name: '8bb438_131a7e1872bc45ec827bb61e56b840fe.jpg',

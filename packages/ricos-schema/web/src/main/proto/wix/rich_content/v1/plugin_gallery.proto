@@ -10,6 +10,8 @@ message GalleryData {
   repeated GalleryItem items = 2;
   GalleryStyles styles = 3;
   GalleryConfig config = 4;
+  google.protobuf.BoolValue disable_expand = 5;
+  google.protobuf.BoolValue disable_download = 6;
 }
 
 message GalleryStyles {

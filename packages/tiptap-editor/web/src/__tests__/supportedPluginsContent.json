@@ -363,8 +363,7 @@
         "mutability": "MUTABLE",
         "data": {
           "url": "www.google.com",
-          "target": "_blank",
-          "rel": "noopener"
+          "target": "_blank"
         }
       },
       "2": {
@@ -372,8 +371,7 @@
         "mutability": "MUTABLE",
         "data": {
           "url": "www.link.com",
-          "target": "_blank",
-          "rel": "noopener"
+          "target": "_blank"
         }
       },
       "3": {

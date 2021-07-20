@@ -91,7 +91,7 @@ export interface EditorDataInstance {
     isLastChangeEdit: boolean;
   };
   getEditorState: () => EditorState;
-  refresh: (editorState: EditorState) => void;
+  refresh: (editorState: EditorState, onError?: OnErrorFunction | undefined) => void;
   waitForUpdate: () => void;
   getContentStatePromise: () => Promise<DraftContent>;
 }

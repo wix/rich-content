@@ -587,7 +587,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Zobrazit všechny výsledky",
 	"Spoiler_Reveal_Image_Placeholder": "Tento obrázek obsahuje spoiler",
 	"Poll_Viewer_Multiselect_Footer": "Můžete hlasovat pro více jak jednu odpověď.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} min",
 	"UploadFile_Viewer_Loader": "Načítání {{fileType}}",
 	"Preview_ReadMore_Label": "Zjistit více",
 	"Spoiler_Reveal_Gallery_Placeholder": "Tato galerie obsahuje spoiler",
@@ -595,7 +594,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Zobrazit méně",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} anonymně",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Sledovat",
-	"Embed_Vertical_Units_Hour": "{{hours}} h",
 	"Poll_Viewer_Toast_Error_ServerDown": "Nepodařilo se připojit k serveru. Zkuste to později.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "Pro tuto odpověď hlasoval {{count}} uživatel",
 	"Poll_Viewer_VoteCount": "Hlasů {{number}}",
@@ -606,5 +604,10 @@
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Položka je rozbalena",
 	"Spoiler_Reveal_Video_Placeholder": "Toto video obsahuje spoiler",
 	"Preview_SeeFullPost_Label": "Zobrazit celý příspěvek",
-	"UploadFile_Viewer_Download": "Stáhnout {{fileType}}"
+	"UploadFile_Viewer_Download": "Stáhnout {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Rezervovat",
+	"VerticalEmbed_Units_Minute": "{{minutes}} min",
+	"VerticalEmbed_Products_Button": "Koupit",
+	"VerticalEmbed_Units_Hour": "{{hours}} h",
+	"VerticalEmbed_Events_Button": "Registrovat"
 }

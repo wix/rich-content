@@ -586,7 +586,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "Žiūrėti visus rezultatus",
 	"Spoiler_Reveal_Image_Placeholder": "Šiame vaizde yra turinio užuomina",
 	"Poll_Viewer_Multiselect_Footer": "Galite balsuoti už daugiau nei vieną atsakymą.",
-	"Embed_Vertical_Units_Minute": "{{minutes}}  min.",
 	"UploadFile_Viewer_Loader": "Įkeliamas {{fileType}}",
 	"Preview_ReadMore_Label": "Skaityti daugiau",
 	"Spoiler_Reveal_Gallery_Placeholder": "Šioje galerijoje yra turinio užuomina",
@@ -594,7 +593,6 @@
 	"Poll_Viewer_ShowLess_CTA": "Rodyti mažiau",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} nežinomi (-ų)",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Stebėti",
-	"Embed_Vertical_Units_Hour": "{{hours}} val.",
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "Elementas išskleistas",
 	"Poll_Viewer_Toast_Error_ServerDown": "Nepavyko prisijungti prie serverio. Pabandykite vėliau.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "Už šį atsakymą balsavo {{count}}",
@@ -606,5 +604,10 @@
 	"Poll_Viewer_VoteCount_Modal_Voters_Header_plural": "Už šį atsakymą balsavo {{count}}",
 	"Spoiler_Reveal_Video_Placeholder": "Šiame vaizdo įraše yra turinio užuomina",
 	"Preview_SeeFullPost_Label": "Rodyti visą įrašą",
-	"UploadFile_Viewer_Download": "Atsisiųsti {{fileType}}"
+	"UploadFile_Viewer_Download": "Atsisiųsti {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "Užsakyti",
+	"VerticalEmbed_Units_Minute": "{{minutes}} min.",
+	"VerticalEmbed_Products_Button": "Pirkti",
+	"VerticalEmbed_Units_Hour": "{{hours}} val.",
+	"VerticalEmbed_Events_Button": "Registruotis"
 }

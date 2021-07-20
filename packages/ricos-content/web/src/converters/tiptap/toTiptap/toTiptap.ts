@@ -6,11 +6,12 @@ import {
   isNode,
   isTextNode,
 } from '../utils';
-import { transform, isObject, pickBy, identity } from 'lodash';
+import { transform, isObject, pickBy } from 'lodash';
 import { Node, Decoration, RichContent } from 'ricos-schema';
 import { TO_RICOS_DATA_FIELD } from '../../draft/consts';
 import { JSONContent } from '@tiptap/core';
 import toCamelCase from 'to-camel-case';
+import { fromEntries } from '../../../utils';
 
 declare const a: RichContent;
 
@@ -28,7 +29,7 @@ export const toTiptap = <T extends RichContent | Node | Record<string, any>>(
   return proseContent;
 };
 
-const PROSE_DATA_FIELDS_MAP = Object.fromEntries(
+const PROSE_DATA_FIELDS_MAP = fromEntries(
   Object.values(TO_RICOS_DATA_FIELD)
     .concat('textData')
     .map(value => [value, 'attrs'])
@@ -62,7 +63,7 @@ const flattenTextData = (node: Node) => {
 const moveToData = (node: Node) => {
   const { style, key, ...rest } = node;
   const dataFieldName = DATA_FIELDS_MAP[node.type];
-  const dataField = { ...node[dataFieldName], ...pickBy({ style, key }, identity) };
+  const dataField = { ...node[dataFieldName], ...pickBy({ style, key }, x => x !== undefined) };
   return { ...rest, [dataFieldName]: dataField };
 };
 

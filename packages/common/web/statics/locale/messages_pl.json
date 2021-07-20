@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "Ten film zawiera spoiler",
 	"Preview_SeeFullPost_Label": "Zobacz cały post",
 	"UploadFile_Viewer_Download": "Pobierz {{fileType}}",
-	"Embed_Vertical_Units_Minute": "{{minutes}} min",
-	"Embed_Vertical_Units_Hour": "{{hours}} godz."
+	"VerticalEmbed_Bookings_Button": "Zarezerwuj teraz",
+	"VerticalEmbed_Units_Minute": "{{minutes}}min",
+	"VerticalEmbed_Products_Button": "Kup teraz",
+	"VerticalEmbed_Units_Hour": "{{hours}}h",
+	"VerticalEmbed_Events_Button": "Zarejestruj się teraz"
 }

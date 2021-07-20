@@ -47,6 +47,7 @@ const createBaseComponent = ({
   noPointerEventsOnFocus,
   withHorizontalScroll,
   disableKeyboardEvents,
+  type,
 }) => {
   return class WrappedComponent extends Component {
     static propTypes = {
@@ -394,6 +395,7 @@ const createBaseComponent = ({
             setComponentUrl={this.setComponentUrl}
             renderInnerRCE={renderInnerRCE}
             disableKeyboardEvents={disableKeyboardEvents}
+            type={type}
           />
           <div
             role="none"

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { UrlInputModal } from 'wix-rich-content-ui-components';
+import { UrlInputModal, BUTTON_SIZE } from 'wix-rich-content-ui-components';
 import { DEFAULTS } from '../defaults';
 
 export default class EmbedURLInputModal extends Component {
@@ -59,6 +59,7 @@ export default class EmbedURLInputModal extends Component {
         errorMessage={t('SoundCloudUploadModal_Input_InvalidUrl')}
         placeholder={t(`EmbedURL_Social_${socialType}_Placeholder`)}
         onCloseRequested={helpers.closeModal}
+        buttonSize={BUTTON_SIZE.medium}
       />
     );
   }

@@ -11,7 +11,7 @@ package wix.rich_content.v1;
 import "wix/rich_content/v1/common.proto";
 
 message DividerData {
-    enum Type {
+    enum LineStyle {
         SINGLE = 0;
         DOUBLE = 1;
         DASHED = 2;
@@ -31,7 +31,7 @@ message DividerData {
     }
 
     PluginContainerData container_data = 1;
-    Type type = 2;
+    LineStyle line_style = 2;
     Width width = 3;
     Alignment alignment = 4;
 }

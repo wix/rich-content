@@ -7,7 +7,6 @@
   "Poll_Viewer_ShowAllResults_CTA": "Ver todos los resultados",
   "Spoiler_Reveal_Image_Placeholder": "La imagen contiene un spoiler",
   "Poll_Viewer_Multiselect_Footer": "Puedes votar por más de una respuesta.",
-  "Embed_Vertical_Units_Minute": "{{minutes}} min.",
   "UploadFile_Viewer_Loader": "Cargando {{fileType}}",
   "Preview_ReadMore_Label": "Leer más",
   "Spoiler_Insert_Tooltip": "Spoiler",
@@ -16,7 +15,6 @@
   "Poll_Viewer_ShowLess_CTA": "Mostrar menos",
   "Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} anónimos",
   "Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "Seguir",
-  "Embed_Vertical_Units_Hour": "{{hours}}h",
   "Poll_Viewer_Toast_Error_ServerDown": "No se pudo conectar al servidor. Inténtalo de nuevo más tarde.",
   "Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} personas votaron por esta respuesta",
   "Poll_Viewer_VoteCount": "{{number}} votos",
@@ -27,5 +25,10 @@
   "CollapsibleListPlugin_ExpandButton_AriaLabel": "El elemento está expandido",
   "Spoiler_Reveal_Video_Placeholder": "Este vídeo contiene un spoiler",
   "Preview_SeeFullPost_Label": "Ver la entrada completa",
-  "UploadFile_Viewer_Download": "Descargar {{fileType}}"
+  "UploadFile_Viewer_Download": "Descargar {{fileType}}",
+  "VerticalEmbed_Bookings_Button": "Reservar ahora",
+  "VerticalEmbed_Units_Minute": "{{minutes}} min",
+  "VerticalEmbed_Products_Button": "Comprar ahora",
+  "VerticalEmbed_Units_Hour": "{{hours}} h",
+  "VerticalEmbed_Events_Button": "Regístrate ahora"
 }

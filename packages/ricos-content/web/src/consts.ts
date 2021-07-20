@@ -64,6 +64,7 @@ export const SOUND_CLOUD_TYPE = 'wix-draft-plugin-sound-cloud';
 export const TEXT_COLOR_TYPE = 'wix-rich-content-text-color';
 export const TEXT_HIGHLIGHT_TYPE = 'wix-rich-content-text-highlight';
 export const UNDO_REDO_TYPE = 'wix-rich-content-undo-redo';
+export const APP_EMBED_TYPE = 'wix-draft-plugin-vertical-embed';
 export const VERTICAL_EMBED_TYPE = 'wix-draft-plugin-vertical-embed';
 export const VIDEO_TYPE = 'wix-draft-plugin-video';
 export const VIDEO_TYPE_LEGACY = 'VIDEO-EMBED';

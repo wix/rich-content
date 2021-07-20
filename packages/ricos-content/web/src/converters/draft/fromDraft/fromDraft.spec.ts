@@ -176,7 +176,6 @@ describe('migrate from draft', () => {
         size: 'content',
         showTitle: true,
         showDescription: true,
-        disableExpand: false,
       },
       src: {
         id: '036c6bf6cef5e4409848eb4eb6f80de1',
@@ -185,6 +184,8 @@ describe('migrate from draft', () => {
         width: 2898,
         height: 3354,
       },
+      disableExpand: false,
+      disableDownload: false,
       metadata: {
         caption: 'The caption!',
         alt: 'feet',
@@ -199,6 +200,7 @@ describe('migrate from draft', () => {
         height: 3354,
       },
       disableExpand: false,
+      disableDownload: false,
       altText: 'feet',
       caption: 'The caption!',
     };

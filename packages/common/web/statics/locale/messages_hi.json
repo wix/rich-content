@@ -605,6 +605,9 @@
 	"Spoiler_Reveal_Video_Placeholder": "इस वीडियो में एक स्पॉइलर है",
 	"Preview_SeeFullPost_Label": "पूरी पोस्ट देखें",
 	"UploadFile_Viewer_Download": "{{fileType}} डाउनलोड करें",
-	"Embed_Vertical_Units_Hour": "{{hours}} घंटे",
-	"Embed_Vertical_Units_Minute": "{{minutes}} मिनट"
+	"VerticalEmbed_Bookings_Button": "अभी बुक करें",
+	"VerticalEmbed_Units_Minute": "{{minutes}}मिनट",
+	"VerticalEmbed_Products_Button": "अभी खरीदें",
+	"VerticalEmbed_Units_Hour": "{{hours}}घंटे",
+	"VerticalEmbed_Events_Button": "अभी पंजीकरण करें"
 }

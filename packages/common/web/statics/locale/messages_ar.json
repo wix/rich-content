@@ -587,7 +587,6 @@
 	"Poll_Viewer_ShowAllResults_CTA": "مشاهدة النتائج كلها",
 	"Spoiler_Reveal_Image_Placeholder": "تحتوي هذه الصورة على سبويلر",
 	"Poll_Viewer_Multiselect_Footer": "يمكنك التصويت لأكثر من إجابة.",
-	"Embed_Vertical_Units_Minute": "{{minutes}} دقيقة",
 	"UploadFile_Viewer_Loader": "جارٍ تحميل {{fileType}}",
 	"Preview_ReadMore_Label": "اقرأ المزيد",
 	"Spoiler_Reveal_Gallery_Placeholder": "يحتوي هذا المعرض على سبويلر",
@@ -595,7 +594,6 @@
 	"Poll_Viewer_ShowLess_CTA": "إظهار أقل",
 	"Poll_Viewer_VoteCount_Modal_Voters_Anonymous": "+{{anonNumber}} غير معروفين",
 	"Poll_Viewer_VoteCount_Modal_Voters_CTA_Follow": "تابع",
-	"Embed_Vertical_Units_Hour": "{{hours}}س",
 	"Poll_Viewer_Toast_Error_ServerDown": "لا يمكن الاتصال بالخادم. أعد المحاولة لاحقًا.",
 	"Poll_Viewer_VoteCount_Modal_Voters_Header": "{{count}} أشخاص صوتوا لهذه الإجابة",
 	"Poll_Viewer_VoteCount": "{{number}} أصوات",
@@ -606,5 +604,10 @@
 	"CollapsibleListPlugin_ExpandButton_AriaLabel": "تم توسيع العنصر.",
 	"Spoiler_Reveal_Video_Placeholder": "يحتوي هذا الفيديو على سبويلر",
 	"Preview_SeeFullPost_Label": "عرض المنشور كاملاً",
-	"UploadFile_Viewer_Download": "تنزيل {{fileType}}"
+	"UploadFile_Viewer_Download": "تنزيل {{fileType}}",
+	"VerticalEmbed_Bookings_Button": "حجز الآن",
+	"VerticalEmbed_Units_Minute": "{{minutes}} د",
+	"VerticalEmbed_Products_Button": "شراء الآن",
+	"VerticalEmbed_Units_Hour": "{{hours}} س",
+	"VerticalEmbed_Events_Button": "تسجيل الآن"
 }
