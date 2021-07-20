@@ -4,7 +4,7 @@ import migrationContentTiptap from '../../toTiptap/__tests__/migrationContentTip
 import draftMigrationContent from '../../../../../../../../e2e/tests/fixtures/migration-content.json';
 import { toTiptap, fromTiptap, tiptapToDraft, tiptapNodeDataToDraft } from '../..';
 import { getImageBlockData, getImageNode } from '../../utils';
-import { compare } from '../../../..';
+import { compare } from '../../../../comparision/compare';
 import { JSONContent } from '@tiptap/core';
 
 describe('convert from Tiptap', () => {

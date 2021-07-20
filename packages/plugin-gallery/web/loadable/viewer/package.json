@@ -1,5 +1,5 @@
 {
-    "main": "../../dist/loadable/viewer/viewer-loadable.cjs.js",
-    "module": "../../dist/loadable/viewer/viewer-loadable.js",
+    "main": "../../dist/loadable/viewer/cjs/viewer-loadable.cjs.js",
+    "module": "../../dist/loadable/viewer/es/viewer-loadable.js",
     "types": "../../dist/src/viewer-loadable.d.ts"
 }

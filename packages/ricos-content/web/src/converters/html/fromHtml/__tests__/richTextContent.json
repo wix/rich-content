@@ -420,7 +420,7 @@
                 "linkData": {
                   "link": {
                     "url": "http://wix.com",
-                    "target": "TOP"
+                    "target": "SELF"
                   }
                 }
               }

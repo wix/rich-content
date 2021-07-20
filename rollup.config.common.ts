@@ -74,12 +74,12 @@ const commonConfig = (output: OutputOptions[], shouldExtractCss: boolean): Rollu
 
   const viewerLoadableOutput: OutputOptions[] = [
     {
-      dir: 'dist/loadable/viewer',
+      dir: 'dist/loadable/viewer/es/',
       format: 'es',
       chunkFileNames: '[name].js',
     },
     {
-      dir: 'dist/loadable/viewer/',
+      dir: 'dist/loadable/viewer/cjs/',
       format: 'cjs',
       chunkFileNames: '[name].cjs.js',
     },

@@ -24,10 +24,10 @@ message Link {
         google.protobuf.BoolValue ugc = 3; // UoU generated link
     }
     enum Target {
-        TOP = 0;
+        SELF = 0;
         BLANK = 1;
         PARENT = 2;
-        SELF = 3;
+        TOP = 3;
     }
 
     oneof data {
@@ -87,18 +87,18 @@ message Media {
 
 message Oembed {
     google.protobuf.StringValue type = 1;
-    google.protobuf.Int32Value width = 2; 
-    google.protobuf.Int32Value height = 3; 
-    google.protobuf.StringValue title = 4; 
+    google.protobuf.Int32Value width = 2;
+    google.protobuf.Int32Value height = 3;
+    google.protobuf.StringValue title = 4;
     google.protobuf.StringValue url = 5;
     google.protobuf.StringValue html = 6;
-    google.protobuf.StringValue author_name = 7; 
-    google.protobuf.StringValue author_url = 8; 
-    google.protobuf.StringValue provider_name = 9; 
-    google.protobuf.StringValue provider_url = 10; 
-    google.protobuf.StringValue thumbnail_url = 11; 
-    google.protobuf.StringValue thumbnail_width = 12; 
-    google.protobuf.StringValue thumbnail_height = 13; 
-    google.protobuf.StringValue video_url = 14; 
-    google.protobuf.StringValue version = 15; 
+    google.protobuf.StringValue author_name = 7;
+    google.protobuf.StringValue author_url = 8;
+    google.protobuf.StringValue provider_name = 9;
+    google.protobuf.StringValue provider_url = 10;
+    google.protobuf.StringValue thumbnail_url = 11;
+    google.protobuf.StringValue thumbnail_width = 12;
+    google.protobuf.StringValue thumbnail_height = 13;
+    google.protobuf.StringValue video_url = 14;
+    google.protobuf.StringValue version = 15;
 }

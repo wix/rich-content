@@ -1,6 +1,6 @@
 {
   "name": "ricos",
-  "version": "8.46.19",
+  "version": "8.47.2",
   "author": {
     "name": "Barak",
     "email": "barakl@wix.com"
@@ -37,10 +37,10 @@
   },
   "dependencies": {
     "ts-is-present": "^1.1.1",
-    "wix-rich-content-common": "8.46.19",
-    "wix-rich-content-editor": "8.46.19",
-    "wix-rich-content-preview": "8.46.19",
-    "wix-rich-content-viewer": "8.46.19"
+    "wix-rich-content-common": "8.47.2",
+    "wix-rich-content-editor": "8.47.2",
+    "wix-rich-content-preview": "8.47.2",
+    "wix-rich-content-viewer": "8.47.2"
   },
   "jest": {
     "globals": {
