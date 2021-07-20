@@ -16,11 +16,13 @@ import OrderedList from '@tiptap/extension-ordered-list';
 import ListItem from '@tiptap/extension-list-item';
 import Paragraph from './extensions/extension-paragraph';
 import Link from '@tiptap/extension-link';
-import { createDivider } from './extensions/extension-divider';
 import { createImage } from './extensions/extension-image';
 import { createBold } from './extensions/extension-bold';
 import { LinkData, HeadingData } from 'ricos-schema';
-import { MarkConfig, NodeConfig } from '@tiptap/react';
+import { MarkConfig, NodeConfig, ExtensionConfig, Node } from '@tiptap/react';
+import * as TTR from '@tiptap/react';
+import { BaseExtensionComponentHOC } from './components/BaseComponent';
+import { CreateTiptapExtension } from 'wix-rich-content-common';
 
 const extendedAttrs = (attrs): Partial<NodeConfig & MarkConfig> => ({
   addAttributes() {
@@ -33,7 +35,7 @@ const extendedAttrs = (attrs): Partial<NodeConfig & MarkConfig> => ({
 
 const withKey = extendedAttrs({ key: '' });
 
-export const tiptapExtensions = [
+const tiptapExtensions = [
   Blockquote.extend(withKey),
   Underline,
   BulletList.extend(withKey),
@@ -47,9 +49,19 @@ export const tiptapExtensions = [
   Paragraph.extend(withKey),
   Text,
   Link.extend(extendedAttrs(LinkData.fromJSON({}))),
-  createDivider().extend(withKey),
   createBold(),
   createImage().extend(withKey),
   // Dropcursor,
   // Gapcursor,
 ];
+
+type Creator = CreateTiptapExtension<NodeConfig | MarkConfig | ExtensionConfig>;
+
+export const createExtensions = (ricosExtensions: ((() => Creator) | undefined)[]) => {
+  const creatorCoreUtils = { ...TTR, BaseExtensionComponentHOC };
+  const extensions = ricosExtensions
+    .map(ext => ext?.()(creatorCoreUtils))
+    .filter(ext => !!ext)
+    .map(ext => Node.create(ext as NodeConfig).extend(withKey));
+  return [...tiptapExtensions, ...extensions];
+};

@@ -110,10 +110,12 @@ export class RicosEditor extends Component<RicosEditorProps, State> {
         'wix-tiptap-editor'
       ).then(tiptapEditorModule => {
         const { initTiptapEditor } = tiptapEditorModule;
-        const { content, injectedContent } = this.props;
+        const { content, injectedContent, plugins = [] } = this.props;
+        const ricosExtensions = plugins.map(plugin => plugin.tiptapExtension);
         this.tiptapApi = initTiptapEditor({
           initialContent: content ?? injectedContent ?? emptyDraftContent,
           onUpdate: this.onUpdate,
+          ricosExtensions,
         });
         this.forceUpdate();
       });
