@@ -21160,28 +21160,28 @@ private@^0.1.6, private@~0.1.5:
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
   integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
 
-pro-gallery-lib@3.1.14:
-  version "3.1.14"
-  resolved "https://registry.yarnpkg.com/pro-gallery-lib/-/pro-gallery-lib-3.1.14.tgz#beaf78a0a8a1601349bfcb946ab24c951a548538"
-  integrity sha512-WUWVTSzRQZdciZ+UCQ5PeDSL/lFr/oPq9Fca4jOwa0ca3UBFOZ7GWDqM6fY1AXWC24sf/PO0KtvdZIrKF9a1Pg==
+pro-gallery-lib@3.1.31:
+  version "3.1.31"
+  resolved "https://registry.yarnpkg.com/pro-gallery-lib/-/pro-gallery-lib-3.1.31.tgz#d9dbe98f10b514b4dcff43b6047516d61ab89840"
+  integrity sha512-p9gt1mlT9LCTTILNDCQg3yaLh0GbVSM3LKpGLpcqZrCu0S0BaUJ8HBEpTszp6wg8Pr3mnTAM3fwzKq9UY4LbVA==
   dependencies:
-    pro-layouts "3.1.14"
+    pro-layouts "3.1.31"
 
-pro-gallery@3.1.14:
-  version "3.1.14"
-  resolved "https://registry.yarnpkg.com/pro-gallery/-/pro-gallery-3.1.14.tgz#d8962582c8f4ea45ca725caa05e240863096301f"
-  integrity sha512-RwWfVyyHO+DaLlSEwg2sJ/7C+jueiYBvR+iOIHz6Vu6tocO/n+d9vYv05IZn3wTiIRMvbjNkb+lDneLMe4bOkQ==
+pro-gallery@3.1.32:
+  version "3.1.32"
+  resolved "https://registry.yarnpkg.com/pro-gallery/-/pro-gallery-3.1.32.tgz#b93306ac236226a438bbc78e3c768b72703d5980"
+  integrity sha512-5uprQhiz4ANUujgQiT6bCdrl3hrM42fyNwjhHnu8qZ4E0gCNUknIxksO8A48bmdqxthpgz5peeVMWnFgJQdFuw==
   dependencies:
     "@vimeo/player" "2.8.2"
     hls.js "^0.14.12"
-    pro-gallery-lib "3.1.14"
-    pro-layouts "3.1.14"
+    pro-gallery-lib "3.1.31"
+    pro-layouts "3.1.31"
     react-player "^2.6.2"
 
-pro-layouts@3.1.14:
-  version "3.1.14"
-  resolved "https://registry.yarnpkg.com/pro-layouts/-/pro-layouts-3.1.14.tgz#bdb10ec6ba3a6d4afb4fbe3ab046744b64338c4a"
-  integrity sha512-HQsDQwVwcHVzg7PjP2uIbM/y1sPEwMTzbipgDYdi9Bnz9z58+P+b0++qqkF056Q8GChpczoA/H/jQp+az2YWOw==
+pro-layouts@3.1.31:
+  version "3.1.31"
+  resolved "https://registry.yarnpkg.com/pro-layouts/-/pro-layouts-3.1.31.tgz#bfdaa10d0ee36c07f567935a6ef4566d658c9f40"
+  integrity sha512-2Qegd5Hg7G9fN4fx8Xyp53bhgQJRWlg52C2F/3EHEwDETNVY3tQv99y2JKqHM+CW0RP8I2r5reDOPZLqjWsKYA==
 
 process-nextick-args@~1.0.6:
   version "1.0.7"
