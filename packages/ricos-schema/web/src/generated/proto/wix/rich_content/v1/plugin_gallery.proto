@@ -70,20 +70,18 @@ message GalleryData {
   }
   
   message Item {
-    message ItemMetadata {
+    message Metadata {
       google.protobuf.StringValue title = 1;
       google.protobuf.StringValue altText = 2;
     }
 
     message Video {
       Media data = 1;
-      ItemMetadata metadata = 2;
       Media thumbnail = 3;
     }
 
     message Image {
       Media data = 1;
-      ItemMetadata metadata = 2;
       Link link = 3;
     }
 
@@ -92,6 +90,7 @@ message GalleryData {
       Image image = 2;
       Video video = 3;
     }
+    Metadata metadata = 4;
   }
 
   PluginContainerData container_data = 1;

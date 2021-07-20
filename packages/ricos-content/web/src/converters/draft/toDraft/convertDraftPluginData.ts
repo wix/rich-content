@@ -193,15 +193,13 @@ const convertGalleryStyles = styles => {
 
 const convertGalleryItem = item => {
   const type = has(item, 'image') ? 'image' : 'video';
-  item.metadata = item[type].metadata;
-  item.metadata.type = type;
   const {
     src: { url },
     height,
     width,
   } = item[type].data;
   item.url = url;
-  item.metadata = { ...item.metadata, height, width };
+  item.metadata = { ...item.metadata, height, width, type };
   if (has(item, 'video.thumbnail')) {
     const {
       src: { url },
