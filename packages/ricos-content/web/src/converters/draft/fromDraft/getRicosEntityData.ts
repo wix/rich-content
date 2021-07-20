@@ -1,7 +1,8 @@
 import { pickBy, identity } from 'lodash';
 /* eslint-disable fp/no-delete */
 import { TextStyle, NodeStyle } from 'ricos-schema';
-import { RicosEntityMap, RicosContentBlock, LINK_PREVIEW_TYPE, EMBED_TYPE } from '../../..';
+import { RicosEntityMap, RicosContentBlock } from '../../../types';
+import { LINK_PREVIEW_TYPE, EMBED_TYPE } from '../../../consts';
 import { TO_RICOS_DATA_FIELD, TO_RICOS_PLUGIN_TYPE } from '../consts';
 import { convertBlockDataToRicos } from './convertRicosPluginData';
 

@@ -9,9 +9,9 @@ import {
 import { transform, isObject, pickBy } from 'lodash';
 import { Node, Decoration, RichContent } from 'ricos-schema';
 import { TO_RICOS_DATA_FIELD } from '../../draft/consts';
-import { JSONContent } from '@tiptap-es5/core';
+import { JSONContent } from '@tiptap/core';
 import toCamelCase from 'to-camel-case';
-import fromEntries from 'fromentries';
+import { fromEntries } from '../../../utils';
 
 declare const a: RichContent;
 

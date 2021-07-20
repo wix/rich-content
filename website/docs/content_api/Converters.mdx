@@ -108,13 +108,13 @@ fromHtml: (html: string) => RichContent;
 #### Example
 
 ```tsx
-import { fromHtml } from 'ricos-content/libs/htmlConverters';
+import { fromRichTextHtml } from 'ricos-content/libs/server-side-converters';
 import { RichContent } from 'ricos-schema';
 import { RicosEditor, DraftContent } from 'ricos-editor';
 
 const HTML = '<p><strong>Bold</strong> <em>italic</em> <u>underline</u></p>';
 
-const content: RichContent = fromHtml(HTML);
+const content: RichContent = fromRichTextHtml(HTML);
 const draftContent: DraftContent = toDraft(content);
 
 <RicosEditor content={draftContent} />;

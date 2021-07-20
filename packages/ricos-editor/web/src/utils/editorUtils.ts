@@ -5,7 +5,7 @@ import {
   convertFromRaw,
 } from 'wix-rich-content-editor/libs/editorStateConversion';
 import { EditorProps } from 'draft-js';
-import { debounce, pick } from 'lodash';
+import { pick } from 'lodash';
 import { DRAFT_EDITOR_PROPS } from 'ricos-common';
 import { isContentStateEmpty } from 'ricos-content';
 import { isContentEqual } from 'ricos-content/libs/comapareDraftContent';
@@ -98,18 +98,37 @@ export function createDataConverter(
     }
     return shouldRemoveErrorBlocks ? errorBlocksRemover(currContent) : currContent;
   };
+
+  function debounce<A, R>(f: (args?: A) => R, interval: number): (args?: A) => Promise<R> {
+    let timer;
+
+    return (...args) => {
+      clearTimeout(timer);
+      return new Promise((resolve, reject) => {
+        timer = setTimeout(() => {
+          try {
+            resolve(f(...args));
+          } catch (err) {
+            reject(err);
+          }
+        }, interval);
+      });
+    };
+  }
+
   const debounceUpdate = debounce(getContentState, ONCHANGE_DEBOUNCE_TIME);
+
   return {
     getContentState,
     getContentTraits,
     getEditorState,
     waitForUpdate,
     getContentStatePromise,
-    refresh: editorState => {
+    refresh: (editorState, onError) => {
       if (!isSSR()) {
         isUpdated = false;
         currEditorState = editorState;
-        debounceUpdate();
+        debounceUpdate().catch(err => onError?.(err));
       }
     },
   };

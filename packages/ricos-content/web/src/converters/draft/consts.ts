@@ -23,7 +23,7 @@ import {
   EMBED_TYPE,
 } from '../../consts';
 import { Decoration_Type, Node_Type } from 'ricos-schema';
-import fromEntries from 'fromentries';
+import { fromEntries } from '../../utils';
 
 export enum BlockType {
   Unstyled = 'unstyled',

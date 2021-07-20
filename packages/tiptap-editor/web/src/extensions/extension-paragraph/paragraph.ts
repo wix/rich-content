@@ -1,4 +1,4 @@
-import { Command, Node, mergeAttributes } from '@tiptap-es5/core';
+import { Command, Node, mergeAttributes } from '@tiptap/core';
 import { ParagraphData } from 'ricos-schema';
 
 export interface ParagraphOptions {
