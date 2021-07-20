@@ -11,15 +11,6 @@ import styles from '../../../statics/styles/multi-select-link-panel.scss';
 import LinkActionsButtons from './LinkActionsButtons';
 import { RADIO_GROUP_VALUES } from '../AnchorComponents/consts';
 
-const Separator = ({ isMobile }) => (
-  <div
-    className={classNames(styles.multiSelectLinkPanel_actionsDivider, {
-      [styles.multiSelectLinkPanel_actionsDivider_mobile]: isMobile,
-    })}
-    role="separator"
-  />
-);
-
 class MultiSelectLinkPanel extends PureComponent {
   constructor(props) {
     super(props);
@@ -50,6 +41,18 @@ class MultiSelectLinkPanel extends PureComponent {
     );
   };
 
+  renderSeparator = () => {
+    const { isMobile } = this.props;
+    return (
+      <div
+        className={classNames(styles.multiSelectLinkPanel_actionsDivider, {
+          [styles.multiSelectLinkPanel_actionsDivider_mobile]: isMobile,
+        })}
+        role="separator"
+      />
+    );
+  };
+
   renderDesktopHeader = () => {
     const { t } = this.props;
     return (
@@ -57,8 +60,23 @@ class MultiSelectLinkPanel extends PureComponent {
         <div className={styles.multiSelectLinkPanel_header}>
           <div>{t('LinkTo_Modal_Header')}</div>
         </div>
-        <Separator isMobile={false} />
+        {this.renderSeparator()}
       </>
+    );
+  };
+
+  renderMultiSelectActions = () => {
+    const { isMobile } = this.props;
+    return (
+      <div>
+        <LinkActionsButtons {...this.props.buttonsProps} />
+        {isMobile && (
+          <>
+            {this.renderSeparator()}
+            {this.renderMobileTabs()}
+          </>
+        )}
+      </div>
     );
   };
 
@@ -160,24 +178,12 @@ class MultiSelectLinkPanel extends PureComponent {
             />
           )}
         </div>
-        {!isMobile && <Separator isMobile={isMobile} />}
-        <div>
-          <LinkActionsButtons {...this.props.buttonsProps} />
-          {isMobile && (
-            <>
-              <Separator isMobile={isMobile} />
-              {this.renderMobileTabs()}
-            </>
-          )}
-        </div>
+        {!isMobile && this.renderSeparator()}
+        {this.renderMultiSelectActions()}
       </FocusManager>
     );
   }
 }
-
-Separator.propTypes = {
-  isMobile: PropTypes.bool,
-};
 
 MultiSelectLinkPanel.propTypes = {
   theme: PropTypes.object.isRequired,

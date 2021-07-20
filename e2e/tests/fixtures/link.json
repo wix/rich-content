@@ -1,0 +1,44 @@
+{
+    "blocks": [
+        {
+        "key": "828fl",
+        "text": "Blackwave ",
+        "type": "unstyled",
+        "depth": 0,
+        "inlineStyleRanges": [
+            {
+            "offset": 0,
+            "length": 9,
+            "style": "UNDERLINE"
+            }
+        ],
+        "entityRanges": [
+            {
+            "offset": 0,
+            "length": 9,
+            "key": 0
+            }
+        ],
+        "data": {
+            "dynamicStyles": {
+            "line-height": "2.5",
+            "padding-top": "2px",
+            "padding-bottom": "3px"
+            },
+            "textAlignment": "justify"
+        }
+        }
+    ],
+    "entityMap": {
+        "0": {
+        "type": "LINK",
+        "mutability": "MUTABLE",
+        "data": {
+            "url": "https://www.youtube.com/watch?v=mteqxMEmH90&list=RDmteqxMEmH90&start_radio=1&ab_channel=blackwaveVEVO",
+            "target": "_blank",
+            "rel": ""
+        }
+        }
+    },
+    "VERSION": "8.47.2"
+  }
